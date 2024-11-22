@@ -1,0 +1,254 @@
+
+
+
+
+Para criar um Diagrama de Fluxo de Dados (DFD) para o protocolo de modelagem de ameaças para organizações não-hierárquicas, com base exclusivamente nos documentos fornecidos, podemos seguir os seguintes passos:
+
+1. **Identificação dos Componentes Principais**:
+   - **Usuários**: Membros das organizações não-hierárquicas.
+   - **Sistema de Modelagem de Ameaças**: O sistema que será desenvolvido para modelar as ameaças.
+   - **Base de Dados de Ameaças**: Onde as ameaças identificadas serão armazenadas.
+   - **Protocolo COLBAC**: Sistema de controle de acesso baseado em participação democrática.
+
+2. **Fluxos de Dados**:
+   - **Entrada de Dados**: Informações sobre a estrutura da organização e possíveis ameaças.
+   - **Processamento de Dados**: Análise das ameaças e desenvolvimento de modelos de ameaças.
+   - **Saída de Dados**: Relatórios de ameaças e recomendações de mitigação.
+
+3. **Processos**:
+   - **Coleta de Dados**: Coleta de informações sobre a organização e suas vulnerabilidades.
+   - **Análise de Ameaças**: Identificação e análise das ameaças.
+   - **Desenvolvimento de Modelos**: Criação de modelos de ameaças com base na análise.
+   - **Avaliação e Mitigação**: Avaliação dos modelos e recomendação de medidas de mitigação.
+
+4. **Armazenamento de Dados**:
+   - **Base de Dados de Ameaças**: Armazenamento das ameaças identificadas e dos modelos desenvolvidos.
+
+### DFD Nível 0 (Contexto)
+
++-------------------+        +-------------------------+
+|                   |        |                         |
+|  Membros da       |        |  Sistema de Modelagem   |
+|  Organização      +------->|  de Ameaças             |
+|  Não-Hierárquica  |        |                         |
+|                   |        |                         |
++-------------------+        +-------------------------+
+        ^                            |
+        |                            v
++-------------------+        +-------------------------+
+|                   |        |                         |
+|  Protocolo        +<-------+  Base de Dados de       |
+|  COLBAC           |        |  Ameaças                |
+|                   |        |                         |
++-------------------+        +-------------------------+
+
+
+### DFD Nível 1 (Detalhado)
+
++-------------------+        +-------------------------+        +-------------------------+
+|                   |        |                         |        |                         |
+|  Membros da       |        |  Coleta de Dados        |        |  Base de Dados de       |
+|  Organização      +------->|  sobre a Organização    +------->|  Ameaças                |
+|  Não-Hierárquica  |        |                         |        |                         |
+|                   |        +-------------------------+        +-------------------------+
++-------------------+                |                            |
+        ^                            v                            |
+        |                    +-------------------------+          |
+        |                    |                         |          |
+        |                    |  Análise de Ameaças     |          |
+        |                    |                         |          |
+        |                    +-------------------------+          |
+        |                            |                            |
+        |                            v                            |
+        |                    +-------------------------+          |
+        |                    |                         |          |
+        |                    |  Desenvolvimento de     |          |
+        |                    |  Modelos de Ameaças     |          |
+        |                    |                         |          |
+        |                    +-------------------------+          |
+        |                            |                            |
+        |                            v                            |
+        |                    +-------------------------+          |
+        |                    |                         |          |
+        +--------------------+  Avaliação e Mitigação  +<---------+
+                             |                         |
+                             +-------------------------+
+```
+
+### Descrição dos Componentes e Processos
+
+- **Membros da Organização Não-Hierárquica**: Fornecem informações sobre a estrutura e possíveis vulnerabilidades da organização.
+- **Sistema de Modelagem de Ameaças**: Recebe dados dos membros, processa essas informações para identificar ameaças e desenvolve modelos de ameaças.
+- **Protocolo COLBAC**: Utiliza tokens de capacidade autorizados democraticamente para expressar políticas de controle de acesso.
+- **Base de Dados de Ameaças**: Armazena as ameaças identificadas e os modelos desenvolvidos para futuras referências e análises.
+
+Este DFD ilustra como os dados fluem entre os diferentes componentes e processos envolvidos na criação de um protocolo de modelagem de ameaças para organizações não-hierárquicas, conforme descrito nos documentos fornecidos [^Microsoft_Press_eBook_TheSecurityDevelopmentLifecycle_PDF.pdf_3][^COLBAC: Shifting Cybersecurity from Hierarchical to Horizontal Designs_3].
+
+
+
+
+
+### Detalhamento do DFD para o Protocolo de Modelagem de Ameaças para Organizações Não-Hierárquicas
+
+#### Componentes Principais
+
+1. **Usuários (Membros das Organizações Não-Hierárquicas)**:
+   - Fornecem informações sobre a estrutura da organização e possíveis vulnerabilidades.
+   - Participam do processo de modelagem de ameaças e avaliação de riscos.
+
+2. **Sistema de Modelagem de Ameaças**:
+   - Recebe dados dos membros das organizações.
+   - Processa essas informações para identificar ameaças e desenvolver modelos de ameaças.
+   - Utiliza o protocolo COLBAC para controle de acesso baseado em participação democrática.
+
+3. **Base de Dados de Ameaças**:
+   - Armazena as ameaças identificadas e os modelos desenvolvidos.
+   - Serve como repositório para futuras referências e análises.
+
+4. **Protocolo COLBAC**:
+   - Sistema de controle de acesso baseado em tokens de capacidade autorizados democraticamente.
+   - Permite um grau flexível e dinâmico de horizontalidade para atender às necessidades das organizações.
+
+#### Relações e Fluxos de Dados
+
+1. **Entrada de Dados**:
+   - **Usuários -> Sistema de Modelagem de Ameaças**:
+     - Os membros das organizações fornecem informações sobre a estrutura da organização e possíveis vulnerabilidades.
+     - Essas informações são coletadas através de entrevistas, questionários e outras formas de coleta de dados.
+
+2. **Processamento de Dados**:
+   - **Sistema de Modelagem de Ameaças**:
+     - Analisa as informações recebidas para identificar possíveis ameaças.
+     - Desenvolve modelos de ameaças com base na análise realizada.
+     - Utiliza técnicas de análise de risco, como a análise STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) [^Microsoft_Press_eBook_TheSecurityDevelopmentLifecycle_PDF.pdf, page 25_5].
+
+3. **Armazenamento de Dados**:
+   - **Sistema de Modelagem de Ameaças -> Base de Dados de Ameaças**:
+     - As ameaças identificadas e os modelos desenvolvidos são armazenados na base de dados.
+     - A base de dados serve como repositório para futuras referências e análises.
+
+4. **Saída de Dados**:
+   - **Sistema de Modelagem de Ameaças -> Usuários**:
+     - Relatórios de ameaças e recomendações de mitigação são gerados e fornecidos aos membros das organizações.
+     - Esses relatórios incluem uma lista de ameaças, classificadas por nível de risco, e sugestões de medidas de mitigação [^Microsoft_Press_eBook_TheSecurityDevelopmentLifecycle_PDF.pdf, page 3_5].
+
+5. **Controle de Acesso**:
+   - **Protocolo COLBAC**:
+     - Utiliza tokens de capacidade autorizados democraticamente para expressar políticas de controle de acesso.
+     - Permite que as decisões de segurança sejam tomadas de forma participativa e democrática, atendendo às necessidades das organizações não-hierárquicas [^COLBAC: Shifting Cybersecurity from Hierarchical to Horizontal Designs, page 1_5].
+
+#### Processos Detalhados
+
+1. **Coleta de Dados**:
+   - Coleta de informações sobre a organização e suas vulnerabilidades.
+   - Utilização de entrevistas, questionários e outras formas de coleta de dados.
+
+2. **Análise de Ameaças**:
+   - Identificação e análise das ameaças com base nas informações coletadas.
+   - Utilização de técnicas de análise de risco, como a análise STRIDE.
+
+3. **Desenvolvimento de Modelos**:
+   - Criação de modelos de ameaças com base na análise realizada.
+   - Documentação dos modelos de ameaças e das medidas de mitigação recomendadas.
+
+4. **Avaliação e Mitigação**:
+   - Avaliação dos modelos de ameaças desenvolvidos.
+   - Recomendação de medidas de mitigação para reduzir os riscos identificados.
+   - Geração de relatórios de ameaças e recomendações de mitigação para os membros das organizações.
+
+
+### Detalhamento do DFD para o Sistema COLBAC
+
+#### Componentes Principais
+
+1. **Usuários (Membros das Organizações Não-Hierárquicas)**:
+   - Participam do processo de autorização e controle de acesso.
+   - Utilizam tokens de capacidade autorizados democraticamente para expressar políticas de controle de acesso.
+
+2. **Sistema COLBAC**:
+   - Sistema de controle de acesso baseado em participação democrática.
+   - Utiliza tokens de capacidade autorizados democraticamente para expressar políticas de controle de acesso.
+   - Permite um grau flexível e dinâmico de horizontalidade para atender às necessidades das organizações.
+
+3. **Base de Dados de Acesso**:
+   - Armazena as políticas de controle de acesso e os tokens de capacidade.
+   - Serve como repositório para futuras referências e análises.
+
+#### Relações e Fluxos de Dados
+
+1. **Entrada de Dados**:
+   - **Usuários -> Sistema COLBAC**:
+     - Os membros das organizações fornecem informações sobre as políticas de controle de acesso desejadas.
+     - Essas informações são coletadas através de processos de deliberação e consenso dentro da organização.
+
+2. **Processamento de Dados**:
+   - **Sistema COLBAC**:
+     - Analisa as informações recebidas para criar políticas de controle de acesso.
+     - Gera tokens de capacidade autorizados democraticamente para expressar essas políticas.
+     - Utiliza técnicas de análise de risco para garantir a segurança das políticas de controle de acesso [^doc-snippet-1_7][^doc-snippet-2_7].
+
+3. **Armazenamento de Dados**:
+   - **Sistema COLBAC -> Base de Dados de Acesso**:
+     - As políticas de controle de acesso e os tokens de capacidade são armazenados na base de dados.
+     - A base de dados serve como repositório para futuras referências e análises [^doc-snippet-3_7][^doc-snippet-4_7].
+
+4. **Saída de Dados**:
+   - **Sistema COLBAC -> Usuários**:
+     - Relatórios de políticas de controle de acesso e tokens de capacidade são gerados e fornecidos aos membros das organizações.
+     - Esses relatórios incluem uma lista de políticas de controle de acesso, classificadas por nível de risco, e sugestões de medidas de mitigação [^doc-snippet-5_7].
+
+5. **Controle de Acesso**:
+   - **Protocolo COLBAC**:
+     - Utiliza tokens de capacidade autorizados democraticamente para expressar políticas de controle de acesso.
+     - Permite que as decisões de segurança sejam tomadas de forma participativa e democrática, atendendo às necessidades das organizações não-hierárquicas [^doc-snippet-1_7][^doc-snippet-2_7].
+
+#### Processos Detalhados
+
+1. **Coleta de Dados**:
+   - Coleta de informações sobre as políticas de controle de acesso desejadas pela organização.
+   - Utilização de processos de deliberação e consenso dentro da organização.
+
+2. **Análise de Ameaças**:
+   - Identificação e análise das ameaças com base nas informações coletadas.
+   - Utilização de técnicas de análise de risco para garantir a segurança das políticas de controle de acesso.
+
+3. **Desenvolvimento de Políticas**:
+   - Criação de políticas de controle de acesso com base na análise realizada.
+   - Geração de tokens de capacidade autorizados democraticamente para expressar essas políticas.
+
+4. **Avaliação e Mitigação**:
+   - Avaliação das políticas de controle de acesso desenvolvidas.
+   - Recomendação de medidas de mitigação para reduzir os riscos identificados.
+   - Geração de relatórios de políticas de controle de acesso e tokens de capacidade para os membros das organizações.
+
+
+
+
++-------------------+        +-------------------------+        +-------------------------+
+|                   |        |                         |        |                         |
+|  Membros da       |        |  Coleta de Dados        |        |  Base de Dados de       |
+|  Organização      +------->|  sobre a Organização    +------->|  Acesso                 |
+|  Não-Hierárquica  |        |                         |        |                         |
+|                   |        +-------------------------+        +-------------------------+
++-------------------+                |                            |
+        ^                            v                            |
+        |                    +-------------------------+          |
+        |                    |                         |          |
+        |                    |  Análise de Ameaças     |          |
+        |                    |                         |          |
+        |                    +-------------------------+          |
+        |                            |                            |
+        |                            v                            |
+        |                    +-------------------------+          |
+        |                    |                         |          |
+        |                    |  Desenvolvimento de     |          |
+        |                    |  Políticas de Acesso    |          |
+        |                    |                         |          |
+        |                    +-------------------------+          |
+        |                            |                            |
+        |                            v                            |
+        |                    +-------------------------+          |
+        |                    |                         |          |
+        +--------------------+  Avaliação e Mitigação  +<---------+
+                             |                         |
+                             +-------------------------+
