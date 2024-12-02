@@ -22,13 +22,66 @@
 % 
 % }
 
-\section{Welcome to}
-\label{sec:if_you_use_this_template}
+\section{Context}
+\label{sec:context}
 
-This first Chapter introduces the \gls{novathesis} template and how it is organized. In Chapter~\ref{cha:background} you can find some specific instructions on how to use this template.   some examples and give some hints on how to write your text. Please read these next Chapters carefully.
+A segurança cibernética moderna frequentemente pressupõe a existência de estruturas hierárquicas,
+o que pode não ser adequado para organizações que operam de maneira horizontal, como cooperativas
+de trabalhadores, sindicatos, organizações ativistas, etc.
+Essas organizações, que evitam deliberadamente estruturas hierárquicas, enfrentam desafios únicos
+em termos de segurança, pois as soluções tradicionais não consideram a horizontalidade de todo.
+Este projeto visa desenvolver protocolos de modelagem de ameaças que valorizem a horizontalidade,
+especificamente para as organizações mencionadas.
 
-\subsection{Your Time is Precious}
+Organizações hierárquicas são estruturadas de forma que o poder e a tomada de decisões fluem de
+cima para baixo. Em uma organização hierárquica típica, há uma cadeia de comando clara, onde
+cada nível da hierarquia tem autoridade sobre o nível abaixo. Por exemplo, em uma empresa
+tradicional, o CEO toma decisões estratégicas que são implementadas por gerentes de nível médio
+e, finalmente, executadas por funcionários de nível operacional. Este modelo facilita a tomada
+de decisões rápidas e a implementação de políticas de segurança, pois há uma clara atribuição
+de responsabilidades e controle \cite{Colbac}.
+
+Em contraste, organizações não-hierárquicas, ou horizontais, distribuem o poder de forma mais
+equitativa entre seus membros. Nessas organizações, a tomada de decisões é frequentemente feita
+de forma coletiva, através de processos democráticos e participativos. Por exemplo, em uma
+cooperativa de trabalhadores, todos os membros podem ter uma voz igual nas decisões importantes,
+e não há uma cadeia de comando rígida. Isso pode levar a uma maior transparência e inclusão, mas
+também pode criar desafios únicos em termos de segurança, como a dificuldade em gerenciar o acesso
+a informações sensíveis sem criar uma hierarquia implícita \cite{Colbac}.
+
+Um dos principais desafios de segurança em organizações horizontais é a gestão
+de segredos, como senhas e chaves de criptografia. Em uma organização
+hierárquica, esses segredos são frequentemente controlados por um pequeno grupo de
+administradores que têm autoridade para gerenciar o acesso. No entanto, em uma organização
+horizontal, decidir quem deve ter acesso a esses segredos pode ser mais complicado. Se
+todos os membros tiverem acesso, há um risco maior de abuso ou erro humano. Por
+outro lado, restringir o acesso a um pequeno grupo pode criar uma hierarquia de
+fato, minando os princípios de horizontalidade \cite{Colbac}. 
+
+Ao desenvolver protocolos de modelagem de ameaças para organizações
+horizontais, é crucial considerar a horizontalidade como um ativo. Isso significa criar
+sistemas de segurança que não apenas protejam contra ameaças externas, mas que também
+respeitem e reforcem a estrutura participativa da organização. Por exemplo, em vez de
+confiar em um único administrador para gerenciar o acesso a recursos críticos, pode-se
+implementar um sistema de autorização coletiva, onde múltiplos membros devem concordar
+antes que o acesso seja concedido. Isso não só distribui a responsabilidade, mas
+também aumenta a resiliência contra ataques internos, pois um único indivíduo não
+pode comprometer o sistema \cite{Colbac}.
+
+Além disso, a horizontalidade pode ser usada para
+melhorar a detecção e resposta a incidentes de segurança. Em uma organização
+hierárquica, a detecção de ameaças pode ser centralizada, o que pode levar a pontos únicos
+de falha. Em uma organização horizontal, a detecção de ameaças pode ser
+distribuída entre todos os membros, aumentando a probabilidade de que atividades suspeitas
+sejam rapidamente identificadas e respondidas \cite{AbcCrypto}.
+
+Ao considerar a horizontalidade como um ativo na modelagem de ameaças, podemos
+desenvolver protocolos de segurança que não apenas protejam as organizações horizontais,
+mas que também reforcem seus princípios fundamentais de participação e igualdade. Este
+projeto busca explorar essas possibilidades e criar um novo paradigma de segurança
+cibernética que seja verdadeiramente adequado para organizações não-hierárquicas \cite{MicrosoftBible}.
+
+\section{Your Time is Precious}
 \label{sub:time_is_money}
 
-Did you learn how to drive by sitting by the wheel and throwing your car into the road?  Most probably you did take your time \emph{learning the rules} and \emph{practicing} first! Likewise, it is not wise to throw yourself at the task of writing a thesis/dissertation in \LaTeX\ without seriously considering the 
 
