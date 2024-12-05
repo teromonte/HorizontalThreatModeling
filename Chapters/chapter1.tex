@@ -27,11 +27,9 @@
 
 A segurança cibernética moderna frequentemente pressupõe a existência de estruturas hierárquicas,
 o que pode não ser adequado para organizações que operam de maneira horizontal, como cooperativas
-de trabalhadores, sindicatos, organizações ativistas, etc.
-Essas organizações, que evitam deliberadamente estruturas hierárquicas, enfrentam desafios únicos
-em termos de segurança, pois as soluções tradicionais não consideram a horizontalidade de todo.
-Este projeto visa desenvolver protocolos de modelagem de ameaças que valorizem a horizontalidade,
-especificamente para as organizações mencionadas.
+de trabalhadores, sindicatos, organizações ativistas, etc. Essas organizações, que evitam
+deliberadamente estruturas hierárquicas, enfrentam desafios únicos em termos de segurança, pois
+as soluções tradicionais não consideram a horizontalidade de todo.
 
 Organizações hierárquicas são estruturadas de forma que o poder e a tomada de decisões fluem de
 cima para baixo. Em uma organização hierárquica típica, há uma cadeia de comando clara, onde
@@ -39,7 +37,7 @@ cada nível da hierarquia tem autoridade sobre o nível abaixo. Por exemplo, em 
 tradicional, o CEO toma decisões estratégicas que são implementadas por gerentes de nível médio
 e, finalmente, executadas por funcionários de nível operacional. Este modelo facilita a tomada
 de decisões rápidas e a implementação de políticas de segurança, pois há uma clara atribuição
-de responsabilidades e controle \cite{Colbac}.
+de responsabilidades e controle.
 
 Em contraste, organizações não-hierárquicas, ou horizontais, distribuem o poder de forma mais
 equitativa entre seus membros. Nessas organizações, a tomada de decisões é frequentemente feita
@@ -47,7 +45,7 @@ de forma coletiva, através de processos democráticos e participativos. Por exe
 cooperativa de trabalhadores, todos os membros podem ter uma voz igual nas decisões importantes,
 e não há uma cadeia de comando rígida. Isso pode levar a uma maior transparência e inclusão, mas
 também pode criar desafios únicos em termos de segurança, como a dificuldade em gerenciar o acesso
-a informações sensíveis sem criar uma hierarquia implícita \cite{Colbac}.
+a informações sensíveis sem criar uma hierarquia implícita.
 
 Um dos principais desafios de segurança em organizações horizontais é a gestão
 de segredos, como senhas e chaves de criptografia. Em uma organização
@@ -56,32 +54,63 @@ administradores que têm autoridade para gerenciar o acesso. No entanto, em uma 
 horizontal, decidir quem deve ter acesso a esses segredos pode ser mais complicado. Se
 todos os membros tiverem acesso, há um risco maior de abuso ou erro humano. Por
 outro lado, restringir o acesso a um pequeno grupo pode criar uma hierarquia de
-fato, minando os princípios de horizontalidade \cite{Colbac}. 
+fato, minando os princípios de horizontalidade.
 
 Ao desenvolver protocolos de modelagem de ameaças para organizações
 horizontais, é crucial considerar a horizontalidade como um ativo. Isso significa criar
 sistemas de segurança que não apenas protejam contra ameaças externas, mas que também
-respeitem e reforcem a estrutura participativa da organização. Por exemplo, em vez de
-confiar em um único administrador para gerenciar o acesso a recursos críticos, pode-se
-implementar um sistema de autorização coletiva, onde múltiplos membros devem concordar
-antes que o acesso seja concedido. Isso não só distribui a responsabilidade, mas
-também aumenta a resiliência contra ataques internos, pois um único indivíduo não
-pode comprometer o sistema \cite{Colbac}.
-
-Além disso, a horizontalidade pode ser usada para
-melhorar a detecção e resposta a incidentes de segurança. Em uma organização
-hierárquica, a detecção de ameaças pode ser centralizada, o que pode levar a pontos únicos
-de falha. Em uma organização horizontal, a detecção de ameaças pode ser
-distribuída entre todos os membros, aumentando a probabilidade de que atividades suspeitas
-sejam rapidamente identificadas e respondidas \cite{AbcCrypto}.
+respeitem e reforcem a estrutura participativa da organização.
 
 Ao considerar a horizontalidade como um ativo na modelagem de ameaças, podemos
 desenvolver protocolos de segurança que não apenas protejam as organizações horizontais,
-mas que também reforcem seus princípios fundamentais de participação e igualdade. Este
-projeto busca explorar essas possibilidades e criar um novo paradigma de segurança
-cibernética que seja verdadeiramente adequado para organizações não-hierárquicas \cite{MicrosoftBible}.
+mas que também reforcem seus princípios fundamentais de participação e igualdade.
 
-\section{Your Time is Precious}
-\label{sub:time_is_money}
+\section{Objective}
+\label{sec:objective}
+
+O objetivo principal desta tese é desenvolver um protocolo de modelagem de
+ameaças especificamente adaptado para organizações não-hierárquicas, como cooperativas
+de trabalhadores, sindicatos, grupos ativistas e projetos de software de código
+aberto. Este protocolo visa abordar os desafios únicos enfrentados por essas
+organizações em termos de segurança cibernética, considerando a horizontalidade como um
+ativo e não como uma limitação. 
+
+O desenvolvimento de um protocolo de modelagem de ameaças que leve em
+consideração a estrutura participativa e democrática das organizações não-hierárquicas é
+essencial para garantir que as soluções de segurança não comprometam os princípios de
+igualdade e participação. A avaliação da eficácia do protocolo desenvolvido será
+realizada com membros de diferentes organizações que exibem variados níveis de
+horizontalidade, analisando como o protocolo se adapta a diferentes contextos e necessidades
+específicas de cada tipo de organização. 
+
+Além disso, será feita uma comparação entre o novo protocolo e os modelos de
+ameaças tradicionais, como STRIDE e DREAD, destacando as vantagens e desvantagens de
+cada abordagem em contextos horizontais. A identificação dos principais desafios de
+segurança enfrentados por organizações não-hierárquicas e a proposição de soluções
+que respeitem e reforcem a estrutura participativa dessas organizações são passos
+cruciais para o sucesso do protocolo.
+
+Por fim, a documentação de casos de uso reais onde o protocolo foi
+implementado fornecerá exemplos práticos de como ele pode ser aplicado e os resultados
+obtidos.
 
 
+\section{Contributions}
+\label{sec:contributions}
+
+\section{Structure}
+\label{sec:structure}
+
+O primeiro capítulo, Introdução, apresenta o contexto e a motivação do estudo,
+destacando a necessidade de um protocolo específico para organizações
+horizontais e delineando os objetivos da pesquisa. O segundo
+capítulo, Background and Related Work, revisa a literatura existente
+sobre modelagem de ameaças e as características das organizações não-hierárquicas,
+fornecendo uma base teórica para o desenvolvimento do protocolo. O terceiro capítulo,
+Research Design, descreve a metodologia utilizada na pesquisa, incluindo os métodos de
+coleta e análise de dados, bem como os critérios para a avaliação do protocolo. O
+quarto capítulo, Conclusion, sintetiza os principais achados da pesquisa, discutindo
+as implicações dos resultados e sugerindo direções para trabalhos futuros.
+Finalmente, o capítulo Work Plan detalha o cronograma e as etapas previstas para a
+implementação e validação do protocolo, garantindo uma abordagem estruturada e sistemática
+ao longo do desenvolvimento da tese

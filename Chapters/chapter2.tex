@@ -13,22 +13,223 @@
 
 \glsresetall
 
-\begin{center}
-  \fbox{\LARGE
-    This manual is outdated and must be revised!}
-\end{center}
-
-
-\section{Introduction}
+\section{Modelagem de Ameaças: Conceitos}
 \label{sec:introduction}
 
-This Chapter describes how to use the 
+A modelagem de ameaças é um processo estruturado que visa identificar,
+analisar e mitigar riscos de segurança em sistemas e aplicações. Na sua base, um
+modelo de ameaças genérico oferece uma abordagem sistemática para entender as
+vulnerabilidades potenciais de um sistema e as possíveis ações que os adversários podem
+tomar para explorá-las. Ele serve tanto como uma ferramenta de design quanto um
+quadro de avaliação, apoiando o desenvolvimento seguro de sistemas e a mitigação
+proativa de riscos.  
+
+O processo geralmente começa com a caracterização do sistema em análise.
+Isso envolve definir sua arquitetura, identificar ativos críticos e mapear o
+fluxo de dados através de seus componentes. Um entendimento completo das
+fronteiras de confiança — pontos onde os dados transitam entre áreas com diferentes
+níveis de segurança — é essencial. Essas fronteiras frequentemente destacam áreas
+de vulnerabilidade aumentada, onde as ações adversárias são mais prováveis de
+ocorrer. 
+
+Uma vez que o sistema é mapeado, o foco se desloca para a identificação de
+ameaças potenciais. Técnicas como STRIDE fornecem uma estrutura para categorizar
+sistematicamente as ameaças. Alternativamente, representações gráficas como árvores de
+ataque mapeiam visualmente caminhos de ataque potenciais, oferecendo uma maneira
+intuitiva de avaliar vulnerabilidades. 
+
+Após as ameaças serem identificadas, seu impacto potencial é analisado.
+Esta análise envolve avaliar a probabilidade de cada ameaça e a gravidade de
+seu impacto na funcionalidade e segurança do sistema. Ferramentas que variam
+de métodos qualitativos, como revisões de especialistas, a modelos formais,
+como redes de Petri, apoiam esta fase. O objetivo é priorizar riscos,
+garantindo que os esforços de mitigação se concentrem nas vulnerabilidades mais
+críticas. 
+
+Estratégias de mitigação são então desenvolvidas para abordar os riscos
+identificados. Essas estratégias podem incluir controles técnicos, como criptografia ou
+gestão de acesso, bem como medidas organizacionais como políticas e treinamentos.
+Um modelo de ameaças genérico também inclui loops de feedback, garantindo
+que, à medida que o sistema evolui, o modelo de ameaças seja atualizado para
+refletir novas vulnerabilidades e ameaças. 
+
+Embora os métodos de modelagem de ameaças variem amplamente, eles
+compartilham um foco comum na análise metódica e defesa proativa. Seja aplicado
+manualmente ou com ferramentas automatizadas, o processo fornece uma visão abrangente
+dos riscos potenciais, permitindo que desenvolvedores e profissionais de
+segurança abordem proativamente as vulnerabilidades antes que possam ser exploradas.
+
+\subsection{STRIDE}
+\label{sec:STRIDE}
+
+A metodologia STRIDE é uma das mais maduras e amplamente utilizadas para
+modelagem de ameaças. Desenvolvida por Loren Kohnfelder e Praerit Garg em 1999 e adotada
+pela Microsoft em 2002, STRIDE evoluiu ao longo do tempo para incluir novas tabelas
+específicas de ameaças e variantes como STRIDE-per-Element e STRIDE-per-Interaction.
+A metodologia STRIDE é baseada na criação de Diagramas de Fluxo de Dados
+(DFDs) para identificar entidades do sistema, eventos e limites do sistema. A
+precisão dos DFDs é crucial para o sucesso da aplicação do STRIDE, embora seu uso
+exclusivo possa ser limitante, pois não representa decisões arquitetônicas relacionadas
+à segurança. 
+
+O acrônimo STRIDE representa seis categorias de ameaças: Spoofing
+(falsificação de identidade), Tampering (manipulação de dados), Repudiation (repúdio),
+Information Disclosure (divulgação de informações), Denial of Service (negação de serviço)
+e Elevation of Privilege (elevação de privilégio). Cada uma dessas categorias
+corresponde a uma propriedade de segurança violada, como autenticação, integridade,
+não-repúdio, confidencialidade, disponibilidade e autorização, respectivamente.
+A metodologia STRIDE é utilizada para identificar ameaças conhecidas com base
+nessas categorias, auxiliando na navegação pelo modelo do sistema criado na fase
+inicial. 
+
+Apesar de a Microsoft não manter mais o STRIDE, ele ainda é implementado como
+parte do Ciclo de Vida de Desenvolvimento Seguro da Microsoft (SDL) com a Ferramenta
+de Modelagem de Ameaças, que continua disponível. A metodologia
+STRIDE é fácil de adotar, mas pode ser demorada, especialmente à medida que a
+complexidade do sistema aumenta. Estudos descritivos da técnica de modelagem de ameaças da
+Microsoft mostram que o STRIDE tem uma taxa moderadamente baixa de falsos positivos e
+uma taxa moderadamente alta de falsos negativos. 
+
+A aplicação do STRIDE não se limita a sistemas cibernéticos, mas também a
+sistemas ciber-físicos, demonstrando sua versatilidade. Além disso, a metodologia
+STRIDE pode ser combinada com outras abordagens de modelagem de ameaças para criar
+uma visão mais robusta e abrangente das potenciais ameaças. A
+escolha da metodologia de modelagem de ameaças deve considerar áreas específicas a
+serem abordadas, o tempo disponível para a modelagem, a experiência com modelagem de
+ameaças e o nível de envolvimento dos stakeholders. 
+
+Em resumo, a metodologia STRIDE é uma ferramenta poderosa para identificar e
+mitigar ameaças em sistemas complexos. Sua aplicação em organizações não hierárquicas
+pode ser particularmente valiosa, pois permite uma abordagem sistemática para a
+segurança, considerando a horizontalidade como um ativo. A adoção de STRIDE, juntamente
+com outras metodologias de modelagem de ameaças, pode proporcionar uma defesa mais
+focada e eficaz contra ameaças cibernéticas. 
+
+\subsection{Attack trees}
+\label{sec:attack_trees}
+
+As árvores de ataque são uma das técnicas mais antigas e amplamente aplicadas
+para modelagem de ameaças em sistemas cibernéticos, ciber-físicos e físicos.
+Desenvolvidas por Bruce Schneier em 1999, inicialmente foram aplicadas como um método
+independente e, desde então, têm sido combinadas com outros métodos e frameworks.
+As árvores de ataque são essencialmente diagramas que representam ataques a um
+sistema em forma de árvore. A raiz da árvore é o objetivo do ataque, e as folhas são
+as maneiras de alcançar esse objetivo. Cada objetivo é representado como uma
+árvore separada, resultando em um conjunto de árvores de ataque para a análise de
+ameaças do sistema. 
+
+A construção de uma árvore de ataque geralmente requer algumas iterações de
+decomposição do objetivo. Uma vez identificados todos os nós folha, podem ser atribuídos
+marcadores de possibilidade, que devem ser definidos após uma pesquisa relevante sobre
+cada etapa. Durante o exame de diferentes métodos para alcançar o objetivo, pode-se
+perceber que isso pode ser realizado de várias maneiras. Para incorporar essas
+diferentes opções na árvore, devem ser usados nós AND e OR. Nós AND indicam que ambos os
+nós devem ser realizados para avançar para a próxima etapa, enquanto nós OR
+representam alternativas. Em sistemas complexos, árvores de ataque
+podem ser construídas para cada componente, em vez de para o sistema como um todo. 
+
+As árvores de ataque são fáceis de entender e adotar, mas são úteis apenas
+quando o sistema e as preocupações de segurança são bem compreendidos. O método
+assume que os analistas possuem alta expertise em cibersegurança e, portanto, não
+fornece diretrizes para avaliar sub-objetivos, ataques ou riscos.
+Nos últimos anos, essa técnica tem sido frequentemente usada em combinação com
+outras técnicas e dentro de frameworks como STRIDE, CVSS e PASTA.
+A aplicação de árvores de ataque pode ajudar a tomar decisões de segurança,
+verificar se os sistemas são vulneráveis a um ataque e avaliar um tipo específico de
+ataque. 
+
+Um objetivo adicional do método é gerar portas de ataque para componentes
+individuais. Essas portas de ataque, que são efetivamente nós raiz para as árvores de
+ataque dos componentes, ilustram atividades que podem passar risco para os
+componentes conectados. A pontuação auxilia no processo de realização de uma avaliação de
+risco do sistema. Se uma porta de ataque depende de um nó raiz de componente com uma
+alta pontuação de risco, essa porta de ataque também terá uma alta pontuação de
+risco e uma alta probabilidade de ser executada. O oposto também é verdadeiro.
+Este método foi utilizado em um estudo de caso para uma rede de comunicações
+ferroviárias, demonstrando sua aplicabilidade prática. 
+
+Em resumo, as árvores de ataque são uma ferramenta poderosa para identificar e
+mitigar ameaças em sistemas complexos. Sua aplicação em organizações não hierárquicas
+pode ser particularmente valiosa, pois permite uma abordagem sistemática para a
+segurança, considerando a horizontalidade como um ativo. A adoção de árvores de ataque,
+juntamente com outras metodologias de modelagem de ameaças, pode proporcionar uma defesa
+mais focada e eficaz contra ameaças cibernéticas. 
 
 
-\section{Quick Start}
-\label{sec:quick_started}
 
-\subsection{With a Local \LaTeX\ Installation} % (fold)
-\label{sub:with_a_local_latex_installation}
+\section{Trabalhos Relacionados}
+\label{sec:introduction}
 
-Follow these steps to get started with a local \LaTeX\ installation:
+A modelagem de ameaças é um campo dinâmico e em constante evolução, com várias
+abordagens e frameworks desenvolvidos ao longo dos anos para atender a diferentes
+necessidades e contextos. Este capítulo revisa alguns dos trabalhos mais relevantes na área
+de modelagem de ameaças, com foco em métodos que podem ser adaptados ou servir de
+inspiração para o desenvolvimento de um protocolo específico para organizações
+não-hierárquicas. 
+
+No artigo "ABC: A Cryptocurrency-Focused Threat Modeling Framework", os autores
+Ghada Almashaqbeh, Allison Bishop e Justin Cappos propõem um modelo de ameaças
+específico para criptomoedas, destacando a necessidade de frameworks especializados
+para lidar com as particularidades desses sistemas. 
+
+O framework ABC introduz a matriz de colusão como uma inovação chave,
+permitindo cobrir um amplo espectro de casos de ameaças sem tornar o processo
+excessivamente complexo. Este modelo é particularmente eficaz em identificar riscos
+financeiros, como demonstrado em estudos de caso reais e em um estudo de usuários, onde
+71\% dos participantes que utilizaram o ABC conseguiram identificar ameaças
+financeiras, em comparação com apenas 13\% dos que usaram o STRIDE. Esta abordagem é
+particularmente importante em criptomoedas permissionless, onde qualquer pessoa pode
+participar e onde a colusão entre atacantes é uma preocupação significativa. 
+
+No contexto de organizações não-hierárquicas, a modelagem de ameaças deve considerar
+a horizontalidade como um ativo. Nós visamos desenvolver protocolos de modelagem de ameaças que
+valorizem a horizontalidade, avaliando esses novos protocolos com membros de grupos
+com diferentes níveis de horizontalidade. 
+
+Assim como o framework ABC aborda as especificidades das criptomoedas, o
+trabalho busca adaptar a modelagem de ameaças para contextos onde a
+ausência de hierarquia é uma característica fundamental. Ambos os trabalhos
+destacam a importância de frameworks especializados que considerem as
+particularidades dos sistemas e organizações que visam proteger.
+
+
+\section{Lacunas na Literatura}
+\label{sec:introduction}
+
+Embora a modelagem de ameaças tenha sido amplamente estudada e aplicada em
+diversos contextos, ainda existem lacunas significativas na literatura, especialmente
+no que diz respeito à segurança em organizações não-hierárquicas. A maioria das
+ferramentas e técnicas de segurança cibernética foi desenvolvida com base em pressupostos
+hierárquicos, refletindo as necessidades de entidades militares ou corporativas, onde há uma
+clara cadeia de comando e responsabilidades bem definidas. No entanto, essas
+tecnologias não são adequadas para setores horizontais e participativos, como cooperativas
+de trabalhadores e grupos ativistas, que operam com base em processos
+democráticos e coletivos. 
+
+Uma das principais lacunas identificadas é a falta de exploração na área de
+segurança horizontal, ou seja, técnicas e tecnologias de segurança que utilizam a
+participação democrática para a tomada de decisões de segurança. O trabalho COLBAC:
+Shifting Cybersecurity from Hierarchical to Horizontal Designs destaca a necessidade
+de desenvolver tecnologias que beneficiem a comunidade limitando os privilégios
+dos poderosos dentro de uma organização por meio da participação democrática. No
+entanto, o estudo também aponta que a implementação de tais sistemas requer mais opções
+de configuração e interações não mediadas, o que pode ser um desafio
+significativo. 
+
+A pesquisa etnográfica também pode fornecer insights valiosos sobre como essas
+organizações trabalham com sistemas centralizados e hierárquicos, e como essas práticas
+estabelecidas podem ser usadas para gerar métodos de design de interfaces entre COLBAC e
+sistemas mais centralizados. A observação de como a introdução de técnicas de segurança
+horizontais afeta a organização das comunidades pode ajudar a refletir essas mudanças em
+novas tecnologias. 
+
+Por fim, é crucial garantir que as soluções desenvolvidas sejam utilizáveis. A
+criação de um sistema de segurança horizontal, ou qualquer sistema, deve considerar a
+usabilidade para garantir que os membros da organização possam efetivamente utilizar e
+manter o sistema sem comprometer os princípios de participação e igualdade.
+
+Essas lacunas na literatura destacam a necessidade de mais pesquisa e
+desenvolvimento na área de segurança cibernética para organizações não-hierárquicas.
+Abordar esses desafios permitirá a criação de sistemas de segurança que não apenas
+protejam contra ameaças externas, mas também respeitem e reforcem a estrutura participativa
+dessas organizações. 
