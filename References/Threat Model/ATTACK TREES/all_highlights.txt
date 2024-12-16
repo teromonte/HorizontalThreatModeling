@@ -1,0 +1,176 @@
+==============================
+Title: AnAttackTreebasedRiskAssessmentforLocationPrivacyinWirelessSensorNetworks1
+==============================
+C. Attack Tree Construction We perform a top-down, stepwise refinement strategy to construct the attack tree. Location privacy leakage, denoted by G, is set as the attacker’s overall goal. The process of constructing the attack tree is as follows:
+
+The attack tree approach, which provide a formal and methodical way of describing the security of systems based on varying attacks, was proposed by Bruce Schneier [13] to model threats against computer systems. A tree structure named attack tree is used represent attacks against a system, with the final desired goal as the root node and different ways of achieving that goal as child nodes. Each child node of the root becomes a sub-goal, and children of that node are ways to achieve that sub-goal. If one of those nodes cannot be divided further, it is a leaf node. Otherwise, those nodes are treated as sub-goals separately and are divided continually until all the events become leaf nodes. According to the logical relationship among them, those nodes, which are linked with an OR-gate or AND-gate, are OR nodes and AND nodes respectively. OR-gates are used to represent alternative attack methods and AND-gates are used to represent different steps toward achieving the same goal. The presentation of OR node and AND node is shown in Fig. 1.
+
+==============================
+Title: attacktrees
+==============================
+ATTACK TREES: WHAT ARE THEY?
+ A way of thinking and describing security of
+systems and subsystems.
+ A way of building an automatic database
+that describes the security of a system.
+ A way of capturing expertise, and reusing it.
+ A way of making decisions about how to
+improve security, or the effects of a new
+attack on security.
+ . 7
+ATTACK TREES: How Do THEY
+WORK?
+ Represent the attacks and countermeasures
+as a tree structure.
+ Root node is the goal of the attack.
+ In any complex system, there are several root
+nodes, each representing a different goal.
+
+ Leaf nodes are attacks.
+ . 8
+BOOLEAN NODE VALUES
+ Once a tree is created, different values can
+be assigned to the leaf nodes.
+ The simplest of these values are boolean:
+possible vs. impossible, for example.
+ . 1 1
+OTHER BOOLEAN NODE VALUES
+ Any Boolean value can be codified in the leaf
+nodes and then used to prune the tree.
+ Easy and not easy.
+ Expensive and not expensive.
+ Intrusive and non-intrusive.
+ Legal and illegal.
+ Special equipment required and not required.
+ . 15
+COMBINING NODE VALUES
+ Each node can have several values: Boolean
+and continuous.
+ Can be used to make statements about
+attacks.
+ For example:
+ Cheapest low-risk attack
+ Most likely non-intrusive attack
+ Best low-skilled attack
+ Cheapest attack with the highest probability of
+success
+ . 24
+TREE CONSTRUCTION
+ Step 0) Identify goals. Each goal is a separate
+attack tree.
+ Step 1) Identify attack against goals; repeat as
+necessary.
+ Step 2) Existing attack trees can be plugged in as
+appropriate.
+ In general, once you have a library of general attack
+trees, you can create a specific tree out of these
+reusable components after the first couple of levels.
+ . 25
+USING AN ATTACK TREE TO DETERMINE THE
+
+VULNERABILITY OF A SYSTEM AGAINST AN ATTACK
+ After building an attack tree, an analyst can
+look at the value of the root node to see if
+the system goal is vulnerable to attack.
+ For example, the presence of a possible -
+Boolean value or an attacker's cost below a
+certain threshold.
+ The analyst can also determine if the system
+is vulnerable to a particular type of attack.
+ Password guessing attacks, legal attacks,
+unskilled attacks, etc.
+ 32
+USING AN ATTACK TREE TO LIST THE
+SECURITY ASSUMPTIONS OF A SYSTEM
+ The attack tree can also be used to provide a
+comprehensive list of the assumptions of a
+security system.
+ For example, the security of this system assumes
+that no one can successfully bribe the president
+of our corporation.
+ . 33
+USING AN ATTACK TREE TO COMPARE
+AND RANK ATTACKS
+ In a similar manner, different attack (or
+defense) scenarios can be compared and
+ranked (based on their respective root node
+values) in order of most likely to succeed.
+ . 35
+WHAT ELSE? (CONT.)
+ Attack trees can compare:
+ Effects of various countermeasures.
+ Security of different products.
+ Attack trees can show:
+=
+ What assumptions security is based on.
+-
+ What happens when those assumptions are
+broken.
+ How to best use a security budget.
+. 56
+SCALABILITY
+ Attack trees become part of larger attack
+ Attack tree against safe is part of a larger attack
+tree, whose goal is to read a document.
+
+ Attack tree against PGP is part of a larger attack
+tree, whose goal is to read a particular file.
+
+ You can read the results of an attack tree
+without understanding its details.
+ . 57
+SCALABILITY (CONT.)
+ Changes at lower levels automatically
+propagate.
+ A new attack against PGP automatically affects
+the security of any tree that has PGP as a
+component.
+ A new attack against an encryption algorithm
+likewise propagates up.
+ Subtrees are reusable components.
+==:..._-
+ The PGP tree works everywhere PGP is used.
+ . 58
+CONCLUSIONS
+ In many systems, applying security measures
+is like sticking a tall spike in the ground and
+hoping that the enemy runs right into it.
+ Attack trees are a methodology to ensure
+that security is a broad palisade.
+--
+ Attack trees are a rigorous way to think
+about security.
+ Attack trees work.
+
+==============================
+Title: Energy-Theft Detection Issues for Advanced Metering Infrastructure in Smart Grid
+==============================
+The attack tree approach, which provides a formaland methodical way to describe the security ofsystems based on varying attacks, is proposed bySchneier[19]. The attack tree enumerates all potential
+
+off their ability and wisdom of attack techniques; Active attackers: These attackers aim to launch large-scale terrorist attacks by compromising the wholepower system; Intrusive data management agencies: These attackerswant to collect customers’ private information formarketing or economic purposes.Speciﬁcally, there are three types of attackers who aremotivated to commit energy theft[18]: Customers: Traditionally, customers have been theprimary adversaries aiming to steal power. Themeansandmotivationtotamperwithanalogmeters is very much individual in nature. Indeveloping countries, people commit energy theftdue to their poor infrastructure,poverty,andirregularities in metering and distribution systems. Indeveloped countries, people, who cultivate marijuanaillegally,steal electricity to hide their overallelectricity consumption to avoid police inspectionand prosecution. Organized crime:The motivation in the case oforganized crime is the monetization of energytheft. Because of the extended computing andnetwork capabilities of AMI, the task of creatingsoftwareandhardwaretoolstocompromisesmart meters can be ofﬂoaded from customersto professional hackers. Members of this group willleverage certain design aspects of AMI systems,such as the widespread use of the same password setover many meters, to greatly amplify the proﬁt fromcracking a single smart meter. Utility company insiders:In most work, utilitycompany insiders are implicitly trusted to be honestin the case of analog meters and the same modelapplies for AMI. However, in order to avoid mis-operation or being attacked by malicious employeesin utility companies, it is preferable that utilityside systems enforce proper customer and groupmanagement to provide properties such as separationof duties.3.2Attack tree based threat model3.2.1Deﬁnition and structure of attack treeThe attack tree approach, which provides a formaland methodical way to describe the security ofsystems based on varying attacks, is proposed bySchneier[19]. The attack tree enumerates all potentialactions that an attacker could utilize to gain access tothe target system and each branch in the tree representsa set of intermediate steps which the attacker must takeprior to gaining access to the target system. The attackbehaviors against a system are represented in a treestructure, with the ﬁnal desired goal as the root node anddifferent ways to achieve that goal as child nodes. Eachchild node of the root becomes a sub-goal, child nodesof which are ways to achieve that sub-goal. If one ofthose nodes cannot be divided further, it becomes theleaf node. Otherwise, those nodes are treated as sub-goals separately and will be decomposed continuallyuntil all the events become leaf nodes.According to the logical relationship among thenodes, there are two kinds of logic gate, called OR-gate and AND-gate in attack tree. The OR-gates areused to represent alternative attack methods, while theAND-gates are used to represent different steps towardachieving the same goal. The nodes, which are linkedwith an OR-gate, are OR nodes. Those nodes linkedan AND-gate are AND nodes. The presentation of ORnode and AND node is shown in Fig. 2, where Goal0is an AND node and Goal1 is an OR node. In orderto achieve the Goal0, both of the sub-goal Goal01 andGoal02 must be achieved ﬁrst. While the Goal1 can beachieved as long as either Goal11 or Goal12 is achieved.3.2.2Attack tree for energy theft in AMIWe perform a top-down, stepwise reﬁnement, andheuristic strategy to construct the attack tree for energytheft[20]. “Energy theft” is set as the attacker’s overallgoal. The procedure of attack tree construction forenergy theft in AMI is described as follows: Deﬁne the attacker’s overall goal “G: Energy Theft”in AMI. Decompose the goal G into sub-goals:InterruptMeasurement, Tamper Stored Demand, and Modifyin Network. The attacker’s purpose can be achievedif any of the three components is reached. This listmight be extensive and more sub-goals could beadded. Continue the step-wise decomposition until the taskcannot be divided into smaller ones. The completeddiagram of attacks and sub-attacks is called an attacktree, as shown in Fig. 3.Fig. 2AND node and OR node.
+
+We perform a top-down, stepwise reﬁnement, andheuristic strategy to construct the attack tree for energytheft[20]. “Energy theft” is set as the attacker’s overall
+
+==============================
+Title: Foundations of Attack Trees
+==============================
+An attack tree is a tree in which the nodes represent attacks. The root nodeof the tree is the global goal of an attacker. Children of a node are reﬁnements
+
+of the tree is the global goal of an attacker. Children of a node are reﬁnementsof this goal, and leafs therefore represent attacks that can no longer be reﬁned.
+
+g,pgA reﬁnement can be conjunctive (aggregation) or disjunctive (choice).
+
+yggOnce the possible attacks on a system have been modeled in an attack tree,the tree can be used to analyze attributes of the security of the system. Schneier
+
+suggests several such attributes, for example the (im)possibility, the cost, andwhether special tools are needed. The analysis proceeds in two steps: First, the
+
+ggmore concrete attacks or sub-goals. Although this structure carries informationon the interpretation and grouping of attacks, we will discard it when determin-ing the meaning of an attack tree. An attack tree simply deﬁnes a collectionof possible attacks which we call an attack suite. Each attack consists of the
+
+The purpose of an attack tree is to deﬁne and analyze possible attacks on asystem in a structured way. This structure is expressed in the node hierarchy,allowing one to decompose an abstract attack or attack goal into a number ofmore concrete attacks or sub-goals. Although this structure carries information
+
+ggyof possible attacks which we call an attack suite. Each attack consists of thecomponents required to perform this attack. A component may occur more thanonce in an attack, so an attack is a multi-set of attack components. These attackcomponents are at the lowest level of abstraction that we consider and thus haveno internal structure. By describing an attack as a set of attack components we
+
+pypyppCentral to our work is the observation that an attack tree describes an at-tack suite. We argue that the structural information that we lose in this wayis a residual of the modeling strategy, rather than an intrinsic property of thedescribed set of attacks. Therefore, attack suites form the appropriate level of
+
+ggy,ppydescribed set of attacks. Therefore, attack suites form the appropriate level ofabstraction. This semantics can be characterized in two ways: by traversing thetree from the leaves to the root and by rewriting the tree to normal form. Bothstrategies can be easily implemented, but in practice it is more interesting tobuild and manipulate attack trees than to calculate their semantics. Rewrit-ing is more suited for this purpose. The rewrite rules can be used e.g. to addstructure to an unstructured attack suite or to rebalance an attack tree.
+

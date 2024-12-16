@@ -1,0 +1,410 @@
+==============================
+Title: A Hybrid Threat Modeling Method
+==============================
+ticipate ways in which a system can be misused by adversaries. It is critically important to per-form systematic, rigorous, and customized threat analyses [Hilburn 2013]. Once the likely threa
+
+form systematic, rigorous, and customized threat analyses [Hilburn 2013]. Once the likely threats have been identified, the associated attack methods can be documented, for example, as misuse cases [Opdahl 2009]. With this information in hand, analysts can define and document mitigation
+
+quirements. This type of approach is standard in many existing security requirements engineering processes, such as SQUARE [Mead 2005]. As a consequence, early specification of security re-
+
+modelers, we adopt the definition that “a threat modeling method (TMM) is an approach for creat-ing an abstraction of a software system, aimed at identifying attackers’ abilities and goals, and us-ing that abstraction to generate and catalog possible threats that the system must mitigate” [Shull 2016a].
+
+about targets and likely attack mechanisms that the attackers would deploy. The theory behind this approach is that if engineers can understand what capabilities an attacker may have and what types of mechanisms they may use to compromise a system, the engineers will gain a better un-derstanding of targets or weaknesses within their own systems and the degree to which they can be compromised. Some critics of this approach argue that a PnG can often take users down the
+
+Data Flow Diagrams (DFDs) are designed to show how a system works by using standard sym-bols to graphically represent the interaction between data stores (e.g., databases, files, registries), processes (e.g., DLLs, web services), data flows (e.g., function calls, remote procedure calls), and external entities (e.g., people, other systems) [Shostak 2014]. Once complete, each of these sys-
+
+In the next stage, the typical STRIDE user works through a checklist, which may be in the form of a threat tree, of specific threats that are associated with each match between a DFD element and threat category. Such checklists are accessible through STRIDE reference books or tools.
+
+their background or experience. Based on these conclusions, STRIDE may be more appropriate for teams that lack significant security expertise because the checklist-based approach constrains users and limits the potential for false positives. However, using STRIDE for threat modeling re-quires an onerous and time-consuming application of checklists of potential threats to the compo-nents of the various systems and subsystems. Finally, the success of the STRIDE method depends heavily on creating accurate DFDs.
+
+Our initial thought was that we could apply Security Cards and then PnG to come up with a hy-brid method. It became clear to us that we could not just do Security Cards followed by PnG, as each one is a threat modeling method in its own right. Therefore, we needed to consider specific aspects of both Security Cards and PnG and also consider what we had learned by our experi-ments with STRIDE. We wanted to capture the best features of all the models. Having said that, it’s possible that the hTMM could change after we have done a few medium-to-large pilot threat modeling projects, in addition to the small case studies in this report, not to mention those con-ducted by students on our earlier research project.
+
+==============================
+Title: ABC A Cryptocurrency-Focused Threat Modeling
+==============================
+a system. Although threat modeling has been thoroughlystudied in the literature, existing paradigms primarily targetsoftware applications [9] or distributed systems that have asmall number of participant types [10]. These threat modeling
+
+ABC’s models are also tailored to better consider the threatdomain of cryptocurrencies. This is done by introducing newthreat categories that account for the ﬁnancial motivationsof attackers and the new asset types, i.e., critical system
+
+priori-ﬁxed list of generalized ones. Another feature of ABC isacknowledging that ﬁnancial incentives and economic analysiscan play major roles in other steps in the design process. These
+
+can play major roles in other steps in the design process. Thesetools can be used in risk assessment and in mitigating sometypes of attacks that cannot be neutralized cryptographically.
+
+These works indicate that different types of systems havedifferent requirements when performing threat modeling.This reinforces the idea that emerging systems, such ascryptocurrencies, need specialized threat modeling tools.
+
+The previous steps are highly dependent on how systemanalysts deﬁne the security properties of an asset, especiallyif there is no agreed-upon deﬁnition in the literature. For exam-ple, several works studied the security of the blockchain [17],[18]. Yet, there is no uniﬁed security notion for the serviceasset because each type may have different requirements.
+
+gThe outcome of the threat modeling process, i.e., thedocumented list of impactful threat cases, can provide thedesigners with a guiding map to secure the system. During thisprocess, it is useful to prioritize threats based on the amountof damage they can cause. This falls under the purview of risk
+
+that are often called detect-and-punish mechanisms. That is,when a cheating incident is detected, the miners punish theattacker ﬁnancially. These approaches can use a game theoretic
+
+ﬁnancial threats may cause. In other words, a threat that couldgive the attacker a big payoff should be prioritized over athreat that yields minimal proﬁts. This reinforces the ideathat cryptocurrencies require an expanded model for exploringrisks and countering them.
+
+ber (525) of collusion cases. During that time, we observedthe beneﬁt of rational ﬁnancial incentives and game theoreticanalysis to threat mitigation and risk management processes.To date, we found ABC useful for CacheCash in both the
+
+==============================
+Title: COLBAC Shifting Cybersecurity from Hierarchical to Horizontal Designs
+==============================
+One example of this is the access to organization-controlledsecrets. Secrets such as organizational passwords to third-partyservices are often trusted to one individual or a small group in anorganization, but easily recovered by an administrator or otherindividual higher in the hierarchy in the case that the individualresponsible leaves the organization or performs a violation. How-
+
+A case in point: one of the organizations we have observed in ourethnographic research was a democratic trade union, which hadrecently transitioned from a more hierarchical and bureaucraticorganizational structure to one which involved more transparentdecision-making and meetings, with direct participation by mem-bers (meetings were open to all, membership became less exclusive,
+
+Here is where the trouble began. Although a democratic pro-cess had put the committee in power, and although the committeeshared decision-making power equally across all members, accessto digital communications and member lists was controlled by sin-gle passwords. In the past, these communications had been handled
+
+superiors. These actors refused to share the passwords with thenew committee, and a great struggle ensued, for weeks. Duringthis period, communications to the membership were sent illegiti-mately and by those who previously held power. A great deal of
+
+the former caucus to share access. Here we see a clear case whereinthe digital security design does not respond to or mirror changesin the political structure of a democratic collective. This can be the
+
+the emergence of new forms of power stratificationembedded in the hierarchy of content managementsystems used by activists, and the explosion of powerstruggles for the control of social media accounts [13].
+
+these cases are specific instances of a more general problem: amismatch between the governance structures of an organizationand the governance structures assumed by technologies. In thisi
+
+specific case, it is the mismatch between horizontally governedorganizations and hierarchical access control.
+
+In current access control systems, whether or not an entityshould be allowed to access a resource is decided by a hierarchi-cal process. In discretionary access control the owner of an objectdecides whether or not others can read from, write to, or executethat object. With the recognition that some files are more impor-tant to operations than others, it is easy to see that this creates ahierarchy. This access control information itself must be stored in
+
+hierarchy. This access control information itself must be stored inan object, and that object must have an owner. Thus, the ownerof that object has the ability to change the system and reallocatepermissions, putting themselves on top of that hierarchy. Similarly,
+
+the fields of security. Why, then, have we not developed more tech-nologies that benefit the community by limiting the privileges of
+
+the powerful within an organization via democratic participation?
+
+Why have no access control methods been developed to allow forauthorization via horizontal, participatory protocols?
+
+Central to the issue of Horizontal Security are the notions of au-thorization (i.e., who is allowed to access a particular resource) andauthentication (i.e., determining who a given individual is). If anauthorized party reads, modifies, or destroys information, the def-initions imply that there is no breach of policy1. Thus, whetheror not the security of an organization has been breached dependshighly on whether or not an entity is authorized to perform anaction. This decision as to whether or not an entity is authorized isheavily informed by an organization’s security policy.
+
+However, as is natural with the notion of authorization, twofundamental pieces must exist: authorization policies that representcollective-based authorization, and an access control system thatcan enforce such policies. Though authentication is also a vitalpiece of this process, in this work we assume that authentication isperformed by another system and do not consider it further in thiswork.
+
+Thus, a question arises: can we develop technology that allowsan organization to be flexible and dynamic in its horizontality, be-ing participatory or hierarchical depending on the needs at hand,without jeopardizing the ability to return to horizontality whendesired?
+
+malicious activities, such as stealing bitcoin or deleting past trans-actions. The implication of this design is that Bitcoin cannot becentrally regulated [40], at least in theory. Thus, a core element ofcryptocurrencies, the consensus protocol is an instantiation of ademocratically-based access control policy.
+
+Yet there exist many shortcomings in the Bitcoin/cryptocurrencymodel. First is identifying who is part of the collective: are only min-ers stakeholders, or are users stakeholders as well, are developersstakeholders? This question raises the fundamental limitation ofBitcoin. Although it can be considered “network-horizontal” it doesnot provide horizontality mechanisms for other elements of theecosystem. This is apparent when considering historical events in
+
+ecosystem. This is apparent when considering historical events inBlockchain-based systems, such as the DAO hack [38], the BitcoinClassic fork [18] and more. Indeed, it seems that developers of aBlockchain, those blessed with public visibility (or even just commitaccess) can have more impact on the nature of the Blockchain thana large mining cartel.
+
+Another issue with this approach is its competitive nature. Ratherthan cooperating miners attempting to create, implement, and en-force transaction policies, we have competing miners interested intheir own profit. One implication of this competitive focus is thatthere is no mechanism to vote in Bitcoin; rather, what is referredto as “regulation” in this work is seen by the Bitcoin communityas an attack. However, the design property of requiring a majority
+
+tends to centralize the network over time. Bitcoin’s Proof of Workalgorithm tends to favor those who can afford highly specializedhardware, eventually leading to a centralization of the network
+
+hardware, eventually leading to a centralization of the networkinto the hands of those who are wealthy enough to control largeamounts of machines specifically made for mining Bitcoins. Proofof Stake, another consensus algorithm for Blockchain, bypasses thismiddle step and directly benefits those who control larger amountsof monetary stake in the network.i
+
+cratic participation. Instead, the threshold must be configured bythe collective itself, and must be able to be changed when necessary.This allows for rapid temporary centralization of the system to re-spond to crises, or to perform a task that requires expertise thatfew members of the collective contain. However, these moments
+
+is not the only usability or user experience concern of the COL-BAC system. Additionally, issues may arise with voting fatigue.Specifically, large amount of votes on action tokens could causeusers to become fatigued, and thus pay less attention to the details
+
+method of making democratic processes any simpler. This is a socialproblem, and is outside of the scope of this paper. Further, there will
+
+effectively use the COLBAC system, one must know what it is theyare voting for, and what the potential outcomes of these votes are.
+
+Though COLBAC does have limitations, no system is perfectwhen first created. Hierarchical access control systems are built ontop of a monumental amount of previous work and lessons learnedfrom previous adoptions. However, COLBAC is the first attempt at
+
+be necessary to first understand a few key points. How do horizon-tally run communities organize themselves? How do they developtrust? How do they view and interact with technologies, and howwould they interact with more horizontal security technologies likeCOLBAC?Answering these questions requires a mixture of ethnographicresearch, theoretical computer security research, systems construc-tion with iterative design, and user experience and usability re-search. Thus, the creation of more horizontal security does not end
+
+begin to develop tools, techniques, and technologies that facilitateor encourage horizontal security. One potential positive outcomel
+
+potentially requiring more unmediated interactions
+
+Another potential positive outcome of this ethnographic researchis observing how these organizations work with centralized orga-nizations and systems, and using these established practices to
+
+more centralized, hierarchical systems. For example, how woulda COLBAC-based system handle a request issues by law enforce-ment using a warrant? Can exceptions such as these be includedin COLBAC without creating an easy path for those who which to
+
+More, we must ensure that the solutions we develop are usable.The creation of a horizontal security system, or any system, isonly useful if people are willing to use it, and are able to use iteffectively. Thus, research into the user experience and usability
+
+effectively. Thus, research into the user experience and usabilityof these solutions is a requirement for their continued growth anddevelopment.
+
+Can we create a concrete and parseable language to express differentmethods of organization with varying levels of horizontality? Ifso, can this language cover all possible forms of governance andorganization, or only a subset of them? If this language were created,could we create a system that takes as input a description of agovernance system in this language, and dynamically adjusts theaccess control needs to fit the governance structure? If so, how
+
+==============================
+Title: CoReTM An Approach Enabling
+==============================
+ered, communicated, and implemented [1]. Threat modelingcomprises two main abstractions: (i) the notion of assets, suchas processes, users, software components, or data sources, thatneed to be protected and (ii) the attack targets and vectors [2].
+
+As postulated by security experts and researchers, collabora-tive approaches are essential for threat modeling [3], especiallywith the growing number of information systems, employees,and critical assets requiring protection [4]. Furthermore, the
+
+included in the process. The importance of including diversesubject and domain experts depends on the type of assetbeing threat modeled. Combining a broad set of perspectives
+
+representatives. Furthermore, existing tools are not sufcientlysupporting modeling among collaborators in modern processes(e.g., agile methodologies and DevSecOps) since these toolsare bound to the underlying methodology [10], [11].
+
+chronous contributions. The prototypical implementation ofCoReTM provides (i) an annotation-based collaborative editor,(ii) automated threat reporting, and (iii) DevOps integrationto support threat modeling in all combinations of meetingstyles. Furthermore, CoReTM enables collaboration between a
+
+discovery phase. STRIDE aims to do so by providing ahigh-level categorization of threat families [1] [12]. Since no
+
+high-level categorization of threat families [1] [12]. Since nospecic procedures or a repertoire of prevalent threats areprovided, derivatives and combinations of this methodologyare common [2] [1]. Other methodologies focus on nding
+
+CAPEC provides a publicly accessible inventory of commonattack patterns described from an adversarial perspective [13].
+
+To provide operational context, Adversarial Tactics, Tech-niques & Common Knowledge (ATT&CK) is often cross-referenced in these descriptions [14]. Finally, some threat enu-meration libraries focus on specic technologies. While suchtechnologies like OWASP can help organizations to increasethe awareness of specic threats [15], they are often consideredcomplementary to other threat modeling methodologies [2].
+
+provide a way to reason about threats [2]. With Attack Trees,high-level threats can be decomposed into a hierarchy ofrelated threats [1].
+
+Methodologies that go beyond the discovery of threats ex-hibit higher complexity. PASTA is an exemplary methodologythat begins with the denition of business objectives andnally provides a risk analysis [16]. NIST SP 800-154 follows
+
+==============================
+Title: Demystifying the Threat-Modeling Process. IEEE Security and Privacy Magazine
+==============================
+To better understand a product’sthreat environment and defendagainst potential attacks, Microsoftuses threat modeling, which shouldbe treated like any other part of thedesign and speciﬁcation process. In
+
+Scoping the process
+
+Threat modeling an entire productis typically too complex, whereasdoing so for individual features istoo simplistic. Instead, we focus onlogical groups of functionalitytermed components. There are two
+
+Entry points
+
+Entry points represent interfaceswith other software, hardware, andusers. Any part of your component
+
+Once you’ve established your com-ponent’s entry points, tag each witha trust level that represents the de-gree to which the entry point can betrusted to send or receive data. In
+
+More complicated systems mighthave additional trust levels, al-though they might not have a de-ﬁned hierarchy like the three maintrust levels do.
+
+Protected assetsProtected assets are the resourceswith which your component inter-acts and which must be kept safefrom harm—the things an attackerwill be looking to steal, modify, ordisrupt. Common examples of pro-
+
+emails, and so on. You should makea list of the trust levels required togain access to each asset.
+
+the data-ﬂow diagram. A DFD is agraphical representation of the com-ponent, showing all the inputs andoutputs as well as all logical internalprocesses.
+
+density. The three colors map di-rectly to trust levels—green itemsrepresent trusted objects; red itemsare untrusted; and orange items are“somewhat” trusted. You don’t usu-ally need to separate the administra-tor and user trust levels at this level ofgranularity (they can both be green),but you can add more colors if yourequire additional trust levels.The different shapes used in thediagram also convey information:circles represent logical processes with-in the modeled component; rectan-gles represent external entitiesthat youhave limited (or no) control over;and double horizontal lines repre-sent passive data stores.
+
+External entities represent entrypoints or dependences over whichyou don’t have direct control. Thisincludes libraries, other programs, re-mote machines, devices, and people.Every external entity must match upto one or more entry points or de-pendencies, as enumerated earlier.They can have any trust level and cansend or receive data (or both).
+
+==============================
+Title: Evaluation of Competing Threat Modeling Methodologies
+==============================
+TMMs are not equally well suited for finding all types of threats
+
+•TMMs exhibited substantial tradeoffs among reported threats, potential false positives, and frequency of reporting•No one TMM optimizes all dimensions of importance
+
+==============================
+Title: Experiences Threat Modeling at Microsoft
+==============================
+)gyq(yanalysis?”). Additionally, threat modeling can be asset-centric, attacker-centricor software-centric. Asset-centric threat modeling often involves some level of
+
+y)y,g,or software-centric. Asset-centric threat modeling often involves some level ofrisk assessment, approximation or ranking. Attacker-centric sometimes involves
+
+grisk assessment, approximation or ranking. Attacker-centric sometimes involvesrisk-ranking or attempts to estimate resources, capabilities or motivations. (Such
+
+Threat modeling is also used to refer, variously, to analysis of software, orga-nizational networks or systems, or, as in [10] even industrial sectors. Modeling
+
+g,y,y,gnizational networks or systems, or, as in [10] even industrial sectors. Modelingof protocols is often done with a variety of formal methods, sometimes callednetwork threat models. The term network threat modeling is also used to referto the analysis of a deployed network.
+
+g,ygp,ygineers without experts available. Experts might question the value or wisdom ofsuch an approach. There are at least two reasons it may make sense to perform
+
+ppypthreat modeling without experts. First, experts might not be available becausethey are in short supply for ﬁnancial or other reasons. Second, having the peo-
+
+gpycurity requirements and analysis of security designs. There is no single “best” or“correct” way of performing threat modeling, but rather, a complex and multi-dimensional set of tradeoﬀs which might be made in order to meet a some setof implicit or explicit goals.
+
+pg qtion in this vein is “what existing processes would be improved by the additionof this methodology, and how much will it cost?” Cost includes getting started
+
+y,yinvolved. The major goals for our threat modeling process are to improve thesecurity of our products, to document the analysis, (both to provide a level ofassurance and to re-use the analysis), and to train people to perform implicitsecurity analysis, even when not performing explicit threat modeling tasks.
+
+The current SDL threat modeling methodology is a 4 step process, designed toenable engineers with a modicum of security expertise to threat model and havereasonable conﬁdence that they have found important threats. The goals of the
+
+yyppgpmethod involves 4 major steps: diagramming, threat enumeration, mitigationand veriﬁcation. The process is further described in Hernan, et al [4].
+
+We generally use a diagramming system derived from standard Data Flow Di-agrams (DFD), with the addition of “trust boundaries.” We ﬁnd the DFD ele-ments of ‘Process,’ ‘Data Store,’ ‘Data Flow’ and ‘External entity’ work reason-ably well as a means of eliciting information which can be used to drive analysis.
+
+it’s very data-centric. A great many software attacks involve the ﬂow of datathrough the system in some way, and so DFDs are focused on ‘the right thing.’
+
+Table 2. STRIDE Threats Per Element
+
+The SDL threat modeling training and documentation discusses four approachesto mitigation, in order of preference: redesign, use ‘standard’ mitigations, suchas ACLs, use unique mitigations (with caution) or accept risk in accordance withpolicies.
+
+ppp,gpsteps is important on a number of levels. First, improving system security is thegoal of modeling. Providing a connection between an identiﬁed problem and a
+
+We provide a number of heuristics for validating threat models, including graphanalysis of diagrams, checking that the ﬁnal diagrams reﬂect the ﬁnal code, thatSTRIDE threats per element have been enumerated, that the whole threat modelhas been reviewed, and that each threat is mitigated. We would like to be able
+
+gpgaccurate with regards to what is being built. The primary cost is that the lackof strong theoretical underpinnings makes it hard to connect the models to aca-demic work which has been done. Overall, we believe that the simplicity of the
+
+gpgdemic work which has been done. Overall, we believe that the simplicity of theapproach, the integration into the development process, and new tooling (notpresented here) provide for a very eﬀective approach for identifying and address-ing design issues in commercial software development.
+
+g,yggAn example of this is the addition of the DREAD risk assessment technique.[6]DREAD may work for some systems, but for software-centric threat modeling,
+
+naive
+
+relish
+
+it seems to add numbers without deﬁning their scales, generating a risk of mak-ing a risk assessment appear algorithmic when it’s not However, Microsoft orSDL threat modeling “obviously” needs a risk management technique, and soDREAD was added.
+
+Designers of methodologies should pay careful attention to the demands madeof their users, and consider the value of each step or element.
+
+gspeciﬁcally, both relating to people. The ﬁrst is humans within the threat model,and the second is the human factors engineering issues related to the design ofsecurity modeling methods, process and tooling.
+
+There are a number of considerations about people in security models. Elli-son has argued [3] that all network protocols, considered fully, include bothcomputers and people. A failure to eﬀectively model people leads to problemssuch as phishing, where three levels of poor authentication combine to result intremendous fraud. (The three levels are schemes which have proven insuﬃcient
+
+ppygsystems intended for use by a broad set of engineers. The ﬁrst is to clearly stateyour expected user and their skillset. Advice we gave, such as “think like anattacker,” was meaningless to many people 5. I ﬁnd challenging security expertsto think like a professional chef helps illustrate the feeling.
+
+The methodologies outlined above are less grounded in mathematics than manypresented at academic events. As I have emphasized, this approach has beneﬁts
+
+4. Shawn Hernan, Scott Lambert,Tomasz Ostwald and Adam Shostack, Uncover Secu-rity Design Flaws Using The STRIDE Approach, MSDN magazine, November 2006
+
+==============================
+Title: Participatory threat assessment
+==============================
+impartial, this process usually relies on security experts’ own expe­riences and assumptions about everyday users [23]. This results in
+
+pyygfor example, most smart home threat models do not anticipate that a current or former partner could be a threat [22]. By positioning the
+
+gpthreat model, such methods deploy the “god trick of seeing from nowhere” [26]. In contrast, feminist standpoint theoriesadvocatefor
+
+,p yggnowhere” [26]. In contrast, feminist standpoint theoriesadvocatefor the use of socially situated experiences as an alternative lens for social science knowledge [24], [25].
+
+ggppto help identify needs, requirements and solutions [2], we reconfg­ured threat-modelling practices to focus on citizen’s experiences of online threats and how they relate to cybersecurity both as a concept and a practice. In a series of eight physical and virtual
+
+ppy“refection” [3]–[5]. This stems from the belief that all people af­fected by an issue should be involved in the processes of research inquiry [5]. In particular, intersectionalfeminist forms of action
+
+gppy ppy,pyas part of the problem. A popular cybersecurity mantra claims that “humans are the weakest link” in cyber-defense strategies [19].
+
+pppywith users rather than in spite of them. Such approaches advocate for moving from “human-as-a-problem” to “human-as-a-solution” [21]. This is refected in moves towards “usable”, “user-centred” and
+
+[],“human-centred” cybersecurity [22]–[25]. However, research which sees humans as a solution still implicitly casts information systems (or organisations which own them), rather than the humans using them, as the “referent object” or the focus of protection [26].
+
+ppppgppare often male: (P3, W2) explained that “being a female getting tech support from a male can be disconcerting. Fears over what private info they might see, fnd, engage with . . . make women feel vulnerable.”
+
+==============================
+Title: Threat Modeling A Summary of Available Methods
+==============================
+Almost all software systems today face a variety of threats, and more are being added constantly as technology changes. These threats can come from outside or within organizations, and their impact has the potential to be devastating. Systems could be prevented from working entirely or sensitive in-formation could be leaked, which would impact consumer trust in the system provider. To prevent threats from taking advantage of system flaws, threat modeling methods can be used to think defen-sively.
+
+Threat modeling methods are used to create an abstraction of the system; p
+
+Software systems are increasingly being integrated into physical infrastructures, such as smart cars. These hybrids are often referred to as cyber-physical systems; this term accounts for their multiple components. While innovative, cyber-physical systems are vulnerable to threats that manufacturers of traditional physical infrastructures may not consider. Performing threat modeling on cyber-physical systems with a variety of stakeholders can help catch threats across a wide spectrum of threat types.
+
+STRIDE evaluates the system detail design. (See the example in Figure 1.) The goal of step one is to model the in-place system. By building data flow diagrams (DFDs), you identify system entities, events, and boundaries of the system [26]. Accurate DFDs dictate how successful your STRIDE will be [15]. However, using DFDs as the only input to threat modeling is limiting because it does not pro-vide a means for representing security-related architectural decisions [13].
+
+This method is easy to adopt but can be time consuming [15, 14]. STRIDE’s main issue is that the number of threats can grow rapidly as a system increases in complexity. Scandariato et al., in their d
+
+ately low rate of false positives and a moderately high rate of false negatives [28]. STRIDE has been successfully applied to cyber-only and cyber-physical systems [14, 15, 20, 28, 40].
+
+PASTA aims to bring business objectives and technical requirements together [22]. It uses a variety of design and elicitation tools in different stages. For example, high-level architectural diagrams are used
+
+. For example, high-level architectural diagrams are used
+
+SOFTWARE ENGINEERING INSTITUTE | CARNEGIE MELLON UNIVERSITY  4  Distribution Statement A: Approved for Public Release; Distribution Is Unlimited during stage two for identifying the technical scope. DFDs are used in stage three. During stage six, attack trees and use and abuse cases are built for analysis and attack modeling [31, 16]. This method elevates the threat modeling process to a strategic level by involving key decision makersand requiring security input from operations, governance, architecture, and development [21]. Widely regarded as a risk-centric framework, PASTA has an attacker-centric perspective. In the end, the pro-cess produces an asset-centric output in the form of threat enumeration and scoring [31, 21]. UcedaVélez and Marco Morana developed very rich documentation for the method to help with this laborious and extensive process [32].
+
+This method elevates the threat modeling process to a strategic level by involving key decision makers and requiring security input from operations, governance, architecture, and development [21]. Widely
+
+LINDDUN starts with a DFD of the system that defines the system’s data flows,
+
+LINDDUN starts with a DFD of the system that defines the system’s data flows, data stores, pro-cesses, and external entities. Systematically iterating over all model elements and analyzing them f
+
+cesses, and external entities. Systematically iterating over all model elements and analyzing them from the threat categories point of view, LINDDUN users identify a threat’s applicability to the system and build threat trees [12, 34, 35].
+
+mentation [34]. The LINDDUN method is labor intensive and time consuming. It suffers from the same issues as STRIDE—the number of threats can grow rapidly as a system increases in complexity.
+
+Using attack trees to model threats is one of the oldest and most widely applied techniques on cyber-only systems as well as cyber-physical and physical systems [3]. Developed by Bruce Schneider in
+
+Attack trees are essentially diagrams that depict attacks on a system in tree form. The tree root is the goal for the attack, and the leaves are ways to achieve that goal [17]. Each goal is represented as a sep
+
+goal for the attack, and the leaves are ways to achieve that goal [17]. Each goal is represented as a sep-arate tree. Thus, the system threat analysis produces a set of attack trees.
+
+==============================
+Title: Threat modeling – A systematic literature
+==============================
+We have studied some of the definitions of threat modeling as stated in selected articles in our literature review, as it can answer the research question “what is threat modeling”, and provide us insight into the adoption of threat modeling. The clearest result we found was that the definitions of threat modeling are numerous, and used in many different and perhaps also incompatible ways.
+
+A widely applicable threat modeling definition was given by Uzunov and Fernandez (2014) , who stated “threat modeling is a process that can be used to analyze potential attacks or threats, and can also be supported by threat libraries or attack taxonomies”. Similarly, threat modeling “provides a
+
+This section allows us to understand what threats and at- tacks the threat modeling methods aimed to protect against. We classify the type of threats and attacks for C1 and C2 separately. The results for C1 are shown in Table 8 , while for C2 the results are shown in Table 9 .
+
+==============================
+Title: Threatmodelingmethodologiesasurvey
+==============================
+Threat modelling using attack trees [13, 14, 15,16] is another methodology used to model threats to software systems. A tree structure is used to represent attack against a system where goal is at the root node and different ways of achieving that goal are the leaf nodes. Each node becomes a sub goal, and children of that node are the ways to achieve that sub goal. OR nodes are used to represent alternatives and AND nodes are used to represent different steps toward achieving the same goal. After the tree is built different values can be assigned to the leaf nodes and these values are used to calculate the security of the goal. These values are totally dependent on the security expert and system engineer. The assignment of values is a manual process. The otherattributes such as time required completing a step, operational expense, expertise required to launch an attack etc. can also be added to attack trees. This approach has a support of an automated tool called SecureI Tree [17] developed by Amenaz Technologies. This is a graphical tool to model attack trees and it is based mathematical attack tree model. Mathematical algorithms are used to calculate the security risks. SecureI Tree has been used successfully in many applications such as buildings, pipelines and electrical transmission lines.
+
+==============================
+Title: Threat_Modeling_as_a_Basis_for_Security_Requiremen
+==============================
+tion, testing, and maintenance. Each stage of security en-gineering feeds back to the preceding stage, and throughthat stage to all earlier stages. Feedback allows designers
+
+stractrs claim that their systems areknowing what assumptions arerd to justify such a claim. Priorsystem, it is important to iden-m in question. Enumerating thestem architects develop realis-requirements.ate how threat modeling can bepeciﬁcation of security require-works have been published onck of integrated, systematic ap-ng for complex systems. We ex-en modeling software productstline our approach for identify-ems. We also present three caseSoftware-Deﬁned Radio, a net-(VisFlowConnect), and a clus-(NVisionCC).designing secure computer sys-Attackers routinely break intotware vendors started providingure for their products and net-years of research, many power-veloped to solve a wide array ofaiming that a system leverages” or uses “128-bit keys” soundsmean very little when taken outuestion to ask is “Are the secu-ecessary, and do they meet themeasures, the security systemdesign of the entire system,technologies at random. In [8],“Security is a chain; it’s onlyas secure as the weakest link. Security is a process, not aproduct.” Designing system security is best done by utiliz-ing a systematic engineering approach. Systems security en-gineering is concerned with identifying security risks, re-quirements and recovery strategies [5]. It involves well de-ﬁned processes through which designers develop securitymechanisms. Ideally, security engineering should be incor-porated into the system design process as early as possible,from the initial architecture speciﬁcation, if possible. Theearlier security concerns are addressed, less time consum-ing and costly it is to ﬁx future security problems. Despitethis well-known fact, it is often the case that software en-gineers ﬁnd themselves needing to retroﬁt security into anexisting system. In either case, the security engineering pro-cess may be applied in similar manner.One view of security engineering process is given in Fig-ure 1. Threat modeling involves understandingthe complex-ity of the system and identifying all possible threats to thesystem, regardless of whether or not they can be exploited.During the formation of security requirements, these threatsare analyzed based on their criticality and likelihood, and adecision is made whether to mitigate the threat or acceptthe risk associated with it. Once system designers deter-mine which security mechanisms must be available to thesystem, the development of these mechanisms follows thegeneral software engineering cycle of design, implementa-tion, testing, and maintenance. Each stage of security en-gineering feeds back to the preceding stage, and throughthat stage to all earlier stages. Feedback allows designersto catch mistakes made in the early stages without lettingtheir effects cascade. Threat modeling and security require-ments provide the foundations upon which the rest of thesecurity system is built.Identifying threats helps develop realistic and meaning-ful security requirements. This is particularly important, forif the security requirements are faulty, the deﬁnition of se-curity for that system is faulty, and thus the system can-not be secure. Proper identiﬁcation of threats and appropri-ate selection of countermeasures reduces the ability of at-tackers to misuse the system. In that respect, threat mod-
+
+not be secure. Proper identiﬁcation of threats and appropri-ate selection of countermeasures reduces the ability of at-tackers to misuse the system. In that respect, threat mod-
+
+Figure 1. System security engineeringeling looks at the system from an adversary’s perspectiveto help designers anticipate attack goals and determine an-swers to questions about what the system is designed to pro-tect, and from whom. Any type of system can beneﬁt from
+
+build on these bodies of work by investigating how threatmodeling can be used as a basis for the speciﬁcation of secu-rity requirements. We advocate the use of threat modeling as
+
+rity requirements. We advocate the use of threat modeling asan important step toward addressing the completeness of thesystem requirements in general, and security requirements
+
+systems. We also present three case studies of threat model-ing: Software-Deﬁned Radio, a network trafﬁc monitoringtool, and a cluster security monitoring tool.
+
+deploy in a system. However, attack trees model a chosenset of attacks via a ﬁnite state machine and are feasible onlyin small scenarios. Moreover, a list of potential threats still
+
+A threat model cannot be created by simply brainstorm-ing an adversary’s possible intentions. This approach is notsystematic and is likely to leave large portions of the attack-space uninvestigated. An attacker only has to ﬁnd one secu-
+
+space uninvestigated. An attacker only has to ﬁnd one secu-rity ﬂaw to compromise the whole system [7]. Thus, it is im-
+
+Our threat modeling process consists of the followingthree high-level steps: characterizing the system, identify-ing assets and access points, and identifying threats. Al-
+
+An application is modeled by a Data Flow Diagram, anda networked system by a Network Model. The consecutive
+
+At the start of the threat modeling process, the securitydesigner needs to understand the system in question com-pletely. This entails understanding every component and its
+
+system in question is a software application, we can drawits Data Flow Diagram (DFD) which dissects the applica-
+
+nents. The DFD approach makes it easier to identify threatsthan other system views because one can follow the adver-sary’s data and commands as they are processed by the sys-tem, analyzing how they are parsed and acted on, as wellas noting which assets they interact with [11]. One exam-
+
+Unfortunately, not all systems can be easily modeled us-ing a DFD. Some systems are so complex that it is impossi-
+
+ing a DFD. Some systems are so complex that it is impossi-ble to know all software components that may be presentand thus no assumptions can be made about data ﬂowpaths. This is especially true for networked systems such
+
+roles. When threat modeling a networked system, the ﬁrststep is to identify the roles and function of each class ofcomputers on the network. Then, the communication pat-
+
+To properly utilize threat modeling, analysts must learnto think like the attacker. This is easier to do once the sys-tem is fully understood, hence the previous step in the threatmodeling process was characterizing the system. Adver-
+
+ Who are my potential adversaries? What’s their motivation, and what are their goals? How much inside information do they have?
+
+an adversary. Assets can be tangible, such as processes anddata, or more abstract concepts such as data consistency. It
+
+gain access to the assets. Examples of access points are opensockets, RPC interfaces, conﬁguration ﬁles, hardware ports,and ﬁle system read/write. Related to access points, it is also
+
+lated to trust boundaries are trust levels. Trust levels indi-cate how much trust is required to access a portion of thesystem. For instance, if a user is an administrator, they are
+
+using the information gathered so far. A threat is the adver-sary’s goal, or what an adversary might try to do to a sys-tem [11]. Sometimes a threat is also described as the capa-
+
+vulnerabilities found in similar systems. Although workingbackward from known vulnerabilities typically yields com-mon threats, system-speciﬁc threats require deeper analysisof the unique qualities of the system being modeled.
+
+The best method for threat enumeration is to step througheach of the system’s assets, reviewing a list of attack goalsfor each asset. Assets and threats are closely correlated. A
+
+t [11]:
+
+Identifying threats is only part of creating the system’sthreat proﬁle. Threats must also be analyzed to determine
+
+threat proﬁle. Threats must also be analyzed to determinewhether the system is susceptible to them. Using attacktrees is one way to accomplish this. To illustrate this pro-
+
+way. Note, attack trees cannot replace threat modeling pro-cess. Sheyner et al. [9] demonstrate the generation attack
+
+cerned with, but also those that are not a high priority. Riskassessment is performed to map each threat either into amitigation mechanism or an assumption that it is not worthworrying about. At this point, the security requirements for
+
+of requirements in his/her mind. Requirements specify whatthe system will do, whereas the following stages in softwareengineering and design deﬁne how it will work.
+
+Security requirements are driven by security threats,whereas most requirements are based on higher level goals.
+
+It is often impossible to mitigate every threat, and evenif this could be done, it would almost certainly take placeat the cost of decreased usability. Securing systems is abouttradeoffs; often ﬁnding an ideal balance is quite a challenge.
+
+tradeoffs; often ﬁnding an ideal balance is quite a challenge.
+
+next task is to specify security requirements. A requirementis a statement of goals that must be satisﬁed. A security pol-
+
+is a statement of goals that must be satisﬁed. A security pol-icy can be considered a set of security requirements. Map-
+
+tem security. This mapping is used to justify the suitabilityof the proposed security mechanisms. In general, a require-
+
+of the proposed security mechanisms. In general, a require-ments engineering process includes the following activi-
+
+ties [5]: 1) Requirements elicitation; 2) Requirements anal-ysis and negotiation; 3) Requirements validation. A threat
+
+ysis and negotiation; 3) Requirements validation. A threatmodel provides most of the information necessary for re-quirements elicitation. By converting a threat statement into
+
+quirements elicitation. By converting a threat statement intoa ”shall not“ requirement statement, it is possible to com-pile an initial set of security requirements. The details of re-
+
+there are many excellent publications on the topic. Next, wedemonstrate a mapping of a threat into a requirement.
+
+work toward 100% risk acceptance. A good security sys-tem strikes a balance between what is possible and what isacceptable via the risk management process. Risk manage-
+
+acceptable via the risk management process. Risk manage-ment consists of risk assessment, risk reduction, and risk ac-ceptance.
+
+prioritized. The simplest way to prioritize threats is by us-ing two factors: damage and likelihood. First, calculate the
+
+work access across various geographies. We were involvedin a threat analysis of SDR [3]. A data ﬂow approach wasused to understand the components and interconnections ofthe software before identifying its security threats.
+

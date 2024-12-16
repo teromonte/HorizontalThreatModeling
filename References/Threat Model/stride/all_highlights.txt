@@ -1,0 +1,103 @@
+==============================
+Title: A descriptive study of Microsoft’s threat modeling technique
+==============================
+3 Background on threat modeling with STRIDESTRIDE is a model-based threat modeling techniquedeveloped by Microsoft [19]. The methodology guides thesecurity analyst through several activities, which will bebrieﬂy discussed in the remainder of this section.Step 1Model the system by means of a data ﬂow dia-gram (DFD). The initial activities deﬁne the scope of theanalysis and produce a model of the system under review.The DFD is built during this step and is instrumental for theelicitation of the threats later on. An example of a DFD isgiven in Fig. 1, which is a representation of the systemused in this study (see also Fig. 2). Starting from thecontext diagram showing the users and the third parties ofthe system, a more detailed decomposition, called level 1DFD, is derived by reﬁnement. The level 1 DFD shows theway the information travels in the system through dataﬂows (DF) from external entities (EE) like system users toprocessing nodes (PN) like active software components anddata storage points (DS) like database components. Thehierarchical reﬁnement can continue further down if nec-essary. As reported by Dhillon, this is only required inmore complex systems and often a level 1 DFD is sufﬁcientfor the sake of the analysis [7].
+
+Step 2Map the DFD elements to threat categories.In STRIDE, threats are organized according to sixcategories:•Spooﬁng (S) refers to a rogue person or programsuccessfully impersonating another legitimate user orprogram.•Tampering (T) refers to a threat agent illegitimatelymodifying application resources, such as in memorydata.•Repudiation(R) refers to a user (legitimate ormalicious) able to deny the execution of an actionwithin the system.•Information disclosure (I) refers to a threat agentobtaining private information she is not supposed toaccess.•Denial of service (D) refers to a threat agent making asystem resource unavailable to its intended users.
+
+•Elevation of privilege (E) refers to a threat agentobtaining privileged access to resources that arenormally protected.Each element type of the DFD is susceptible to one or moreof the above categories, according to the schema illustratedin Table 1. For instance, the consumer (EE) in Fig. 1 isprone to spooﬁng and repudiation, while the internalservice (PN) is susceptible to all types of threats.
+
+Step 3Elicit the threats. For each mapping between ageneric threat category and a DFD element type, STRIDEprovides a ‘‘checklist’’ of concrete threats that need to beconsidered. As shown in Fig. 3, the checklist comes in theshape of a tree containing a hierarchy of template threatsthat can be instantiated in the context of the system underreview. In the reference book describing STRIDE [19], acatalog of 12 threat trees is provided. A tree can sometimesrefer to others. In the picture, for instance, the ‘‘spooﬁng’’tree is referenced from the ‘‘tampering with a data ﬂow’’tree. The tree-based structure is intended to ease the nav-igation and to provide a better overview of the rationalebehind each threat.
+
+Step 4 Document the threatsSTRIDE does not mandatea speciﬁc format for this step. Misuse cases are commonlyused in security to document threats [42]. Therefore, wehave used the structured textual format that has beendeﬁned for misuse cases by Sindre and Opdahl [43]. Thetemplate is very similar to those used for use cases andincludes some extra security-speciﬁc information such asthe so-called capture points section. This section containsthe description of how the misuse may be prevented (ordetected) and represents an opportunity to identify thesecurity requirements.
+
+8 Summary of the ﬁndingsIn summary, this study observed that in our sample:1.The STRIDE technique is not perceived as difﬁcult,but with an average productivity of 1.8 threats/h atbest, the time cost is relatively large.2.The average number of incorrect threats is low andcorresponds to the 19–24 % of the total amount ofproduced threats.3.The average number of overlooked threats is very highand corresponds to the 64–69 % of the total amount ofthreats.Despite the limitations of this study discussed in Sect. 9,these observations might be of use to software managers(to budget the effort for a security analysis), to customersof security consultants (to understand the level of trust thatcan be granted to the results) and to instructors (to under-stand the learning curve and the attention points of thetraining).
+
+use. Both misuse cases and attack tree are easier in thisrespect, with an advantage of attack trees when it comes tointerpreting and analyzing the results.
+
+==============================
+Title: Adam Shostack - Threat modeling_ designing for security-Wiley (2014)
+==============================
+As Bruce Schneier wrote in his introduction to the subject, “Attack trees provide a formal, methodical way of describing the security of systems, based on vary-ing attacks. Basically, you represent attacks against a system in a tree structure, with the goal as the root node and different ways of achieving that goal as leaf nodes” (Schneier, 1999).
+
+tive to STRIDE. You can use attack trees as a way to fi nd threats, as a way to organize threats found with other building blocks, or both. You’ll start with
+
+There are three ways you can use attack trees to enumerate threats: You can use an attack tree someone else created to help you fi nd threats. You can create
+
+a tree to help you think through threats for a project you’re working on. Or you can create trees with the intent that others will use them. Creating new trees for general use is challenging, even for security experts.
+
+==============================
+Title: DREADful _ Microsoft Learn
+==============================
+Both the STRIDE and DREAD systems Michael and I documented in Writing Secure Codehave been criticized quite a bit. Neither of them were developed with any real academicrigor, and from a scientific standpoint, neither of them tend to hold up very well. STRIDEhas a number of cross-correlations – for example, escalation of privilege (E) tends toimply spoofing and loss of non-repudiation, and could imply tampering, informationdisclosure, and denial of service. Ouch – every vulnerability category we had, all in onebundle. The fact that it isn't a rigorous classification doesn't mean that it isn't useful – itis useful in helping people focus the debate about what to do about some specificproblem. Outside of the ivory towers of academia, there's a lot of very useful things thatdon't pass muster with a strict academic standard.DREAD is something that came up out of the Visual Studio security push. A bit of trivia –that was actually our first security push, and preceded the Windows security push forWin2k3. I believe that DREAD is actually a fairly reasonable model, and that the biggestproblem is how we implemented coming up with an overall score. Let's review thecomponents:
+
+==============================
+Title: Microsoft_Press_eBook_TheSecurityDevelopmentLifecycle_PDF
+==============================
+If we had our hands tied behind our backs (we don’t) and could do only one thing to improve software security—threat modeling, better security code reviews, or better security testing—we would do threat modeling every day of the week. The reason is simple: when performed cor-rectly, threat modeling occurs early in the project lifecycle and can be used to find security design issues before code is committed. This can lead to significant cost savings because issues are resolved early in the development lifecycle. Derived from numerous studies and research sources, Table 9-1—from Steve McConnell’s Code Complete (McConnell 2004)—shows
+
+■Contributes to the risk management process because threats to software and infrastruc-ture are risks to the user and environment deploying the software.■Uncovers threats to the system before the system is committed to code.■Revalidates the architecture and design by having the development team go over the design again.■Forces development staff to look at the design from a different viewpoint—that of secu-rity and privacy. To understand the most at-risk components, development staff focuses on components with a high attack probability.■Helps clarify the selection of appropriate countermeasures for the application and environment. ■Contributes to the Attack Surface Reduction (ASR) process for the software. (See Chapter 7, “Stage 2: Define and Follow Design Best Practices.”)■Helps guide the code review process.■Guides the penetration testing process.
+
+The main output of the threat-modeling process is a document (or documents) that describes background information about the application and defines the high-level application model, often by using data flow diagrams (DFDs); a list of assets that require protection; threats to the
+
+Large software products are composed of smaller modules, and modeling smaller modules is often more efficient than modeling the entire product. However, this approach leads threats to the system once the system is fully composed. After all, a system can be secure at a micro level, but the interaction between two components can cause insecurity if your security assump-tions about other components in the system are incorrect.
+
+As a start, consider the trust boundaries of your application, and model all the components inside that trust boundary. Next, look outside the boundaries to determine what is really part of your application. If the answer is “nothing,” you have successfully bounded the scope of your DFD. We’ll discuss trust or privilege boundaries shortly.
+
+A common question we hear is, “Who builds the threat model?” The threat-modeling process is owned by a person in the design group, for example, an architect, program manager, or ana-lyst. The person who has the most security background is probably the most appropriate choice for this role. Other engineering disciplines such as software development, user educa-tion, and testing are also involved to provide important design information, but they do not drive the process; that is left to designers. Threat modeling is part of the design process, after all.
+
+Although the high-level steps involved in creating a threat model may seem numerous, many of the elements require little security expertise and are virtually rote. The steps are as follows:1.Define use scenarios.2.Gather a list of external dependencies.3.Define security assumptions.4.Create external security notes.5.Create one or more DFDs of the application being modeled. 6.Determine threat types.7.Identify the threats to the system.8.Determine risk.9.Plan mitigations.
+
+At this stage of the process, the team needs to determine which key threat scenarios are within scope. For example, if you create a mobile or small device, you’ll probably want to cover the stolen-device scenario. However, you may determine that the device stores no sensitive data whatsoever, so the risk associated with a stolen device is low. In this situation, you should explicitly state the reasoning behind your decision. If you don’t, someone years from now is bound to ask why you did not cover the stolen-device scenario! If you later decide to store sen-sitive data on the device, you’ll need to revisit the model.
+
+What follows is a best practice that can help uncover the boundary between something you control and can threat-model and something you can’t control but depend on, which might have security assumptions. This will probably be iterative because you need to understand
+
+Value of Privilege or Trust BoundariesTrust boundaries are demarcation points in the application that show where data moves from lower privilege to higher privilege. These boundaries can help pinpoint areas in the application where data must be analyzed for correctness, but they can also be the site of sensitive data leaks. For example, an anonymous user creates a request that is sent to a higher-privilege process for consumption. Because the data moves from low privilege to a higher privilege, the request must be vetted for correctness. Any code on a boundary like this must be human-reviewed for correctness. This is especially true if the trust delta is large. For example, an anonymous user interacting with code running as admin, root, or system constitutes a very large privilege delta, whereas an administrator interacting with the same code constitutes a substantially lower privilege delta.
+
+data flow is associated with a verb or verb/noun. Adding verbs and possibly nouns to a data flow helps provide context for the tasks you expect the user to perform. For some data flows,
+
+Note that the numbering system for each of the DFD elements is a hierarchical dotted nota-tion. Element 4.0 in the original context diagram (Figure 9-3) contains elements 4.1 through
+
+Microsoft uses a threat taxonomy called STRIDE to identify various threat types. S
+
+An important caveat you should understand about repudiation is that only humans repudiate (Ellison 2000). However, computers and software can gather evidence that can be used to counter the claims of the repudiating party.
+
+Identify Threats to the SystemOnce the DFD is done, you need to list all the DFD elements (also often referred to as assets) because you need to protect these elements from attack. Table 9-3 lists all the elements in the
+
+==============================
+Title: Software and Attack Centric Integrated Threat Modeling for Quantitative Risk Assessment
+==============================
+Asset centric threat modeling encompasses a defense strat-egy (blue team) in protecting the internal infrastructure ofa system. This approach is typically popular in informationtechnology and business applications where an ”asset” suchas health data, monetary funds, or personally identiﬁableinformation needs to be protected from outside intruders,similarly to the functionality of a bank vault in the physicaldomain. In 2013, the SANS Institute developed a list of the20 most impactful security measures relevant to network se-curity after analyzing the most common oﬀensive exploits.This is very beneﬁcial in that it focuses only on the mostpractical ”proven to work” approaches in guiding companiesto better security [1]. However, one drawback of this ap-proach is that it is constrained to the cyber domain, mainlyfocusing on general network security information.
+
+DREAD (Damage Potential, Reproducibility, Exploitabil-ity, Aﬀected Users, Discoverability) is another threat mod-eling methodology encompassing an acronym referring toseveral threat assessment categories [10]. However, insteadof focusing on a boolean variable representing the vulnera-bility of a category, DREAD uses a numerical approach inassigning one of three values to the ﬁrst four categories (0,5, 10) and one of four values (0, 5, 9, 10) to the last cat-egory. These assignments allow for an average value to becalculated to represent the risk of the entire system.
+
+TRIKE is an open source threat modeling framework simi-lar to the Microsoft methodologies of STRIDE and DREAD,but focuses on a risk based approach. While STRIDE andDREAD models consist of a representation of attacks, threatsand weaknesses, TRIKE focuses on the impact of systemstakeholders [11][10].One beneﬁt of this tool is the abil-
+
+Ucedav´elez et al.has developed the PASTA (Processfor Attack Simulation and Threat Analysis) framework forthreat modeling in respect to addressing the most viablethreats to an application target [16]. This framework pro-vides 7 layers for more detailed modeling capabilities thantraditional threat modeling tools. However, similar to TRIKE,the framework modeling process seems to be extensive withseveral layers of modeling required. This framework seems
+
+==============================
+Title: STRIDE-based Threat Modeling for Cyber-Physical Systems
+==============================
+Cyber-Physical Systems (CPS) use Information and Com-munication Technologies (ICT) to control and monitor thephysical processes. Critical infrastructures such as smart grids,
+
+Various system safety and security modeling methodologiesexist in literature e.g., STPA-sec (focuses on system safety)[16], HAZOP (focuses on hazard and system operability)[17], SAHARA (focuses on hazard, risk and security) [18],PASTA (focuses on process for attack simulation), OCTAVE(focuses on operationally critical threats and assets) [19],STRIDE (focuses on identiﬁcation of potential threats in eachsubcomponent of the system) [20]. Although researchers have
+
+STPA-sec, HAZOP, OCTAVE and PASTA are complexmodeling methodologies with more focus on system safetyand risks. This paper performs threat modeling using STRIDEwhich is comparatively a lightweight approach. The choiceof STRIDE is motivated due to several reasons: (i) it is asystematic approach and analyzes cyber threats against eachsystem component based on its technical knowledge, (ii) itis comprehensive and analyzes security properties such as
+
+authentication, authorization, conﬁdentiality, integrity, non-repudiation and availability against each system component,and (iii) it provides a clear understanding of the impact of acomponent vulnerability on the entire system and helps ensuresystem security as the component level.
+
+The literature still lacks an example framework showing theapplication of the STRIDE approach to a CPS. Hence, the ob-jective of this paper is to provide a walk-through demonstrat-ing that the light-weight STRIDE approach can be applied to aCPS to produce an effective categorization of system-speciﬁcthreats. Speciﬁcally, it performs STRIDE-based threat mod-eling against a real synchrophasor-based laboratory testbedwith the objective to establish appropriate security measuresto secure the environment. Most synchrophasor applications
+
+STRIDE-based threat modeling can be performed in twopossible ways [22]: (i) STRIDE-per-element and (ii) STRIDE-per-interaction. STRIDE-per-element is more complex as itanalyzes behavior and operations of each system component.However, it may not be sufﬁcient to identify certain threats thatare not evident from the DFD. In certain scenarios, threatsshow up in the interactions between system components.STRIDE-per-interaction therefore enumerates threats againstsystem interactions by considering tuples (origin, destination,interaction). Comparatively, STRIDE-per-interaction is easierto perform and its protection strategies are normally enoughto protect system (as cyber attacks normally involve maliciousinteractions between system components).
+
+==============================
+Title: UncoverSecurityDesignFlawsUsingTheSTRIDEApproachMicrosoftDocs
+==============================
+Now, the truth of the matter is that we can't prove it. We can't yet show that theinteractions between components that are individually immune to a spoofing threataren't susceptible to a spoofing threat when they're composed into a system. In fact,
+
+Getting the DFD right is key to getting the threat model right. Spend enough time onyours, making sure all the pieces of your system are represented. Have you noted all th
+
+Here are some general rules for understanding if your DFD is sensible. First, be careful ofmagic data sources or sinks: data isn't created out of thin air. Make sure you have a userrepresented as a reader or writer for each data store. Second, beware of psychokinesis
+
+represented as a reader or writer for each data store. Second, beware of psychokinesisas a data transport. In other words, make sure there is always a process that reads andwrites data. It doesn't go directly from a user's head to the disk, or vice versa. Third,collapse similar elements within a single trust boundary into a single element formodeling purposes. If they are implemented in the same technology and are containedwithin the same trust boundary, you may be able to collapse them. Fourth, be carefulwhen modeling details on either side of a trust boundary. The temptation is to modelthings on both sides of a trust boundary simultaneously. It's good practice to have acontext DFD and breakout diagrams that show more detail. Our system here doesrepresent the client and server systems simultaneously in a single model. But rememberthat the attacker is under no obligation to use your tools or respect your protocols.
+
