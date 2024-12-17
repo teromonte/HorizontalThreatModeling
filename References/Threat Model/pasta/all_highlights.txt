@@ -3,3 +3,51 @@ Title: Risk Centric Threat Modeling Process for Attack Simulation and Threat Ana
 ==============================
 RISK-CENTRIC THREAT MODELING
 
+For any security process to be successful, it needs to be repeatable, measurable,yield results, and invite more stakeholders than those found in security and compli-ance. The risk-centric threat model detailed in this chapter provides a linear method-
+
+Some of the inherent challenges to threat modeling center around company culture,resources, maturity of process and control, and most importantly executive support.
+
+Inherent Challenges to Threat Modeling
+
+1. Threat modeling via PASTA allows greater cohesiveness among security groupsin operations, governance, architecture, and development.2. PASTA allows money and time savings by incorporating security governance atthe inception of development efforts, thereby reducing compliance gaps, auditfindings, and risk issues – all that warrant remediation management and excep-tion or waiver management workflows.
+
+3. Threat modeling with PASTA will foster greater understanding of likely attacksources. Current efforts may simply take prefabricated attack scripts from secu-rity solutions without truly understanding how those attacks are really address-ing security weaknesses in their software or vendor software. If a company isserious about security and mitigating the advanced threats that continuouslyapproach, a shift in approach and technique is warranted.4. PASTA takes security principles to both business and IT groups as part of theirnormal workflow of the SDLC process, thereby introducing a type of securityon-the-job training that serves as an effective awareness vehicle. Developers,QA, Network Engineers, and System Administrators are now better able tounderstand specifically how inaction in corrective security measures can intro-duce risks to the application and the data it manages.5. PASTA makes things less adversarial in terms of addressing security risk mit-igation. It is no longer an “us” versus “them” mentality. More collaborative,more warm, and fuzzy – overall, an HR love story in the making.
+
+People as Inputs People may be the most important input to consider when embark-ing on threat modeling efforts for your application environments. Do you have the
+
+technical deficiencies may exist. Given that threat modeling encompasses the follow-ing organizational layers, it is preferred that the threat modeler seek representationfrom each one of the areas depicted in Figure 6.2 in order to establish a temporary
+
+Governance, risk,compliance (GRC)administrative controlstechnology standardssecurity trainingregulatory risk  app risk profiles
+
+Business operationsWell defined functionalspecsSecurity operationsvuln detectionIT operationssystem/app hardeningGovernance, risk,compliance (GRC)administrative controlstechnology standardssecurity trainingregulatory risk  app risk profilesnetwork monitoringendpoint securitydevelopmentquality assurancearchitecture exploit testingstatic analysislog managementCSIRT/Incident Responsepenetration testingRACI exercisesBus. Impact Analysis (BIA)Data classificationThreatmodelingroundtable
+
+Figure 6.2Threat Modeling Team Selection
+
+Establishing an ambassador-like representation during the threat modeling processallows greater facilitation and funneling of ideas and feedback received during thethreat modeling process. Initially, the participation of such ambassadors will entail
+
+text and online banking use case is provided herein. Stage I of PASTA consists ofthe “Definition the Objectives (DO) for the Analysis of Risks” in stage I, we willdemonstrate how to derive the security and compliance requirements, determine thebusiness impacts and derive the risk profile that is the basis of a set of high-levelobjectives for securing the web application for security/compliance but also for therisks due to emerging cyber-threats affecting the business and technical environmentin which the application is planned to operate.
+
+Stage II of PASTA consists of the “Definition of the Technical Scope (DTS)” of theprocess. This stage is where we capture and enumerate the various technical detailsof users and functional accounts, software and architecture components includingsystem-level services and third-party infrastructure components. After these various
+
+During stage III, that is during the “Application Decomposition and Analysis(ADA)” of the threat modeling process, we will decompose the application in basicelements of application functionality that includes the various type of users, andtheir roles, the various type of data that is accessed as data in storage (e.g. databases)or in transit (e.g. data flows), the boundaries of trust that are crossed by the data toaccess functionality and resources and the security controls that protect data andfunctions from external and internal threat agents.
+
+Once we have decomposed the application and analyzed how the application com-ponents interact with the data in transit and storage and we have identified the dataand functional assets inherent risk due to the sensitivity and exposure of these assets,we can start analyzing the various threats against these components and assets todetermine if these are potentially at risk of attacks. This can be done during stage IV,“Threat Analysis (TA).” Specifically, we will show how we can conduct the analy-sis of specific threats targeting the application whose technical scope was defined instage II and whose functional and data assets were identified in stage III.
+
+During stage V, that is, during the “Weakness and Vulnerability Analysis (WVA),”we will show how each threat of the threat library can be associated with a previously
+
+t library can be associated with a previously
+
+assessed vulnerability or gaps in the security controls of the application (e.g. authen-tication, authorization, encryption, session management, data validation, audit, andlogging). During this stage, we also look in depth on how the application is designed,which technical security controls are in place both at the architectural level and func-tional level to identify any weaknesses that might expose the application assets to thepreviously identified threats. These are weaknesses in security controls that might
+
+technical design in stage II. At the end of stage V, we will have a clearer picture ofweaknesses and vulnerabilities affecting the various components of the applicationarchitecture and of the type of threat agents that might exploit them in the case ofspecific attack scenarios.
+
+When we use the PASTA methodology to conduct a risk-centric threat model-ing exercise, the focus of vulnerability assessments is threat/risk centric and PASTAallows us reassess these vulnerabilities with the lenses of threat agents trying toexploit them. By applying the PASTA to the application, we will leverage any vulner-ability data of weaknesses and vulnerabilities that was identified in previous vulner-ability assessment conducted on the web application in scope for the analysis. The
+
+threats are the attack modeling and simulation. During stage VI “Attack Modelingand Simulation (AMS),” we will analyze the attack scenario for each specific threatto determine the likelihood of the threat occurring and the technical impacts in caseof exploits of a condition such as either a control gap or vulnerabilities previouslyidentified. The attack scenario will be analyzed by looking at the course of actionsand the events that are triggered by the attacks so that these can be detected and alertedfor actions (e.g. through a security incident response). Attack trees to learn about the
+
+for actions (e.g. through a security incident response). Attack trees to learn about theattacker goals and methods can be used as methodology to determine the path ofattacks sought by the attackers as path of least resistance and minimum cost hencebearing the highest probability to be executed to cause damage to the application.
+
+At the end of this stage, we will derive a list of attack simulation test cases thatinclude the most probable attacks leading to exploits of control gaps and vulnera-bilities and conduct simulated test cases of these attacks to determine whether thesecurity measures that include both detective and preventive controls that are cur-rently deployed are sufficient to mitigate the risk of a threat to be realized. The goal of
+
+Finally in stage VII, “Risk Analysis and Management (RAM)” we will analyzethe information in hand such as the threats and the simulated tests of attack scenariosto identify the technical impacts and to determine the business impacts on the assetsand the type of security measures (e.g. preventive and detective controls) that can beimplemented in order to mitigate the risks of the various threats considered includ-ing DDoS and malware banking hacking threats. The types of security measures that
+

@@ -8,9 +8,6 @@
 
 \typeout{NT FILE chapter1.tex}%
 
-\chapter{Introduction}
-\label{cha:introduction}
-
 \prependtographicspath{{Chapters/Figures/Covers/}}
 
 % epigraph configuration
@@ -22,113 +19,218 @@
 % 
 % }
 
+%\chapter{Introduction}
+%\label{cha:introduction}
+%
+%\section{Context}
+%\label{sec:context}
+%
+%A segurança cibernética moderna frequentemente pressupõe a existência
+%de estruturas hierárquicas, o que pode não ser adequado para
+%organizações que operam de maneira horizontal, como cooperativas de
+%trabalhadores, sindicatos e grupos ativistas. Essas organizações
+%enfrentam desafios específicos em termos de segurança devido à
+%inadequação das soluções tradicionais, que geralmente ignoram a
+%horizontalidade em sua concepção \cite{Colbac,
+%AHybridThreatModelingMethod, EvaluationofCompetingThreatModeling,
+%ThreatModelingASystematicLiteratureReview,
+%ParticipatoryThreatModelling,
+%ThreatModelingASummaryOfAvailableMethods}.
+%
+%Organizações hierárquicas normalmente facilitam a implementação de
+%políticas de segurança devido à clara atribuição de responsabilidades
+%e controle, como destacado em práticas tradicionais de modelagem de
+%ameaças, incluindo STRIDE e DREAD
+%\cite{ThreatModelingASystematicLiteratureReview,
+%ExperiencesThreatModelingAtMicrosoft, ThreatModellingSurvey}. Por
+%outro lado, organizações horizontais distribuem o poder de forma
+%equitativa, baseando decisões em processos coletivos e participativos.
+%Essa estrutura pode ser mais inclusiva e transparente, mas apresenta
+%desafios únicos, como a gestão de segredos e o controle de acesso
+%\cite{Colbac, CoReTM, ParticipatoryThreatModelling}.
+%
+%Soluções tradicionais, como as fornecidas pelo STRIDE, muitas vezes
+%dependem de diagramas de fluxo de dados (DFDs) e de processos
+%hierárquicos de decisão
+%\cite{ThreatModelingASystematicLiteratureReview,
+%AHybridThreatModelingMethod, ThreatModellingSurvey}. Essas abordagens
+%frequentemente falham em abordar as complexidades organizacionais
+%horizontais, onde é necessário um equilíbrio cuidadoso entre
+%participação coletiva e a segurança de informações sensíveis
+%\cite{EvaluationofCompetingThreatModeling,
+%ParticipatoryThreatModelling}. 
+%
+%A horizontalidade, porém, pode ser vista como um ativo. Protocolos de
+%segurança que respeitem essa estrutura podem reforçar os princípios
+%fundamentais de participação e igualdade das organizações. Isso exige
+%o desenvolvimento de novas abordagens que considerem tanto as ameaças
+%externas quanto os requisitos internos de governança horizontal
+%\cite{Colbac, CoReTM, DemystifyingTheThreatModelingProcess,
+%ThreatModelingASummaryOfAvailableMethods}.
+%
+%Além disso, a modelagem de ameaças em organizações horizontais deve
+%considerar a complexidade adicional de gerenciar segredos e acessos de
+%forma distribuída. Em organizações hierárquicas, segredos como senhas
+%e chaves de acesso são frequentemente centralizados e controlados por
+%administradores. Em contraste, em organizações horizontais, esses
+%segredos precisam ser gerenciados de maneira que todos os membros
+%tenham acesso equitativo, sem comprometer a segurança \cite{Colbac}.
+%
+%\section{Objective}
+%\label{sec:objective}
+%
+%O objetivo desta pesquisa é desenvolver um protocolo de modelagem de
+%ameaças adaptado para organizações não-hierárquicas, como
+%cooperativas, sindicatos e projetos de software de código aberto. Este
+%protocolo busca resolver os desafios de segurança enfrentados por
+%essas organizações, valorizando a horizontalidade como um diferencial
+%positivo \cite{ThreatModelingAsABasisForSecurityRequirements,
+%AHybridThreatModelingMethod, ParticipatoryThreatModelling}. A
+%abordagem proposta considera não apenas as ameaças externas, mas
+%também os processos democráticos internos, garantindo soluções que
+%respeitem a igualdade e a participação \cite{Colbac}.
+%
+%Para validar o protocolo, serão conduzidas avaliações em diferentes
+%organizações horizontais, comparando seus resultados com abordagens
+%tradicionais, como STRIDE e DREAD, destacando vantagens e desvantagens
+%em contextos não-hierárquicos
+%\cite{ThreatModelingASystematicLiteratureReview,
+%EvaluationofCompetingThreatModeling,
+%ExperiencesThreatModelingAtMicrosoft,
+%ThreatModelingASummaryOfAvailableMethods}.
+%
+%\section{Contributions}
+%\label{sec:contributions}
+%
+%As contribuições desta pesquisa incluem o desenvolvimento de um
+%protocolo de modelagem de ameaças inovador que considera a
+%horizontalidade como um ativo estratégico. Este protocolo será
+%projetado para abordar os desafios específicos enfrentados por
+%cooperativas, sindicatos e projetos de código aberto
+%\cite{ThreatModelingASystematicLiteratureReview, CoReTM,
+%ParticipatoryThreatModelling}. Além disso, será realizada uma
+%avaliação comparativa detalhada do protocolo com métodos tradicionais,
+%como STRIDE, para ilustrar a aplicabilidade prática e eficácia em
+%diferentes contextos \cite{AHybridThreatModelingMethod,
+%EvaluationofCompetingThreatModeling,
+%ExperiencesThreatModelingAtMicrosoft,
+%ThreatModelingASummaryOfAvailableMethods}.
+%
+%Por fim, espera-se que este trabalho contribua para o avanço das
+%práticas de segurança cibernética, promovendo soluções inclusivas e
+%respeitando os princípios de participação e igualdade \cite{Colbac,
+%AbcCrypto}.
+
+
+
+
+
+\chapter{Introduction}
+\label{cha:introduction}
+
 \section{Context}
 \label{sec:context}
 
-A segurança cibernética moderna frequentemente pressupõe a existência de estruturas hierárquicas,
-o que pode não ser adequado para organizações que operam de maneira horizontal, como cooperativas
-de trabalhadores, sindicatos, organizações ativistas, etc. Essas organizações, que evitam
-deliberadamente estruturas hierárquicas, enfrentam desafios únicos em termos de segurança, pois
-as soluções tradicionais não consideram a horizontalidade de todo.
 
-Organizações hierárquicas são estruturadas de forma que o poder e a tomada de decisões fluem de
-cima para baixo. Em uma organização hierárquica típica, há uma cadeia de comando clara, onde
-cada nível da hierarquia tem autoridade sobre o nível abaixo. Por exemplo, em uma empresa
-tradicional, o CEO toma decisões estratégicas que são implementadas por gerentes de nível médio
-e, finalmente, executadas por funcionários de nível operacional. Este modelo facilita a tomada
-de decisões rápidas e a implementação de políticas de segurança, pois há uma clara atribuição
-de responsabilidades e controle.
+A segurança cibernética moderna frequentemente pressupõe a existência de
+estruturas hierárquicas, o que pode não ser adequado para organizações que
+operam de maneira horizontal, como cooperativas de trabalhadores, sindicatos e
+grupos ativistas. Essas organizações enfrentam desafios específicos em termos de
+segurança devido à inadequação das soluções tradicionais, que geralmente ignoram
+a horizontalidade em sua concepção. Por exemplo, métodos como STRIDE, amplamente
+utilizados em modelagem de ameaças, dependem fortemente de diagramas de fluxo de
+dados (DFDs) e processos hierárquicos de decisão, mas enfrentam limitações
+significativas ao abordar organizações horizontais, conforme explorado por
+Shostak (2014) e outros autores \cite{ThreatModelingASystematicLiteratureReview,
+AHybridThreatModelingMethod, ThreatModellingSurvey}.
 
-Em contraste, organizações não-hierárquicas, ou horizontais, distribuem o poder de forma mais
-equitativa entre seus membros. Nessas organizações, a tomada de decisões é frequentemente feita
-de forma coletiva, através de processos democráticos e participativos. Por exemplo, em uma
-cooperativa de trabalhadores, todos os membros podem ter uma voz igual nas decisões importantes,
-e não há uma cadeia de comando rígida. Isso pode levar a uma maior transparência e inclusão, mas
-também pode criar desafios únicos em termos de segurança, como a dificuldade em gerenciar o acesso
-a informações sensíveis sem criar uma hierarquia implícita.
+Organizações hierárquicas normalmente facilitam a implementação de políticas de
+segurança devido à clara atribuição de responsabilidades e controle. Essa
+abordagem é evidente em práticas tradicionais como STRIDE e DREAD, que
+estruturam as ameaças em categorias bem definidas, tornando o processo mais
+direto, ainda que por vezes oneroso \cite{ExperiencesThreatModelingAtMicrosoft,
+ThreatModellingSurvey, DemystifyingTheThreatModelingProcess}.
+Em contraste, organizações horizontais distribuem o poder de forma
+equitativa, baseando decisões em processos coletivos e participativos.
+Essa estrutura, enquanto mais inclusiva e transparente, apresenta
+desafios únicos, como a gestão de segredos e o controle de acesso,
+temas amplamente debatidos na literatura sobre segurança para estruturas
+horizontais \cite{Colbac, ParticipatoryThreatModelling, CoReTM}.
 
-Um dos principais desafios de segurança em organizações horizontais é a gestão
-de segredos, como senhas e chaves de criptografia. Em uma organização
-hierárquica, esses segredos são frequentemente controlados por um pequeno grupo de
-administradores que têm autoridade para gerenciar o acesso. No entanto, em uma organização
-horizontal, decidir quem deve ter acesso a esses segredos pode ser mais complicado. Se
-todos os membros tiverem acesso, há um risco maior de abuso ou erro humano. Por
-outro lado, restringir o acesso a um pequeno grupo pode criar uma hierarquia de
-fato, minando os princípios de horizontalidade.
+Além disso, autores como Uzunov e Fernandez (2014) destacam que a modelagem de
+ameaças frequentemente ignora as complexidades de governança horizontal,
+requerendo ferramentas que incorporem múltiplas perspectivas
+\cite{ThreatModelingASystematicLiteratureReview}. Por outro lado, metodologias
+participativas, como a descrita por CoReTM, demonstram a eficácia da colaboração
+e da diversidade de expertise na modelagem de ameaças, mas ainda enfrentam
+desafios de implementação \cite{CoReTM}.
 
-Ao desenvolver protocolos de modelagem de ameaças para organizações
-horizontais, é crucial considerar a horizontalidade como um ativo. Isso significa criar
-sistemas de segurança que não apenas protejam contra ameaças externas, mas que também
-respeitem e reforcem a estrutura participativa da organização.
+A horizontalidade, porém, pode ser vista como um ativo estratégico. Protocolos
+de segurança que respeitem essa estrutura podem reforçar os princípios
+fundamentais de participação e igualdade das organizações. Esse conceito é
+destacado em trabalhos como COLBAC, que explora tecnologias para suporte a
+organizações democráticas e horizontais, enfatizando a importância de integrar
+políticas de autorização baseadas na coletividade \cite{Colbac}. No entanto,
+como aponta o estudo da COLBAC, soluções eficazes para segurança horizontal
+exigem não apenas tecnologias, mas também adaptações sociotécnicas e um
+alinhamento entre estruturas organizacionais e suas ferramentas tecnológicas.
 
-Ao considerar a horizontalidade como um ativo na modelagem de ameaças, podemos
-desenvolver protocolos de segurança que não apenas protejam as organizações horizontais,
-mas que também reforcem seus princípios fundamentais de participação e igualdade.
+Finalmente, para organizações horizontais, a gestão de segredos, como senhas e
+chaves de acesso, precisa ser distribuída de forma justa e segura, evitando
+concentração de poder. Isso contrasta diretamente com práticas hierárquicas
+tradicionais, onde essas responsabilidades são centralizadas \cite{Colbac}.
 
 \section{Objective}
 \label{sec:objective}
 
-O objetivo principal desta tese é desenvolver um protocolo de modelagem de
-ameaças especificamente adaptado para organizações não-hierárquicas, como cooperativas
-de trabalhadores, sindicatos, grupos ativistas e projetos de software de código
-aberto. Este protocolo visa abordar os desafios únicos enfrentados por essas
-organizações em termos de segurança cibernética, considerando a horizontalidade como um
-ativo e não como uma limitação. 
+O objetivo desta pesquisa é desenvolver um protocolo de modelagem de ameaças
+adaptado para organizações não hierárquicas, como cooperativas, sindicatos e
+projetos de software de código aberto. Esse protocolo busca resolver os desafios
+específicos enfrentados por essas organizações, valorizando a horizontalidade
+como um diferencial positivo. A abordagem aqui proposta considera tanto as
+ameaças externas quanto os processos democráticos internos, garantindo soluções
+que respeitem a igualdade e a participação
+\cite{ThreatModelingAsABasisForSecurityRequirements,
+AHybridThreatModelingMethod, ParticipatoryThreatModelling}.
 
-O desenvolvimento de um protocolo de modelagem de ameaças que leve em
-consideração a estrutura participativa e democrática das organizações não-hierárquicas é
-essencial para garantir que as soluções de segurança não comprometam os princípios de
-igualdade e participação. A avaliação da eficácia do protocolo desenvolvido será
-realizada com membros de diferentes organizações que exibem variados níveis de
-horizontalidade, analisando como o protocolo se adapta a diferentes contextos e necessidades
-específicas de cada tipo de organização. 
-
-Além disso, será feita uma comparação entre o novo protocolo e os modelos de
-ameaças tradicionais, como STRIDE e DREAD, destacando as vantagens e desvantagens de
-cada abordagem em contextos horizontais. A identificação dos principais desafios de
-segurança enfrentados por organizações não-hierárquicas e a proposição de soluções
-que respeitem e reforcem a estrutura participativa dessas organizações são passos
-cruciais para o sucesso do protocolo.
-
-Por fim, a documentação de casos de uso reais onde o protocolo foi
-implementado fornecerá exemplos práticos de como ele pode ser aplicado e os resultados
-obtidos.
-
+Para validar o protocolo, serão conduzidas avaliações em diferentes organizações
+horizontais, comparando seus resultados com abordagens tradicionais, como STRIDE
+e DREAD. Esses métodos tradicionais, ainda que robustos, frequentemente dependem
+de diagramas de fluxo de dados e abordagens sistemáticas, como checklist, que
+não capturam nuances participativas
+\cite{ThreatModelingASystematicLiteratureReview,
+ExperiencesThreatModelingAtMicrosoft}. A comparação irá destacar vantagens e
+desvantagens de cada abordagem no contexto de organizações horizontais.
 
 \section{Contributions}
 \label{sec:contributions}
 
-Esta tese pretende apresentar várias contribuições significativas para o campo
-da segurança cibernética em organizações não-hierárquicas. Primeiramente,
-desenvolveremos um protocolo de modelagem de ameaças que considera a horizontalidade como um
-ativo, abordando os desafios únicos enfrentados por cooperativas de trabalhadores,
-sindicatos, grupos ativistas e projetos de software de código aberto. Este protocolo será
-projetado para respeitar e reforçar a estrutura participativa dessas organizações,
-garantindo que as soluções de segurança não comprometam os princípios de igualdade e
-participação. 
+As contribuições desta pesquisa incluem o desenvolvimento de um
+protocolo de modelagem de ameaças inovador que considera a
+horizontalidade como um ativo estratégico. Este protocolo será
+projetado para abordar os desafios específicos enfrentados por
+cooperativas, sindicatos e projetos de código aberto
+\cite{ThreatModelingASystematicLiteratureReview, CoReTM,
+ParticipatoryThreatModelling}. Além disso, será realizada uma
+avaliação comparativa detalhada do protocolo com métodos tradicionais,
+como STRIDE, para ilustrar a aplicabilidade prática e eficácia em
+diferentes contextos \cite{AHybridThreatModelingMethod,
+EvaluationofCompetingThreatModeling,
+ExperiencesThreatModelingAtMicrosoft,
+ThreatModelingASummaryOfAvailableMethods}.
 
-Em segundo lugar, realizaremos uma avaliação detalhada da eficácia do
-protocolo desenvolvido, envolvendo membros de diferentes organizações com variados
-níveis de horizontalidade. Esta avaliação permitirá analisar como o protocolo se
-adapta a diferentes contextos e necessidades específicas, fornecendo insights
-valiosos sobre sua aplicabilidade prática e eficácia em ambientes reais.  
-
-Além disso, compararemos o novo protocolo com modelos de ameaças tradicionais,
-como STRIDE e Attack trees, destacando as vantagens e desvantagens de cada abordagem em
-contextos horizontais. Esta comparação não apenas ilustrará a necessidade de soluções de
-segurança adaptadas para organizações não-hierárquicas, mas também fornecerá uma base
-sólida para futuras pesquisas e desenvolvimentos no campo.
+Por fim, espera-se que este trabalho contribua para o avanço das
+práticas de segurança cibernética, promovendo soluções inclusivas e
+respeitando os princípios de participação e igualdade \cite{Colbac,
+AbcCrypto}.
 
 \section{Structure}
 \label{sec:structure}
 
-O primeiro capítulo, Introdução, apresenta o contexto e a motivação do estudo,
-destacando a necessidade de um protocolo específico para organizações
-horizontais e delineando os objetivos da pesquisa. O segundo
-capítulo, Background and Related Work, revisa a literatura existente
-sobre modelagem de ameaças e as características das organizações não-hierárquicas,
-fornecendo uma base teórica para o desenvolvimento do protocolo. O terceiro capítulo,
-Design, descreve o novo protocolo. O quarto capítulo, Conclusion, sintetiza os principais
-achados da pesquisa, discutindo as implicações dos resultados e sugerindo direções para
-trabalhos futuros. Finalmente, o capítulo Work Plan detalha o cronograma e as etapas
-previstas para a implementação e validação do protocolo.
+O primeiro capítulo apresenta o contexto e os objetivos do estudo. No
+segundo capítulo, são revisados trabalhos relacionados e fundamentos
+teóricos, com ênfase em abordagens participativas e tradicionais de
+modelagem de ameaças. O terceiro capítulo detalha o protocolo
+proposto. O quarto capítulo sintetiza os resultados e propõe direções
+futuras. Finalmente, o capítulo Work Plan apresenta o cronograma e as
+etapas de validação.

@@ -43,6 +43,75 @@ that are often called detect-and-punish mechanisms. That is,when a cheating inci
 ber (525) of collusion cases. During that time, we observedthe beneﬁt of rational ﬁnancial incentives and game theoreticanalysis to threat mitigation and risk management processes.To date, we found ABC useful for CacheCash in both the
 
 ==============================
+Title: Advanced Threat Modeling
+==============================
+DefinitionsThreat modeling is a process by which potential threats can be identified, enumerated, and prioritized – all from a hypothetical attacker’s point of view.Wikipedia https://en.wikipedia.org/wiki/Threat_model A threat modeling method (TMM) is an approach for creating an abstraction of a software system, aimed at identifying attackers’ abilities and goals, and using that abstraction to generate and catalog possible threats that the system must mitigate.
+
+Who Does Threat Modeling?Vendors such as Microsoft • Microsoft developed and uses STRIDE and makes it freely availableGovernment organizations such as DoD• Mandated for DoD• Various methods in use, some are based on NIST standards, some use checklists.Commercial organizations such as automotive industry, finance, and so on• Various methods in use, including STRIDE, risk analysis approaches such as OCTAVE, attack trees, etc.BSIMM identified Attack Models as a Level 1 practicehttps://www.bsimm.com/framework/intelligence/attack-models/
+
+Security is not binary.•Not secure vs. insecure•Perfect security does not exist.•“Secure against attacker A with resources R with probability P under conditions C”
+
+Security VulnerabilityDefinition: a weakness which allows an attacker* to bypass security controlsRequires three elements: • a system susceptibility or flaw, • attacker access to the flaw, and • attacker capability to exploit the flaw* Security Hacker. Wikipedia. July 2017. https://en.wikipedia.org/wiki/Security_hackerThreat modeling can be used to identify potential security vulnerabilities in the software design
+
+Security Cards: A Threat Brainstorming Toolkit
+
+Purpose: To facilitate the broad exploration of potential security and privacy threats to a system: the “security mindset”
+
+•This exercise will use the Unmanned Autonomous Vehicle (UAV) or Drone scenario.  •Read the instructions that have been provided with the scenario.•Use the security cards that have been provided with your course materials.
+
+Security Cards Exercise Instructions
+
+What is a persona?“Personas are detailed descriptions of imaginary people constructed out of well-understood, highly specified data about real people”
+
+Example PersonaThomas is 76 years old, a retired accountant and he enjoys spending time with his grand children. During his retirement, he enjoys reading newspapers, working in his garden and staying in touch with friends. He is a free spirit and enjoys exploration and technology, but only when it doesn’t get in his way.
+
+Why create personas?Personas…• Guide developer decisions about features and how people interact with those features• Help developers keep users and other stakeholders in mind during development• Supplement (but cannot replace) developer access to stakeholders during iterations
+
+Originating Personas from DataSurvey stakeholders• Good for large N > 1000 individuals to identify segmentsConduct interviews and focus groups• Good for 4-5 people, hand-picked as representativesAnalyze research articles for facts about stakeholders• Pew Research Center, Gartner Research, etc.Read blogs and newspaper articles about similar technologies
+
+Creating PersonasIdentify important categories of stakeholder• Roles describe the kind of work people do, or their relationship in time to the product• Goals describe what the users hope to achieve• Segments describe shared demographic, attitudes or behaviors of your users
+
+User Roles and GoalsHow to describe a role?• Defined by tasks, job descriptions, responsibilities• Occupation (shopper, assistant, manager)• Sub-divide by status: new shopper, repeat customerWhat do they care about? How do they feel?• Defined by their goals• Behavior (“only browsing”, “get it done”, “max sales”)• Life phases (adolescence, parenthood, retirement)
+
+User SegmentsCan we segment our users by demographics?• Age ranges• Gender• Income levelWhat about attitudes or behaviors?• Physically active, always moving, can’t slow down• Likes routine, avoids uncertainty, structured• Telecommuter, works from home, free spirit• Experienced, technically minded, geek
+
+The Persona SkeletonGirl, age 10-13Computer use at school• Has access to shared computer in school lab• Has one computer-related assignment per week• Finds computer use at school ‘boring’Internet use at home• Shares home computer with family• Uses Internet to play games and do school work• Enjoys home use of computerInterests• Likes to use computers to chat with friends• Participates in music and art classes
+
+Partitioning the stakeholders into personasUse a data-driven approach, whenever possible• Data collected using surveys or focus groups• Data reported in research studies• Data inferred using affinity diagramsDiversify your selections• The common case (most users)• The extremes (rare, but demanding users)
+
+Example ScenarioScenarios illustrate a “thread of execution” through the existing or envisioned systemExample:“Today is election day, and Aarnav is ready to vote. He arrives at the voting location and shows his identification to the station attendant, who then checks Aarnav’s name against the roster of registered voters. Aarnav is given a virtual ballot to activate the voting machine. He enters the voting booth, closes the curtain, enters the ballot into the machine, and casts his vote. Upon leaving, he returns the ballot to attendant.”
+
+From Persona to Persona non Grata (PNG)PnG? An unacceptable or unwelcome person• Help developers think about how requirements/features can be intentionally or unintentionally abused• Useful for understanding—and defending against—malicious users.Steps:• Begin with consideration of attackers and their motivations and abilities• Shift to attackers’ targets and attack mechanisms
+
+Persona non Grata:  BackgroundPnG concept developed at DePaul University, based on Human Computer Interaction (HCI) theory & practiceSimilar research on Negative User Stories & Negative Roles for agile software development at Concordia University (Montreal)• In agile methods, software requirements often originate with user stories or use casesPnG and Negative User Stories build on the idea in Persona development of the “Negative Persona” or “Anti-Persona”• Negative Personas are types of users the product is designed not to serve, ranging from tech-savvy early adopters to criminalsKamthan & Shahmir, 2016; Cooper et. al., 2014; Shull & Mead, 2016
+
+Persona non Grata:  Background (cont’d)PnGs (and Negative User Stories) developed through techniques such as brainstorming and mind-mappingPersonas normally developed using ethnographic methods e.g. interviews and surveysBottom Line: A move away from checklists, regulations, and misuse cases to thinking about the negative user i.e. attacker/ abuser
+
+Developing a PnG1.Motivations:  What is the PnG’s motivations? Monetary gain? Revenge? Recognition? Laughs? 2.Goals:  How will the PnG fulfill their motivation i.e. what do they want to do and how do they plan to get away with it?3.Skills:  What abilities do they have to achieve their goal? What other assets do they have e.g. access to infrastructure, relationships to those who have skills?4.Misuse cases:  What are the misuse cases the PnGcan follow to achieve their goals?
+
+Example Persona non Grata: Mike
+
+Description:  Mike worked as a contractor installing SCADA radio-controlled sewage equipment for a municipal authority.  After leaving the contractor, Mike applied for a job with the municipality but was rebuffed.  Feeling bitter and rejected, Mike decides to get even with the municipality and his former employer.Goals:  Cause raw sewage to leak into local parks and rivers and make the events appear as malfunctions. Create a public backlash against the contractor and municipality.
+
+Example Persona non Grata: Mike (cont’d)Skills:  Extensive knowledge of SCADA equipment, including control computers, relevant programs, and radio communication protocols; access to specialized equipment.Misuse cases:  • Steal control computer and radio equipment from his former employer• Using the stolen computer, construct a fake pumping control station from which to send radio signals• Gain remote access to SCADA system and disable alarms at pumping stations • Issue radio commands (using stolen radio equipment) to instruct pumping stations to release sewageAbrams & Weiss, 2008
+
+PnG in PracticeInitial Results from DoD Threat Modeling Working Group • Useful technique to identify a potential threat with a high degree of confidence• Not ideal for gaining a comprehensive view of all potential threats.• Compared to other threat modeling methods, research participants applying PnG yielded fewer false positives• But they consistently produced only a subset of threat types (which were nonetheless reproduced uniformly across teams)Shull & Mead, 2016
+
+Persona-non-grata Exercise•You’ll be doing an exercise that involves an Implantable Cardioverter Defibrillator (ICD). It summarizes the use of Security Cards and introduces the idea of using personas for threat modeling instead of using Security Cards.•First you’ll review examples that have been provided for you.  Then you’ll practice creating your own PnGs•Go ahead and turn to the resources that have been provided to do the exercise.
+
+VAST: Visual, Simple, and Agile Threat ModelingDeveloped by A. Arguwal, basis for first commercially available threat modeling tool, ThreatModeler.• Very limited openly available documentation.Intended for large/medium organizations while supporting prevailing Agile methodologyDesigned for consistent output regardless of implementerImplemented by DevOps teams during SDLCDivides threat models into two categories:• Application models: Creates process flow diagrams that focus on specific application• Operational models: Provides end-to-end data flow diagrams that incorporate application interactions
+
+Trike Threat ModelDeveloped in 2003 to improve perceived deficiencies of STRIDEDesigned for security auditing from a risk management perspectiveModels threats from defensive perspective i.e. not from attacker’sAims to generate threat models in reliable and repeatable manner through automation of most functions• Methodology as well as a tool/spreadsheet (www.octotrike.org)• Multiple, independent implementers should reach same resultsLimitations: Difficult to model systems with more than 12 actors and 12 assets; limited documentation and unclear level of tool supportSaitta et. al, 2005;  Larcom, 2012;   Dsouza, 2016
+
+.© 2017 Carnegie Mellon University[Distribution Statement A] This material has been approved for public release and unlimited distribution.© 2017 Carnegie Mellon University[Distribution Statement A] This material has been approved for public release and unlimited distribution.
+
+Trike ImplementationRequirements Model• Identify what the system is intended to do.• Examine Actors, Assets, Intended Actions, RulesImplementation Model• Gather information about the system implementation• Create DFDsThreat Model• Build attack graph• Determine vulnerabilities & apply solutions Risk Model• Experimental• Determine exploitation probabilities• Calculate threat risk value
+
+PASTA: Process for Attack Simulation & Threat AnalysisDeveloped around 2012 by Morana and UcedaVelez; published book in 2015Seven stage process that yields impact of threat to application and business• Process begins with defining business objectives & security requirements• Application is then decomposed into use cases and DFDs• Threat trees and abuse cases are then introduced• Final step includes risk and business impact
+
+PASTA ProcessUceda Velez & Morana , 2015 1. Define Business & Security Objectives2. Define the Technical Scope3. Decompose Application4. Threat Analysis5. Weakness & Vulnerability Analysis6. Attack Modeling & Simulation7. Risk Analysis & Management•Business Requirements•Security/ Compliance Requirements•Business Impact•Risk Profile•Software Components•System-Level Services•Third party infrastructure•App use cases and risk functions•Document DFDs•Gather threat intelligence•Map to assets•Assign probabilities•Identify weak design patterns•Map threats to vulnerabilities•Analyze attack scenarios•Assess probability & impact•Security tests and simulations•Calculate risk per threat•Identify countermeasures•Recommend risk management strategies
+
+==============================
 Title: COLBAC Shifting Cybersecurity from Hierarchical to Horizontal Designs
 ==============================
 One example of this is the access to organization-controlledsecrets. Secrets such as organizational passwords to third-partyservices are often trusted to one individual or a small group in anorganization, but easily recovered by an administrator or otherindividual higher in the hierarchy in the case that the individualresponsible leaves the organization or performs a violation. How-

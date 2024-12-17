@@ -13,51 +13,65 @@
 
 \glsresetall
 
-\section{Modelagem de Ameaças: Conceitos}
-\label{sec:introduction}
+\section{Modelagem de Ameaças: Conceitos e Estratégias}
+\label{sec:threat_modeling}
 
-A modelagem de ameaças é um processo estruturado que visa identificar,
-analisar e mitigar riscos de segurança em sistemas e aplicações. Na sua base, um
-modelo de ameaças genérico oferece uma abordagem sistemática para entender as
-vulnerabilidades potenciais de um sistema e as possíveis ações que os adversários podem
-tomar para explorá-las. Ele serve tanto como uma ferramenta de design quanto um
-quadro de avaliação, apoiando o desenvolvimento seguro de sistemas e a mitigação
-proativa de riscos.  
+A modelagem de ameaças é um processo estruturado que permite identificar,
+analisar e mitigar vulnerabilidades em sistemas, compondo um elemento essencial
+para a segurança cibernética. Este processo também serve como base para a
+definição de requisitos de segurança e é amplamente utilizado no desenvolvimento
+de sistemas mais resilientes. Segundo Torr
+\cite{DemystifyingTheThreatModelingProcess}, a modelagem de ameaças deve ser
+integrada aos processos de design e especificação desde o início, como uma
+prática preventiva essencial.
 
-O processo geralmente começa com a caracterização do sistema em análise.
-Isso envolve definir sua arquitetura, identificar ativos críticos e mapear o
-fluxo de dados através de seus componentes. Um entendimento completo das
-fronteiras de confiança — pontos onde os dados transitam entre áreas com diferentes
-níveis de segurança — é essencial. Essas fronteiras frequentemente destacam áreas
-de vulnerabilidade aumentada, onde as ações adversárias são mais prováveis de
-ocorrer. 
+\subsection{Definições e Objetivos da Modelagem de Ameaças}
 
-Uma vez que o sistema é mapeado, o foco se desloca para a identificação de
-ameaças potenciais. Técnicas como STRIDE fornecem uma estrutura para categorizar
-sistematicamente as ameaças. Alternativamente, representações gráficas como árvores de
-ataque mapeiam visualmente caminhos de ataque potenciais, oferecendo uma maneira
-intuitiva de avaliar vulnerabilidades. 
+Diversos autores oferecem definições que destacam aspectos fundamentais da
+modelagem de ameaças. Uzunov e Fernandez
+\cite{ThreatModelingASystematicLiteratureReview} descrevem-na como um processo
+para analisar ataques potenciais, utilizando bibliotecas de ameaças ou
+taxonomias. Em um contexto mais específico, Shull et al.
+\cite{EvaluationofCompetingThreatModeling} destacam que a modelagem de ameaças
+cria uma abstração do sistema de software para identificar habilidades e metas
+dos atacantes, gerando catálogos de possíveis ameaças que precisam ser
+mitigadas.
 
-Após as ameaças serem identificadas, seu impacto potencial é analisado.
-Esta análise envolve avaliar a probabilidade de cada ameaça e a gravidade de
-seu impacto na funcionalidade e segurança do sistema. Ferramentas que variam
-de métodos qualitativos, como revisões de especialistas, a modelos formais,
-como redes de Petri, apoiam esta fase. O objetivo é priorizar riscos,
-garantindo que os esforços de mitigação se concentrem nas vulnerabilidades mais
-críticas. 
+As metodologias de modelagem de ameaças são ferramentas valiosas para responder
+a perguntas como: "Quais são os ativos mais críticos?", "Quem são os
+adversários?" e "Quais vulnerabilidades podem ser exploradas?"
+\cite{ThreatModelingAsABasisForSecurityRequirements}.
 
-Estratégias de mitigação são então desenvolvidas para abordar os riscos
-identificados. Essas estratégias podem incluir controles técnicos, como criptografia ou
-gestão de acesso, bem como medidas organizacionais como políticas e treinamentos.
-Um modelo de ameaças genérico também inclui loops de feedback, garantindo
-que, à medida que o sistema evolui, o modelo de ameaças seja atualizado para
-refletir novas vulnerabilidades e ameaças. 
+\subsection{Ferramentas e Representações Visuais}
 
-Embora os métodos de modelagem de ameaças variem amplamente, eles
-compartilham um foco comum na análise metódica e defesa proativa. Seja aplicado
-manualmente ou com ferramentas automatizadas, o processo fornece uma visão abrangente
-dos riscos potenciais, permitindo que desenvolvedores e profissionais de
-segurança abordem proativamente as vulnerabilidades antes que possam ser exploradas.
+As ferramentas desempenham um papel crucial na eficácia da modelagem de ameaças.
+\textit{Data Flow Diagrams} (DFDs), por exemplo, são amplamente usados para
+mapear fluxos de dados e identificar fronteiras de confiança
+\cite{ThreatModelingASummaryOfAvailableMethods}. As árvores de ataque são outro
+exemplo comum, oferecendo uma maneira hierárquica de decompor ameaças
+\cite{ThreatModellingSurvey}.
+
+\subsection{Desafios e Limitações}
+
+Embora eficaz, a modelagem de ameaças enfrenta desafios, como a dependência de
+DFDs precisos e a complexidade crescente em sistemas maiores
+\cite{ThreatModelingASummaryOfAvailableMethods}. Almashaqbeh et al.
+\cite{AbcCrypto} destacam que modelos específicos para domínios emergentes, como
+criptomoedas, ainda estão em estágios iniciais de desenvolvimento.
+
+\subsection{Futuras Direções}
+
+Para melhorar a modelagem de ameaças, é crucial integrar abordagens
+colaborativas e adaptativas \cite{CoReTM}. Modelos que considerem dinâmicas
+horizontais, como o COLBAC, e a participação ativa dos usuários, como o
+Participatory Threat Modeling, mostram promessas significativas
+\cite{Colbac,ParticipatoryThreatModelling}.
+
+Com uma evolução constante nas metodologias e ferramentas, a modelagem de
+ameaças continuará sendo uma área essencial para avanços em segurança
+cibernética e resiliência organizacional.
+
+
 
 \subsection{STRIDE}
 \label{sec:STRIDE}
