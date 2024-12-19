@@ -20,135 +20,151 @@
 % }
 
 \chapter{Introduction}
-\label{cha:introduction}
+\label{cha:Introduction}
 
-\section{Contexto Histórico da Governança Organizacional}
-\label{sec:contexto-historico}
+\section{Governança Organizacional: Uma Perspectiva
+Histórica} \label{sec:contexto_historico}
 
-A governança organizacional tem sido moldada ao longo da
-história por diferentes formas de organização social,
-econômica e política. Desde as democracias atenienses,
-descritas como um exemplo inicial de decisão coletiva e
-distribuição equitativa de poder, até modelos hierárquicos
-mais complexos que surgiram com a industrialização,
-observa-se uma evolução significativa na maneira como as
-pessoas administram recursos e tomam decisões coletivas. A
-experiência ateniense, destacada no documento
-\cite{AthenianDemocracyABrief}, oferece uma perspectiva
-única de como a inclusão cidadã e a participação direta
-podem funcionar como alternativa ao controle centralizado,
-embora com limitações estruturais e sociais evidentes à
-época.
+A governança organizacional reflete as estruturas sociais,
+econômicas e tecnológicas vigentes em cada época. Desde os
+primeiros agrupamentos humanos até as organizações complexas
+da contemporaneidade, as formas de organizar o poder e a
+tomada de decisão foram moldadas para responder a contextos
+específicos. O modelo hierárquico, adotado amplamente,
+emergiu como solução para demandas de controle e eficiência,
+mas a história também registra experimentos que desafiaram
+essa lógica.
 
-No entanto, modelos como o centralismo democrático, que
-evoluíram em regimes socialistas no século XX, apresentam
-uma tensão entre a hierarquia e a participação coletiva.
-Conforme discutido em \cite{StillaCenturyoftheChineseModel},
-esses sistemas tentaram conciliar o controle centralizado
-com mecanismos de consulta popular, mas muitas vezes
-sacrificaram a horizontalidade em prol da eficiência.
+Mesmo em sistemas participativos históricos, como a
+democracia ateniense, a horizontalidade enfrentou limitações
+de inclusão e praticidade \cite{AthenianDemocracyABrief}.
+Durante a Revolução Industrial, a centralização hierárquica
+intensificou-se para lidar com o crescimento e a
+complexidade organizacional. Por outro lado, cooperativas e
+movimentos sindicalistas do século XIX começaram a esboçar
+alternativas à centralização absoluta, apontando novos
+caminhos para a governança
+\cite{WorkerCooperativesinAmerica, EverydayRevolutions}.
 
-Hoje, é essencial compreender as origens desses sistemas não
-apenas para criticar, mas para extrair lições que possam
-informar estruturas descentralizadas e horizontais, como as
-exploradas neste estudo.
+No século XX, os avanços tecnológicos e as novas teorias
+organizacionais puseram em xeque a inevitabilidade das
+hierarquias rígidas. Nesse contexto, cooperativas modernas e
+redes descentralizadas demonstraram a possibilidade de
+alinhar eficiência a valores igualitários
+\cite{WorkerCooperativesandRevolution}. Ao mesmo tempo,
+tecnologias de vigilância em massa tendem a reforçar
+estruturas centralizadoras, enquanto ferramentas como o
+blockchain catalisam processos de descentralização,
+ampliando o alcance de modelos horizontais
+\cite{DoArtifactsHavePolitics}. Essa evolução histórica
+lança as bases para entender, a seguir, os desafios
+contemporâneos de segurança em estruturas não-hierárquicas.
 
-\section{Desafios Contemporâneos na Segurança Horizontal}
-\label{sec:desafios-contemporaneos}
+\section{A Segurança Horizontal em Tempos de Interconexão}
+\label{sec:desafios_contemporaneos}
 
-Com o advento das tecnologias digitais e das organizações em
-rede, surgiram novos desafios para a segurança em ambientes
-horizontais. Diferentemente de estruturas hierárquicas, em
-que o controle é concentrado, as organizações horizontais
-enfrentam dificuldades para coordenar respostas às ameaças
-sem comprometer sua estrutura descentralizada. De acordo com
-\cite{ThreatModelingASummaryOfAvailableMethods} e
-\cite{ParticipatoryThreatModelling}, os métodos tradicionais
-de modelagem de ameaças frequentemente subestimam os riscos
-associados à falta de um comando centralizado, como
-comunicação ineficaz e desconfiança entre membros.
+No mundo interconectado atual, organizações horizontais
+enfrentam desafios de segurança específicos. A ausência de
+hierarquia formal dificulta ataques centralizados, mas exige
+uma redefinição da gestão da confiança. Em sistemas de
+confiança distribuída, como os utilizados em organizações
+descentralizadas baseadas em blockchain, a segurança depende
+de mecanismos que substituem líderes formais por processos
+participativos e algoritmos orientados à transparência e ao
+consenso \cite{Reputation-basedDAO}.
 
-Em paralelo, o crescimento de tecnologias de vigilância e
-controle exacerba essas vulnerabilidades.
-\cite{DoArtifactsHavePolitics} argumenta que as ferramentas
-tecnológicas não são neutras, muitas vezes refletindo as
-dinâmicas de poder de seus criadores. Essa perspectiva
-destaca a necessidade de soluções tecnológicas alinhadas aos
-princípios de horizontalidade, garantindo que a segurança
-seja distribuída e responsiva.
+Modelos tradicionais de segurança, como STRIDE e árvores de
+ataque, fornecem bases sólidas para análise de ameaças, mas
+nem sempre se adaptam à complexidade das estruturas
+descentralizadas \cite{ThreatModellingSurvey}. Por outro
+lado, tecnologias como a criptografia colaborativa
+\cite{Colbac, AbcCrypto} permitem que múltiplos membros
+contribuam para a proteção de dados sem comprometer a
+horizontalidade.
 
-\section{Objetivos da Pesquisa}
-\label{sec:objetivos-pesquisa}
+Essas abordagens já demonstram um avanço significativo: a
+segurança pode ser concebida de forma coerente com
+princípios democráticos, preservando a horizontalidade.
+Compreender tais desafios é o primeiro passo para a
+proposição de um protocolo de segurança específico, que será
+discutido no próximo capítulo.
 
-O principal objetivo desta pesquisa é desenvolver um
-protocolo de modelagem de ameaças que leve em consideração
-as características únicas de organizações horizontais.
-Inspirando-se nos conceitos de criptografia colaborativa
-apresentados em \cite{AbcCrypto} e \cite{Colbac}, o estudo
-busca propor uma abordagem que valorize a participação
-coletiva sem comprometer a segurança e a eficiência.
+\section{Protocolo de Segurança para Organizações
+Não-Hierárquicas} \label{sec:objetivos_pesquisa}
 
-Ademais, espera-se identificar ferramentas e métodos que
-possam ser integrados em estruturas horizontais,
-considerando os desafios específicos levantados por
-\cite{Non-HierarchicalForms} e
-\cite{WorkerCooperativesandRevolution}. O foco está em
-equilibrar a distribuição do poder com a capacidade de
-responder de maneira eficaz a ameaças externas e internas.
+Esta pesquisa propõe um protocolo de segurança que não
+apenas preserva a horizontalidade, mas a converte em um
+diferencial estratégico. Ao invés de considerar a ausência
+de hierarquia como vulnerabilidade, buscou-se demonstrar que
+ela pode fornecer resiliência diante de cenários adversos.
+Tal esforço preenche uma lacuna na literatura sobre
+segurança em estruturas horizontalizadas, oferecendo
+diretrizes práticas para organizações comprometidas com a
+governança democrática.
 
-\section{Delimitação do Escopo}
-\label{sec:delimitacao-escopo}
+O protocolo fundamenta-se em valores participativos, na
+análise de casos reais de cooperativas e redes comunitárias,
+e em abordagens metodológicas orientadas à eficiência e à
+transparência. Por exemplo, imagine uma cooperativa de
+trabalhadores que gerencia recursos digitais sensíveis: como
+assegurar a proteção contra fraudes internas e ataques
+externos sem recorrer a estruturas autoritárias? O protocolo
+aqui delineado oferece mecanismos de consenso,
+transparência, criptografia colaborativa e modelagem de
+ameaças adaptada, respondendo a esse tipo de questionamento.
 
-Esta pesquisa concentra-se em organizações não hierárquicas,
-com ênfase em cooperativas de trabalhadores, movimentos
-sociais e redes descentralizadas. Embora o escopo teórico
-inclua uma ampla variedade de modelos, os estudos de caso se
-limitarão a organizações que operam com princípios de
-horizontalidade clara, como as descritas em
-\cite{WorkerCooperativesinAmerica}.
+Assim, ao alinhar eficiência técnica, participação coletiva
+e acesso igualitário à informação, o protocolo se diferencia
+de abordagens tradicionais. Antes de detalhar seus
+elementos, é necessário delimitar o escopo da pesquisa para
+garantir precisão analítica.
 
-Exclusões importantes incluem organizações que utilizam
-apenas elementos horizontais de maneira parcial, ou aquelas
-que possuem uma estrutura claramente hierárquica disfarçada
-de horizontalidade. Essa delimitação visa garantir que as
-conclusões sejam relevantes para o contexto específico das
-organizações horizontais autênticas.
+\section{Delimitando o Escopo da Pesquisa}
+\label{sec:delimitacao_escopo}
+
+A variedade de arranjos organizacionais horizontais é ampla.
+Para uma análise mais profunda, esta pesquisa concentra-se
+em estruturas plenamente horizontais que operam sob
+princípios de confiança distribuída e governança
+democrática, como cooperativas de trabalhadores e redes
+comunitárias \cite{WorkerCooperativesinAmerica,
+EverydayRevolutions}. Ao excluir organizações híbridas,
+busca-se compreender o cerne da relação entre
+horizontalidade e segurança, esclarecendo a eficácia do
+protocolo proposto em cenários puros. Futuras investigações
+poderão, então, integrar elementos híbridos, ampliando a
+aplicabilidade do conhecimento gerado.
 
 \section{Contribuições Esperadas}
-\label{sec:contribuicoes-esperadas}
+\label{sec:contribuicoes_esperadas}
 
-Espera-se que esta pesquisa forneça um protocolo prático e
-acessível para organizações horizontais, ajudando-as a
-identificar e mitigar ameaças de maneira eficaz. O trabalho
-também contribuirá para a literatura acadêmica, preenchendo
-lacunas identificadas em \cite{ParticipatoryThreatModelling}
-e \cite{ThreatModelingASummaryOfAvailableMethods}, além de
-oferecer soluções inspiradas em casos práticos de
-cooperativas e redes descentralizadas.
+Esta pesquisa espera avançar a compreensão teórica da
+segurança em estruturas horizontais, abordando lacunas
+evidenciadas por
+\cite{ThreatModelingAsABasisForSecurityRequirements} e
+\cite{DemystifyingTheThreatModelingProcess}, que ressaltam a
+necessidade de ferramentas específicas para tais contextos.
+No plano prático, espera-se oferecer um conjunto de
+recomendações que combine eficiência, participação coletiva
+e transparência na proteção de dados e processos.
 
-Por fim, a pesquisa espera promover um diálogo entre
-disciplinas, combinando teorias de ciência política,
-tecnologia e administração para abordar os desafios das
-organizações do futuro.
+Ao ampliar o repertório de soluções, a segurança não se
+torna um obstáculo, mas uma oportunidade de aprofundar a
+democratização organizacional. Assim, o protocolo contribui
+para o desenvolvimento de organizações em que a
+horizontalidade não é meramente um ideal normativo, mas uma
+estratégia efetiva contra ameaças complexas.
 
-\section{Estrutura da Tese}
-\label{sec:estrutura-tese}
+\section{Estrutura da Tese} \label{sec:estrutura_tese}
 
-A tese está organizada em seis capítulos principais. O
-primeiro capítulo introduz o contexto histórico e
-contemporâneo da pesquisa, detalhando os objetivos, a
-delimitação do escopo e as contribuições esperadas. O
-segundo capítulo oferece uma revisão detalhada do background
-teórico, explorando modelos de governança horizontal e
-ferramentas de modelagem de ameaças. Os capítulos seguintes
-apresentam o design metodológico, os estudos de caso e as
-análises empíricas, culminando em uma discussão crítica das
-descobertas.
-
-A conclusão resume os principais achados, oferecendo
-recomendações práticas para organizações horizontais e
-identificando direções futuras para pesquisa. A organização
-da tese busca equilibrar rigor acadêmico com relevância
-prática, assegurando que o conhecimento produzido seja útil
-para acadêmicos e praticantes.
-
+Após esta introdução, o capítulo de fundamentação teórica
+definirá conceitos centrais, como modelagem de ameaças,
+governança horizontal e confiança distribuída. Em seguida, o
+capítulo de trabalhos relacionados analisará estudos
+pré-existentes, como \cite{Colbac, AbcCrypto}, situando o
+protocolo proposto no debate acadêmico. O capítulo de design
+detalhará o protocolo, seus componentes e os métodos de
+avaliação. Por fim, as conclusões sintetizarão os achados e
+sugerirão direções para pesquisas futuras, reforçando o
+papel da horizontalidade como aliada da segurança em um
+mundo cada vez mais interconectado.
