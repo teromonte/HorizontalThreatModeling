@@ -2,8 +2,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% chapter3.tex
 %% NOVA thesis document file
-%%
-%% Chapter with the template manual
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \typeout{NT FILE chapter3.tex}%
@@ -22,19 +20,15 @@
 O \gls{stride}, desenvolvido pela Microsoft, é uma metodologia sistemática
 para a modelagem de ameaças, projetada para identificar potenciais
 vulnerabilidades em sistemas de software. O acrônimo \gls{stride} representa
-seis categorias principais de ameaças: Spoofing (falsificação),
-Tampering (manipulação), Repudiation (repúdio), Information Disclosure
-(divulgação de informações), Denial of Service (negação de serviço) e
-Elevation of Privilege (elevação de privilégios)
-\cite{ThreatModelingdesigningForSecurity}. Cada uma dessas categorias
-reflete uma violação específica das propriedades desejadas de
-segurança, como autenticidade, integridade, não-repúdio,
-confidencialidade, disponibilidade e autorização
+seis categorias principais de ameaças\cite{ThreatModelingdesigningForSecurity}.
+Cada uma dessas categorias reflete uma violação específica das
+propriedades desejadas de segurança, como autenticidade,
+integridade, não-repúdio, confidencialidade, disponibilidade e autorização
 \cite{MicrosoftThreatModelingTechnique}.
 
-A aplicação do \gls{stride} começa com a criação de Diagramas de Fluxo de
-Dados (DFDs) para mapear a movimentação de informações no sistema
-\cite{UncoverSecurityDesignFlawsSTRIDE}. Os DFDs ajudam a identificar
+A aplicação do \gls{stride} começa com a criação de \gls{dfds}
+para mapear a movimentação de informações no sistema
+\cite{UncoverSecurityDesignFlawsSTRIDE}. Os \gls{dfds} ajudam a identificar
 elementos como entidades externas, processos, fluxos de dados e
 armazenamentos de dados. Para cada elemento do diagrama, as seis
 categorias de ameaças do \gls{stride} são analisadas para identificar
@@ -111,15 +105,7 @@ complementar o \gls{stride}, permitindo que equipes representem visualmente
 cenários de ameaça complexos e identifiquem múltiplas vias de ataque.
 Essa integração é particularmente útil em organizações horizontais,
 onde a ausência de centralização aumenta a necessidade de mapeamentos
-colaborativos de ameaças \cite{ThreatModelingdesigningForSecurity}.
-
-Embora os modelos complementares e frameworks adicionais enriqueçam o
-\gls{stride}, sua aplicação ainda requer adaptações específicas para atender
-às particularidades de ambientes descentralizados, como organizações
-horizontais. Nessas estruturas, frameworks colaborativos, como o
-Security Cards e o CoReTM, têm demonstrado maior alinhamento com os
-princípios de governança distribuída
-\cite{SoftwareandattackcentricThreatModeling}.
+colaborativos de ameaças \cite{ThreatModelingdesigningForSecurity}. 
 
 \subsection{Attack Trees}
 \label{subsec:attack_trees}
@@ -235,11 +221,7 @@ envolve múltiplos stakeholders em todas as etapas do processo, está
 alinhada com os princípios de governança distribuída. Em estruturas
 não hierárquicas, onde a responsabilidade pela segurança é
 compartilhada, o \gls{pasta} oferece um framework estruturado para
-identificar e mitigar riscos de forma participativa e eficiente. Além
-disso, a análise iterativa do \gls{pasta} permite que organizações
-horizontais adaptem suas estratégias de segurança às mudanças
-constantes em seus ambientes operacionais, fortalecendo a resiliência
-coletiva.
+identificar e mitigar riscos de forma participativa e eficiente.
 
 \subsection{Security Cards}
 \label{subsec:security_cards}
@@ -361,11 +343,9 @@ O \gls{colbac} é um modelo de controle de
 acesso projetado para abordar as especificidades de organizações
 horizontais, promovendo uma abordagem democrática e participativa para
 a autorização de acessos. Sua proposta busca superar os desafios
-impostos por modelos tradicionais de controle de acesso, como DAC
-(Discretionary Access Control), MAC (Mandatory Access Control) e RBAC
-(Role-Based Access Control), que frequentemente reforçam dinâmicas
-hierárquicas inadequadas para estruturas horizontalizadas
-\cite{Colbac}.
+impostos por modelos tradicionais de controle de acesso, como
+\gls{dac}, \gls{mac} e \gls{rbac}, que frequentemente reforçam dinâmicas
+hierárquicas inadequadas para estruturas horizontalizadas \cite{Colbac}.
 
 Uma das características mais marcantes do \gls{colbac} é sua capacidade de
 alinhar o controle de acesso às práticas de governança horizontal,
@@ -475,7 +455,7 @@ sistemas distribuídos.
 
 \subsection{PGP and the Web of Trust}
 \label{subsec:pgp_web_of_trust}
-ads
+TODO
 
 \section{Comparative Perspectives}
 \label{sec:comparative_perspectives}
