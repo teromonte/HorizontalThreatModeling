@@ -6,12 +6,12 @@
 
 \typeout{NT FILE chapter3.tex}%
 
-\chapter{Related Work}
+\chapter{Trabalhos Relacionados}
 \label{cha:related_work}
 
 \glsresetall
 
-\section{Traditional Threat Modeling Approaches}
+\section{Abordagens Tradicionais de Modelagem de Ameaças}
 \label{sec:traditional_threat_modeling}
 
 \subsection{STRIDE}
@@ -157,7 +157,7 @@ para análise. Apesar de sua versatilidade, o uso eficaz das árvores
 depende de representações claras de nós AND/OR e da avaliação contínua
 para evitar excessos ou lacunas \cite{ThreatModelingdesigningForSecurity}.
 
-\section{Emerging Methodologies}
+\section{Metodologias Emergentes}
 \label{sec:emerging_methodologies}
 
 \subsection{PASTA}
@@ -303,7 +303,7 @@ tornando-as uma ferramenta indispensável para organizações que buscam
 compreender e mitigar ameaças de forma abrangente
 \cite{PnGRequirementsPhaseThreatModeling}.
 
-\section{Hybrid and Collaborative Approaches}
+\section{Abordagens Híbridas e Colaborativas}
 \label{sec:hybrid_collaborative_approaches}
 
 As abordagens híbridas e colaborativas buscam integrar diferentes
@@ -333,7 +333,7 @@ tradicionais.
 
 
 
-\section{Decentralized Trust and Cryptographic Frameworks}
+\section{Confiança Descentralizada e Frameworks Criptográficos}
 \label{sec:decentralized_cryptographic}
 
 \subsection{COLBAC}
@@ -453,14 +453,56 @@ podem melhorar significativamente a segurança e a resiliência de
 sistemas distribuídos.
 
 
-\subsection{PGP and the Web of Trust}
+\subsection{PGP e o Web of Trust}
 \label{subsec:pgp_web_of_trust}
-TODO
 
-\section{Comparative Perspectives}
+\gls{pgp}, desenvolvido por Philip Zimmermann, é um sistema de
+criptografia que combina privacidade, autenticação e conveniência para proteger
+mensagens e arquivos. O \gls{pgp} utiliza a criptografia de chave pública para
+viabilizar a comunicação segura entre indivíduos, mesmo sem confiança prévia ou
+troca de chaves em canais seguros \cite{Pgp}.
+
+No modelo de funcionamento do \gls{pgp}, cada indivíduo possui um par de chaves — uma
+pública, amplamente divulgada, e uma privada, mantida em sigilo. A chave pública
+é utilizada para criptografar mensagens, enquanto a privada é usada para
+descriptografá-las. Esse esquema não apenas garante a privacidade das mensagens,
+mas também permite a autenticação por meio de assinaturas digitais, assegurando
+a integridade e a origem de um conteúdo \cite{Pgp}.
+
+Uma característica central do \gls{pgp} é o modelo de \gls{wot}, que adota
+uma abordagem descentralizada para a validação de identidades. Diferentemente
+das hierarquias centralizadas de Autoridades Certificadoras, o \gls{wot} permite
+que qualquer usuário assine digitalmente a chave pública de outro, certificando
+sua autenticidade. Essas assinaturas criam uma rede de confiança distribuída, na
+qual a validação de uma chave pública depende da confiança acumulada das
+assinaturas de outros usuários confiáveis \cite{Pgp}.
+
+No \gls{pgp}, cada usuário pode atribuir diferentes níveis de confiança a outros
+indivíduos para atuarem como "introduzidores confiáveis". Esse mecanismo permite
+que a rede de confiança seja construída de forma orgânica, refletindo as
+relações sociais naturais. Por exemplo, um usuário pode confiar plenamente em
+outro para certificar chaves, ou apenas marginalmente, dependendo de sua
+percepção sobre a competência e integridade do introduzidor \cite{Pgp}.
+
+Além de promover a descentralização, a \gls{wot} também oferece resiliência
+contra ataques. Em vez de depender de um único ponto de falha, como ocorre em
+sistemas centralizados, o \gls{wot} permite que os usuários validem chaves públicas
+com base em múltiplas assinaturas, reduzindo o impacto de compromissos
+individuais. No entanto, essa abordagem também apresenta desafios, como a
+dificuldade de gerenciar grandes anéis de chaves e a subjetividade na atribuição
+de níveis de confiança \cite{Pgp}.
+
+A relevância do \gls{pgp} e da \gls{wot} para organizações horizontais é evidente.
+Estruturas não hierárquicas podem aproveitar a natureza descentralizada do \gls{wot}
+para criar sistemas de segurança alinhados aos princípios de autonomia coletiva
+e governança distribuída. Ao permitir que cada participante construa sua própria
+rede de confiança, o \gls{pgp} reforça a segurança sem comprometer a horizontalidade
+dessas organizações.
+
+\section{Perspectivas Comparativas}
 \label{sec:comparative_perspectives}
 
-\subsection{Criteria for Evaluation}
+\subsection{Critérios de Avaliação}
 \label{subsec:criteria_evaluation}
 
 A avaliação de frameworks de modelagem de ameaças requer critérios
@@ -499,7 +541,7 @@ podem mitigar custos operacionais enquanto mantêm a robustez
 analítica. Isso os torna adequados para sistemas modernos que exigem
 tanto precisão técnica quanto flexibilidade organizacional.
 
-\subsection{Applicability in Non-Hierarchical Organizations}
+\subsection{Aplicabilidade em Organizações Não-Hierárquicas}
 \label{subsec:applicability_non_hierarchical}
 
 A aplicabilidade de frameworks de modelagem de ameaças em organizações

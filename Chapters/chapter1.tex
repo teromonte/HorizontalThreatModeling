@@ -15,10 +15,89 @@
 
 \typeout{NT FILE chapter1.tex}%
 
-\chapter{Introduction}
+\chapter{Introdução}
 \label{cha:Introduction}
 
 \prependtographicspath{{Chapters/Figures/Covers/}}
+
+\section{Modelagem de Ameaças: Relevância e Desafios}
+\label{sec:modelagem_ameacas}
+
+A modelagem de ameaças é uma disciplina essencial no âmbito da segurança da
+informação, cuja principal função é identificar, classificar e mitigar
+vulnerabilidades em sistemas tecnológicos antes que estas possam ser exploradas
+por adversários. Em um contexto onde os sistemas se tornam cada vez mais
+complexos e integrados, a modelagem de ameaças se destaca como uma ferramenta
+crítica para antecipar riscos e estabelecer medidas de segurança eficazes
+\cite{ThreatModellingSurvey}.
+
+As organizações hierárquicas, devido à centralização do controle e de recursos,
+geralmente aplicam metodologias de modelagem de ameaças que dependem de fluxos
+de decisão lineares e centralizados, como é o caso da metodologia STRIDE,
+desenvolvida pela Microsoft \cite{ThreatModelingASummaryOfAvailableMethods}.
+Esse modelo centralizado reflete uma estrutura organizacional que facilita a
+implementação de políticas de segurança homogêneas, mas carece de flexibilidade
+para lidar com as dinâmicas horizontais
+\cite{EvaluationofCompetingThreatModeling}.
+
+Em contrapartida, estruturas organizacionais horizontais, caracterizadas por uma
+distribuição equitativa de poder e responsabilidades, apresentam desafios
+específicos para a modelagem de ameaças \cite{Colbac}. A ausência de uma
+hierarquia clara muitas vezes resulta em incompatibilidades estruturais, como
+sistemas de controle de acesso que forçam a hierarquização, dificultando a
+implementação de políticas democraticamente acordadas \cite{Colbac}.
+Adicionalmente, a centralização de segredos organizacionais, como senhas, pode
+gerar conflitos durante transições de liderança, o que é exemplificado no
+fenômeno conhecido como pasword wars \cite{FromCounterpublicstoContentious}.
+
+A utilização de ferramentas digitais por movimentos sociais também revela um
+fenômeno conhecido como vanguard digital. Isso ocorre quando indivíduos que
+controlam plataformas e contas digitais assumem posições de poder que podem
+contrariar os princípios de igualdade estrutural
+\cite{SocialMediaTeamsAsDigitalVanguards}. Além disso, ataques a processos
+democráticos, como falsificação de identidades (Sybil attacks) e manipulação de
+quorum, destacam vulnerabilidades exclusivas de sistemas horizontais devido à
+dependência em processos participativos \cite{MitigationSybilAttack,
+TheSybilAttack}. Finalmente, a falta de ferramentas tecnológicas que acomodem
+transições entre centralizações temporárias e estruturas horizontais limita a
+eficiência em cenários que demandam respostas rápidas ou especialização
+\cite{Colbac}.
+
+Esses desafios evidenciam a necessidade de adaptações nos métodos de segurança e
+na modelagem de ameaças para que possam atender às especificidades das
+organizações horizontais. A modelagem de ameaças para esses contextos deve
+equilibrar aspectos técnicos e dinâmicas organizacionais, promovendo a
+resiliência e a segurança em ambientes onde o poder e a responsabilidade são
+compartilhados \cite{ThreatModelingdesigningForSecurity}.
+
+\section{A Segurança Horizontal em Tempos de Interconexão}
+\label{sec:desafios_contemporaneos}
+
+No mundo interconectado atual, as organizações horizontais desafiam o
+pressuposto de que a segurança depende de uma cadeia clara de comando. A
+ausência de hierarquia formal pode se transformar em um ativo estratégico
+ao dificultar ataques centralizados e ao permitir uma reconfiguração da
+gestão da confiança, promovendo a resiliência organizacional
+\cite{EverydayRevolutions}. Em sistemas de confiança distribuída,
+como os utilizados em organizações baseadas em blockchain,
+a segurança é promovida por mecanismos colaborativos que
+substituem líderes formais por processos participativos e soluções
+orientadas à transparência e consenso \cite{Reputation-basedDAO}.
+
+Metodologias tradicionais de análise de ameaças, tais como \gls{stride} e árvores
+de ataque, fornecem fundamentos valiosos, mas enfrentam limitações em
+ambientes descentralizados, destacando a necessidade de abordagens mais
+adequadas às especificidades de estruturas horizontais
+\cite{ThreatModellingSurvey}. Contextos menos hierárquicos requerem
+abordagens adaptadas que compreendam a complexidade da confiança horizontal
+e dos potenciais riscos associados.
+
+Nesse sentido, tecnologias como a criptografia colaborativa \cite{Colbac,
+AbcCrypto} e abordagens de modelagem de ameaças que adotam a perspectiva global
+da organização podem promover um entendimento mais realista da segurança em
+estruturas descentralizadas. A horizontalidade, frequentemente vista como
+um desafio, deve ser explorada como um ativo estratégico capaz de diluir
+pontos únicos de falha e fortalecer a resiliência organizacional.
 
 \section{Governança Organizacional: Uma Perspectiva Histórica}
 \label{sec:contexto_historico}
@@ -56,35 +135,6 @@ de governança, mas também introduzem desafios únicos na modelagem de
 ameaças. A análise crítica dessas tentativas permite identificar
 vulnerabilidades e forças que fundamentam a construção de protocolos de
 segurança em organizações horizontais.
-
-\section{A Segurança Horizontal em Tempos de Interconexão}
-\label{sec:desafios_contemporaneos}
-
-No mundo interconectado atual, as organizações horizontais desafiam o
-pressuposto de que a segurança depende de uma cadeia clara de comando. A
-ausência de hierarquia formal pode se transformar em um ativo estratégico
-ao dificultar ataques centralizados e ao permitir uma reconfiguração da
-gestão da confiança, promovendo a resiliência organizacional
-\cite{EverydayRevolutions}. Em sistemas de confiança distribuída,
-como os utilizados em organizações baseadas em blockchain,
-a segurança é promovida por mecanismos colaborativos que
-substituem líderes formais por processos participativos e soluções
-orientadas à transparência e consenso \cite{Reputation-basedDAO}.
-
-Metodologias tradicionais de análise de ameaças, tais como \gls{stride} e árvores
-de ataque, fornecem fundamentos valiosos, mas enfrentam limitações em
-ambientes descentralizados, destacando a necessidade de abordagens mais
-adequadas às especificidades de estruturas horizontais
-\cite{ThreatModellingSurvey}. Contextos menos hierárquicos requerem
-abordagens adaptadas que compreendam a complexidade da confiança horizontal
-e dos potenciais riscos associados.
-
-Nesse sentido, tecnologias como a criptografia colaborativa \cite{Colbac,
-AbcCrypto} e abordagens de modelagem de ameaças que adotam a perspectiva global
-da organização podem promover um entendimento mais realista da segurança em
-estruturas descentralizadas. A horizontalidade, frequentemente vista como
-um desafio, deve ser explorada como um ativo estratégico capaz de diluir
-pontos únicos de falha e fortalecer a resiliência organizacional.
 
 \section{Protocolo de Segurança para Organizações Não-Hierárquicas}
 \label{sec:objetivos_pesquisa}
@@ -135,27 +185,20 @@ governança descentralizada e segurança distribuída
 \section{Contribuições Esperadas} 
 \label{sec:contribuicoes_esperadas}
 
-Esta pesquisa busca avançar a compreensão teórica da segurança em
-estruturas horizontais, abordando lacunas relacionadas à aplicabilidade de
-metodologias tradicionais em contextos descentralizados, como a falta de
-adaptação às dinâmicas de governança horizontal identificadas em
-\cite{ThreatModelingAsABasisForSecurityRequirements} e
-\cite{DemystifyingTheThreatModelingProcess}. O objetivo é superar
-adaptações limitadas de metodologias existentes, desenvolvendo um protocolo
-que não apenas respeite os valores de participação coletiva, transparência
-e confiança distribuída, mas também aproveitem a horizontalidade como ativo
-estratégico, conforme sugerido em \cite{Colbac}.
+A pesquisa entregará um protocolo de modelagem de ameaças específico para
+organizações horizontais, integrando os princípios de governança distribuída,
+participação coletiva e transparência. Esse protocolo será projetado para
+identificar, avaliar e mitigar ameaças em estruturas descentralizadas,
+fornecendo diretrizes práticas adaptadas às particularidades dessas
+organizações. Além disso, será acompanhado por um método de avaliação para
+validar sua eficácia e sua aplicação em casos reais ou simulados.
 
-Do ponto de vista prático, espera-se oferecer diretrizes que demonstrem
-como a segurança pode ser integrada à governança democrática, promovendo
-decisões participativas e protegendo ativos organizacionais de forma
-descentralizada, conforme discutido em \cite{Non-HierarchicalForms}. Ao
-fazê-lo, o protocolo busca demonstrar que a horizontalidade pode ser uma
-vantagem estratégica, transformando a segurança em um catalisador para
-autonomia e resiliência organizacional frente a ameaças complexas, como
-enfatizado em \cite{Reputation-basedDAO} e \cite{AbcCrypto}.
-
-
+Espera-se que o protocolo demonstre como a horizontalidade pode ser um ativo
+estratégico, reforçando a segurança e a resiliência organizacional frente a
+ameaças complexas. Além de contribuir para o avanço teórico sobre segurança em
+estruturas descentralizadas, a pesquisa busca oferecer uma solução prática que
+fortaleça a autonomia e promova a integração entre segurança e governança
+democrática.
 
 \section{Estrutura da Tese} 
 \label{sec:estrutura_tese}
