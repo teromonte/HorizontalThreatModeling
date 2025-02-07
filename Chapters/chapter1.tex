@@ -137,47 +137,73 @@ segurança em organizações horizontais.
 \section{Protocolo de Segurança para Organizações Não-Hierárquicas}
 \label{sec:objetivos_pesquisa}
 
-Esta pesquisa propõe um protocolo de segurança que integra a
-horizontalidade como elemento estratégico, indo além da simples adaptação
-de metodologias tradicionais. Em vez disso, busca demonstrar como a
-descentralização, quando bem estruturada, reforça a resiliência frente a
-ameaças complexas, mitigando pontos únicos de falha.
+Esta pesquisa propõe um protocolo de segurança que integra a horizontalidade
+como elemento estratégico, indo além da simples adaptação de metodologias
+tradicionais. O objetivo central é demonstrar como a descentralização, quando
+estruturada de forma coerente com os princípios organizacionais, pode reforçar a
+resiliência frente a ameaças complexas, mitigando pontos únicos de falha e
+distribuindo responsabilidades de maneira equitativa. O protocolo visa
+equilibrar eficiência operacional e participação democrática, garantindo que
+medidas de segurança não comprometam a agilidade decisória nem a inclusão de
+membros em processos críticos. Para isso, baseia-se em abordagens colaborativas,
+como a criptografia adaptada a contextos horizontais \cite{Colbac}, e em
+metodologias de modelagem de ameaças que consideram dinâmicas participativas
+\cite{ThreatModelingdesigningForSecurity}.
 
-A proposta preenche uma lacuna na literatura sobre segurança em estruturas
-horizontalizadas, abordando desafios apontados em estudos como o uso
-limitado de metodologias tradicionais em contextos descentralizados
-\cite{ThreatModellingSurvey} e a necessidade de criptografia adaptada
-\cite{Colbac}. Considere organizações descentralizadas que gerenciam ativos
-digitais sensíveis. A pergunta central é como garantir proteção contra
-fraudes internas e ataques externos, preservando a governança horizontal.
+A integração entre segurança e governança é abordada por meio de diretrizes que
+harmonizam requisitos técnicos com princípios organizacionais. O protocolo prevê
+a aplicação de mecanismos de consenso transparentes e auditáveis, inspirados em
+modelos de reputação distribuída \cite{Reputation-basedDAO}, para validar
+políticas de acesso e mitigar riscos como ataques Sybil
+\cite{MitigationSybilAttack}. Além disso, incorpora estruturas modulares que
+permitem adaptação a diferentes níveis de horizontalidade, desde redes
+totalmente descentralizadas até organizações com estruturas mais hierarquizadas
+\cite{Colbac}. Essa flexibilidade é essencial para responder a ameaças
+dinâmicas sem comprometer a autonomia dos membros e abranger o maior número de
+organizações.
 
-O protocolo proposto oferecerá mecanismos de consenso, transparência e uma
-modelagem de ameaças adaptada, como a inclusão de abordagens colaborativas
-e participativas descritas em \cite{Colbac} e \cite{AbcCrypto}, fornecendo
-soluções pragmáticas para tais desafios.
+Para fortalecer a resiliência, o protocolo combina camadas técnicas e sociais:
+técnicas criptográficas protegem contra ameaças externas, enquanto
+estruturas de transparência radical e revisões periódicas por comitês
+rotativos previnem fraudes internas. A rastreabilidade de decisões via
+registros imutáveis assegura que vulnerabilidades sejam
+identificadas e corrigidas de forma colaborativa, alinhando-se a estudos sobre
+falhas em sistemas distribuídos \cite{Reputation-basedDAO}. Ao incorporar lições
+de casos históricos e inovações metodológicas, o protocolo oferece um arcabouço
+prático para organizações que almejam segurança sem abrir mão de sua identidade
+horizontal, preparando o terreno para análises detalhadas nos capítulos
+subsequentes.
 
 
 \section{Delimitando o Escopo da Pesquisa}
 \label{sec:delimitacao_escopo}
 
-A variedade de arranjos horizontais é ampla, e analisar todos em um único
-estudo seria pouco produtivo. Para permitir uma análise detalhada e
-alinhada com os objetivos da pesquisa, este trabalho concentra-se em
-estruturas plenamente horizontais que exemplifiquem confiança distribuída,
-governança democrática e mecanismos colaborativos para a tomada de decisão
-\cite{Colbac}. Ambientes híbridos ou parcialmente horizontalizados, onde a
-governança é compartilhada entre níveis hierárquicos e horizontais, ficam
-fora do escopo, permitindo avaliar com maior precisão a eficácia do
-protocolo em um cenário idealizado e mais controlado.
+A diversidade de organizações horizontais abrange desde coletivos informais até
+redes digitais complexas, cada uma com dinâmicas particulares. Para garantir
+foco analítico, este estudo limita-se a estruturas que operam sob princípios
+estritos de horizontalidade, caracterizadas por: (1) ausência de hierarquias
+formais ou centralização permanente de poder; (2) processos decisórios baseados
+em consenso ou participação ampla; e (3) mecanismos explícitos de distribuição
+de responsabilidades e recursos \cite{Colbac}. Essa delimitação exclui modelos
+híbridos ou parcialmente descentralizados, onde a coexistência de estruturas
+hierárquicas e horizontais introduz variáveis adicionais que dificultam a
+avaliação isolada do protocolo proposto.
 
-Futuras investigações poderão expandir este protocolo, adaptando suas
-diretrizes a contextos organizacionais híbridos ou altamente dinâmicos,
-como redes sociais e plataformas cooperativas digitais
-\cite{CreatingTheCollectiveSocialMedia, Non-HierarchicalForms}. A escolha
-por cooperativas de trabalhadores e redes comunitárias também reflete a
-relevância prática dessas estruturas em demonstrar a viabilidade de
-governança descentralizada e segurança distribuída
-\cite{WorkerCooperativesinAmerica, EverydayRevolutions}.
+A opção por analisar organizações como cooperativas de trabalhadores e redes
+comunitárias justifica-se por sua relevância empírica: esses modelos possuem
+documentação robusta sobre desafios operacionais
+\cite{WorkerCooperativesinAmerica}, além de adotarem explicitamente princípios
+de autogestão e transparência radical \cite{EverydayRevolutions}. Tais
+características permitem testar o protocolo em contextos onde a segurança
+depende diretamente da coordenação coletiva, sem intermediários ou autoridades
+centrais.
+
+Embora plataformas digitais e redes sociais descentralizadas
+\cite{CreatingTheCollectiveSocialMedia} representem casos igualmente relevantes,
+sua natureza dinâmica e dependência de infraestruturas técnicas heterogêneas
+exigiriam adaptações metodológicas além do escopo atual. Estudos futuros poderão
+explorar essas variações, utilizando o protocolo aqui desenvolvido como base
+para análises comparativas em ambientes menos controlados.
 
 
 \section{Contribuições Esperadas} 
@@ -189,7 +215,7 @@ participação coletiva e transparência. Esse protocolo será projetado para
 identificar, avaliar e mitigar ameaças em estruturas descentralizadas,
 fornecendo diretrizes práticas adaptadas às particularidades dessas
 organizações. Além disso, será acompanhado por um método de avaliação para
-validar sua eficácia e sua aplicação em casos reais ou simulados.
+validar sua eficácia e sua aplicação em casos reais.
 
 Espera-se que o protocolo demonstre como a horizontalidade pode ser um ativo
 estratégico, reforçando a segurança e a resiliência organizacional frente a
@@ -206,7 +232,7 @@ da modelagem de ameaças e segurança em estruturas horizontais. O
 capítulo de Related Work analisa estudos prévios, identificando
 lacunas e oportunidades relevantes.
 
-O capítulo de Design detalha o protocolo proposto, suas metodologias e
+O capítulo de Design esboça o protocolo proposto, suas metodologias e
 critérios de avaliação. O capítulo de Work Plan descreve as etapas e
 cronograma da pesquisa, assegurando a execução estruturada e viável do
 projeto. Por fim, o capítulo de Conclusão sintetiza os resultados,

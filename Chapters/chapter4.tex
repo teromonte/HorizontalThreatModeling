@@ -14,52 +14,94 @@
 \section{Conceito Preliminar do Protocolo}
 \label{sec:preliminary_protocol_concept}
 
-TODO
+O protocolo a ser desenvolvido será um modelo estruturado para a modelagem de
+ameaças em organizações não-hierárquicas, funcionando de forma semelhante ao
+STRIDE, mas adaptado às especificidades da governança distribuída. Ele não será
+um software, mas um conjunto formal de diretrizes e metodologias documentadas
+para identificação, análise e mitigação de ameaças em ambientes horizontais. Seu
+formato será textual e estruturado como um documento acadêmico e técnico,
+oferecendo um referencial prático e teórico para segurança em estruturas
+descentralizadas.
+
+A audiência primária inclui membros da organização que utilizam o protocolo para
+analisar ameaças em seu contexto específico, bem como especialistas em segurança
+da informação e governança distribuída que buscam métodos adaptados a ambientes
+sem hierarquia. O protocolo servirá para aprimorar a resiliência organizacional
+sem comprometer a participação democrática, garantindo que a segurança seja
+integrada à dinâmica colaborativa das organizações horizontais.
 
 \section{Requisitos de Segurança e Governança}
 \label{sec:security_governance_requirements}
 
-Para garantir que o protocolo atenda às demandas de segurança e
-governança horizontal, os seguintes requisitos são definidos:
-
+Para garantir que o protocolo atenda às demandas de segurança e governança
+horizontal, os seguintes requisitos são definidos e sua integração à modelagem
+de ameaças é delineada:
+    
 \begin{itemize}
-    \item \textbf{Transparência:} Todos os processos de autorização
-devem ser registrados de forma imutável, permitindo auditorias
-completas.
-    \item \textbf{Participação Democrática:} A tomada de decisão deve
-ser inclusiva, com processos que permitam contribuições de todos os
-membros.
-    \item \textbf{Flexibilidade:} O protocolo deve suportar mudanças
-rápidas entre modos de governança centralizados e descentralizados,
-dependendo das necessidades da organização.
-    \item \textbf{Escalabilidade:} Deve ser capaz de operar
-eficientemente em organizações de diferentes tamanhos e níveis de
-complexidade.
+
+    \item \textbf{Transparência}: Todos os processos de autorização devem ser
+registrados de forma imutável, permitindo auditorias completas. Para isso, o
+protocolo utilizará mecanismos criptográficos de registro imutável, como logs
+descentralizados e assinaturas digitais verificáveis, garantindo rastreabilidade
+sem comprometer a horizontalidade.
+    
+    \item \textbf{Participação Democrática}: A tomada de decisão deve ser
+inclusiva, permitindo contribuições de todos os membros. O protocolo integrará
+mecanismos de consenso inspirados em sistemas de governança distribuída, como
+votação segura e delegação dinâmica de autoridade, reduzindo riscos como
+manipulação de quórum ou ataques Sybil.
+    
+    \item \textbf{Flexibilidade}: O protocolo deve suportar mudanças rápidas
+entre modos de governança centralizados e descentralizados, conforme as
+necessidades da organização. Para isso, serão definidos critérios e mecanismos
+para transições seguras entre modelos de tomada de decisão, permitindo ajustes
+dinâmicos sem expor a organização a vulnerabilidades.
+    
+    \item \textbf{Escalabilidade}: Deve ser capaz de operar eficientemente em
+organizações de diferentes tamanhos e níveis de complexidade. A modelagem de
+ameaças abordará a expansão das interações e dos processos de segurança sem
+comprometer a governança distribuída, garantindo que mecanismos como controle de
+acesso colaborativo e validação distribuída continuem funcionais em diferentes
+contextos organizacionais.
+
 \end{itemize}
 
 \section{Estratégia de Avaliação}
 \label{sec:evaluation_strategy}
 
-A estratégia de avaliação será baseada em estudos de caso e simulações
-que envolvam cenários realistas de organizações horizontais. O
-desempenho do protocolo será analisado considerando os seguintes
-critérios:
+A estratégia de avaliação do protocolo será conduzida através da sua aplicação
+em grupos selecionados que apresentam diferentes níveis de horizontalidade. Isso
+permitirá analisar como a estrutura de governança influencia a eficiência, a
+segurança e a adesão ao protocolo. A avaliação será baseada em estudos de caso e
+simulações que repliquem ameaças realistas dentro desses contextos, considerando
+os seguintes critérios:
 
 \begin{itemize}
-    \item \textbf{Eficiência:} Tempo necessário para concluir
-processos de autorização e tomadas de decisão.
-    \item \textbf{Eficácia:} Capacidade de identificar e mitigar
-ameaças relevantes.
-    \item \textbf{Aceitação pelos Usuários:} Facilidade de uso e nível
-de adoção pelos membros da organização.
-    \item \textbf{Resiliência a Ameaças:} Desempenho sob ataques
-simulados, incluindo manipulações de quórum e falhas de consenso.
+
+    \item \textbf{Eficiência}: O tempo necessário para concluir processos de autorização e
+tomadas de decisão será medido utilizando logs de auditoria e análise da
+latência operacional em diferentes modelos de governança. Serão comparadas
+abordagens baseadas em consenso distribuído e em decisões locais para
+identificar quais garantem maior agilidade sem comprometer a segurança.
+
+    \item \textbf{Eficácia}: A capacidade do protocolo de identificar e mitigar ameaças
+será testada em cada grupo, analisando-se vulnerabilidades estruturais
+associadas à sua dinâmica organizacional. Modelos como STRIDE e árvores de
+ataque serão utilizados para simular cenários adversos e avaliar a resposta do
+sistema a ataques internos e externos.
+
+    \item \textbf{Aceitação pelos Usuários}: A facilidade de uso e o nível de adesão serão
+medidos através da interação com diferentes grupos e seus modos de tomada de
+decisão. Experimentos controlados incluirão feedback qualitativo e quantitativo
+sobre a usabilidade do protocolo em contextos altamente horizontais e híbridos.
+
+    \item \textbf{Resiliência a Ameaças}: O desempenho do protocolo diante de ataques
+simulados, incluindo manipulação de quórum, ataques Sybil e falhas de consenso,
+será testado em cada nível de horizontalidade. Serão analisadas abordagens de
+mitigação específicas para organizações sem liderança central e grupos com
+hierarquia flexível, garantindo um protocolo adaptável a diferentes cenários.
+
 \end{itemize}
-
-\section{Desenho Experimental}
-\label{sec:experimental_design}
-
-TODO
 
 \section{Questões de Pesquisa}
 \label{sec:research_questions}
