@@ -19,8 +19,9 @@
 
 O \gls{stride}, desenvolvido pela Microsoft, é uma metodologia sistemática
 para a modelagem de ameaças, projetada para identificar potenciais
-vulnerabilidades em sistemas de software. O acrônimo \gls{stride} representa
-seis categorias principais de ameaças\cite{ThreatModelingdesigningForSecurity}.
+vulnerabilidades em sistemas de software \cite{MicrosoftThreatModelingTechnique}.
+O acrônimo \gls{stride} representa seis categorias principais
+de ameaças\cite{ThreatModelingdesigningForSecurity}.
 Cada uma dessas categorias reflete uma violação específica das
 propriedades desejadas de segurança, como autenticidade,
 integridade, não-repúdio, confidencialidade, disponibilidade e autorização
@@ -82,14 +83,15 @@ sistemas modernos e descentralizados
 
 Diversos modelos complementares foram derivados ou utilizados em
 conjunto com o \gls{stride} para aprimorar sua eficácia e adaptabilidade em
-diferentes contextos. Entre esses, destaca-se o modelo \gls{dread}, que
+diferentes contextos \cite{SoftwareandattackcentricThreatModeling}.
+Entre esses, destaca-se o modelo \gls{dread}, que
 complementa o \gls{stride} ao fornecer uma abordagem quantitativa para
 priorização de ameaças \cite{DREADful}. O \gls{dread} utiliza cinco
 categorias principais: Damage Potential, Reproducibility,
 Exploitability, Affected Users e Discoverability, permitindo que
-analistas atribuam valores e criem escores para classificar ameaças de
-acordo com sua severidade
-\cite{SoftwareandattackcentricThreatModeling}.
+analistas atribuam valores e criem escores
+para classificar ameaças de acordo com sua severidade
+\cite{SoftwareandattackcentricThreatModeling, DREADful}.
 
 O uso combinado do \gls{stride} e do \gls{dread} pode melhorar a avaliação de
 riscos em sistemas mais complexos. No entanto, a subjetividade
@@ -102,7 +104,8 @@ priorizar ameaças \cite{SoftwareandattackcentricThreatModeling}.
 
 Adicionalmente, o uso de árvores de ataque tem se mostrado eficaz para
 complementar o \gls{stride}, permitindo que equipes representem visualmente
-cenários de ameaça complexos e identifiquem múltiplas vias de ataque.
+cenários de ameaça complexos e identifiquem múltiplas vias de ataque
+\cite{FoundationsofAttackTrees}.
 Essa integração é particularmente útil em organizações horizontais,
 onde a ausência de centralização aumenta a necessidade de mapeamentos
 colaborativos de ameaças \cite{ThreatModelingdesigningForSecurity}. 
@@ -143,19 +146,21 @@ análises futuras, economizando tempo e recursos.
 Embora sejam amplamente aplicáveis, as árvores de ataque apresentam
 desafios relacionados ao esforço necessário para sua construção
 inicial e à complexidade em sistemas de grande escala
-\cite{AttackTrees}. A colaboração entre stakeholders, incluindo
+\cite{AttackTrees, Energytheftdetectionissues}. A colaboração entre stakeholders, incluindo
 especialistas técnicos e operacionais, é essencial para garantir que a
 representação das ameaças seja precisa e abrangente
 \cite{Energytheftdetectionissues}.
 
 As árvores de ataque também se destacam como ferramentas
 complementares a metodologias como \gls{stride} e podem ser utilizadas tanto
-para identificar ameaças quanto para organizar as já descobertas. Além
+para identificar ameaças quanto para organizar as já descobertas
+\cite{FoundationsofAttackTrees, ThreatModelingASystematicLiteratureReview}. Além
 disso, a reutilização de árvores existentes, como aquelas voltadas
 para fraudes ou eleições, economiza tempo e fornece uma base sólida
-para análise. Apesar de sua versatilidade, o uso eficaz das árvores
-depende de representações claras de nós AND/OR e da avaliação contínua
-para evitar excessos ou lacunas \cite{ThreatModelingdesigningForSecurity}.
+para análise \cite{FoundationsofAttackTrees}. Apesar de sua versatilidade,
+o uso eficaz das árvores depende de representações claras de nós AND/OR
+e da avaliação contínua para evitar excessos ou lacunas
+\cite{ThreatModelingdesigningForSecurity}.
 
 \section{Metodologias Emergentes}
 \label{sec:emerging_methodologies}
@@ -207,19 +212,20 @@ riscos prioritários \cite{RiskCentricThreatModeling}.
 
 O \gls{pasta} se destaca por sua flexibilidade e profundidade analítica,
 tornando-o particularmente eficaz em ambientes dinâmicos e
-distribuídos. A metodologia incentiva a colaboração entre stakeholders
+distribuídos \cite{ThreatModelingASystematicLiteratureReview}.
+A metodologia incentiva a colaboração entre stakeholders
 de diferentes áreas, promovendo uma compreensão unificada dos riscos e
-das prioridades organizacionais. Além disso, a integração de
-simulações de ataques permite que as organizações testem a eficácia de
-suas estratégias de segurança em condições realistas, aprimorando sua
-resiliência contra ameaças emergentes
+das prioridades organizacionais \cite{ParticipatoryThreatModelling}.
+Além disso, a integração de simulações de ataques permite
+que as organizações testem a eficácia de suas estratégias de segurança
+em condições realistas, aprimorando sua resiliência contra ameaças emergentes
 \cite{RiskCentricThreatModeling}.
 
 Um dos aspectos mais relevantes do \gls{pasta} é sua compatibilidade com
 organizações horizontais. A abordagem colaborativa da metodologia, que
 envolve múltiplos stakeholders em todas as etapas do processo, está
-alinhada com os princípios de governança distribuída. Em estruturas
-não hierárquicas, onde a responsabilidade pela segurança é
+alinhada com os princípios de governança distribuída \cite{Colbac}.
+Em estruturas não hierárquicas, onde a responsabilidade pela segurança é
 compartilhada, o \gls{pasta} oferece um framework estruturado para
 identificar e mitigar riscos de forma participativa e eficiente.
 
@@ -247,10 +253,11 @@ centrada no usuário \cite{KeepingAheadofOurAdversaries}.
 
 Os Security Cards têm sido utilizados em diversas aplicações, como a
 proteção de sistemas biométricos contra ataques de apresentação
-\cite{AttackTreesforProtectingBiometric}. Sua estrutura flexível
-permite adaptação a diferentes contextos organizacionais, incluindo
-ambientes descentralizados. Em organizações horizontais, os Security
-Cards facilitam a participação de diversos stakeholders, promovendo a
+\cite{AttackTreesforProtectingBiometric, KeepingAheadofOurAdversaries}.
+Sua estrutura flexível permite adaptação a diferentes contextos organizacionais, incluindo
+ambientes descentralizados \cite{ParticipatoryThreatModelling}.
+Em organizações horizontais, os Security Cards facilitam
+a participação de diversos stakeholders, promovendo a
 governança distribuída e reforçando a colaboração
 \cite{CyberThreatModeling}.
 
@@ -259,7 +266,7 @@ falsos positivos, o que exige esforço adicional para filtrar ameaças
 relevantes \cite{KeepingAheadofOurAdversaries}. No entanto, sua ênfase
 na criatividade e inclusão de múltiplas perspectivas faz dos Security
 Cards uma ferramenta valiosa para explorar ameaças emergentes e
-fortalecer a resiliência organizacional.
+fortalecer a resiliência organizacional \cite{CyberThreatModeling}.
 
 \subsection{Personae Non Grata}
 \label{subsec:personae_non_grata}
@@ -281,22 +288,25 @@ perfis de atacantes considerados, permitindo uma modelagem mais
 robusta e adaptada a diferentes contextos \cite{PersonaeNonGratae}.
 
 Uma das principais vantagens das \gls{pngs} é sua capacidade de capturar
-motivações, capacidades e comportamentos específicos de atacantes. Por
-exemplo, uma PnG pode descrever um adversário que utiliza phishing
+motivações, capacidades e comportamentos específicos de atacantes
+\cite{PnGRequirementsPhaseThreatModeling}.
+Por exemplo, uma PnG pode descrever um adversário que utiliza phishing
 para obter credenciais ou explora falhas de segurança em transações
 financeiras \cite{PersonaeNonGratae}. Este nível de detalhamento
 auxilia na priorização de contramedidas e na alocação de recursos de
 segurança \cite{PnGRequirementsPhaseThreatModeling}.
 
 Além disso, as \gls{pngs} são particularmente eficazes em contextos onde as
-ameaças internas e externas se sobrepõem. Em organizações horizontais,
-onde a governança é distribuída e a responsabilidade é compartilhada,
-as \gls{pngs} ajudam a mapear potenciais riscos que podem surgir de atores
+ameaças internas e externas se sobrepõem \cite{PersonaeNonGratae}.
+Em organizações horizontais, onde a governança é distribuída
+e a responsabilidade é compartilhada, as \gls{pngs} ajudam
+a mapear potenciais riscos que podem surgir de atores
 internos, como colaboradores, ou externos, como competidores
 \cite{PersonaeNonGratae}.
 
 Apesar de seus benefícios, a implementação de \gls{pngs} requer esforço
-significativo para garantir que os perfis sejam precisos e relevantes.
+significativo para garantir que os perfis sejam precisos e relevantes
+\cite{PnGRequirementsPhaseThreatModeling}.
 No entanto, quando integradas a outras metodologias, como árvores de
 ataque ou \gls{stride}, as \gls{pngs} oferecem uma camada adicional de análise,
 tornando-as uma ferramenta indispensável para organizações que buscam
@@ -308,7 +318,8 @@ compreender e mitigar ameaças de forma abrangente
 
 As abordagens híbridas e colaborativas buscam integrar diferentes
 metodologias para criar frameworks adaptáveis e eficazes em contextos
-variados. Dentre essas, destaca-se o \gls{htmm}, que combina elementos
+variados \cite{AHybridThreatModelingMethod, CoReTM}.
+Dentre essas, destaca-se o \gls{htmm}, que combina elementos
 de diferentes frameworks para uma análise abrangente de riscos.
 Ele é particularmente útil em cenários que envolvem múltiplos
 stakeholders e requerem alinhamento entre objetivos de segurança
@@ -321,15 +332,15 @@ plataformas de anotação compartilhada, o \gls{coretm} torna o processo mais
 acessível e inclusivo, sendo ideal para organizações horizontais e
 globais \cite{CoReTM}.
 
-Por fim, o \gls{ptm} promove a inclusão de
-uma ampla gama de stakeholders no processo de modelagem de ameaças.
+Por fim, o \gls{ptm} promove a inclusão de uma ampla gama de stakeholders
+no processo de modelagem de ameaças \cite{ParticipatoryThreatModelling}. 
 Esta abordagem valoriza a diversidade de perspectivas, sendo
 especialmente relevante em contextos descentralizados onde a
 transparência e a participação coletiva são essenciais
 \cite{ParticipatoryThreatModelling}. Essas metodologias reforçam a
 governança distribuída e fortalecem a resiliência organizacional,
 complementando o trabalho desenvolvido por frameworks mais
-tradicionais.
+tradicionais \cite{Colbac}.
 
 
 
@@ -350,8 +361,9 @@ hierárquicas inadequadas para estruturas horizontalizadas \cite{Colbac}.
 Uma das características mais marcantes do \gls{colbac} é sua capacidade de
 alinhar o controle de acesso às práticas de governança horizontal,
 permitindo que decisões sejam tomadas coletivamente por meio de
-processos democráticos. O modelo organiza recursos e processos em três
-esferas principais: a Esfera Coletiva, que concentra recursos críticos
+processos democráticos \cite{ParticipatoryThreatModelling}.
+O modelo organiza recursos e processos em três esferas
+principais: a Esfera Coletiva, que concentra recursos críticos
 sujeitos à aprovação coletiva; a Esfera do Usuário, que abrange
 recursos gerenciados individualmente com base em controles
 tradicionais; e a Esfera Imutável, responsável por armazenar logs e
@@ -368,27 +380,28 @@ registros sendo armazenados na Esfera Imutável \cite{Colbac}. Essa
 estrutura oferece flexibilidade ao permitir a adaptação do nível de
 horizontalidade de acordo com as necessidades da organização,
 inclusive em situações de crise que possam demandar centralizações
-temporárias.
+temporárias \cite{Colbac}.
 
 Apesar de suas vantagens, o \gls{colbac} enfrenta desafios inerentes à sua
-abordagem democrática. Processos de votação frequentes podem resultar
-em fadiga dos usuários, especialmente em organizações maiores. Além
-disso, ataques democráticos, como a manipulação de quóruns ou o uso
+abordagem democrática \cite{Colbac}. Processos de votação frequentes podem resultar
+em fadiga dos usuários, especialmente em organizações maiores
+\cite{Colbac, EverydayRevolutions}.
+Além disso, ataques democráticos, como a manipulação de quóruns ou o uso
 abusivo de tokens de emergência, representam riscos significativos.
 Tais problemas podem ser mitigados com a implementação de auditorias
 independentes, ajustes dinâmicos nos critérios de quórum e mecanismos
-que limitem o uso de tokens de emergência. Outra questão importante é
+que limitem o uso de tokens de emergência \cite{Colbac}. Outra questão importante é
 a curva de aprendizado associada ao modelo, que requer familiaridade
 com práticas democráticas e a compreensão do funcionamento dos tokens
 \cite{Colbac}.
 
 O \gls{colbac} oferece uma solução inovadora para organizações que desejam
 alinhar sua governança horizontal com práticas robustas de segurança
-digital. Sua transparência, flexibilidade e compromisso com a
+digital \cite{Colbac}. Sua transparência, flexibilidade e compromisso com a
 participação democrática o posicionam como uma ferramenta estratégica
 para superar os desafios de segurança em estruturas descentralizadas,
 transformando potenciais vulnerabilidades em oportunidades para
-fortalecer a autonomia coletiva.
+fortalecer a autonomia coletiva \cite{Colbac, EverydayRevolutions}.
 
 \subsection{ABCcrypto}
 \label{subsec:abccrypto}
@@ -407,13 +420,13 @@ O principal diferencial do \gls{abc} é a introdução de matrizes de conluio
 envolvem colaborações entre diferentes atores maliciosos. Essa
 abordagem sistemática reduz a complexidade do processo de modelagem ao
 eliminar casos irrelevantes e agrupar cenários com efeitos
-semelhantes. Além disso, o framework utiliza categorias de ameaças
+semelhantes \cite{AbcCrypto}. Além disso, o framework utiliza categorias de ameaças
 específicas para criptomoedas, considerando não apenas os ativos
 tangíveis, como blockchains e tokens, mas também ativos abstratos,
 como privacidade e reputação \cite{AbcCrypto}.
 
 Uma característica fundamental do \gls{abc} é sua capacidade de adaptar as
-categorias de ameaças aos objetivos e ativos de cada sistema. O
+categorias de ameaças aos objetivos e ativos de cada sistema \cite{AbcCrypto}. O
 processo começa com a caracterização detalhada do modelo de sistema,
 identificando participantes, ativos e motivações financeiras. Em
 seguida, categorias de ameaças são derivadas a partir das violações
@@ -440,8 +453,8 @@ previamente considerados. Já no CacheCash, o \gls{abc} foi usado desde as
 etapas iniciais do design para identificar 525 casos de conluio e
 implementar contramedidas baseadas em incentivos \cite{AbcCrypto}.
 
-Embora apresente benefícios claros, o \gls{abc} não é isento de desafios. A
-criação de matrizes de conluio e a análise detalhada de categorias de
+Embora apresente benefícios claros, o \gls{abc} não é isento de desafios \cite{AbcCrypto}.
+A criação de matrizes de conluio e a análise detalhada de categorias de
 ameaças podem ser intensivas em termos de recursos, especialmente em
 sistemas com múltiplos participantes e ativos complexos. No entanto,
 esses esforços são recompensados pela identificação de ameaças
@@ -450,7 +463,7 @@ críticas e pela robustez das soluções propostas \cite{AbcCrypto}.
 O \gls{abc} oferece uma abordagem avançada e adaptável para a modelagem de
 ameaças em criptomoedas, demonstrando que frameworks especializados
 podem melhorar significativamente a segurança e a resiliência de
-sistemas distribuídos.
+sistemas distribuídos \cite{AbcCrypto}.
 
 
 \subsection{PGP e o Web of Trust}
@@ -458,7 +471,7 @@ sistemas distribuídos.
 
 \gls{pgp}, desenvolvido por Philip Zimmermann, é um sistema de
 criptografia que combina privacidade, autenticação e conveniência para proteger
-mensagens e arquivos. O \gls{pgp} utiliza a criptografia de chave pública para
+mensagens e arquivos \cite{Pgp}. O \gls{pgp} utiliza a criptografia de chave pública para
 viabilizar a comunicação segura entre indivíduos, mesmo sem confiança prévia ou
 troca de chaves em canais seguros \cite{Pgp}.
 
@@ -485,19 +498,19 @@ outro para certificar chaves, ou apenas marginalmente, dependendo de sua
 percepção sobre a competência e integridade do introduzidor \cite{Pgp}.
 
 Além de promover a descentralização, a \gls{wot} também oferece resiliência
-contra ataques. Em vez de depender de um único ponto de falha, como ocorre em
+contra ataques \cite{Pgp}. Em vez de depender de um único ponto de falha, como ocorre em
 sistemas centralizados, o \gls{wot} permite que os usuários validem chaves públicas
 com base em múltiplas assinaturas, reduzindo o impacto de compromissos
 individuais. No entanto, essa abordagem também apresenta desafios, como a
 dificuldade de gerenciar grandes anéis de chaves e a subjetividade na atribuição
 de níveis de confiança \cite{Pgp}.
 
-A relevância do \gls{pgp} e da \gls{wot} para organizações horizontais é evidente.
+A relevância do \gls{pgp} e da \gls{wot} para organizações horizontais é evidente \cite{Colbac}.
 Estruturas não hierárquicas podem aproveitar a natureza descentralizada do \gls{wot}
 para criar sistemas de segurança alinhados aos princípios de autonomia coletiva
-e governança distribuída. Ao permitir que cada participante construa sua própria
+e governança distribuída . Ao permitir que cada participante construa sua própria
 rede de confiança, o \gls{pgp} reforça a segurança sem comprometer a horizontalidade
-dessas organizações.
+dessas organizações \cite{EverydayRevolutions, Colbac}.
 
 \section{Perspectivas Comparativas}
 \label{sec:comparative_perspectives}
@@ -507,22 +520,26 @@ dessas organizações.
 
 A avaliação de frameworks de modelagem de ameaças requer critérios
 objetivos para comparar sua eficácia, aplicabilidade e adequação a
-diferentes contextos organizacionais. Critérios fundamentais incluem a
-capacidade de identificar ameaças específicas, adaptabilidade às
+diferentes contextos organizacionais \cite{EvaluationofCompetingThreatModeling}.
+Critérios fundamentais incluem a capacidade de
+identificar ameaças específicas, adaptabilidade às
 mudanças no ambiente operacional, custos de implementação e a
 integração de dimensões sociais, econômicas e técnicas no processo de
-modelagem. Além disso, a escalabilidade e a habilidade de lidar com
-estruturas organizacionais complexas são fatores críticos.
+modelagem \cite{ThreatModelingASystematicLiteratureReview}.
+Além disso, a escalabilidade e a habilidade de lidar com
+estruturas organizacionais complexas são fatores críticos \cite{AbcCrypto}.
 
 O \gls{stride}, por exemplo, é amplamente utilizado por sua simplicidade e
-aplicabilidade em sistemas de software tradicionais. No entanto, ele
+aplicabilidade em sistemas de software tradicionais
+\cite{ThreatModelingdesigningForSecurity}. No entanto, ele
 enfrenta limitações em ambientes descentralizados, como criptomoedas
 ou organizações horizontais, devido à sua dependência de categorias de
-ameaças predefinidas. Em contraste, frameworks como
-o \gls{abc} oferecem uma abordagem especializada,
+ameaças predefinidas \cite{STRIDEthreatmodelingforcyberphysical}.
+Em contraste, frameworks como o \gls{abc} oferecem uma abordagem especializada,
 utilizando matrizes de conluio para explorar ameaças em
 sistemas distribuídos e permissionless, enquanto o \gls{pasta} foca na
-avaliação iterativa de riscos para sistemas dinâmicos.
+avaliação iterativa de riscos para sistemas dinâmicos
+\cite{AbcCrypto, RiskCentricThreatModeling}.
 
 Frameworks como o \gls{colbac}, por outro lado, destacam-se por integrar
 processos democráticos à modelagem de ameaças, permitindo que
@@ -535,21 +552,21 @@ priorização de ameaças, podem complementar modelos existentes, embora
 sua subjetividade possa limitar a eficácia em cenários colaborativos.
 
 Por fim, a escalabilidade é essencial para organizações que lidam com
-múltiplos participantes e interações complexas. Técnicas como a fusão
-de cenários no \gls{abc} demonstram que frameworks especializados
+múltiplos participantes e interações complexas \cite{AbcCrypto}.
+Técnicas como a fusão de cenários no \gls{abc} demonstram que frameworks especializados
 podem mitigar custos operacionais enquanto mantêm a robustez
-analítica. Isso os torna adequados para sistemas modernos que exigem
-tanto precisão técnica quanto flexibilidade organizacional.
+analítica \cite{AbcCrypto}. Isso os torna adequados para sistemas modernos que exigem
+tanto precisão técnica quanto flexibilidade organizacional \cite{Colbac}.
 
 \subsection{Aplicabilidade em Organizações Não-Hierárquicas}
 \label{subsec:applicability_non_hierarchical}
 
 A aplicabilidade de frameworks de modelagem de ameaças em organizações
 não-hierárquicas depende de sua capacidade de abordar dinâmicas
-específicas dessas estruturas. Organizações horizontais operam com
-base em governança distribuída, participação equitativa e ausência de 
-centralização formal, exigindo abordagens que respeitem e fortaleçam
-esses princípios.
+específicas dessas estruturas \cite{Colbac, ThreatModelingASystematicLiteratureReview}.
+Organizações horizontais operam com base em governança distribuída,
+participação equitativa e ausência de centralização formal,
+exigindo abordagens que respeitem e fortaleçam esses princípios \cite{EverydayRevolutions}.
 
 Frameworks como o \gls{colbac} e o \gls{abc} demonstram forte
 compatibilidade com organizações horizontais devido à sua ênfase em
@@ -564,8 +581,9 @@ mapear cenários de ameaça complexos.
 Frameworks tradicionais, como \gls{stride} e árvores de ataque, fornecem uma
 base sólida para a identificação de ameaças, mas sua aplicabilidade é
 limitada em organizações horizontais devido à sua dependência de
-hierarquias formais e pontos de controle centralizados. Em contraste,
-abordagens emergentes, como o \gls{ptm},
+hierarquias formais e pontos de controle centralizados
+\cite{ThreatModelingdesigningForSecurity, AttackTrees}.
+Em contraste, abordagens emergentes, como o \gls{ptm},
 promovem maior alinhamento com as necessidades dessas organizações,
 integrando stakeholders em todas as etapas do processo.
 
@@ -573,6 +591,7 @@ A escolha de um framework para organizações horizontais deve
 equilibrar eficácia técnica com transparência e engajamento coletivo.
 Soluções como o \gls{abc} e o  \gls{colbac} destacam-se ao integrar dimensões
 sociais e econômicas, demonstrando que a segurança pode ser
-fortalecida por meio de práticas colaborativas e governança inclusiva.
+fortalecida por meio de práticas colaborativas e governança inclusiva
+\cite{AbcCrypto, Colbac}.
 Essas abordagens são particularmente relevantes para organizações que
-buscam alinhar segurança com autonomia e resiliência organizacional.
+buscam alinhar segurança com autonomia e resiliência organizacional \cite{Colbac}.

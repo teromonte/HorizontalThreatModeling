@@ -16,12 +16,13 @@
 
 O protocolo a ser desenvolvido será um modelo estruturado para a modelagem de
 ameaças em organizações não-hierárquicas, funcionando de forma semelhante ao
-STRIDE, mas adaptado às especificidades da governança distribuída. Ele não será
-um software, mas um conjunto formal de diretrizes e metodologias documentadas
-para identificação, análise e mitigação de ameaças em ambientes horizontais. Seu
-formato será textual e estruturado como um documento acadêmico e técnico,
+STRIDE, mas adaptado às especificidades da governança distribuída
+\cite{ThreatModelingdesigningForSecurity}.
+Ele não será um software, mas um conjunto formal de diretrizes e metodologias documentadas
+para identificação, análise e mitigação de ameaças em ambientes horizontais \cite{Colbac}.
+Seu formato será textual e estruturado como um documento acadêmico e técnico,
 oferecendo um referencial prático e teórico para segurança em estruturas
-descentralizadas.
+descentralizadas .
 
 A audiência primária inclui membros da organização que utilizam o protocolo para
 analisar ameaças em seu contexto específico, bem como especialistas em segurança
@@ -43,26 +44,26 @@ de ameaças é delineada:
 registrados de forma imutável, permitindo auditorias completas. Para isso, o
 protocolo utilizará mecanismos criptográficos de registro imutável, como logs
 descentralizados e assinaturas digitais verificáveis, garantindo rastreabilidade
-sem comprometer a horizontalidade.
+sem comprometer a horizontalidade \cite{Reputation-basedDAO}.
     
     \item \textbf{Participação Democrática}: A tomada de decisão deve ser
 inclusiva, permitindo contribuições de todos os membros. O protocolo integrará
 mecanismos de consenso inspirados em sistemas de governança distribuída, como
 votação segura e delegação dinâmica de autoridade, reduzindo riscos como
-manipulação de quórum ou ataques Sybil.
+manipulação de quórum ou ataques Sybil \cite{Colbac}.
     
     \item \textbf{Flexibilidade}: O protocolo deve suportar mudanças rápidas
 entre modos de governança centralizados e descentralizados, conforme as
 necessidades da organização. Para isso, serão definidos critérios e mecanismos
 para transições seguras entre modelos de tomada de decisão, permitindo ajustes
-dinâmicos sem expor a organização a vulnerabilidades.
+dinâmicos sem expor a organização a vulnerabilidades \cite{Colbac}.
     
     \item \textbf{Escalabilidade}: Deve ser capaz de operar eficientemente em
 organizações de diferentes tamanhos e níveis de complexidade. A modelagem de
 ameaças abordará a expansão das interações e dos processos de segurança sem
 comprometer a governança distribuída, garantindo que mecanismos como controle de
 acesso colaborativo e validação distribuída continuem funcionais em diferentes
-contextos organizacionais.
+contextos organizacionais \cite{AbcCrypto}.
 
 \end{itemize}
 
@@ -82,24 +83,26 @@ os seguintes critérios:
 tomadas de decisão será medido utilizando logs de auditoria e análise da
 latência operacional em diferentes modelos de governança. Serão comparadas
 abordagens baseadas em consenso distribuído e em decisões locais para
-identificar quais garantem maior agilidade sem comprometer a segurança.
+identificar quais garantem maior agilidade sem comprometer a segurança \cite{RiskCentricThreatModeling}.
 
     \item \textbf{Eficácia}: A capacidade do protocolo de identificar e mitigar ameaças
 será testada em cada grupo, analisando-se vulnerabilidades estruturais
 associadas à sua dinâmica organizacional. Modelos como STRIDE e árvores de
 ataque serão utilizados para simular cenários adversos e avaliar a resposta do
-sistema a ataques internos e externos.
+sistema a ataques internos e externos \cite{STRIDEthreatmodelingforcyberphysical, AttackTrees}.
 
     \item \textbf{Aceitação pelos Usuários}: A facilidade de uso e o nível de adesão serão
 medidos através da interação com diferentes grupos e seus modos de tomada de
 decisão. Experimentos controlados incluirão feedback qualitativo e quantitativo
-sobre a usabilidade do protocolo em contextos altamente horizontais e híbridos.
+sobre a usabilidade do protocolo em contextos altamente horizontais e híbridos
+\cite{ParticipatoryThreatModelling}.
 
     \item \textbf{Resiliência a Ameaças}: O desempenho do protocolo diante de ataques
 simulados, incluindo manipulação de quórum, ataques Sybil e falhas de consenso,
 será testado em cada nível de horizontalidade. Serão analisadas abordagens de
 mitigação específicas para organizações sem liderança central e grupos com
-hierarquia flexível, garantindo um protocolo adaptável a diferentes cenários.
+hierarquia flexível, garantindo um protocolo adaptável a diferentes cenários
+\cite{MitigationSybilAttack}.
 
 \end{itemize}
 

@@ -24,29 +24,30 @@
 A modelagem de ameaças é uma disciplina essencial no âmbito da segurança da
 informação, cuja principal função é identificar, classificar e mitigar
 vulnerabilidades em sistemas tecnológicos antes que estas possam ser exploradas
-por adversários. Em um contexto onde os sistemas se tornam cada vez mais
+por adversários \cite{ThreatModelingdesigningForSecurity, ThreatModelingASystematicLiteratureReview}.
+Em um contexto onde os sistemas se tornam cada vez mais
 complexos e integrados, a modelagem de ameaças se destaca como uma ferramenta
 crítica para antecipar riscos e estabelecer medidas de segurança eficazes
-\cite{ThreatModellingSurvey}.
+\cite{DemystifyingTheThreatModelingProcess, ThreatModelingASummaryOfAvailableMethods}.
 
 As organizações hierárquicas, devido à centralização do controle e de recursos,
 geralmente aplicam metodologias de modelagem de ameaças que dependem de fluxos
 de decisão lineares e centralizados, como é o caso da metodologia STRIDE,
-desenvolvida pela Microsoft \cite{ThreatModelingASummaryOfAvailableMethods}.
+desenvolvida pela Microsoft \cite{MicrosoftThreatModelingTechnique}.
 Esse modelo centralizado reflete uma estrutura organizacional que facilita a
 implementação de políticas de segurança homogêneas, mas carece de flexibilidade
 para lidar com as dinâmicas horizontais
-\cite{EvaluationofCompetingThreatModeling}.
+\cite{Colbac, EvaluationofCompetingThreatModeling}.
 
 Em contrapartida, estruturas organizacionais horizontais, caracterizadas por uma
 distribuição equitativa de poder e responsabilidades, apresentam desafios
 específicos para a modelagem de ameaças \cite{Colbac}. A ausência de uma
 hierarquia clara muitas vezes resulta em incompatibilidades estruturais, como
 sistemas de controle de acesso que forçam a hierarquização, dificultando a
-implementação de políticas democraticamente acordadas \cite{Colbac}.
+implementação de políticas democraticamente acordadas \cite{Colbac, ParticipatoryThreatModelling}.
 Adicionalmente, a centralização de segredos organizacionais, como senhas, pode
 gerar conflitos durante transições de liderança, o que é exemplificado no
-fenômeno conhecido como pasword wars \cite{FromCounterpublicstoContentious}.
+fenômeno conhecido como pasword wars \cite{FromCounterpublicstoContentious, Colbac}.
 
 A utilização de ferramentas digitais por movimentos sociais também revela um
 fenômeno conhecido como vanguard digital. Isso ocorre quando indivíduos que
@@ -56,46 +57,48 @@ contrariar os princípios de igualdade estrutural
 democráticos, como falsificação de identidades (Sybil attacks) e manipulação de
 quorum, destacam vulnerabilidades exclusivas de sistemas horizontais devido à
 dependência em processos participativos \cite{MitigationSybilAttack,
-TheSybilAttack}. Finalmente, a falta de ferramentas tecnológicas que acomodem
+TheSybilAttack, Reputation-basedDAO}. Finalmente, a falta de ferramentas tecnológicas que acomodem
 transições entre centralizações temporárias e estruturas horizontais limita a
 eficiência em cenários que demandam respostas rápidas ou especialização
-\cite{Colbac}.
+\cite{Colbac, ParticipatoryThreatModelling}.
 
 Esses desafios evidenciam a necessidade de adaptações nos métodos de segurança e
 na modelagem de ameaças para que possam atender às especificidades das
-organizações horizontais. A modelagem de ameaças para esses contextos deve
+organizações horizontais \cite{Colbac}. A modelagem de ameaças para esses contextos deve
 equilibrar aspectos técnicos e dinâmicas organizacionais, promovendo a
 resiliência e a segurança em ambientes onde o poder e a responsabilidade são
-compartilhados \cite{ThreatModelingdesigningForSecurity}.
+compartilhados \cite{ThreatModelingdesigningForSecurity, EvaluationofCompetingThreatModeling}.
 
 \section{A Segurança Horizontal em Tempos de Interconexão}
 \label{sec:desafios_contemporaneos}
 
 No mundo interconectado atual, as organizações horizontais desafiam o
-pressuposto de que a segurança depende de uma cadeia clara de comando. A
-ausência de hierarquia formal pode se transformar em um ativo estratégico
+pressuposto de que a segurança depende de uma cadeia clara de comando
+\cite{Non-HierarchicalForms, EverydayRevolutions}.
+A ausência de hierarquia formal pode se transformar em um ativo estratégico
 ao dificultar ataques centralizados e ao permitir uma reconfiguração da
 gestão da confiança, promovendo a resiliência organizacional
-\cite{EverydayRevolutions}. Em sistemas de confiança distribuída,
+\cite{EverydayRevolutions, Colbac}. Em sistemas de confiança distribuída,
 como os utilizados em organizações baseadas em blockchain,
 a segurança é promovida por mecanismos colaborativos que
 substituem líderes formais por processos participativos e soluções
-orientadas à transparência e consenso \cite{Reputation-basedDAO}.
+orientadas à transparência e consenso \cite{Reputation-basedDAO, AbcCrypto}.
 
 Metodologias tradicionais de análise de ameaças, tais como \gls{stride} e árvores
 de ataque, fornecem fundamentos valiosos, mas enfrentam limitações em
 ambientes descentralizados, destacando a necessidade de abordagens mais
 adequadas às especificidades de estruturas horizontais
-\cite{ThreatModellingSurvey}. Contextos menos hierárquicos requerem
-abordagens adaptadas que compreendam a complexidade da confiança horizontal
-e dos potenciais riscos associados.
+\cite{ThreatModellingSurvey, ThreatModelingASummaryOfAvailableMethods}.
+Contextos menos hierárquicos requerem abordagens adaptadas
+que compreendam a complexidade da confiança horizontal
+e dos potenciais riscos associados \cite{Colbac}.
 
 Nesse sentido, tecnologias como a criptografia colaborativa \cite{Colbac,
 AbcCrypto} e abordagens de modelagem de ameaças que adotam a perspectiva global
 da organização podem promover um entendimento mais realista da segurança em
 estruturas descentralizadas. A horizontalidade, frequentemente vista como
 um desafio, deve ser explorada como um ativo estratégico capaz de diluir
-pontos únicos de falha e fortalecer a resiliência organizacional.
+pontos únicos de falha e fortalecer a resiliência organizacional \cite{EverydayRevolutions}.
 
 \section{Governança Organizacional: Uma Perspectiva Histórica}
 \label{sec:contexto_historico}
@@ -104,10 +107,12 @@ A governança organizacional reflete as estruturas sociais, econômicas e
 tecnológicas de cada época. Desde os primeiros agrupamentos humanos até as
 organizações complexas da contemporaneidade, as formas de organizar o poder
 e a tomada de decisão foram moldadas para responder a contextos
-específicos. O modelo hierárquico, amplamente adotado, emergiu como solução
-para demandas de controle e eficiência. Contudo, a história também registra
+específicos \cite{Non-HierarchicalForms}. O modelo hierárquico,
+amplamente adotado, emergiu como solução para demandas de
+controle e eficiência. Contudo, a história também registra
 experimentos que desafiaram essa lógica, sugerindo a possibilidade de novas
-abordagens na gestão e coordenação de atividades.
+abordagens na gestão e coordenação de atividades
+\cite{WorkerCooperativesinAmerica, WorkerCooperativesandRevolution}.
 
 Mesmo em sistemas considerados pioneiros na horizontalidade, como a
 democracia ateniense, a governança enfrentou limitações significativas
@@ -130,29 +135,29 @@ recursos, como evidenciado na concentração de mineradores em redes públicas
 
 Essas evoluções históricas e tecnológicas não apenas moldam as estruturas
 de governança, mas também introduzem desafios únicos na modelagem de
-ameaças. A análise crítica dessas tentativas permite identificar
+ameaças \cite{DoArtifactsHavePolitics}. A análise crítica dessas tentativas permite identificar
 vulnerabilidades e forças que fundamentam a construção de protocolos de
-segurança em organizações horizontais.
+segurança em organizações horizontais \cite{Colbac}.
 
 \section{Protocolo de Segurança para Organizações Não-Hierárquicas}
 \label{sec:objetivos_pesquisa}
 
 Esta pesquisa propõe um protocolo de segurança que integra a horizontalidade
 como elemento estratégico, indo além da simples adaptação de metodologias
-tradicionais. O objetivo central é demonstrar como a descentralização, quando
+tradicionais \cite{Colbac}. O objetivo central é demonstrar como a descentralização, quando
 estruturada de forma coerente com os princípios organizacionais, pode reforçar a
 resiliência frente a ameaças complexas, mitigando pontos únicos de falha e
-distribuindo responsabilidades de maneira equitativa. O protocolo visa
-equilibrar eficiência operacional e participação democrática, garantindo que
+distribuindo responsabilidades de maneira equitativa \cite{ThreatModelingdesigningForSecurity}.
+O protocolo visa equilibrar eficiência operacional e participação democrática, garantindo que
 medidas de segurança não comprometam a agilidade decisória nem a inclusão de
-membros em processos críticos. Para isso, baseia-se em abordagens colaborativas,
+membros em processos críticos \cite{Reputation-basedDAO}. Para isso, baseia-se em abordagens colaborativas,
 como a criptografia adaptada a contextos horizontais \cite{Colbac}, e em
 metodologias de modelagem de ameaças que consideram dinâmicas participativas
-\cite{ThreatModelingdesigningForSecurity}.
+\cite{ParticipatoryThreatModelling}.
 
 A integração entre segurança e governança é abordada por meio de diretrizes que
-harmonizam requisitos técnicos com princípios organizacionais. O protocolo prevê
-a aplicação de mecanismos de consenso transparentes e auditáveis, inspirados em
+harmonizam requisitos técnicos com princípios organizacionais \cite{ParticipatoryThreatModelling}.
+O protocolo prevê a aplicação de mecanismos de consenso transparentes e auditáveis, inspirados em
 modelos de reputação distribuída \cite{Reputation-basedDAO}, para validar
 políticas de acesso e mitigar riscos como ataques Sybil
 \cite{MitigationSybilAttack}. Além disso, incorpora estruturas modulares que
@@ -165,7 +170,7 @@ organizações.
 Para fortalecer a resiliência, o protocolo combina camadas técnicas e sociais:
 técnicas criptográficas protegem contra ameaças externas, enquanto
 estruturas de transparência radical e revisões periódicas por comitês
-rotativos previnem fraudes internas. A rastreabilidade de decisões via
+rotativos previnem fraudes internas \cite{EverydayRevolutions}. A rastreabilidade de decisões via
 registros imutáveis assegura que vulnerabilidades sejam
 identificadas e corrigidas de forma colaborativa, alinhando-se a estudos sobre
 falhas em sistemas distribuídos \cite{Reputation-basedDAO}. Ao incorporar lições
@@ -179,7 +184,7 @@ subsequentes.
 \label{sec:delimitacao_escopo}
 
 A diversidade de organizações horizontais abrange desde coletivos informais até
-redes digitais complexas, cada uma com dinâmicas particulares. Para garantir
+redes digitais complexas, cada uma com dinâmicas particulares \cite{EverydayRevolutions}. Para garantir
 foco analítico, este estudo limita-se a estruturas que operam sob princípios
 estritos de horizontalidade, caracterizadas por: (1) ausência de hierarquias
 formais ou centralização permanente de poder; (2) processos decisórios baseados
@@ -187,7 +192,7 @@ em consenso ou participação ampla; e (3) mecanismos explícitos de distribuiç
 de responsabilidades e recursos \cite{Colbac}. Essa delimitação exclui modelos
 híbridos ou parcialmente descentralizados, onde a coexistência de estruturas
 hierárquicas e horizontais introduz variáveis adicionais que dificultam a
-avaliação isolada do protocolo proposto.
+avaliação isolada do protocolo proposto \cite{Non-HierarchicalForms}.
 
 A opção por analisar organizações como cooperativas de trabalhadores e redes
 comunitárias justifica-se por sua relevância empírica: esses modelos possuem
@@ -196,7 +201,7 @@ documentação robusta sobre desafios operacionais
 de autogestão e transparência radical \cite{EverydayRevolutions}. Tais
 características permitem testar o protocolo em contextos onde a segurança
 depende diretamente da coordenação coletiva, sem intermediários ou autoridades
-centrais.
+centrais \cite{ThreatModelingdesigningForSecurity}.
 
 Embora plataformas digitais e redes sociais descentralizadas
 \cite{CreatingTheCollectiveSocialMedia} representem casos igualmente relevantes,
@@ -211,7 +216,7 @@ para análises comparativas em ambientes menos controlados.
 
 A pesquisa entregará um protocolo de modelagem de ameaças específico para
 organizações horizontais, integrando os princípios de governança distribuída,
-participação coletiva e transparência. Esse protocolo será projetado para
+participação coletiva e transparência \cite{Colbac}. Esse protocolo será projetado para
 identificar, avaliar e mitigar ameaças em estruturas descentralizadas,
 fornecendo diretrizes práticas adaptadas às particularidades dessas
 organizações. Além disso, será acompanhado por um método de avaliação para
