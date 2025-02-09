@@ -34,77 +34,102 @@ integrada à dinâmica colaborativa das organizações horizontais.
 \section{Requisitos de Segurança e Governança}
 \label{sec:security_governance_requirements}
 
-Para garantir que o protocolo atenda às demandas de segurança e governança
-horizontal, os seguintes requisitos são definidos e sua integração à modelagem
-de ameaças é delineada:
-    
-\begin{itemize}
+O protocolo proposto para organizações horizontais deve atender a requisitos de
+segurança e governança que garantam tanto a inclusão participativa quanto a
+robustez contra ameaças internas e externas. Em estruturas descentralizadas,
+onde a ausência de hierarquia formal pode ser vista tanto como uma vantagem
+quanto como um desafio, é imperativo que o protocolo seja projetado para
+integrar mecanismos que preservem a horizontalidade sem comprometer a
+resiliência organizacional. A transparência, nesse contexto, emerge como um dos
+pilares centrais \cite{Colbac}. Todos os eventos relacionados à autorização de ações ou
+modificações devem ser registrados de maneira imutável, garantindo que as ações
+possam ser auditadas de forma confiável por qualquer membro da organização.
+Esses registros imutáveis, construídos sobre tecnologias como blockchain ou
+estruturas criptográficas semelhantes, asseguram a rastreabilidade e eliminam a
+possibilidade de alterações não autorizadas, mantendo a coesão entre os
+princípios organizacionais e os mecanismos tecnológicos.
 
-    \item \textbf{Transparência}: Todos os processos de autorização devem ser
-registrados de forma imutável, permitindo auditorias completas. Para isso, o
-protocolo utilizará mecanismos criptográficos de registro imutável, como logs
-descentralizados e assinaturas digitais verificáveis, garantindo rastreabilidade
-sem comprometer a horizontalidade \cite{Reputation-basedDAO}.
-    
-    \item \textbf{Participação Democrática}: A tomada de decisão deve ser
-inclusiva, permitindo contribuições de todos os membros. O protocolo integrará
-mecanismos de consenso inspirados em sistemas de governança distribuída, como
-votação segura e delegação dinâmica de autoridade, reduzindo riscos como
-manipulação de quórum ou ataques Sybil \cite{Colbac}.
-    
-    \item \textbf{Flexibilidade}: O protocolo deve suportar mudanças rápidas
-entre modos de governança centralizados e descentralizados, conforme as
-necessidades da organização. Para isso, serão definidos critérios e mecanismos
-para transições seguras entre modelos de tomada de decisão, permitindo ajustes
-dinâmicos sem expor a organização a vulnerabilidades \cite{Colbac}.
-    
-    \item \textbf{Escalabilidade}: Deve ser capaz de operar eficientemente em
-organizações de diferentes tamanhos e níveis de complexidade. A modelagem de
-ameaças abordará a expansão das interações e dos processos de segurança sem
-comprometer a governança distribuída, garantindo que mecanismos como controle de
-acesso colaborativo e validação distribuída continuem funcionais em diferentes
-contextos organizacionais \cite{AbcCrypto}.
+A participação democrática também desempenha um papel fundamental no desenho do
+protocolo \cite{Colbac}. Em uma organização horizontal, as decisões devem refletir a vontade
+coletiva, e, para isso, o protocolo deve integrar sistemas de voto digital que
+garantam tanto a privacidade quanto a segurança dos votos \cite{Colbac}. Além disso, deve ser
+possível delegar temporariamente a autoridade a indivíduos ou grupos para lidar
+com situações que requeiram expertise específica, sempre assegurando que tal
+delegação possa ser revogada e que os registros das ações estejam acessíveis
+para auditoria coletiva \cite{Colbac}.
 
-\end{itemize}
+Outro aspecto crucial é a flexibilidade do protocolo, especialmente em cenários
+onde a organização precise alternar entre modos de governança centralizada e
+distribuída. Essa capacidade de transição deve ser implementada de forma que os
+níveis de centralização sejam temporários e devidamente rastreados, garantindo
+que o controle possa retornar rapidamente ao coletivo. Para isso, o protocolo
+deve prever mecanismos como tokens de emergência, que permitam a execução de
+ações críticas em situações excepcionais, desde que tais ações sejam registradas
+e sujeitas a validação retroativa pelos membros da organização \cite{Colbac}.
+
+Para que o protocolo seja escalável, é essencial que ele suporte organizações de
+diferentes tamanhos e graus de complexidade. Isso inclui a implementação de
+sistemas de validação distribuída que permitam a verificação colaborativa das
+ações sem sobrecarregar indivíduos ou pontos únicos de controle \cite{Colbac}. Além disso, a
+modelagem de ameaças deve ser iterativa e adaptável, incorporando técnicas como
+simulações baseadas em cenários reais para identificar vulnerabilidades
+emergentes e ajustar as contramedidas de acordo. Esses mecanismos
+asseguram que o protocolo permaneça funcional e eficaz mesmo diante
+de ampliação da escala organizacional ou de alterações em suas dinâmicas
+internas.
 
 \section{Estratégia de Avaliação}
 \label{sec:evaluation_strategy}
 
-A estratégia de avaliação do protocolo será conduzida através da sua aplicação
-em grupos selecionados que apresentam diferentes níveis de horizontalidade. Isso
-permitirá analisar como a estrutura de governança influencia a eficiência, a
-segurança e a adesão ao protocolo. A avaliação será baseada em estudos de caso e
-simulações que repliquem ameaças realistas dentro desses contextos, considerando
-os seguintes critérios:
+A avaliação do protocolo proposto será conduzida de forma experimental e
+comparativa, utilizando grupos organizacionais com diferentes graus de
+horizontalidade. Este processo tem como objetivo principal validar a capacidade
+do protocolo em identificar, mitigar e prevenir ameaças em ambientes
+horizontais, enquanto compara sua eficácia com frameworks consolidados, como o
+\gls{stride}.
+
+Inicialmente, serão selecionadas organizações candidatas representativas de
+distintos níveis de distribuição de poder e autonomia. Cada organização será
+submetida a sessões de treinamento estruturadas, abordando tanto o protocolo
+desenvolvido quanto o \gls{stride}, garantindo que todos os participantes compreendam
+as ferramentas utilizadas.
+
+Para operacionalizar a avaliação, será aplicada uma metodologia em três etapas.
+Na primeira etapa, cada grupo organizará um modelo de ameaças para sua estrutura
+com base no protocolo proposto. Em paralelo, um segundo grupo, dentro da mesma
+organização, aplicará o \gls{stride} ao mesmo cenário. Ambas as sessões
+serão acompanhadas para documentar o processo e coletar dados
+quantitativos e qualitativos.
+
+Os modelos resultantes serão analisados segundo métricas predefinidas, incluindo:
 
 \begin{itemize}
 
-    \item \textbf{Eficiência}: O tempo necessário para concluir processos de autorização e
-tomadas de decisão será medido utilizando logs de auditoria e análise da
-latência operacional em diferentes modelos de governança. Serão comparadas
-abordagens baseadas em consenso distribuído e em decisões locais para
-identificar quais garantem maior agilidade sem comprometer a segurança \cite{RiskCentricThreatModeling}.
+    \item \textbf{Precisão}: avaliação do número de ameaças corretamente identificadas
+    em relação ao total detectado.
 
-    \item \textbf{Eficácia}: A capacidade do protocolo de identificar e mitigar ameaças
-será testada em cada grupo, analisando-se vulnerabilidades estruturais
-associadas à sua dinâmica organizacional. Modelos como STRIDE e árvores de
-ataque serão utilizados para simular cenários adversos e avaliar a resposta do
-sistema a ataques internos e externos \cite{STRIDEthreatmodelingforcyberphysical, AttackTrees}.
+    \item \textbf{Recall}: proporção de ameaças identificadas pelo protocolo em relação
+    às existentes no modelo de referência.
 
-    \item \textbf{Aceitação pelos Usuários}: A facilidade de uso e o nível de adesão serão
-medidos através da interação com diferentes grupos e seus modos de tomada de
-decisão. Experimentos controlados incluirão feedback qualitativo e quantitativo
-sobre a usabilidade do protocolo em contextos altamente horizontais e híbridos
-\cite{ParticipatoryThreatModelling}.
+    \item \textbf{Latência Operacional}: tempo total necessário para completar cada fase
+    do processo de modelagem.
 
-    \item \textbf{Resiliência a Ameaças}: O desempenho do protocolo diante de ataques
-simulados, incluindo manipulação de quórum, ataques Sybil e falhas de consenso,
-será testado em cada nível de horizontalidade. Serão analisadas abordagens de
-mitigação específicas para organizações sem liderança central e grupos com
-hierarquia flexível, garantindo um protocolo adaptável a diferentes cenários
-\cite{MitigationSybilAttack}.
+    \item \textbf{Feedback dos Usuários}: coleta de opiniões qualitativas sobre
+    usabilidade e clareza do protocolo por parte dos participantes.
 
 \end{itemize}
+
+A segunda etapa envolverá a simulação de cenários de ameaças, incluindo ataques
+Sybil, manipulação de quórum e falhas de consenso, replicando situações
+realistas enfrentadas por organizações horizontais. A resposta a essas ameaças
+será comparada entre os protocolos, considerando a qualidade das soluções
+propostas e o tempo de resposta dos grupos.
+
+Por fim, na terceira etapa, as organizações serão submetidas a estudos de caso,
+nos quais o protocolo será implementado de maneira integral e monitorado ao
+longo do tempo. O desempenho do protocolo será analisado em termos de
+resiliência às ameaças identificadas, sua adaptabilidade a dinâmicas
+organizacionais e a capacidade de promover a participação e transparência.
 
 \section{Questões de Pesquisa}
 \label{sec:research_questions}
