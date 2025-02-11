@@ -24,50 +24,44 @@
 A modelagem de ameaças é uma disciplina essencial no âmbito da segurança da
 informação, cuja principal função é identificar, classificar e mitigar
 vulnerabilidades em sistemas tecnológicos antes que estas possam ser exploradas
-por adversários \cite{ThreatModelingdesigningForSecurity, ThreatModelingASystematicLiteratureReview}.
-Em um contexto onde os sistemas se tornam cada vez mais
-complexos e integrados, a modelagem de ameaças se destaca como uma ferramenta
-crítica para antecipar riscos e estabelecer medidas de segurança eficazes
-\cite{DemystifyingTheThreatModelingProcess, ThreatModelingASummaryOfAvailableMethods}.
+por adversários \cite{ThreatModelingdesigningForSecurity,
+ThreatModelingASystematicLiteratureReview}. Em um contexto onde os sistemas se
+tornam cada vez mais complexos e integrados, a modelagem de ameaças se destaca
+como uma ferramenta crítica para antecipar riscos e estabelecer medidas de
+segurança eficazes \cite{DemystifyingTheThreatModelingProcess,
+ThreatModelingASummaryOfAvailableMethods}.
 
-As organizações hierárquicas, devido à centralização do controle e de recursos,
-geralmente aplicam metodologias de modelagem de ameaças que dependem de fluxos
-de decisão lineares e centralizados, como é o caso da metodologia STRIDE,
-desenvolvida pela Microsoft \cite{MicrosoftThreatModelingTechnique}.
-Esse modelo centralizado reflete uma estrutura organizacional que facilita a
-implementação de políticas de segurança homogêneas, mas carece de flexibilidade
-para lidar com as dinâmicas horizontais
-\cite{Colbac, EvaluationofCompetingThreatModeling}.
+Modelos tradicionais, como STRIDE, árvores de ataque e metodologias iterativas
+como PASTA, foram amplamente aplicados em contextos hierárquicos
+\cite{MicrosoftThreatModelingTechnique, AttackTrees, RiskCentricThreatModeling}.
+Essas abordagens focam em fluxos de dados lineares e hierárquicos, mas enfrentam
+desafios significativos quando aplicadas a organizações horizontais, onde a
+distribuição de poder e responsabilidades altera fundamentalmente as dinâmicas
+de risco \cite{EvaluationofCompetingThreatModeling, Colbac}.
 
-Em contrapartida, estruturas organizacionais horizontais, caracterizadas por uma
-distribuição equitativa de poder e responsabilidades, apresentam desafios
-específicos para a modelagem de ameaças \cite{Colbac}. A ausência de uma
-hierarquia clara muitas vezes resulta em incompatibilidades estruturais, como
-sistemas de controle de acesso que forçam a hierarquização, dificultando a
-implementação de políticas democraticamente acordadas \cite{Colbac, ParticipatoryThreatModelling}.
-Adicionalmente, a centralização de segredos organizacionais, como senhas, pode
-gerar conflitos durante transições de liderança, o que é exemplificado no
-fenômeno conhecido como pasword wars \cite{FromCounterpublicstoContentious, Colbac}.
+Estruturas organizacionais horizontais, caracterizadas pela ausência de uma
+hierarquia formal, enfrentam desafios particulares na modelagem de ameaças
+\cite{Colbac}. A falta de centralização pode dificultar a implementação de
+controles de acesso baseados em papéis (RBAC) e outros sistemas que dependem de
+estruturas hierárquicas \cite{Colbac}. Além disso, a centralização temporária de
+segredos organizacionais, como senhas ou chaves de criptografia, frequentemente
+leva a conflitos conhecidos como "password wars" durante transições de liderança
+\cite{FromCounterpublicstoContentious}.
 
-A utilização de ferramentas digitais por movimentos sociais também revela um
-fenômeno conhecido como vanguard digital. Isso ocorre quando indivíduos que
-controlam plataformas e contas digitais assumem posições de poder que podem
-contrariar os princípios de igualdade estrutural
-\cite{SocialMediaTeamsAsDigitalVanguards}. Além disso, ataques a processos
-democráticos, como falsificação de identidades (Sybil attacks) e manipulação de
-quorum, destacam vulnerabilidades exclusivas de sistemas horizontais devido à
-dependência em processos participativos \cite{MitigationSybilAttack,
-TheSybilAttack, Reputation-basedDAO}. Finalmente, a falta de ferramentas tecnológicas que acomodem
-transições entre centralizações temporárias e estruturas horizontais limita a
-eficiência em cenários que demandam respostas rápidas ou especialização
-\cite{Colbac, ParticipatoryThreatModelling}.
+Adicionalmente, ferramentas digitais frequentemente promovem a centralização
+implícita de poder, criando o fenômeno da "vanguarda digital", onde indivíduos
+controlam recursos críticos como plataformas de comunicação
+\cite{SocialMediaTeamsAsDigitalVanguards}. Isso é exacerbado por ataques
+específicos a sistemas horizontais, como falsificação de identidades (ataques
+Sybil) e manipulação de quórum, que exploram a dependência em processos
+participativos \cite{MitigationSybilAttack, TheSybilAttack}.
 
-Esses desafios evidenciam a necessidade de adaptações nos métodos de segurança e
-na modelagem de ameaças para que possam atender às especificidades das
-organizações horizontais \cite{Colbac}. A modelagem de ameaças para esses contextos deve
-equilibrar aspectos técnicos e dinâmicas organizacionais, promovendo a
-resiliência e a segurança em ambientes onde o poder e a responsabilidade são
-compartilhados \cite{ThreatModelingdesigningForSecurity, EvaluationofCompetingThreatModeling}.
+Os desafios destacados indicam a necessidade de adaptações nos métodos de
+modelagem de ameaças para contextos horizontais \cite{Colbac}. Além das
+limitações técnicas, como a dificuldade de integrar criptografia colaborativa
+\cite{AbcCrypto}, também se destaca a necessidade de ferramentas participativas
+que respeitem as dinâmicas democráticas e que promovam a resiliência
+\cite{SecurityCardsToolkit}. 
 
 \section{A Segurança Horizontal em Tempos de Interconexão}
 \label{sec:desafios_contemporaneos}
@@ -126,16 +120,14 @@ sindicalistas do século XIX delinearam alternativas à centralização absoluta
 enquanto tecnologias modernas, oferecendo estruturas descentralizadas que desafiam paradigmas
 tradicionais de controle \cite{WorkerCooperativesinAmerica, EverydayRevolutions}.
 
-Enquanto tecnologias de vigilância em massa reforçam estruturas
-centralizadoras, bloqueando a adoção plena de governança horizontal,
-inovações como o blockchain abrem novas possibilidades de descentralização,
+Inovações como o blockchain abrem novas possibilidades de descentralização,
 ainda que enfrentem desafios na distribuição equitativa de poder e
 recursos, como evidenciado na concentração de mineradores em redes públicas
-\cite{DoArtifactsHavePolitics}.
+\cite{Energytheftdetectionissues}.
 
 Essas evoluções históricas e tecnológicas não apenas moldam as estruturas
 de governança, mas também introduzem desafios únicos na modelagem de
-ameaças \cite{DoArtifactsHavePolitics}. A análise crítica dessas tentativas permite identificar
+ameaças \cite{DoArtifactsHavePolitics, Democraciaeoscodigosinvisiveis}. A análise crítica dessas tentativas permite identificar
 vulnerabilidades e forças que fundamentam a construção de protocolos de
 segurança em organizações horizontais \cite{Colbac}.
 
