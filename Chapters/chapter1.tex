@@ -15,224 +15,228 @@
 
 \typeout{NT FILE chapter1.tex}%
 
-\chapter{Introdução}
-\label{cha:Introduction}
+\chapter{Introduction}
+\label{cha:introduction}
 
-\section{Modelagem de Ameaças: Relevância e Desafios}
-\label{sec:modelagem_ameacas}
+\section{Threat Modeling: Relevance and Challenges}
+\label{sec:threat_modeling_relevance_challenges}
 
-A modelagem de ameaças é uma disciplina essencial no âmbito da segurança da
-informação, cuja principal função é identificar, classificar e mitigar
-vulnerabilidades em sistemas tecnológicos antes que estas possam ser exploradas
-por adversários \cite{ThreatModelingdesigningForSecurity,
-ThreatModelingASystematicLiteratureReview}. Em um contexto onde os sistemas se
-tornam cada vez mais complexos e integrados, a modelagem de ameaças se destaca
-como uma ferramenta crítica para antecipar riscos e estabelecer medidas de
-segurança eficazes \cite{DemystifyingTheThreatModelingProcess,
+Threat modeling is an essential discipline in information security, whose main
+function is to identify, classify and mitigate vulnerabilities in technological
+systems before they can be exploited by adversaries
+\cite{ThreatModelingdesigningForSecurity,
+ThreatModelingASystematicLiteratureReview}. In a context where systems become
+increasingly complex and integrated, threat modeling stands out as a critical
+tool for anticipating risks and establishing effective security measures
+\cite{DemystifyingTheThreatModelingProcess,
 ThreatModelingASummaryOfAvailableMethods}.
 
-Modelos tradicionais, como STRIDE, árvores de ataque e metodologias iterativas
-como PASTA, foram amplamente aplicados em contextos hierárquicos
+Traditional models such as \gls{stride}, attack trees, and iterative
+methodologies such as \gls{pasta} have been widely applied in hierarchical contexts
 \cite{MicrosoftThreatModelingTechnique, AttackTrees, RiskCentricThreatModeling}.
-Essas abordagens focam em fluxos de dados lineares e hierárquicos, mas enfrentam
-desafios significativos quando aplicadas a organizações horizontais, onde a
-distribuição de poder e responsabilidades altera fundamentalmente as dinâmicas
-de risco \cite{EvaluationofCompetingThreatModeling, Colbac}.
+These approaches focus on linear, hierarchical data flows, but face
+significant challenges when applied to horizontal organizations, where the
+distribution of power and responsibilities fundamentally alters risk dynamics
+\cite{EvaluationofCompetingThreatModeling, Colbac}.
 
-Estruturas organizacionais horizontais, caracterizadas pela ausência de uma
-hierarquia formal, enfrentam desafios particulares na modelagem de ameaças
-\cite{Colbac}. A falta de centralização pode dificultar a implementação de
-controles de acesso baseados em papéis (RBAC) e outros sistemas que dependem de
-estruturas hierárquicas \cite{Colbac}. Além disso, a centralização temporária de
-segredos organizacionais, como senhas ou chaves de criptografia, frequentemente
-leva a conflitos conhecidos como "password wars" durante transições de liderança
-\cite{FromCounterpublicstoContentious}.
+Horizontal organizational structures, characterized by the absence of a formal
+hierarchy, face particular challenges in threat modeling \cite{Colbac}. The lack of
+centralization can make it difficult to implement role-based access controls
+(RBAC) and other systems that rely on hierarchical structures \cite{Colbac}. Furthermore, the
+temporary centralization of organizational secrets, such as passwords or
+encryption keys, often leads to conflicts known as “password wars” during
+leadership transitions \cite{FromCounterpublicstoContentious}.
 
-Adicionalmente, ferramentas digitais frequentemente promovem a centralização
-implícita de poder, criando o fenômeno da "vanguarda digital", onde indivíduos
-controlam recursos críticos como plataformas de comunicação
-\cite{SocialMediaTeamsAsDigitalVanguards}. Isso é exacerbado por ataques
-específicos a sistemas horizontais, como falsificação de identidades (ataques
-Sybil) e manipulação de quórum, que exploram a dependência em processos
-participativos \cite{MitigationSybilAttack, TheSybilAttack}.
+Additionally, digital tools often promote implicit centralization of power,
+creating the phenomenon of the “digital vanguard,” where individuals control
+critical resources such as communication platforms \cite{SocialMediaTeamsAsDigitalVanguards}.
+This is exacerbated by attacks specific to horizontal systems, such as identity spoofing (Sybil
+attacks) and quorum manipulation, which exploit the dependency on participatory
+processes \cite{MitigationSybilAttack, TheSybilAttack}.
 
-Os desafios destacados indicam a necessidade de adaptações nos métodos de
-modelagem de ameaças para contextos horizontais \cite{Colbac}. Além das
-limitações técnicas, como a dificuldade de integrar criptografia colaborativa
-\cite{AbcCrypto}, também se destaca a necessidade de ferramentas participativas
-que respeitem as dinâmicas democráticas e que promovam a resiliência
-\cite{SecurityCardsToolkit}. 
+The challenges highlighted indicate the need for adaptations in threat modeling
+methods for horizontal contexts \cite{Colbac}. In addition to technical
+limitations, such as the difficulty of integrating collaborative cryptography
+\cite{AbcCrypto}, the need for participatory tools that respect democratic
+dynamics and promote resilience is also highlighted \cite{SecurityCardsToolkit}.
 
-\section{A Segurança Horizontal em Tempos de Interconexão}
-\label{sec:desafios_contemporaneos}
+\section{Horizontal Security in Times of Interconnection}
+\label{sec:horizontal_security_interconnection}
 
-No mundo interconectado atual, as organizações horizontais desafiam o
-pressuposto de que a segurança depende de uma cadeia clara de comando
+In today’s interconnected world, horizontal organizations challenge the
+assumption that security depends on a clear chain of command
 \cite{Non-HierarchicalForms, EverydayRevolutions}.
-A ausência de hierarquia formal pode se transformar em um ativo estratégico
-ao dificultar ataques centralizados e ao permitir uma reconfiguração da
-gestão da confiança, promovendo a resiliência organizacional
-\cite{EverydayRevolutions, Colbac}. Em sistemas de confiança distribuída,
-como os utilizados em organizações baseadas em blockchain,
-a segurança é promovida por mecanismos colaborativos que
-substituem líderes formais por processos participativos e soluções
-orientadas à transparência e consenso \cite{Reputation-basedDAO, AbcCrypto}.
+The absence of a formal hierarchy can become a strategic asset by hindering
+centralized attacks and enabling a reconfiguration of trust management,
+promoting organizational resilience \cite{EverydayRevolutions, Colbac}. In
+distributed trust systems, such as those used in blockchain-based organizations,
+security is promoted by collaborative mechanisms that replace formal leaders
+with participatory processes and solutions oriented towards transparency and
+consensus \cite{Reputation-basedDAO, AbcCrypto}.
 
-Metodologias tradicionais de análise de ameaças, tais como \gls{stride} e árvores
-de ataque, fornecem fundamentos valiosos, mas enfrentam limitações em
-ambientes descentralizados, destacando a necessidade de abordagens mais
-adequadas às especificidades de estruturas horizontais
-\cite{ThreatModellingSurvey, ThreatModelingASummaryOfAvailableMethods}.
-Contextos menos hierárquicos requerem abordagens adaptadas
-que compreendam a complexidade da confiança horizontal
-e dos potenciais riscos associados \cite{Colbac}.
+Traditional threat analysis methodologies such as \gls{stride} and attack trees
+provide valuable insights but face limitations in decentralized environments,
+highlighting the need for approaches better suited to the specificities of
+horizontal structures \cite{ThreatModellingSurvey,
+ThreatModelingASummaryOfAvailableMethods}. Less hierarchical contexts require
+adapted approaches that understand the complexity of horizontal trust and the
+potential associated risks \cite{Colbac}.
 
-Nesse sentido, tecnologias como a criptografia colaborativa \cite{Colbac,
-AbcCrypto} e abordagens de modelagem de ameaças que adotam a perspectiva global
-da organização podem promover um entendimento mais realista da segurança em
-estruturas descentralizadas. A horizontalidade, frequentemente vista como
-um desafio, deve ser explorada como um ativo estratégico capaz de diluir
-pontos únicos de falha e fortalecer a resiliência organizacional \cite{EverydayRevolutions}.
+In this sense, technologies such as collaborative cryptography \cite{Colbac,
+AbcCrypto} and threat modeling approaches that adopt the global perspective of
+the organization can promote a more realistic understanding of security in
+decentralized structures. Horizontality, often seen as a challenge, should be
+explored as a strategic asset capable of diluting single points of failure and
+strengthening organizational resilience \cite{EverydayRevolutions}.
 
-\section{Governança Organizacional: Uma Perspectiva Histórica}
-\label{sec:contexto_historico}
+\section{Organizational Governance: A Historical Perspective}
+\label{sec:organizational_governance_historical}
 
-A governança organizacional reflete as estruturas sociais, econômicas e
-tecnológicas de cada época. Desde os primeiros agrupamentos humanos até as
-organizações complexas da contemporaneidade, as formas de organizar o poder
-e a tomada de decisão foram moldadas para responder a contextos
-específicos \cite{Non-HierarchicalForms}. O modelo hierárquico,
-amplamente adotado, emergiu como solução para demandas de
-controle e eficiência. Contudo, a história também registra
-experimentos que desafiaram essa lógica, sugerindo a possibilidade de novas
-abordagens na gestão e coordenação de atividades
+Organizational governance reflects the social, economic, and technological
+structures of each era. From the earliest human groups to the complex
+organizations of contemporary times, the ways of organizing power and
+decision-making have been shaped to respond to specific contexts
+\cite{Non-HierarchicalForms}. The hierarchical model, widely adopted, emerged as
+a solution to demands for control and efficiency. However, history also records
+experiments that challenged this logic, suggesting the possibility of new
+approaches to the management and coordination of activities
 \cite{WorkerCooperativesinAmerica, WorkerCooperativesandRevolution}.
 
-Mesmo em sistemas considerados pioneiros na horizontalidade, como a
-democracia ateniense, a governança enfrentou limitações significativas
-relacionadas à inclusão e à aplicabilidade prática, evidenciando
-fragilidades na operacionalização da participação igualitária
-\cite{AthenianDemocracyABrief}. Com o avanço da Revolução Industrial, a
-centralização hierárquica intensificou-se para lidar com o crescimento e a
-complexidade organizacional \cite{WorkerCooperativesandRevolution}.
-Adicionalmente, experiências como as cooperativas e os movimentos
-sindicalistas do século XIX delinearam alternativas à centralização absoluta,
-enquanto tecnologias modernas, oferecendo estruturas descentralizadas que desafiam paradigmas
-tradicionais de controle \cite{WorkerCooperativesinAmerica, EverydayRevolutions}.
+Even in systems considered pioneers in horizontality, such as Athenian
+democracy, governance faced significant limitations related to inclusion and
+practical applicability, highlighting weaknesses in the operationalization of
+equal participation \cite{AthenianDemocracyABrief}. As the Industrial Revolution
+progressed, hierarchical centralization intensified to cope with organizational
+growth and complexity \cite{WorkerCooperativesandRevolution}. Additionally,
+experiences such as cooperatives and the 19th century labor movement outlined
+alternatives to absolute centralization, while modern technologies offer
+decentralized structures that challenge traditional paradigms of control
+\cite{WorkerCooperativesinAmerica, EverydayRevolutions}.
 
-Inovações como o blockchain abrem novas possibilidades de descentralização,
-ainda que enfrentem desafios na distribuição equitativa de poder e
-recursos, como evidenciado na concentração de mineradores em redes públicas
+Innovations such as blockchain open up new possibilities for decentralization,
+yet face challenges in equitable distribution of power and resources, as
+evidenced by the concentration of miners on public networks
 \cite{Energytheftdetectionissues}.
 
-Essas evoluções históricas e tecnológicas não apenas moldam as estruturas
-de governança, mas também introduzem desafios únicos na modelagem de
-ameaças \cite{DoArtifactsHavePolitics, Democraciaeoscodigosinvisiveis}. A análise crítica dessas tentativas permite identificar
-vulnerabilidades e forças que fundamentam a construção de protocolos de
-segurança em organizações horizontais \cite{Colbac}.
+These historical and technological evolutions not only shape governance
+structures, but also introduce unique challenges in threat modeling
+\cite{DoArtifactsHavePolitics, Democraciaeoscodigosinvisiveis}. Critical analysis of
+these attempts allows us to identify vulnerabilities and strengths that underpin
+the construction of security protocols in horizontal organizations
+\cite{Colbac}.
 
-\section{Protocolo de Segurança para Organizações Não-Hierárquicas}
-\label{sec:objetivos_pesquisa}
+\section{Security Protocol for Non-Hierarchical Organizations}
+\label{sec:security_protocol_nonhierarchical}
 
-Esta pesquisa propõe um protocolo de segurança que integra a horizontalidade
-como elemento estratégico, indo além da simples adaptação de metodologias
-tradicionais \cite{Colbac}. O objetivo central é demonstrar como a descentralização, quando
-estruturada de forma coerente com os princípios organizacionais, pode reforçar a
-resiliência frente a ameaças complexas, mitigando pontos únicos de falha e
-distribuindo responsabilidades de maneira equitativa \cite{ThreatModelingdesigningForSecurity}.
-O protocolo visa equilibrar eficiência operacional e participação democrática, garantindo que
-medidas de segurança não comprometam a agilidade decisória nem a inclusão de
-membros em processos críticos \cite{Reputation-basedDAO}. Para isso, baseia-se em abordagens colaborativas,
-como a criptografia adaptada a contextos horizontais \cite{Colbac}, e em
-metodologias de modelagem de ameaças que consideram dinâmicas participativas
-\cite{ParticipatoryThreatModelling}.
+This research proposes a security protocol that integrates horizontality as a
+strategic element, going beyond the simple adaptation of traditional
+methodologies \cite{Colbac}. The main objective is to demonstrate how
+decentralization, when structured in a way that is coherent with organizational
+principles, can strengthen resilience against complex threats, mitigating single
+points of failure and distributing responsibilities equitably
+\cite{ThreatModelingdesigningForSecurity}. The protocol aims to balance
+operational efficiency and democratic participation, ensuring that security
+measures do not compromise decision-making agility or the inclusion of members
+in critical processes \cite{Reputation-basedDAO}. To this end, it relies on
+collaborative approaches, such as cryptography adapted to horizontal contexts
+\cite{Colbac}, and on threat modeling methodologies that consider participatory
+dynamics \cite{ParticipatoryThreatModelling}.
 
-A integração entre segurança e governança é abordada por meio de diretrizes que
-harmonizam requisitos técnicos com princípios organizacionais \cite{ParticipatoryThreatModelling}.
-O protocolo prevê a aplicação de mecanismos de consenso transparentes e auditáveis, inspirados em
-modelos de reputação distribuída \cite{Reputation-basedDAO}, para validar
-políticas de acesso e mitigar riscos como ataques Sybil
-\cite{MitigationSybilAttack}. Além disso, incorpora estruturas modulares que
-permitem adaptação a diferentes níveis de horizontalidade, desde redes
-totalmente descentralizadas até organizações com estruturas mais hierarquizadas
-\cite{Colbac}. Essa flexibilidade é essencial para responder a ameaças
-dinâmicas sem comprometer a autonomia dos membros e abranger o maior número de
-organizações.
+The integration between security and governance is addressed through guidelines
+that harmonize technical requirements with organizational principles
+\cite{ParticipatoryThreatModelling}. The protocol foresees the application of
+transparent and auditable consensus mechanisms, inspired by distributed
+reputation models \cite{Reputation-basedDAO}, to validate access policies and
+mitigate risks such as Sybil attacks \cite{MitigationSybilAttack}. In addition,
+it incorporates modular structures that allow adaptation to different levels of
+horizontality, from fully decentralized networks to organizations with more
+hierarchical structures \cite{Colbac}. This flexibility is essential to respond
+to dynamic threats without compromising the autonomy of members and to cover the
+largest number of organizations.
 
-Para fortalecer a resiliência, o protocolo combina camadas técnicas e sociais:
-técnicas criptográficas protegem contra ameaças externas, enquanto
-estruturas de transparência radical e revisões periódicas por comitês
-rotativos previnem fraudes internas \cite{EverydayRevolutions}. A rastreabilidade de decisões via
-registros imutáveis assegura que vulnerabilidades sejam
-identificadas e corrigidas de forma colaborativa, alinhando-se a estudos sobre
-falhas em sistemas distribuídos \cite{Reputation-basedDAO}. Ao incorporar lições
-de casos históricos e inovações metodológicas, o protocolo oferece um arcabouço
-prático para organizações que almejam segurança sem abrir mão de sua identidade
-horizontal, preparando o terreno para análises detalhadas nos capítulos
-subsequentes.
+To strengthen resilience, the protocol combines technical and social layers:
+cryptographic techniques protect against external threats, while radical
+transparency structures and periodic reviews by rotating committees prevent
+internal fraud \cite{EverydayRevolutions}. The traceability of decisions via
+immutable records ensures that vulnerabilities are identified and corrected
+collaboratively, in line with studies on failures in distributed systems
+\cite{Reputation-basedDAO}. By incorporating lessons from historical cases and
+methodological innovations, the protocol offers a practical framework for
+organizations that seek security without giving up their horizontal identity,
+paving the way for detailed analyses in subsequent chapters.
+
+\section{Defining the Scope of Research}
+\label{sec:defining_research_scope}
+
+The diversity of horizontal organizations ranges from informal collectives to
+complex digital networks, each with its own dynamics \cite{EverydayRevolutions}.
+To ensure analytical focus, this study is limited to structures that operate
+under strict principles of horizontality, characterized by: (1) absence of
+formal hierarchies or permanent centralization of power; (2) decision-making
+processes based on consensus or broad participation; and (3) explicit mechanisms
+for distributing responsibilities and resources \cite{Colbac}. This delimitation
+excludes hybrid or partially decentralized models, where the coexistence of
+hierarchical and horizontal structures introduces additional variables that make
+it difficult to evaluate the proposed protocol in isolation
+\cite{Non-HierarchicalForms}.
+
+The choice to analyze organizations such as worker cooperatives and community
+networks is justified by their empirical relevance: these models have robust
+documentation on operational challenges \cite{WorkerCooperativesinAmerica}, in
+addition to explicitly adopting principles of self-management and radical
+transparency \cite{EverydayRevolutions}. These characteristics allow testing the
+protocol in contexts where security depends directly on collective coordination,
+without intermediaries or central authorities
+\cite{ThreatModelingdesigningForSecurity}.
+
+Although digital platforms and decentralized social networks
+\cite{CreatingTheCollectiveSocialMedia} represent equally relevant cases, their
+dynamic nature and dependence on heterogeneous technical infrastructures would
+require methodological adaptations beyond the current scope. Future studies
+could explore these variations, using the protocol developed here as a basis for
+comparative analyses in less controlled environments.
 
 
-\section{Delimitando o Escopo da Pesquisa}
-\label{sec:delimitacao_escopo}
+\section{Expected Contributions}
+\label{sec:expected_contributions}
 
-A diversidade de organizações horizontais abrange desde coletivos informais até
-redes digitais complexas, cada uma com dinâmicas particulares \cite{EverydayRevolutions}. Para garantir
-foco analítico, este estudo limita-se a estruturas que operam sob princípios
-estritos de horizontalidade, caracterizadas por: (1) ausência de hierarquias
-formais ou centralização permanente de poder; (2) processos decisórios baseados
-em consenso ou participação ampla; e (3) mecanismos explícitos de distribuição
-de responsabilidades e recursos \cite{Colbac}. Essa delimitação exclui modelos
-híbridos ou parcialmente descentralizados, onde a coexistência de estruturas
-hierárquicas e horizontais introduz variáveis adicionais que dificultam a
-avaliação isolada do protocolo proposto \cite{Non-HierarchicalForms}.
+The research will deliver a threat modeling protocol specific to horizontal
+organizations, integrating the principles of distributed governance, collective
+participation, and transparency \cite{Colbac}. This protocol will be designed to
+identify, assess, and mitigate threats in decentralized structures, providing
+practical guidelines adapted to the particularities of these organizations. In
+addition, it will be accompanied by an evaluation method to validate its
+effectiveness and its application in real cases.
 
-A opção por analisar organizações como cooperativas de trabalhadores e redes
-comunitárias justifica-se por sua relevância empírica: esses modelos possuem
-documentação robusta sobre desafios operacionais
-\cite{WorkerCooperativesinAmerica}, além de adotarem explicitamente princípios
-de autogestão e transparência radical \cite{EverydayRevolutions}. Tais
-características permitem testar o protocolo em contextos onde a segurança
-depende diretamente da coordenação coletiva, sem intermediários ou autoridades
-centrais \cite{ThreatModelingdesigningForSecurity}.
+The protocol is expected to demonstrate how horizontality can be a strategic
+asset, reinforcing organizational security and resilience in the face of complex
+threats. In addition to contributing to theoretical advancement on security in
+decentralized structures, the research seeks to offer a practical solution that
+strengthens autonomy and promotes the integration between security and
+democratic governance.
 
-Embora plataformas digitais e redes sociais descentralizadas
-\cite{CreatingTheCollectiveSocialMedia} representem casos igualmente relevantes,
-sua natureza dinâmica e dependência de infraestruturas técnicas heterogêneas
-exigiriam adaptações metodológicas além do escopo atual. Estudos futuros poderão
-explorar essas variações, utilizando o protocolo aqui desenvolvido como base
-para análises comparativas em ambientes menos controlados.
+\section{Structure of the Thesis}
+\label{sec:structure_thesis}
 
+After the introduction, the Background chapter presents the fundamentals of
+threat modeling and security in horizontal structures. The Related Work chapter
+analyzes previous studies, identifying relevant gaps and opportunities.
 
-\section{Contribuições Esperadas} 
-\label{sec:contribuicoes_esperadas}
+The Design chapter outlines the proposed protocol, its methodologies, and
+evaluation criteria. The Work Plan chapter describes the research steps and
+schedule, ensuring the structured and viable execution of the project. Finally,
+the Conclusion chapter summarizes the results, discusses limitations, and
+proposes future directions, highlighting horizontality as a strategic asset for
+organizational security.
 
-A pesquisa entregará um protocolo de modelagem de ameaças específico para
-organizações horizontais, integrando os princípios de governança distribuída,
-participação coletiva e transparência \cite{Colbac}. Esse protocolo será projetado para
-identificar, avaliar e mitigar ameaças em estruturas descentralizadas,
-fornecendo diretrizes práticas adaptadas às particularidades dessas
-organizações. Além disso, será acompanhado por um método de avaliação para
-validar sua eficácia e sua aplicação em casos reais.
-
-Espera-se que o protocolo demonstre como a horizontalidade pode ser um ativo
-estratégico, reforçando a segurança e a resiliência organizacional frente a
-ameaças complexas. Além de contribuir para o avanço teórico sobre segurança em
-estruturas descentralizadas, a pesquisa busca oferecer uma solução prática que
-fortaleça a autonomia e promova a integração entre segurança e governança
-democrática.
-
-\section{Estrutura da Tese} 
-\label{sec:estrutura_tese}
-
-Após a introdução, o capítulo de Background apresenta os fundamentos
-da modelagem de ameaças e segurança em estruturas horizontais. O
-capítulo de Related Work analisa estudos prévios, identificando
-lacunas e oportunidades relevantes.
-
-O capítulo de Design esboça o protocolo proposto, suas metodologias e
-critérios de avaliação. O capítulo de Work Plan descreve as etapas e
-cronograma da pesquisa, assegurando a execução estruturada e viável do
-projeto. Por fim, o capítulo de Conclusão sintetiza os resultados,
-discute limitações e propõe direções futuras, destacando a
-horizontalidade como ativo estratégico para a segurança
-organizacional.
+\section*{} 
+The first chapter presented the context that support this research, identifying
+challenges faced by non-hierarchical organizations in the area of digital
+security and threat modeling. The structural particularities of these
+organizations were described, highlighting the need for specific methods for
+risk analysis and mitigation. Having defined the objectives, intended
+contributions and structure of this research, Chapter 2 will address the
+essential concepts that underpin the study, including threat modeling, the
+conceptual differences between horizontal organizations and organizations
+without explicit leadership, and the role of democratic centralism as an
+organizational principle.

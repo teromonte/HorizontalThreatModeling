@@ -11,138 +11,152 @@
 
 \glsresetall
  
-\section{Conceito Preliminar do Protocolo}
+\section{Preliminary Protocol Concept}
 \label{sec:preliminary_protocol_concept}
 
-O protocolo a ser desenvolvido será um modelo estruturado para a modelagem de
-ameaças em organizações não-hierárquicas, funcionando de forma semelhante ao
-STRIDE, mas adaptado às especificidades da governança distribuída
-\cite{ThreatModelingdesigningForSecurity}.
-Ele não será um software, mas um conjunto formal de diretrizes e metodologias documentadas
-para identificação, análise e mitigação de ameaças em ambientes horizontais \cite{Colbac}.
-Seu formato será textual e estruturado como um documento acadêmico e técnico,
-oferecendo um referencial prático e teórico para segurança em estruturas
-descentralizadas .
+The protocol to be developed will be a structured model for threat modeling in
+non-hierarchical organizations, functioning similarly to STRIDE, but adapted to
+the specificities of distributed governance
+\cite{ThreatModelingdesigningForSecurity}. It will not be a software, but a
+formal set of documented guidelines and methodologies for identifying, analyzing
+and mitigating threats in horizontal environments \cite{Colbac}. Its format will
+be textual and structured as an academic and technical document, offering a
+practical and theoretical framework for security in decentralized structures.
 
-A audiência primária inclui membros da organização que utilizam o protocolo para
-analisar ameaças em seu contexto específico, bem como especialistas em segurança
-da informação e governança distribuída que buscam métodos adaptados a ambientes
-sem hierarquia. O protocolo servirá para aprimorar a resiliência organizacional
-sem comprometer a participação democrática, garantindo que a segurança seja
-integrada à dinâmica colaborativa das organizações horizontais.
+The primary audience includes members of the organization who use the protocol
+to analyze threats in their specific context, as well as experts in information
+security and distributed governance who seek methods adapted to non-hierarchical
+environments. The protocol will serve to improve organizational resilience
+without compromising democratic participation, ensuring that security is
+integrated into the collaborative dynamics of horizontal organizations.
 
-\section{Requisitos de Segurança e Governança}
+\subsection{Target Audience}
+\label{subsec:target_audience}
+
+The protocol is designed for members of horizontal organizations without
+specialized cybersecurity expertise. Unlike traditional expert-oriented models,
+our protocol emphasizes simplicity and accessibility. It supports stakeholders
+involved in decision-making, operational activities, conflict resolution, and
+coordination tasks, as well as informal community groups, by providing clear
+guidance and intuitive methods for effectively dealing with security threats.
+
+\section{Security and Governance Requirements}
 \label{sec:security_governance_requirements}
 
-O protocolo proposto para organizações horizontais deve atender a requisitos de
-segurança e governança que garantam tanto a inclusão participativa quanto a
-robustez contra ameaças internas e externas. Em estruturas descentralizadas,
-onde a ausência de hierarquia formal pode ser vista tanto como uma vantagem
-quanto como um desafio, é imperativo que o protocolo seja projetado para
-integrar mecanismos que preservem a horizontalidade sem comprometer a
-resiliência organizacional. A transparência, nesse contexto, emerge como um dos
-pilares centrais \cite{Colbac}. Todos os eventos relacionados à autorização de ações ou
-modificações devem ser registrados de maneira imutável, garantindo que as ações
-possam ser auditadas de forma confiável por qualquer membro da organização.
-Esses registros imutáveis, construídos sobre tecnologias como blockchain ou
-estruturas criptográficas semelhantes, asseguram a rastreabilidade e eliminam a
-possibilidade de alterações não autorizadas, mantendo a coesão entre os
-princípios organizacionais e os mecanismos tecnológicos.
+The proposed protocol for horizontal organizations must meet security and
+governance requirements that ensure both participatory inclusion and robustness
+against internal and external threats. In decentralized structures, where the
+absence of formal hierarchy can be seen as both an advantage and a challenge, it
+is imperative that the protocol be designed to integrate mechanisms that
+preserve horizontality without compromising organizational resilience.
+Transparency, in this context, emerges as one of the central pillars
+\cite{Colbac}. All events related to the authorization of actions or
+modifications must be recorded in an immutable manner, ensuring that actions can
+be reliably audited by any member of the organization. These immutable records,
+built on technologies such as blockchain or similar cryptographic structures,
+ensure traceability and eliminate the possibility of unauthorized changes,
+maintaining cohesion between organizational principles and technological
+mechanisms.
 
-A participação democrática também desempenha um papel fundamental no desenho do
-protocolo \cite{Colbac}. Em uma organização horizontal, as decisões devem refletir a vontade
-coletiva, e, para isso, o protocolo deve integrar sistemas de voto digital que
-garantam tanto a privacidade quanto a segurança dos votos \cite{Colbac}. Além disso, deve ser
-possível delegar temporariamente a autoridade a indivíduos ou grupos para lidar
-com situações que requeiram expertise específica, sempre assegurando que tal
-delegação possa ser revogada e que os registros das ações estejam acessíveis
-para auditoria coletiva \cite{Colbac}.
+Democratic participation also plays a fundamental role in the design of the
+protocol \cite{Colbac}. In a horizontal organization, decisions must reflect the
+collective will, and to this end, the protocol must integrate digital voting
+systems that guarantee both the privacy and security of votes \cite{Colbac}. In
+addition, it must be possible to temporarily delegate authority to individuals
+or groups to deal with situations that require specific expertise, always
+ensuring that such delegation can be revoked and that records of actions are
+accessible for collective audit \cite{Colbac}.
 
-Outro aspecto crucial é a flexibilidade do protocolo, especialmente em cenários
-onde a organização precise alternar entre modos de governança centralizada e
-distribuída. Essa capacidade de transição deve ser implementada de forma que os
-níveis de centralização sejam temporários e devidamente rastreados, garantindo
-que o controle possa retornar rapidamente ao coletivo. Para isso, o protocolo
-deve prever mecanismos como tokens de emergência, que permitam a execução de
-ações críticas em situações excepcionais, desde que tais ações sejam registradas
-e sujeitas a validação retroativa pelos membros da organização \cite{Colbac}.
+Another crucial aspect is the flexibility of the protocol, especially in
+scenarios where the organization needs to switch between centralized and
+distributed governance modes. This transition capacity must be implemented in a
+way that the levels of centralization are temporary and properly tracked,
+ensuring that control can quickly return to the collective. To this end, the
+protocol must provide mechanisms such as emergency tokens, which allow the
+execution of critical actions in exceptional situations, as long as such actions
+are recorded and subject to retroactive validation by the members of the
+organization \cite{Colbac}.
 
-Para que o protocolo seja escalável, é essencial que ele suporte organizações de
-diferentes tamanhos e graus de complexidade. Isso inclui a implementação de
-sistemas de validação distribuída que permitam a verificação colaborativa das
-ações sem sobrecarregar indivíduos ou pontos únicos de controle \cite{Colbac}. Além disso, a
-modelagem de ameaças deve ser iterativa e adaptável, incorporando técnicas como
-simulações baseadas em cenários reais para identificar vulnerabilidades
-emergentes e ajustar as contramedidas de acordo. Esses mecanismos
-asseguram que o protocolo permaneça funcional e eficaz mesmo diante
-de ampliação da escala organizacional ou de alterações em suas dinâmicas
-internas.
+For the protocol to be scalable, it is essential that it supports organizations
+of different sizes and degrees of complexity. This includes implementing
+distributed validation systems that allow collaborative verification of actions
+without burdening individuals or single points of control \cite{Colbac}.
+Furthermore, threat modeling should be iterative and adaptive, incorporating
+techniques such as simulations based on real-world scenarios to identify
+emerging vulnerabilities and adjust countermeasures accordingly. These
+mechanisms ensure that the protocol remains functional and effective even when
+the organizational scale increases or its internal dynamics change.
 
-\section{Estratégia de Avaliação}
+\section{Evaluation Strategy}
 \label{sec:evaluation_strategy}
 
-A avaliação do protocolo proposto será conduzida de forma experimental e
-comparativa, utilizando grupos organizacionais com diferentes graus de
-horizontalidade. Este processo tem como objetivo principal validar a capacidade
-do protocolo em identificar, mitigar e prevenir ameaças em ambientes
-horizontais, enquanto compara sua eficácia com frameworks consolidados, como o
+The evaluation of the proposed protocol will be conducted in an experimental and
+comparative manner, using organizational groups with different degrees of
+horizontality. The main objective of this process is to validate the protocol's
+ability to identify, mitigate and prevent threats in horizontal environments,
+while comparing its effectiveness with consolidated frameworks, such as
 \gls{stride}.
 
-Inicialmente, serão selecionadas organizações candidatas representativas de
-distintos níveis de distribuição de poder e autonomia. Cada organização será
-submetida a sessões de treinamento estruturadas, abordando tanto o protocolo
-desenvolvido quanto o \gls{stride}, garantindo que todos os participantes compreendam
-as ferramentas utilizadas.
+Initially, candidate organizations representing different levels of power
+distribution and autonomy will be selected. Each organization will undergo
+structured training sessions, addressing both the developed protocol and
+\gls{stride}, ensuring that all participants understand the tools used.
 
-Para operacionalizar a avaliação, será aplicada uma metodologia em três etapas.
-Na primeira etapa, cada grupo organizará um modelo de ameaças para sua estrutura
-com base no protocolo proposto. Em paralelo, um segundo grupo, dentro da mesma
-organização, aplicará o \gls{stride} ao mesmo cenário. Ambas as sessões
-serão acompanhadas para documentar o processo e coletar dados
-quantitativos e qualitativos.
+To operationalize the evaluation, a three-stage methodology will be applied. In
+the first stage, each group will organize a threat model for its structure based
+on the proposed protocol. In parallel, a second group, within the same
+organization, will apply \gls{stride} to the same scenario. Both sessions will
+be monitored to document the process and collect quantitative and qualitative
+data.
 
-Os modelos resultantes serão analisados segundo métricas predefinidas, incluindo:
+The resulting models will be analyzed according to predefined metrics,
+including:
 
 \begin{itemize}
-
-    \item \textbf{Precisão}: avaliação do número de ameaças corretamente identificadas
-    em relação ao total detectado.
-
-    \item \textbf{Recall}: proporção de ameaças identificadas pelo protocolo em relação
-    às existentes no modelo de referência.
-
-    \item \textbf{Latência Operacional}: tempo total necessário para completar cada fase
-    do processo de modelagem.
-
-    \item \textbf{Feedback dos Usuários}: coleta de opiniões qualitativas sobre
-    usabilidade e clareza do protocolo por parte dos participantes.
-
+    \item \textbf{Precision}: assessment of the number of correctly identified threats
+in relation to the total detected.
+    \item \textbf{Recall}: proportion of threats identified by the protocol in relation
+to those existing in the reference model.
+    \item \textbf{Operational Latency}: total time required to complete each phase
+of the modeling process.
+    \item \textbf{User Feedback}: collection of qualitative opinions on
+the usability and clarity of the protocol from participants.
 \end{itemize}
 
-A segunda etapa envolverá a simulação de cenários de ameaças, incluindo ataques
-Sybil, manipulação de quórum e falhas de consenso, replicando situações
-realistas enfrentadas por organizações horizontais. A resposta a essas ameaças
-será comparada entre os protocolos, considerando a qualidade das soluções
-propostas e o tempo de resposta dos grupos.
+The second stage will involve simulating threat scenarios, including Sybil
+attacks, quorum manipulation and consensus failures, replicating realistic
+situations faced by horizontal organizations. The response to these threats will
+be compared between the protocols, considering the quality of the proposed
+solutions and the response time of the groups.
 
-Por fim, na terceira etapa, as organizações serão submetidas a estudos de caso,
-nos quais o protocolo será implementado de maneira integral e monitorado ao
-longo do tempo. O desempenho do protocolo será analisado em termos de
-resiliência às ameaças identificadas, sua adaptabilidade a dinâmicas
-organizacionais e a capacidade de promover a participação e transparência.
+Finally, in the third stage, the organizations will be subjected to case
+studies, in which the protocol will be implemented in full and monitored over
+time. The performance of the protocol will be analyzed in terms of its
+resilience to the identified threats, its adaptability to organizational
+dynamics and its ability to promote participation and transparency.
 
-\section{Questões de Pesquisa}
+\section{Research Questions}
 \label{sec:research_questions}
 
 \begin{enumerate}
-    \item Como o protocolo pode equilibrar eficiência e participação
-democrática em organizações horizontais?
-    \item Quais são as melhores práticas para integrar segurança e
-governança em estruturas descentralizadas?
-    \item Como o protocolo pode se adaptar a diferentes níveis de
-horizontalidade e dinâmicas organizacionais?
-    \item De que forma ele pode melhorar a resiliência contra ameaças
-internas e externas, mantendo a transparência e a participação
-inclusiva?
+    \item How can the protocol balance efficiency and democratic participation
+in horizontal organizations?
+    \item What are the best practices for integrating security and governance
+in decentralized structures?
+    \item How can the protocol adapt to different levels of horizontality and
+organizational dynamics?
+    \item How can it improve resilience against internal and external threats
+while maintaining transparency and inclusive participation?
 \end{enumerate}
 
+\section*{}
+Chapter 4 presented the preliminary design of a protocol specifically aimed at
+threat modeling in horizontal organizations, detailing fundamental security and
+governance requirements, such as mechanisms for democratic participation,
+temporary delegation of authority, and auditable records. The importance of
+aligning technological and organizational processes to ensure robustness against
+internal and external threats was highlighted. Based on this conceptual
+development, Chapter 5 summarizes the main results achieved by this research,
+critically evaluating the proposed protocol, identifying its contributions in
+relation to traditional methodologies, and exploring practical scenarios for
+future validations in real environments.

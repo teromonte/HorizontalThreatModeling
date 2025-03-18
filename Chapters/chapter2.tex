@@ -11,305 +11,302 @@
 
 \glsresetall
 
-\section{Fundamentos da Modelagem de Ameaças}
-\label{sec:fundamentos_da_modelagem_de_ameacas}
+\section{Foundations of Threat Modeling}
+\label{sec:foundations_threat_modeling}
 
-A modelagem de ameaças é um componente central da cibersegurança, pois
-permite identificar ativos valiosos, analisar potenciais vetores de
-ataque e estabelecer controles capazes de mitigar riscos. Essa prática
-vai além de fatores técnicos, incorporando elementos organizacionais e
-humanos que moldam a segurança em contextos diversos, especialmente em
-estruturas horizontais, onde processos internos e relações de confiança
-se tornam ainda mais críticos devido à ausência de hierarquias formais \cite{Colbac}.
-Em um cenário de rápida evolução tecnológica e diversificação constante
-das ameaças, uma abordagem ampla e flexível ganha relevância, atendendo
-às particularidades de contextos em transformação \cite{ThreatModelingdesigningForSecurity}.
+Threat modeling is a central component of cybersecurity, as it allows the
+identification of valuable assets, analysis of potential attack vectors, and
+establishment of controls capable of mitigating risks. This practice goes beyond
+technical factors, incorporating organizational and human elements that shape
+security in diverse contexts, especially in horizontal structures, where
+internal processes and trust relationships become even more critical due to the
+absence of formal hierarchies \cite{Colbac}. In a scenario of rapid
+technological evolution and constant diversification of threats, a broad and
+flexible approach gains relevance, meeting the particularities of changing
+contexts \cite{ThreatModelingdesigningForSecurity}.
 
-Estudos como \cite{ThreatModelingAsABasisForSecurityRequirements},
-\cite{AdvancedThreatModeling} e
-\cite{DemystifyingTheThreatModelingProcess} demonstram a necessidade
-de métodos estruturados, porém adaptáveis, para acompanhar ambientes
-em mutação. A adoção da perspectiva do adversário \cite{AHybridThreatModelingMethod}
-é crucial para antecipar cenários complexos e fortalecer a resiliência
-em ambientes descentralizados, onde a multiplicidade de atores e a
-distribuição de poder requerem uma análise holística das ameaças.
-Nesse tipo de contexto, a modelagem de ameaças precisa refletir
-a distribuição de poder e a multiplicidade de atores, incluindo as
-possíveis ameaças internas, externas e híbridas \cite{ThreatModelingASummaryOfAvailableMethods}.
+Studies such as \cite{ThreatModelingAsABasisForSecurityRequirements},
+\cite{AdvancedThreatModeling}, and \cite{DemystifyingTheThreatModelingProcess}
+demonstrate the need for structured, yet adaptable, methods to keep up with
+changing environments. Adopting the adversary perspective
+\cite{AHybridThreatModelingMethod} is crucial to anticipate complex scenarios
+and strengthen resilience in decentralized environments, where the multiplicity
+of actors and the distribution of power require a holistic analysis of threats.
+In this type of context, threat modeling needs to reflect the distribution of
+power and the multiplicity of actors, including potential internal, external and
+hybrid threats \cite{ThreatModelingASummaryOfAvailableMethods}.
 
-Além disso, a experiência da Microsoft, documentada em
-\cite{ExperiencesThreatModelingAtMicrosoft}, enfatiza a importância de
-envolver stakeholders diversos e de aplicar ferramentas colaborativas.
-Esses elementos tornam-se cruciais quando a tomada de decisão é
-democrática ou descentralizada, pois a identificação e mitigação de
-riscos demandam engajamento coletivo e flexibilidade estratégica,
-conectando o exercício de modelagem de ameaças às dinâmicas
-organizacionais \cite{ParticipatoryThreatModelling}.
+In addition, Microsoft's experience, documented in
+\cite{ExperiencesThreatModelingAtMicrosoft}, emphasizes the importance of
+involving diverse stakeholders and applying collaborative tools. These elements
+become crucial when decision-making is democratic or decentralized, since
+identifying and mitigating risks requires collective engagement and strategic
+flexibility, connecting the threat modeling exercise to organizational dynamics
+\cite{ParticipatoryThreatModelling}.
 
-\subsection{Definições Conceituais} 
-\label{sec:definicoes_conceituais}
+\subsection{Conceptual Definitions}
+\label{subsec:conceptual_definitions}
 
-A modelagem de ameaças pode ser entendida como um esforço sistemático de
-proteção que considera tanto vulnerabilidades técnicas quanto fatores
-sociais e organizacionais. Ao adotar uma visão holística, conforme sugerem
-\cite{ThreatModelingAsABasisForSecurityRequirements} e
-\cite{AdvancedThreatModeling}, a análise de segurança não fica restrita à
-infraestrutura, mas incorpora práticas internas, fluxos de informação e a
-cultura da organização. Em contextos não-hierárquicos, a ausência de linhas
-claras de autoridade e o caráter participativo tornam essencial uma análise
-que considere a distribuição de responsabilidades e a dependência de
-mecanismos coletivos de mitigação \cite{Colbac}.
+Threat modeling can be understood as a systematic protection effort that
+considers both technical vulnerabilities and social and organizational factors.
+By adopting a holistic view, as suggested by
+\cite{ThreatModelingAsABasisForSecurityRequirements} and
+\cite{AdvancedThreatModeling}, security analysis is not restricted to
+infrastructure, but incorporates internal practices, information flows, and the
+organization's culture. In non-hierarchical contexts, the absence of clear lines
+of authority and the participatory nature make an analysis that considers the
+distribution of responsibilities and the reliance on collective mitigation
+mechanisms essential \cite{Colbac}.
 
-Por sua vez, \cite{DemystifyingTheThreatModelingProcess} enfatiza que não
-existe uma solução única para modelagem de ameaças. Nesse sentido,a
-modelagem de ameaças torna-se um processo iterativo, adaptando-se a
-alterações estruturais e incorporando inovações como ferramentas de
-tomada de decisão participativa e práticas de segurança colaborativa
+In turn, \cite{DemystifyingTheThreatModelingProcess} emphasizes that there is no
+single solution for threat modeling. In this sense, threat modeling becomes an
+iterative process, adapting to structural changes and incorporating innovations
+such as participatory decision-making tools and collaborative security practices
 \cite{SecurityCardsToolkit, ParticipatoryThreatModelling}.
 
-\subsection{Principais Metodologias}
-\label{sec:principais_metodologias}
+\subsection{Main Methodologies}
+\label{subsec:main_methodologies}
 
-Metodologias amplamente discutidas, como o \gls{stride}, as árvores de
-ataque e frameworks baseados em cenários
-\cite{EvaluationofCompetingThreatModeling}, fornecem um ponto de partida
-testado, mas frequentemente não capturam a complexidade de estruturas
-horizontais.
+Widely discussed methodologies such as \gls{stride}, attack trees, and
+scenario-based frameworks \cite{EvaluationofCompetingThreatModeling} provide a
+tested starting point, but they often fail to capture the complexity of
+horizontal structures.
 
-A documentação \cite{ThreatModelingASummaryOfAvailableMethods} apresenta um
-panorama de métodos existentes, alertando que a eficácia de cada abordagem
-depende do contexto. Por exemplo, \gls{stride} e árvores de ataque são
-úteis para identificar vetores de ataque diretos, mas a ausência de
-hierarquias formais intensifica a necessidade de explorar cenários
-complexos, como ameaças internas associadas a ataques externos, bem como
-falhas em mecanismos distribuídos de autenticação, consenso e governança,
-como sugerido em \cite{Colbac, AttackTrees, STRIDEthreatmodelingforcyberphysical}.
+The documentation \cite{ThreatModelingASummaryOfAvailableMethods} provides an
+overview of existing methods, cautioning that the effectiveness of each approach
+depends on the context. For example, \gls{stride} and attack trees are useful
+for identifying straightforward attack vectors, but the lack of formal
+hierarchies intensifies the need to explore complex scenarios such as insider
+threats coupled with external attacks, as well as flaws in distributed
+authentication, consensus, and governance mechanisms, as suggested in
+\cite{Colbac, AttackTrees, STRIDEthreatmodelingforcyberphysical}.
 
-A integração de métodos diversos, como práticas de criptografia
-colaborativa \cite{AbcCrypto} e abordagens híbridas \cite{CoReTM}, permite
-que organizações horizontais identifiquem padrões de risco menos óbvios e
-fortaleçam sua resiliência coletiva. Essa integração se torna crucial em
-estruturas distribuídas, onde a ausência de um 'centro' transforma a
-segurança em um esforço coletivo, e a resiliência emerge da interação
-contínua entre membros, sistemas e mecanismos de governança
-descentralizada \cite{Reputation-basedDAO}.
+Integrating diverse approaches, such as collaborative cryptography practices
+\cite{AbcCrypto} and hybrid approaches \cite{CoReTM}, enables horizontal
+organizations to identify less obvious risk patterns and strengthen their
+collective resilience. This integration becomes crucial in distributed
+structures, where the absence of a 'center' turns security into a collective
+effort, and resilience emerges from the continuous interaction between members,
+systems and decentralized governance mechanisms \cite{Reputation-basedDAO}.
 
-\section{Taxonomia de Estruturas Organizacionais}
-\label{sec:taxonomia_de_estruturas_organizacionais}
+\section{Taxonomy of Organizational Structures}
+\label{sec:taxonomy_organizational_structures}
 
-Entender a relação entre forma organizacional e segurança é essencial para
-ajustar a modelagem de ameaças à realidade de cada instituição \cite{Non-HierarchicalForms}.
-Enquanto estruturas hierárquicas confiam em pontos centrais de decisão para controle
-e coordenação, esses mesmos pontos podem se tornar vulnerabilidades
-críticas \cite{ThreatModelingdesigningForSecurity}. Organizações horizontais ou cooperativas podem
-dispersar vulnerabilidades e aumentar a resiliência por meio da governança
-descentralizada, embora também possam criar múltiplos pontos de entrada que
-exigem controle colaborativo \cite{Colbac}. A análise desta taxonomia, conforme
-\cite{WorkerCooperativesinAmerica, RealNotNominalGlobalDemocracy}, oferece
-uma base para identificar como a distribuição de poder em diferentes formas
-organizacionais afeta a eficácia de medidas de segurança, incluindo a
-capacidade de resposta a ameaças internas e externas.
+Understanding the relationship between organizational form and security is
+essential to adjust threat modeling to the reality of each institution
+\cite{Non-HierarchicalForms}. While hierarchical structures rely on central
+decision points for control and coordination, these same points can become
+critical vulnerabilities \cite{ThreatModelingdesigningForSecurity}. Horizontal
+or cooperative organizations can disperse vulnerabilities and increase
+resilience through decentralized governance, although they can also create
+multiple entry points that require collaborative control \cite{Colbac}. Analysis
+of this taxonomy, as \cite{WorkerCooperativesinAmerica,
+RealNotNominalGlobalDemocracy}, provides a basis for identifying how the
+distribution of power in different organizational forms affects the
+effectiveness of security measures, including the ability to respond to internal
+and external threats.
 
-\subsection{Estruturas Tradicionais Hierárquicas}
-\label{sec:estruturas_tradicionais_hierarquicas}
+\subsection{Traditional Hierarchical Structures}
+\label{subsec:traditional_hierarchical_structures}
 
-Organizações hierárquicas apresentam linhas claras de autoridade, o que
-facilita o controle, mas pode concentrar vulnerabilidades em pontos
-críticos \cite{MicrosoftThreatModelingTechnique}. Essas organizações são caracterizadas por uma cadeia de comando
-bem definida, onde as decisões fluem do topo para a base. Exemplos
-clássicos incluem grandes corporações multinacionais, onde a diretoria
-estabelece políticas que são implementadas por camadas de gerentes,
-supervisores e funcionários. Por outro lado, em pequenas empresas, como
-escritórios familiares, a hierarquia pode ser menos formal, mas ainda assim
-baseada em uma estrutura de comando clara e centralizada \cite{WorkerCooperativesinAmerica}.
+Hierarchical organizations have clear lines of authority, which facilitates
+control but can concentrate vulnerabilities in critical areas
+\cite{MicrosoftThreatModelingTechnique}. These organizations are characterized
+by a well-defined chain of command, where decisions flow from the top down.
+Classic examples include large multinational corporations, where the board of
+directors establishes policies that are implemented by layers of managers,
+supervisors, and employees. On the other hand, in small businesses, such as
+family offices, the hierarchy may be less formal but still based on a clear,
+centralized command structure \cite{WorkerCooperativesinAmerica}.
 
-Em grandes organizações, como bancos ou indústrias automotivas, a
-hierarquia permite uma alocação eficiente de recursos e um controle
-rigoroso sobre as operações. Por exemplo, as divisões de TI desses
-ambientes frequentemente utilizam frameworks de segurança como o
-\gls{stride} para modelagem de ameaças, focando na proteção de ativos
-críticos e no gerenciamento de acessos centralizados
-\cite{MicrosoftThreatModelingTechnique, ThreatModelingASystematicLiteratureReview}.
-A centralização facilita a resposta rápida a incidentes, mas também cria pontos únicos de falha,
-como vulnerabilidades em servidores principais ou credenciais
-administrativas \cite{DoArtifactsHavePolitics, BigTech}.
-
-Em contrapartida, pequenas empresas enfrentam desafios diferentes. Nesses
-contextos, a falta de recursos pode levar a menos camadas hierárquicas, mas
-as decisões ainda se concentram em um único proprietário ou gerente \cite{WorkerCooperativesandRevolution}.
-Isso reduz a complexidade organizacional, mas aumenta a dependência de
-indivíduos específicos, tornando-os alvos prioritários em ataques
-\cite{WorkerCooperativesinAmerica}. Ademais, a ausência de equipes
-dedicadas de segurança pode limitar a capacidade de implementar frameworks
-sofisticados, como \gls{stride}, exigindo soluções mais simplificadas.
-
-A diferença entre organizações grandes e pequenas também reflete no impacto
-sobre a modelagem de ameaças \cite{WorkerCooperativesinAmerica, ThreatModelingASummaryOfAvailableMethods}.
-Em empresas maiores, as estruturas hierárquicas permitem segmentações detalhadas para identificar e mitigar
-riscos em níveis específicos da organização. No entanto, essa segmentação
-pode levar a lacunas de comunicação entre departamentos, dificultando a
-implementação de soluções integradas
-\cite{ThreatModelingASystematicLiteratureReview}. Por outro lado,
-organizações menores têm maior flexibilidade para adaptar rapidamente suas
-estratégias de segurança, embora frequentemente careçam de recursos para
-implementar soluções robustas \cite{WorkerCooperativesandRevolution}.
-
-Portanto, enquanto organizações hierárquicas oferecem vantagens em termos
-de controle e clareza, elas também introduzem desafios específicos para a
-modelagem de ameaças. Esses desafios variam significativamente com o
-tamanho e a complexidade da organização, exigindo adaptações nos frameworks
-tradicionais para atender às necessidades específicas de cada tipo de
-hierarquia.
-
-\subsection{Organizações Horizontais}
-\label{sec:organizacoes_horizontais}
-
-Organizações horizontais se distinguem pela rejeição de hierarquias
-tradicionais, priorizando processos decisórios distribuídos e participação
-equitativa de todos os membros. Este modelo contrasta diretamente com
-estruturas hierárquicas, que centralizam o poder em níveis superiores,
-perpetuando desigualdades no acesso à informação e controle organizacional
-\cite{Non-HierarchicalForms, EstatutosDoPCP}.
-
-A horizontalidade é tanto uma ferramenta quanto um objetivo em si \cite{Colbac}. Nos
-movimentos sociais argentinos, como analisado por Marina Sitrin, a
-horizontalidade emergiu como um mecanismo essencial para estabelecer
-relações baseadas na confiança e no consenso, superando formas tradicionais
-de organização. Assembleias de bairro e coletivos de trabalhadores
-desempregados exemplificam como a horizontalidade pode ser aplicada para
-autogestão e planejamento coletivo \cite{EverydayRevolutions}.
-
-No campo da cibernética, o protocolo COLBAC demonstra a relevância da
-horizontalidade em sistemas de segurança digital, promovendo um controle de
-acesso colaborativo que reduz a centralização de poder. Este modelo evita
-as vulnerabilidades criadas pela dependência de proprietários únicos de
-senhas ou permissões, reforçando a coerência entre práticas organizacionais
-e ferramentas tecnológicas \cite{Colbac}.
-
-Adicionalmente, exemplos históricos, como a democracia ateniense, ilustram
-que estruturas horizontais podem ser complementadas por mecanismos
-temporários de centralização em momentos de crise, garantindo flexibilidade
-e eficiência sem comprometer os princípios básicos da governança
-distribuída \cite{AthenianDemocracyABrief}.
-
-Apesar dos desafios, como o risco de dominação por vozes mais influentes ou
-a gestão de conflitos em espaços coletivos, as organizações horizontais
-demonstram que, com mecanismos adequados, é possível promover autonomia,
-participação inclusiva e eficiência em estruturas descentralizadas
-\cite{SocialMediaTeamsAsDigitalVanguards}.
-
-\subsection{Modelos Organizacionais Sem Liderança}
-\label{sec:modelos_sem_lideranca}
-
-O discurso de organizações sem liderança esconde uma complexidade
-adicional, onde a ausência de uma hierarquia formal não implica
-necessariamente uma horizontalidade genuína \cite{SocialMediaTeamsAsDigitalVanguards}.
-Estudos críticos destacam como essas organizações frequentemente
-replicam dinâmicas de poder veladas e centralizações informais
-\cite{SocialMediaTeamsAsDigitalVanguards, EverydayRevolutions}.
-
-Marina Sitrin, em sua análise sobre movimentos horizontais na Argentina,
-aponta que, embora a horizontalidade seja declarada como objetivo, muitos
-movimentos enfrentam desafios significativos para sustentar práticas
-realmente participativas. A falta de hierarquia formal frequentemente leva
-a estruturas de poder informais, onde vozes dominantes assumem papéis de
-liderança sem supervisão ou responsabilidade coletiva clara
-\cite{EverydayRevolutions}.
-
-No contexto digital, movimentos como Occupy Wall Street demonstram que a
-ausência de uma liderança reconhecível não elimina conflitos internos
-\cite{SocialMediaTeamsAsDigitalVanguards}.
-Estudos sobre as equipes de mídia social desses movimentos revelam que a
-administração de contas, como no Twitter, foi frequentemente marcada por
-disputas de controle, ilustrando como poder e influência podem se
-consolidar mesmo em estruturas supostamente horizontais
-\cite{SocialMediaTeamsAsDigitalVanguards}.
-
-Além disso, pesquisas sobre cooperativas de trabalhadores nos Estados
-Unidos indicam que essas organizações, embora frequentemente vistas como
-alternativas não hierárquicas, tendem a desenvolver líderes informais que
-influenciam decisões de maneira significativa, questionando a narrativa de
-horizontalidade absoluta \cite{WorkerCooperativesandRevolution}.
-
-Tecnologias utilizadas por essas organizações também carregam implicações
-políticas \cite{DoArtifactsHavePolitics, Democraciaeoscodigosinvisiveis}.
-Langdon Winner argumenta que artefatos técnicos podem perpetuar estruturas de poder
-existentes, mesmo quando empregados em contextos
-descentralizados \cite{DoArtifactsHavePolitics}. Por exemplo, plataformas digitais,
-muitas vezes projetadas para usos individuais, criam desafios na construção de
-governança coletiva efetiva, exacerbando desigualdades latentes
+In large organizations, such as banks or automotive manufacturers, hierarchy
+allows for efficient allocation of resources and tight control over operations.
+For example, IT departments in these environments often use security frameworks
+such as \gls{stride} for threat modeling, focusing on protecting critical assets
+and centralized access management \cite{MicrosoftThreatModelingTechnique,
+ThreatModelingASystematicLiteratureReview}. Centralization facilitates rapid
+incident response, but it also creates single points of failure, such as
+vulnerabilities in key servers or administrative credentials
 \cite{DoArtifactsHavePolitics, BigTech}.
 
-Esses exemplos destacam que, embora a ideia de ausência de liderança formal
-seja atraente, sua execução prática frequentemente resulta em formas
-informais de hierarquia \cite{EverydayRevolutions, SocialMediaTeamsAsDigitalVanguards}.
-Assim, o sucesso dessas organizações depende da
-capacidade de identificar e mitigar as dinâmicas de poder ocultas,
-promovendo mecanismos claros de governança coletiva e responsabilidade
-mútua que realmente sustentem a horizontalidade desejada \cite{Colbac}.
+In contrast, small businesses face different challenges. In these contexts, lack
+of resources may lead to fewer hierarchical layers, but decisions are still
+centered on a single owner or manager \cite{WorkerCooperativesandRevolution}.
+This reduces organizational complexity but increases reliance on specific
+individuals, making them prime targets for attacks
+\cite{WorkerCooperativesinAmerica}. Furthermore, the lack of dedicated security
+teams can limit the ability to implement sophisticated frameworks such as
+\gls{stride}, requiring more streamlined solutions.
 
-\section{Centralismo Democrático}
-\label{sec:centralismo_democratico}
+The difference between large and small organizations also impacts threat
+modeling \cite{WorkerCooperativesinAmerica,
+ThreatModelingASummaryOfAvailableMethods}. In larger organizations, hierarchical
+structures allow for detailed segmentations to identify and mitigate risks at
+specific levels of the organization. However, this segmentation can lead to
+communication gaps between departments, making it difficult to implement
+integrated solutions \cite{ThreatModelingASystematicLiteratureReview}. On the
+other hand, smaller organizations have greater flexibility to quickly adapt
+their security strategies, although they often lack the resources to implement
+robust solutions \cite{WorkerCooperativesandRevolution}.
 
-Em meio a cenários cada vez mais desafiadores em termos de coordenação
-organizacional, seja na gestão de grandes corporações ou na manutenção
-de redes descentralizadas como a blockchain, surge a necessidade de se
-conciliar a eficiência na tomada de decisões com a participação ativa
-de todos os envolvidos \cite{DoArtifactsHavePolitics}.
-O centralismo democrático, formulado para
-atender às exigências de movimentos revolucionários, mantém sua
-relevância ao propor um equilíbrio dinâmico entre deliberação coletiva
-e execução centralizada \cite{EstatutosDoPCP}. Essa abordagem tem se mostrado pertinente
-tanto em contextos políticos e sociais quanto em cenários tecnológicos
-contemporâneos \cite{Colbac}.
+Therefore, while hierarchical organizations offer advantages in terms of control
+and clarity, they also introduce specific challenges for threat modeling. These
+challenges vary significantly with the size and complexity of the organization,
+requiring adaptations to traditional frameworks to meet the specific needs of
+each type of hierarchy.
 
-\subsection{Princípios Fundamentais e Origens Teóricas}
-\label{sec:principios_origens_teoricas}
+\subsection{Horizontal Organizations}
+\label{subsec:horizontal_organizations}
 
-O centralismo democrático fundamenta-se na ideia de que a coleta de
-opiniões e a deliberação (democracia) devem ser harmonizadas com a
-capacidade de implementar decisões de forma unificada (centralismo)
-\cite{ACenturyofDemocraticCentralism}.
-Esse sistema foi originalmente concebido como resposta à necessidade
-de organização em contextos de alta complexidade estrutural 
+Horizontal organizations are distinguished by their rejection of traditional
+hierarchies, prioritizing distributed decision-making processes and equitable
+participation of all members. This model contrasts directly with hierarchical
+structures, which centralize power at higher levels, perpetuating inequalities
+in access to information and organizational control \cite{Non-HierarchicalForms,
+EstatutosDoPCP}.
+
+Horizontality is both a tool and an objective in itself \cite{Colbac}. In
+Argentine social movements, as analyzed by Marina Sitrin, horizontality has
+emerged as an essential mechanism for establishing relationships based on trust
+and consensus, overcoming traditional forms of organization. Neighborhood
+assemblies and collectives of unemployed workers exemplify how horizontality can
+be applied to self-management and collective planning
+\cite{EverydayRevolutions}.
+
+In the field of cybernetics, the COLBAC protocol demonstrates the relevance of
+horizontality in digital security systems, promoting collaborative access
+control that reduces the centralization of power. This model avoids the
+vulnerabilities created by the dependence on single owners of passwords or
+permissions, reinforcing the coherence between organizational practices and
+technological tools \cite{Colbac}.
+
+In addition, historical examples, such as Athenian democracy, illustrate that
+horizontal structures can be complemented by temporary centralization mechanisms
+in times of crisis, ensuring flexibility and efficiency without compromising the
+basic principles of distributed governance \cite{AthenianDemocracyABrief}.
+
+Despite the challenges, such as the risk of domination by more influential
+voices or the management of conflicts in collective spaces, horizontal
+organizations demonstrate that, with adequate mechanisms, it is possible to
+promote autonomy, inclusive participation and efficiency in decentralized
+structures \cite{SocialMediaTeamsAsDigitalVanguards}.
+
+\subsection{Leaderless Organizational Models}
+\label{subsec:leaderless_organizational_models}
+
+The discourse of leaderless organizations hides an additional complexity, where
+the absence of a formal hierarchy does not necessarily imply genuine
+horizontality \cite{SocialMediaTeamsAsDigitalVanguards}. Critical studies
+highlight how these organizations often replicate veiled power dynamics and
+informal centralizations \cite{SocialMediaTeamsAsDigitalVanguards,
+EverydayRevolutions}.
+
+Marina Sitrin, in her analysis of horizontal movements in Argentina, points out
+that although horizontality is declared as an objective, many movements face
+significant challenges in sustaining truly participatory practices. The lack of
+formal hierarchy often leads to informal power structures, where dominant voices
+assume leadership roles without oversight or clear collective responsibility
+\cite{EverydayRevolutions}.
+
+In the digital context, movements such as Occupy Wall Street demonstrate that
+the absence of recognizable leadership does not eliminate internal conflicts
+\cite{SocialMediaTeamsAsDigitalVanguards}. Studies of social media teams in
+these movements reveal that account management, as on Twitter, was often marked
+by struggles for control, illustrating how power and influence can consolidate
+even in supposedly horizontal structures
+\cite{SocialMediaTeamsAsDigitalVanguards}.
+
+Furthermore, research on worker cooperatives in the United States indicates that
+these organizations, although often seen as non-hierarchical alternatives, tend
+to develop informal leaders who influence decisions in significant ways,
+challenging the narrative of absolute horizontality
+\cite{WorkerCooperativesandRevolution}.
+
+Technologies used by these organizations also carry political implications
+\cite{DoArtifactsHavePolitics, Democraciaeoscodigosinvisiveis}. Langdon Winner
+argues that technical artifacts can perpetuate existing power structures, even
+when employed in decentralized contexts \cite{DoArtifactsHavePolitics}. For
+example, digital platforms, often designed for individual use, create challenges
+in building effective collective governance, exacerbating latent inequalities
+\cite{DoArtifactsHavePolitics, BigTech}.
+
+These examples highlight that while the idea of formal leadershiplessness is
+appealing, its practical execution often results in informal forms of hierarchy
+\cite{EverydayRevolutions, SocialMediaTeamsAsDigitalVanguards}. Thus, the
+success of these organizations depends on the ability to identify and mitigate
+hidden power dynamics, promoting clear mechanisms of collective governance and
+mutual accountability that truly sustain the desired horizontality
+\cite{Colbac}.
+
+\section{Democratic Centralism}
+\label{sec:democratic_centralism}
+
+In the midst of increasingly challenging scenarios in terms of organizational
+coordination, whether in the management of large corporations or in the
+maintenance of decentralized networks such as blockchain, the need arises to
+reconcile efficiency in decision-making with the active participation of all
+those involved \cite{DoArtifactsHavePolitics}. Democratic centralism, formulated
+to meet the demands of revolutionary movements, maintains its relevance by
+proposing a dynamic balance between collective deliberation and centralized
+execution \cite{EstatutosDoPCP}. This approach has proven to be relevant both in
+political and social contexts and in contemporary technological scenarios
+\cite{Colbac}.
+
+\subsection{Fundamental Principles and Theoretical Origins}
+\label{subsec:fundamental_principles_origins}
+
+Democratic centralism is based on the idea that opinion gathering and
+deliberation (democracy) must be harmonized with the ability to implement
+decisions in a unified manner (centralism)
+\cite{ACenturyofDemocraticCentralism}. This system was originally conceived as a
+response to the need for organization in contexts of high structural complexity
 \cite{StillaCenturyoftheChineseModel,EstatutosDoPCP}.
 
-Sua formulação inicial, associada ao Partido Comunista da União
-Soviética, inspirou a adoção do modelo por diferentes grupos ao redor
-do mundo \cite{EstatutosDoPCP}. Na China, por exemplo, as práticas de centralismo
-democrático demonstram uma resiliência notável, sendo reconfiguradas à
-medida que variam as conjunturas políticas e sociais
-\cite{ACenturyofDemocraticCentralism}.
+Its initial formulation, associated with the Communist Party of the Soviet
+Union, inspired the adoption of the model by different groups around the world
+\cite{EstatutosDoPCP}. In China, for example, the practices of democratic
+centralism demonstrate remarkable resilience, being reconfigured as political
+and social situations change \cite{ACenturyofDemocraticCentralism}.
 
-\subsection{Modelos Contemporâneos de Aplicação}
-\label{sec:modelos_contemporaneos}
+\subsection{Contemporary Models of Application}
+\label{subsec:contemporary_models_application}
 
-A transposição dos preceitos do centralismo democrático para contextos
-modernos tem sido observada em diferentes estruturas organizacionais e
-tecnológicas \cite{DoArtifactsHavePolitics, Colbac}.
-Um exemplo é o protocolo \gls{colbac}, que adapta as bases do
-centralismo democrático a um ambiente de controle de acesso
-colaborativo, possibilitando decisões participativas aliadas a uma
-implementação coesa \cite{Colbac}.
+The transposition of the precepts of democratic centralism to modern contexts
+has been observed in different organizational and technological structures
+\cite{DoArtifactsHavePolitics, Colbac}. One example is the \gls{colbac}
+protocol, which adapts the bases of democratic centralism to a collaborative
+access control environment, enabling participatory decisions combined with
+cohesive implementation \cite{Colbac}.
 
-Movimentos sindicais e organizações sociais também
-têm integrado princípios de centralismo democrático \cite{CGTPStatutes}. A
-Confederação Geral dos Trabalhadores Portugueses, por exemplo,
-combina deliberação coletiva e períodos de centralização estratégica
-para dar respostas eficazes a desafios organizacionais \cite{CGTPStatutes}.
+Trade unions and social organizations have also integrated principles of
+democratic centralism \cite{CGTPStatutes}. The General Confederation of
+Portuguese Workers, for example, combines collective deliberation and periods of
+strategic centralization to provide effective responses to organizational
+challenges \cite{CGTPStatutes}.
 
-\subsection{Implicações e Potenciais para Governança}
-\label{sec:implicacoes_potenciais}
+\subsection{Implications and Potentials for Governance}
+\label{subsec:implications_potentials_governance}
 
-A influência do centralismo democrático transcende os limites dos
-partidos políticos, podendo ser estendida a cenários diversos que
-exijam tanto participação ampla quanto execução eficiente
-\cite{ACenturyofDemocraticCentralism, TheCostsofConnection}.
-Organizações horizontais ou distribuídas podem recorrer a esse modelo
-para conciliar a voz de seus integrantes com a necessidade de tomar
-decisões de forma centralizada em momentos críticos
+The influence of democratic centralism transcends the limits of political
+parties and can be extended to diverse scenarios that require both broad
+participation and efficient execution \cite{ACenturyofDemocraticCentralism,
+TheCostsofConnection}. Horizontal or distributed organizations can use this
+model to reconcile the voice of their members with the need to make centralized
+decisions at critical moments
 \cite{StillaCenturyoftheChineseModel,ACenturyofDemocraticCentralism}.
 
-Nesse sentido, a aplicação de elementos do centralismo democrático em
-plataformas digitais evidencia como conceitos históricos podem ser
-reapropriados para atender às demandas de governança contemporâneas \cite{Colbac}.
+In this sense, the application of elements of democratic centralism in digital
+platforms highlights how historical concepts can be reappropriated to meet
+contemporary governance demands \cite{Colbac}.
+
+\section*{} 
+Chapter 2 presented the theoretical foundations related to threat modeling,
+addressing structured and flexible methods needed to deal with decentralized
+organizational contexts. Approaches that incorporate adversarial perspectives
+were discussed and emphasized the importance of considering social and
+organizational factors, in addition to technical vulnerabilities, highlighting
+especially the relevance of collaboration between different actors in the
+process. Building on these fundamental concepts, Chapter 3 will analyze related
+works, describing in detail traditional threat modeling approaches, such as
+STRIDE, and exploring their applications and limitations in decentralized and
+collaborative environments.
