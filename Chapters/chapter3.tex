@@ -573,9 +573,8 @@ ensure democratic participation in threat analysis and mitigation processes.
                 per component. Simple and widely adopted; easy for teams new to threat modeling.
             &Focused on technical threats – may miss threats outside its six
                 categories (e.g., collusion or social attacks). No built-in risk ranking, so a
-                long list of threats may need additional prioritization. Considered somewhat
-                outdated (no longer officially supported by Microsoft), and less detailed for
-                complex, business-specific threats.\\
+                long list of threats may need additional prioritization. Considered less
+                detailed for complex, business-specific threats.\\
         Attack Trees
             &No fixed set – any threat goal can be modeled (e.g., malware
                 attack, insider abuse, social engineering) as the root, with sub-goals as attack
@@ -623,7 +622,7 @@ ensure democratic participation in threat analysis and mitigation processes.
                 stakeholders in deciding which risks to mitigate vs. accept (tying into
                 governance).          
             &Can be too granular/complex in large IT environments – requires
-                detailed mapping of all assets, roles, and permissions. Less mainstream – fewer
+                detailed mapping of all assets, roles, and permissions. Less mainstream and fewer
                 tooling options and community support compared to STRIDE/PASTA. Focuses on
                 internal policy violations; may require augmentation to cover threats like
                 external social engineering or collusion not captured by role-permission
@@ -641,15 +640,11 @@ ensure democratic participation in threat analysis and mitigation processes.
                 enumerate complex collusion scenarios among actors (forcing analysis of
                 combinations of insider/outsider attacks). Asset-centric: identifies unique
                 assets (crypto tokens, consensus, smart contracts) and derives system-specific
-                threat categories incorporating financial impact. Proven effective in practice –
-                user studies found it uncovers significantly more financial security threats
-                than STRIDE in crypto contexts.      
+                threat categories incorporating financial impact.      
             &Specialized scope – designed for cryptocurrency and blockchain context, so it
                 may require adaptation to use in other domains. Complexity: Collusion analysis
                 can become intricate (though the matrix approach manages complexity, it still
-                demands detailed domain knowledge). Being a newer framework, it's less
-                documented in industry practice and tool support is limited (mostly in academic
-                or specialized settings).\\
+                demands detailed domain knowledge).\\
                 \bottomrule
             \end{tabular}%
             }
@@ -657,109 +652,3 @@ ensure democratic participation in threat analysis and mitigation processes.
 
 
         
-
-%\newpage
-%\bgroup
-%\tiny
-%\rowcolors{1}{}{GhostWhite}
-%   
-%\begin{xltabular}{\textwidth}{|p{0.05\textwidth}|p{0.21\textwidth}|p{0.21\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
-%        \caption{Comparison of Threat Modeling Methods}
-%        \label{tab:threat-modeling-comparison}
-%        \toprule
-%        \rowcolor{Gainsboro}
-%        Method
-%            &Threat categories considered
-%            &Scope
-%            &Key Features
-%            &Limitations\\
-%        \midrule
-%        STRIDE
-%            &Spoofing, Tampering, Repudiation, Information Disclosure, Denial of
-%                Service, Elevation of Privilege
-%            &Software and application security (design-phase threat analysis)
-%            &Six-category mnemonic covers major attack types (acts as a
-%                checklist). Applied to system models (DFDs) to systematically identify threats
-%                per component. Simple and widely adopted; easy for teams new to threat modeling.
-%            &Focused on technical threats – may miss threats outside its six
-%                categories (e.g., collusion or social attacks). No built-in risk ranking, so a
-%                long list of threats may need additional prioritization. Considered somewhat
-%                outdated (no longer officially supported by Microsoft), and less detailed for
-%                complex, business-specific threats.\\
-%        Attack Trees
-%            &No fixed set – any threat goal can be modeled (e.g., malware
-%                attack, insider abuse, social engineering) as the root, with sub-goals as attack
-%                steps.
-%            &Broadly applicable (software, cyber-physical systems, critical
-%                infrastructure) for visualizing attack paths.
-%            &Graphical tree diagrams map out attacker goals and all possible
-%                paths (leaf nodes are specific attack methods). Can capture complex multi-step
-%                attacks (including technical exploits or human tactics) by branching logic.
-%                Often used in combination with other methods (e.g., STRIDE or risk scoring) for
-%                comprehensive analysis.
-%            &Time-consuming to create for large or complex systems (trees can
-%                become very large). No inherent risk scoring – requires supplemental analysis
-%                (like CVSS) to prioritize threats. Maintenance can be difficult as systems
-%                evolve (manual updates needed for tree changes).\\
-%        PASTA
-%            &Not predefined by categories – addresses all threat types
-%                identified through its stages, from technical vulnerabilities to misuse and
-%                fraud (prioritized by business impact).
-%            &Enterprise and critical systems where business impact and risk
-%                alignment are key (e.g., fintech, large applications). Integrates with SDLC and
-%                organizational risk management.
-%            &Seven-stage, risk-centric methodology (from defining scope to
-%                attack simulation) providing in-depth analysis. Aligns threats with business
-%                objectives – focuses on likely attacks that matter most to the organization's
-%                mission. Emphasizes risk prioritization: analyzes likelihood/impact of each
-%                threat to guide resource allocation.
-%            &Complex and resource-intensive – the 7-step process is lengthy and
-%                requires cross-functional expertise. Not widely used compared to simpler models;
-%                has a steep learning curve and longer implementation time. Geared toward
-%                comprehensive analysis, which may be overkill for small projects or early-phase
-%                designs.\\
-%        Trike
-%            &Doesn't use classic threat categories – focuses on unauthorized
-%                actions on assets. Threats are modeled as any action (Create, Read, Update,
-%                Delete) by any actor that violates assigned permissions (e.g., an insider
-%                modifying data they shouldn't, or an outsider gaining illicit access).
-%            &Primarily for security audit and risk management in software
-%                systems. Suitable for organizations wanting to set and verify acceptable risk
-%                levels for each asset/user role.
-%            &Risk-based audit approach – assigns a risk score to each asset's
-%                threat scenarios, ensuring risk is acceptable to stakeholders. Uses a unique
-%                actor–asset matrix (CRUD matrix) to identify where an actor's permitted actions
-%                differ from potential malicious actions. Provides a structured way to involve
-%                stakeholders in deciding which risks to mitigate vs. accept (tying into
-%                governance).          
-%            &Can be too granular/complex in large IT environments – requires
-%                detailed mapping of all assets, roles, and permissions. Less mainstream – fewer
-%                tooling options and community support compared to STRIDE/PASTA. Focuses on
-%                internal policy violations; may require augmentation to cover threats like
-%                external social engineering or collusion not captured by role-permission
-%                analysis.\\
-%        ABC
-%            &Collusion-based threats (multiple actors cooperating maliciously)
-%                and financial attacks specific to crypto systems. Derives custom threat
-%                categories for new blockchain assets (e.g., double-spend fraud, consensus
-%                manipulation) beyond traditional threat lists.
-%            &Blockchain and decentralized systems (cryptocurrencies,
-%                decentralized organizations). Tailored for systems with economic incentives and
-%                distributed trust, but also applied to other large-scale distributed systems
-%                (e.g., cloud-native architectures).
-%            &Introduces collusion matrices – a novel tool to systematically
-%                enumerate complex collusion scenarios among actors (forcing analysis of
-%                combinations of insider/outsider attacks). Asset-centric: identifies unique
-%                assets (crypto tokens, consensus, smart contracts) and derives system-specific
-%                threat categories incorporating financial impact. Proven effective in practice –
-%                user studies found it uncovers significantly more financial security threats
-%                than STRIDE in crypto contexts.      
-%            &Specialized scope – designed for cryptocurrency and blockchain context, so it
-%                may require adaptation to use in other domains. Complexity: Collusion analysis
-%                can become intricate (though the matrix approach manages complexity, it still
-%                demands detailed domain knowledge). Being a newer framework, it's less
-%                documented in industry practice and tool support is limited (mostly in academic
-%                or specialized settings).\\
-%
-%    \end{xltabular}
-%\egroup
