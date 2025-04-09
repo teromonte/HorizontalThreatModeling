@@ -104,257 +104,186 @@ mitigated and documented without unnecessary public exposure.
 
 The threat modeling process is broken into eight collaborative steps. In a small
 cooperative, most steps can be taken in all-hands meetings or workshops with
-everyone. In larger groups, you might delegate initial work to committees or
+everyone. In larger groups, you might delegate initial work to
 working groups, but every member should have a chance to review and contribute
 at each stage. The process is iterative and modular, so you can adjust the depth
 or format of each step based on your organization's size and needs. For each
-step below, we outline the purpose, activities, and participatory approach,
+step below we describe the process and its activities
 along with tips to adapt to different situations.
 
-\subsection{Step 1: Establish Context and Goals (What Are We Protecting?)}
+\subsection{Step 1: Establish Context and Goals}
 \label{subsec:Step1}
+
+What Are We Protecting?
 
 \subsubsection{Purpose}
 
 Set the stage by agreeing on what assets and operations you need to protect, and
 what your security objectives are. This ensures everyone is on the same page
-about why you are doing threat modeling and what "success looks like. In
-traditional terms, this is like defining the business/mission objectives and
-scope for security.
+about why you are doing threat modeling and what "success looks like". 
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
 \begin{itemize}
-    \item \textbf{Identify Critical Assets}: As a group, list out what is most
+    \item \textbf{Identify Critical Assets}: In a group, list out what is most
 valuable to your organization. This can include digital assets (member data,
 documents, the website, chat platforms), physical assets (office space, devices,
-servers), and intangible assets (the organization's reputation, member trust, know-how).
-Ask yourselves: "What would really hurt if it were stolen, destroyed, or made
-public? Write these down for all to see.
+servers), and intangible assets (the organization's reputation, member trust).
+Ask yourselves what would hurt the most if it were stolen, destroyed, or made
+public.
     \item \textbf{Outline Key Operations/Workflows}: Describe in simple terms
-what the organization does day-to-day. For example, "We coordinate orders through an
-online platform, or "We have weekly meetings to make decisions, or "We run a
-community space with an entry badge system. Understanding these workflows helps
+what the organization does everyday. For example, "We coordinate orders through an
+online platform", or "We have weekly meetings to make decisions", or "We run a
+community space with an entry badge system". Understanding these workflows helps
 identify where disruptions would be most damaging.
     \item \textbf{State Security Objectives and Requirements}: Discuss what
 security means for your organization. Do you need to keep member data private? Ensure
-your service is always available? Meet any legal/privacy regulations (like
-GDPR)? Also consider organization statutes or policies about confidentiality and data
+your service is always available? Meet any legal regulations like
+GDPR? Also consider organization statutes or policies about confidentiality and data
 handling. For instance, if your statutes say all financial info must be accessible
 to members, that influences how you balance transparency with confidentiality.
-Jot down these objectives and any compliance requirements.
     \item \textbf{Define the Scope and Boundaries}: Decide what will and won't
 be covered in this threat modeling exercise. Maybe you want to focus on a
-particular system (e.g. your member database and communication tools) and not on
-unrelated areas. Or include only digital systems but not physical office
+particular system and not on unrelated areas.
+Or include only digital systems but not physical office
 security or vice versa. Clearly defining scope prevents the discussion from
-going off-track. It's okay to start with a narrow scope (like "our shared Google
-Drive and Slack workspace) and expand later if needed.
+going off-track. It's okay to start with a narrow scope and expand later if needed.
     \item \textbf{Agree on Terminology}: Ensure everyone understands basic terms
 you will use. For example, define what you mean by asset, threat, vulnerability,
-etc., in plain language. This avoids confusion later (a quick glossary on a
-whiteboard or shared doc can help).
+etc., in plain language. A quick glossary on a whiteboard can help.
 \end{itemize}
 
-\subsubsection{Participation Tips}
-
-In a small coop, you can do this step in a single meeting where everyone
-contributes to the list of assets and goals. In a larger coop, consider sending
-a short survey or having breakout groups to gather input, then consolidating the
-results in a plenary session. Make sure the final list of assets and scope is
-reviewed or approved by the group (e.g. via a show of hands or online poll) so
-you have collective agreement on "what we care about protecting. This
-collaborative start sets a democratic tone for the whole process.
-
-\subsection{Step 2: Map Systems and Trust Boundaries (How Do We Work?)}
+\subsection{Step 2: Map Systems and Trust Boundaries}
 \label{subsec:Step2}
+
+How Do We Work?
 
 \subsubsection{Purpose}
 
 Create a shared understanding of how information and processes flow in your
-coop, and where important trust boundaries lie. Essentially, draw a map of your
+organization, and where important trust boundaries are. Essentially, draw a map of your
 organization's sociotechnical system including people, tech, and their
 interactions. In threat modeling, this is similar to diagramming your system
 architecture and identifying entry points. For a cooperative, it also means
-noting social trust assumptions (who/what we trust and in what ways).
+noting social trust assumptions like who or what we trust and in what ways.
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
-List Components and Assets:
+List components and assets like hardware, Software, Data Stores,
+People, Roles and Processes. Write these out, possibly in categories.
+Essentially, you are enumerating what pieces make up your organization "system".
 
-\begin{itemize}
-    \item \textbf{Hardware/Infrastructure}: e.g. member laptops, a server or
-NAS, routers, smartphones used for work, IoT devices in the office.
-    \item \textbf{Software/Tools}: e.g. the platforms you use – Google Drive,
-Slack/Matrix, Nextcloud, Loomio for decisions, etc., as well as any custom
-software or website your coop has.
-    \item \textbf{Data Stores}: e.g. databases, cloud storage, email archives –
-what data is stored and where.
-    \item \textbf{People/Roles}: e.g. general members, IT volunteers, finance
-coordinators, any outsiders like an accountant or platform provider.
-    \item \textbf{Processes}: e.g. how a decision is made (proposal ->
-discussion -> vote), how a new member is onboarded, how finances are managed.
-\end{itemize}
+After that, diagram the Workflow: On a large paper or using a simple online diagram,
+sketch how these components connect. Draw who interacts with what:
+for example members (people) log into the chat platform (software) to discuss,
+or the website communicates with a payment processor. Draw arrows for data flow
+or interaction: emails sent, files shared, money transferred, etc. Keep it
+understandable. Mark any external services clearly since those are partly
+outside your control.
 
-Write these out, possibly in categories. Essentially, you are enumerating what
-pieces make up your organization "system". After that, diagram the Workflow: On
-a large paper or using a simple online diagram, sketch how these components
-connect. Draw who interacts with what: e.g. members (people) log into the chat
-platform (software) to discuss, or the website communicates with a payment
-processor. Draw arrows for data flow or interaction: emails sent, files shared,
-money transferred, etc. Keep it understandable – you can use simple icons or
-just labeled boxes and arrows. Mark any external services (like a third-party
-payment gateway or cloud provider) clearly, maybe with a different color or a
-cloud icon, since those are partly outside your control.
+Identify Trust Boundaries, the points in the system where the
+level of trust changes. For instance: between an external user and your
+internal system like a public website and your internal database; between
+a regular member and personal data; social trust boundaries for example
+the trust members will not to leak info from private discussions.
 
-Identify Trust Boundaries: A trust boundary is a point in the system where the
-level of trust changes. For instance:
-
-\begin{itemize}
-    \item Between an external user and your internal system: e.g. a public
-website vs. your internal database.
-    \item Between a regular member and an admin interface: (if any).
-    \item Between your organization network and the open internet.
-    \item Social trust boundaries: e.g., you trust members not to leak info from
-private discussions, or you trust a core team with certain credentials.
-\end{itemize}
-
-On your diagram, draw a dotted line or a firewall symbol where these boundaries
-are. Essentially ask: At what points do we assume things are safe on one side
-and potentially risky on the other? (For example, data inside our Nextcloud is
-trusted to be seen by members, but anything coming from outside (like file
-uploads from a new user) might be untrusted until checked.)
+On your diagram, draw a dotted line where these boundaries are.
+Essentially ask: At what points do we assume things are safe on one side
+and potentially risky on the other?
 
 Document Who Has Access to What: Alongside the map, list which roles or people have
 access to which assets. E.g., "Only tech team members can access the server", or "All
 members can post in the forum", or "Treasurer has the bank account login". This
-helps spotlight any concentrations of access (if one person holds many keys,
-that's noted) and areas where trust is placed in individuals. Note External
-Dependencies: Write down services or partners you rely on and mark them on the
-diagram (for example, your website host, email service, or any software
-provider). These are outside your organization but critical; threats can come through
-them (a concept known as supply chain or third-party risk).
+helps spotlight any concentrations of access and areas where trust is placed in
+individuals. Write down services or partners you rely on and mark them on the
+diagram for example, your website host, email service, or any software
+provider. These are outside your organization but critical; threats can come through them.
 
-\subsubsection{Participation Tips}
-
-Building the system map can be a fun group exercise. In a small organization, do it
-together on a whiteboard or shared screen, asking everyone to call out
-components and connections ("Don't forget we also use Pad for meeting notes!").
-In larger organizations, you might have a smaller group draft the diagram (say, an IT
-working group or a mix of tech and non-tech members) and then present it to
-others for additions and corrections. Make it interactive: people can stick
-Post-its on a draft poster or add comments on an online diagram with "Did you
-include the volunteer's laptop that runs X?" Keep refining until ,members feel
-the map is an accurate picture of "how things work." The final diagram should be
-saved in a place where all members can see it, this is now a shared reference
-for your threat discussions.
-
-\subsection{Step 3: Identify Threats Collaboratively (What Could Go Wrong?)}
+\subsection{Step 3: Identify Threats Collaboratively}
 \label{subsec:Step3}
+
+What Could Go Wrong?
 
 \subsubsection{Purpose}
 
 Brainstorm all the potential threats and bad things that could happen to the
 assets and processes you identified. The goal is a comprehensive list of threat
-scenarios, covering both technical attacks and social/governance risks. At this
+scenarios, covering both technical attacks and governance risks. At this
 stage, quantity is more important than quality. We want to surface as many
 ideas as possible, without judging them yet. This step harnesses the diverse
 perspectives in your organization: digitally skilled members might think
 of hacking scenarios, whereas others might point out process failures or insider
 issues that a pure tech focus could miss.
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
 \begin{itemize}
 
     \item \textbf{Brainstorm in a Safe Environment}:
     
-    Gather a group of members (ideally representing different roles or viewpoints in
-    the coop) for a threat brainstorming session. Set some ground rules: no idea is
-    too small or too "out there," and everyone's input is valued. It's important
-    people feel comfortable mentioning even unpleasant hypotheticals ("What if one
-    of us turned rogue?") – assure everyone this is about hypothetical situations,
+    Gather a group of members, ideally representing different roles or viewpoints,
+    for a threat brainstorming session. Set some ground rules: no idea is
+    too small and everyone's input is valued. It's important
+    people feel comfortable mentioning even unpleasant hypotheticals.
+    Assure everyone this is about hypothetical situations,
     not personal distrust.
 
     \item \textbf{Use Prompts and Creative Tools}:
-    \begin{itemize}
-        \item Walk through the system map from Step 2 and pause at each component or boundary:
-        ask "What could go wrong here?" For instance, at the database: "Could someone
-        steal or delete this data? Who might and how?" At a boundary like the internet
-        connection: "What if an attacker intercepts data here or floods us with
-        traffic?"
+    Use prompts and creative techniques to explore potential threats by walking
+    through the system map from Step 2 and pausing at each component or boundary to
+    ask what could go wrong. For example, when examining the database, consider
+    whether someone could steal or delete important information, and think about who
+    might do this and how. At a boundary like the internet connection, reflect on
+    the possibility of an attacker intercepting data in transit or flooding the
+    system with excessive traffic. It can also be helpful to introduce the classic
+    \gls{stride} as a simple checklist that prompts questions such as
+    whether there is a risk of someone impersonating users,
+    manipulating records, denying actions they actually performed, exposing private
+    data, disrupting service, or somehow gaining privileged access.
 
-        \item Introduce the STRIDE categories (a classic security mnemonic) in simple
-        terms as a checklist:
-
-        \begin{itemize}
-            \item	Spoofing (pretending to be someone else – e.g. fake member login, impersonating an admin),
-            \item	Tampering (messing with data or systems – e.g. altering records, defacing the website),
-            \item	Repudiation (denying an action – e.g. a member does something and later claims they didn't,
-            which is an issue if there's no proof),
-            \item	Information Disclosure (leaks – e.g. private member info exposed),
-            \item	Denial of Service (disrupting service – e.g. someone takes down your communication channel
-            or overloads your server),
-            \item	Elevation of Privilege (gaining higher access – e.g. a regular member somehow gets admin
-            rights). Use these as thought-starters: "Do we have a risk of someone spoofing identity? Tampering
-            with records? etc."
-        \end{itemize}    
-
-        \item Use Security Cards (if available) or hypothetical scenario prompts: Security
-        Cards are a deck with categories like Attackers' Motivations, Methods, Impacts.
-        You can simulate this by asking questions in those dimensions:
-
-        \begin{itemize}
-            \item	Motivations: "Who might want to attack us and why? (Ex: for money, for political reasons,
-            disgruntled ex-member, random mischief)"
-            \item	Methods/Resources: "What skills or tools could they use? (Ex: Phishing emails, malware,
-            physical break-in, legal threats, bribes, social engineering phone calls)"
-            \item	Impacts: "What would be the impact if they succeeded? (Ex: website down for days, loss of
-            member trust, financial loss, legal trouble)"
-        \end{itemize}
-        
-        These prompts help the group consider not just obvious IT threats, but also
-        things like internal misuse, mistakes, or external events.
-    \end{itemize}
+    Another useful approach is to incorporate Security Cards, which
+    encourage you to think broadly about different attackers
+    motivations, methods, and the impacts they could have.
+    Motivations might include financial gain, political objectives, disgruntled
+    ex-members, or simple mischief. Methods and resources could range from phishing
+    emails and malware to physical break-ins, social engineering, or legal threats.
+    The potential impacts include service downtime, loss of member trust, financial
+    losses, or legal ramifications. By posing these questions and exploring various
+    scenarios, the group can avoid focusing solely on obvious IT threats and instead
+    uncover possibilities that include internal misuse, human error, or even
+    external events that could pose significant risks.
 
     \item \textbf{Distinguish Different Threat Sources}:
     As ideas emerge, note whether each threat
-    scenario is external (coming from outside, e.g. a hacker, a virus, a competitor,
-    a random troll) or internal (coming from within the coop, e.g. a member error,
-    an insider attack, conflict/miscoordination). Both are important. For example:
-    \begin{itemize}
-        \item External threat example: "A hacker defaces our website or steals our member list."
-        \item Internal threat example: "A coop member accidentally shares a private document publicly,"
-        or "Two factions in the coop conflict and someone locks others out of an account."
-        \item Hybrid threat: "An external attacker tricks a member (social engineering) to gain access"
-        or "An ex-member colludes with an outsider."
-    \end{itemize}
-
-    By labeling these, you ensure internal governance vulnerabilities (like abuse of
-    trust or poor processes) get attention alongside technical attacks.
+    scenario is external like a hacker, a virus, a competitor
+    or internal coming from within the organization like a member error,
+    an insider attack, conflict and miscoordination. There could be a hybrid threat
+    where an external actor exploits an internal weakness, like a hacker using
+    social engineering to trick a member into giving up access.
 
     \item \textbf{Write Down Concrete Scenarios}:
-    For each idea, capture it as a short scenario description. For instance:
+    For each idea, capture it as a short scenario description.
+    For example:
 
     \begin{itemize}
-        \item "Sybil Attack on decision-making:" An attacker (or someone from the community) creates multiple
-        fake member accounts to gain extra votes in an online poll, influencing a cooperative decision illicitly.
+        \item "Sybil Attack on decision-making:" An attacker creates multiple fake member
+        accounts to gain extra votes in an online poll, influencing the group decision illicitly.
         \item "Insider data leak:" A discontented member with access to sensitive data decides to leak member
         emails and addresses to the public.
         \item "Ransomware on shared drive:" Malware infects a member's computer and encrypts the shared cloud
         drive files, making them inaccessible until a ransom is paid.
         \item "Lost credentials:" A member who manages the Twitter account leaves suddenly, and no one else has
-        the password – the coop loses control of its own social media for a time.
-        \item "Miscoordination outage:" In a crisis, no one is designated to respond (because everyone thinks
-        someone else will) and a small issue (like a certificate expiry) escalates, taking the website offline
+        the password The group loses control of its own social media.
+        \item "Miscoordination outage:" In a crisis, no one is designated to respond, because everyone thinks
+        someone else will, and a small issue like a certificate expiry escalates, taking the website offline
         for days.
-        \item "Service provider failure:" The third-party platform (e.g. web host or payment processor) goes
-        down or is compromised, affecting the coop's operations.
+        \item "Service provider failure:" The third-party platform goes
+        down or is compromised, affecting the organization's operations.
     \end{itemize}
 
     Aim for a broad list, covering cyber-attacks, human mistakes, physical events
-    (the office gets robbed or a server gets wet), and governance failures. Don't
-    worry at this stage if some scenarios seem very unlikely – list them if someone
+    like the office gets robbed or a server gets wet, and governance failures. Don't
+    worry at this stage if some scenarios seem very unlikely. List them as if someone
     is concerned about it.
 
     \item \textbf{Ensure Social/Process Threats are Included}:
@@ -368,122 +297,72 @@ issues that a pure tech focus could miss.
 
 \end{itemize}
 
-\subsubsection{Participation Tips}
-
-Use sticky notes or a shared online document during the brainstorm so everyone
-can contribute simultaneously. One approach is to give participants 5–10 minutes
-to silently write as many "What if…?" threats as they can (one per sticky note),
-then post them and discuss. This helps include those who might be quieter in a
-big group. After the brainstorm, group similar threats together (cluster
-duplicates) but do not dismiss any threat yet just because it seems minor or
-absurd. The point is to capture the collective worries and creative ideas. If
-you have a very long list (which is good), you can categorize them into groups
-like "Tech Infrastructure," "Member Behavior," "Outsider Attacks,"
-"Natural/External," etc., for clarity.
-
-Finally, thank everyone for their ideas – emphasize that all contributions (even
-wild ones) help build a complete picture. Save this threat list somewhere
-accessible (it becomes an input to later steps). In a coop, making this list
-visible (on the wall or online) also signals transparency: everyone sees what
-threats are on the radar.
-
-
-\subsection{Step 4: Profile Adversaries (Who Might Attack Us?)}
+\subsection{Step 4: Profile Adversaries}
 \label{subsec:Step4}
+
+Who Might Attack Us?
 
 \subsubsection{Purpose}
 
-Humanize the threats by creating adversary personas – fictional characters that
-represent types of attackers or sources of threats. This helps the group think
-from an attacker's perspective ("what would X do?") and ensures you consider the
-motivations and capabilities behind the threats. In a cooperative, adversaries
-aren't only outside hackers; they could be internal (like a frustrated member)
-or systemic (like software bugs or accidents – though we focus on personas for
-intentional actors here). Developing these profiles makes later analysis more
+Humanize the threats by creating adversary personas that represent fictional
+characters that represent types of attackers or sources of threats. This helps the
+group to think from an attacker's perspective and ensures you consider the
+motivations and capabilities behind the threats. In this step we focus on personas for
+intentional actors. Developing these profiles makes later analysis more
 concrete and relatable.
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
 \begin{itemize}
-    \item Identify Key Threat Actors: Look at the threat scenarios from Step 3 and ask, "Who would carry out these
-    actions?" You'll likely find a few recurring archetypes. For example:
-        \begin{itemize}
-            \item A malicious outsider (generic hacker or vandal) with no stake in the coop, just attacking for
-            personal gain or fun.
-            \item A state or corporate actor who opposes your coop's mission (if relevant politically or
-            competitively).
-            \item A disgruntled member or ex-member who knows the internal system and might seek revenge or change
-            outcomes.
-            \item A negligent insider (not malicious, but someone who might make mistakes – although this is more a
-            cause of accidents than an "attacker," it's still a persona to consider for unintentional threats).
-            \item Technical vs non-technical adversaries: e.g., a script-kiddie hacker with moderate skills, vs. an
-            internal activist who might misuse rules rather than code.
-        \end{itemize}
-    \item Create Persona Descriptions: For each actor type, write a short profile including:
-        \begin{itemize}
-            \item Name and Role: Give them a nickname that captures their role, like "Mallory the Malicious Member"
-            or "Ingrid the Inattentive Intern" or "Oscar the Outside Hacker." This makes it easy to refer to them.
-            \item Motivations/Goals: What do they want? Money, disruption of the coop's activities, ideological
-            reasons, personal vendetta, thrill? For instance, Mallory (disgruntled ex-member) might be motivated by revenge
-            for being voted out of a project, whereas Oscar (outsider) might just want to steal data to sell.
-            \item Capabilities/Resources: What skills or resources do they have? Oscar might have hacking tools or know
-            how to exploit software. Mallory has insider knowledge of how your coop operates and where the weaknesses in
-            process are, but maybe not advanced technical skills. Ingrid (the negligent intern) isn't trying to attack but
-            might unknowingly introduce risk by ignoring policies or falling for scams.
-            \item Possible Methods: Given their motivation and skills, how might this persona attack or cause an
-            incident? E.g., Oscar might use phishing emails or find a bug in your website; Mallory might exploit their
-            still-active login or sow misinformation in meetings; Ingrid might click a malicious link or use a weak password
-            that gets guessed.
-            \item Scenario Tie-In: Connect each persona to one or more of the scenarios from your threat list. For
-            example, note that "Sybil attack on voting" would be done by someone like Mallory (if internal) or an outsider
-            Sam the Sockpuppet if external. "Ransomware on shared drive" could be set off by Ingrid's mistake or by Oscar
-            deliberately.
-        \end{itemize}
-    \item Document in an Accessible Format: Make one page or slide for each persona. You can even include a
-    representative image (e.g., an icon or cartoon; avoid using real people's photos to prevent bias or confusion).
-    The idea is to make these threat actors memorable. Write in plain language – this is an internal tool for
-    understanding, so it doesn't need to be formal. For example:
-    \begin{itemize}   
-        \item Persona: Mallory (Disgruntled Ex-Member)
-            \begin{itemize}    
-                \item Background: Former member who left after a conflict. Still has some credentials left over.
-                \item Motivation: Revenge, proving a point about weak security.
-                \item Skills/Resources: Knows our systems well, not a hacking expert but savvy enough to abuse any
-                oversight. Possibly still in contact with current members (could socially engineer info).
-                \item Likely Actions: Try to log in to systems with old account, misuse a still-active access, or spread
-                false messages pretending to be someone else (impersonation). Might collude with an outsider for technical help.
-                \item Targeted Assets: Member directory (to expose personal info), internal chat (to disrupt
-                communications), decision platform (to sway outcomes or just cause chaos).
-            \end{itemize}
-        \end{itemize}
-        Do this for each major adversary types.
+    \item Identify Key Threat Actors: Look at the threat scenarios from Step 3 and ask, "Who would
+    carry out these actions?". You will find a few recurring archetypes. For example:
+    a hacker or vandal with no connection to the organization, motivated by profit or
+    entertainment; a state or corporate actor who opposes the organization's
+    mission; a disgruntled or former member with inside knowledge and intent to
+    cause harm; or a careless insider who, even without bad intentions, may
+    introduce risks through mistakes or negligence. It is also important to
+    distinguish between adversaries with technical skills—such as a mid-level
+    hacker—and those who act in a non-technical manner, such as an insider who
+    manipulates rules or processes to his or her own advantage.
+
+    \item For each type of actor, it is recommended to create a brief profile that
+    includes their name and role, for example: "Mallory, the Malicious Insider" or "Ingrid,
+    the Unaware member", as well as describing their motivations such as profit,
+    revenge, or simply wanting to harm the organization and their capabilities or
+    resources, from intrusion techniques to privileged insider knowledge. In
+    addition, it is important to indicate what methods this actor might use for example:
+    phishing, vulnerability exploitation, manipulation of legitimate credentials.
+    and relate each persona to specific scenarios from the threat list, highlighting
+    how their actions fit into the group dynamics.
+
+    \item When documenting personas, it is recommended to dedicate a page or slide to each
+    adversary, including an illustrative image to make it more memorable, avoiding
+    photographs of real people, in order to avoid generating bias.
+    The text should be clear and accessible, emphasizing that the purpose is
+    purely internal, without the need for excessive formality. For example, when
+    describing Mallory, the resentful ex-member, it would be useful to indicate her
+    background (she left after a conflict, but still retains some credentials), her
+    motivations (revenge, demonstrating security flaws), her skills (she knows the
+    system well, although she is not an expert in hacking), the most likely actions
+    (using leftover credentials, masquerading as another member, spreading
+    disinformation), and the assets targeted (member directory, internal
+    communication channels, decision-making platforms). The same pattern can be
+    applied for each main type of adversary identified.
     
     \item Include at Least One Insider Persona: It may be uncomfortable but include a scenario of a malicious or
     careless insider. Cooperatives thrive on trust, yet history shows sometimes insiders can cause harm (intentionally
-    or not). By creating, say, "Insider Irene" who is well-meaning but prone to bypassing rules, or "Rogue Ray" who
-    turns against the group, you can discuss those threats without pointing fingers at a real person. Make it clear
-    this is hypothetical to improve security for everyone.
+    or not). By creating, say, "Insider Irene" who is well meaning but prone to bypassing rules.
+    Make it clear this is hypothetical to improve security for everyone.
     
     \item Use Personas in Discussion: Once you have personas, you can use them in future steps. For example, when
     thinking about mitigations, you might ask "Would this stop Mallory?" or "How would we detect Oscar's actions?"
     Personas help ground these discussions.
 \end{itemize}
 
-\subsubsection{Participation Tips}
-
-Developing personas can be done in small breakout groups, with each group taking
-one persona to draft. It's a creative exercise – encourage storytelling, but
-keep it grounded in plausibility. After drafting, share with the whole team for
-feedback. Non-technical members often contribute richly here ("Actually, a
-really angry member might do X, not Y"), and technical members can refine how an
-external hacker persona might behave. Keep the tone collaborative and even a bit
-playful (people can get quite engaged coming up with hacker nicknames!), but
-always tie it back to real threats you identified. In the end, post the personas
-alongside the threat list. They become part of your "threat model" documentation
-that everyone can reference.
-
-\subsection{Step 5: Analyze Attack Scenarios (How Could Attacks Happen?)}
+\subsection{Step 5: Analyze Attack Scenarios}
 \label{subsec:Step5}
+
+How Could Attacks Happen?
 
 \subsubsection{Purpose}
 
@@ -491,188 +370,120 @@ Now take your threat list and personas, and dive deeper into how those threats
 could play out step-by-step. This scenario analysis helps you understand the
 sequence of events in an attack and where your weak points are. In practice,
 this means building attack narratives or attack trees and possibly simulating
-some scenarios in a tabletop exercise. This step turns abstract threats into
+some scenarios in an exercise. This step turns abstract threats into
 concrete stories, revealing exactly what vulnerabilities enable an attack and
 how severe the consequences would be. It's a bridge from brainstorming to
-action: by visualizing attacks, you prepare to figure out defenses.
+action, by visualizing attacks, you prepare to figure out defenses.
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
 \begin{itemize}   
-    \item Construct Attack Trees or Flowcharts: Pick a high-priority threat scenario (you will
-    prioritize formally in the next step but start with one that seems obviously serious or emblematic).
-    For example, take "steal member data" or "Sybil attack on voting". Write that as the attacker's goal
-    at the top (root of the tree). Then brainstorm the possible paths to reach that goal. For each path,
-    break it into steps:
-        \begin{itemize}   
-            \item Example: Goal = "Unauthorized person accesses member list." Path 1 might be: External
-            hacker exploits a software vulnerability in the database -> gains admin privileges -> extracts the
-            data. Path 2: Malicious insider uses their legitimate access -> downloads the data -> shares it out
-            of malice. Path 3: Social engineer tricks a member into giving up their password -> logs in as them
-            -> navigates to data and copies it.
-            \item Draw this as a tree: the goal at top, then branches for each different method, and
-            sub-branches for steps/prerequisites. (It can be as simple as bullet indentations if not drawing:
-            e.g. a numbered list of steps for each scenario.)
-            \item Mark points on the tree where a defense exists or fails. E.g., "Does our system have a
-            vulnerability? Possibly if software not up-to-date." Or "Insider route: relies on that member having
-            access – do all members have access to full member list? Maybe that's a policy question." This
-            highlights vulnerabilities at each step.
-            \item Keep the tree at a detail level that's useful – not every keystroke, but significant
-            steps and decision points. Two or three levels deep is usually fine (primary ways -> specific
-            steps).
-        \end{itemize} 
+    \item Construct Attack Trees: Pick a high-priority threat scenario (you will prioritize
+    formally in the next step but start with one that seems obviously serious or emblematic).
+    For example, "unauthorized access to the member list", an attack tree is
+    constructed with that objective at the root. From there, possible paths are identified.
+    For example, an external attacker exploits a vulnerability in the system, gains administrator privileges, and
+    extracts the data; or a malicious insider uses their legitimate access to copy
+    and disclose the information; or an attacker convinces someone to give up their
+    password, logs in with the victim's account, and navigates to the data. The
+    figure below illustrates these branches. At each stage, it highlights where
+    defenses already exist, where they fail, and which points require attention. The
+    level of detail should be sufficient to reveal relevant decisions and
+    vulnerabilities, while maintaining the clarity of the analysis.
+
     \item Conduct Tabletop Simulations: For some scenarios, especially ones involving multiple people or
     processes, do a role-play tabletop exercise. Assemble a small group and narratively walk through the
-    scenario:
-        \begin{itemize}   
-            \item Assign someone to play the adversary (using one of your personas) and others to play
-            defenders or just observers.
-            \item Example: Simulate "Sybil attack during an online vote." Narrator says: "It's the day
-            of a big proposal vote. Unknown to the group, Mallory has created three fake member identities over
-            the last month." Then step by step: "Vote opens. Mallory votes as herself and as Alice, Bob, and
-            Charlie (her fake profiles). The system tallies four votes from what appears to be four people."
-            Discuss: Would anything at that moment flag an issue? How would the coop notice? Perhaps another
-            member finds it odd that there were three new members who never spoke but voted. Or maybe nobody
-            notices until later. Continue: "The vote passes with those extra votes. Later, someone questions the
-            outcome…" This kind of storytelling helps highlight if your current processes have detection or not.
-            Participants can chime in with "At that point, I would check the member list…" or ask "Do we verify
-            new online voters somehow?" Write down these insights.
-            \item Another example: "Insider incident response." Simulate what happens if an insider is
-            caught doing something suspicious – do you have an agreed response or does chaos ensue?
-            \item Or "Server ransomware attack at 2 AM." Who gets the call? Is there a backup? Walk
-            through who does what.
-        \end{itemize}
-    The idea is to practice an attack in theory to see where your response or system breaks. It's
-    much cheaper to find gaps this way than during a real incident.
+    scenario: Assign someone to play the adversary (using one of your personas) and others to play
+    defenders or just observers. Example: Simulate "Sybil attack during an online vote." Narrator says:
+    "It's the day of a big proposal vote. Unknown to the group, Mallory has created three fake member identities over
+    the last month." Then step by step: "Vote opens. Mallory votes as herself and as Alice, Bob, and
+    Charlie (her fake profiles). The system tallies four votes from what appears to be four people."
+    Discuss: Would anything at that moment flag an issue? How would the organization notice? Perhaps another
+    member finds it odd that there were three new members who never spoke but voted. Or maybe nobody
+    notices until later. Continue: "The vote passes with those extra votes. Later, someone questions the
+    outcome…" This kind of storytelling helps highlight if your current processes have detection or not.
+    Participants can chime in with "At that point, I would check the member list…" or ask "Do we verify
+    new online voters somehow?" Write down these insights. The idea is to practice an attack in theory
+    to see where your response or system breaks. It's much cheaper to find gaps this way than during
+    a real incident.
     
     \item Identify Vulnerabilities at Each Step: As you chart out these scenarios, explicitly list the
     vulnerabilities or weak points that make the attack possible. These could be technical (e.g.
     "Outdated plugin allows injection", "No backup exists for database"), or organizational (e.g. "New
     members are not verified, allowing fakes", "Only one person knows how to reset the server"). Also
-    note any existing controls and whether they work:
-        \begin{itemize}   
-            \item For each step in the scenario, ask "What should stop this? Do we have something to
-            stop it? Does it actually stop it or can it be bypassed?"
-            \item E.g., in the Sybil scenario: Vulnerability = lack of strict member verification in the
-            voting system. Existing control = new accounts require admin approval (does that happen? maybe
-            someone auto-approved without checks).
-            \item In the hacker scenario: Vulnerability = software not patched; Control = we have a
-            firewall, but if the attack comes through a web port, firewall doesn't stop it; or Control = we rely
-            on strong passwords, which might not help if exploit exists.
-            \item Write these vulnerabilities next to the steps or in a separate list mapped to the
-            scenario. This will directly feed into deciding mitigations.
-        \end{itemize}
+    note any existing controls and whether they work: For each step in the scenario, ask "What should
+    stop this? Do we have something to stop it? Does it actually stop it or can it be bypassed?"
+    E.g., in the Sybil scenario: Vulnerability = lack of strict member verification in the
+    voting system. Existing control = new accounts require admin approval (does that happen? maybe
+    someone auto-approved without checks).
+    In the hacker scenario: Vulnerability = software not patched; Control = we have a
+    firewall, but if the attack comes through a web port, firewall doesn't stop it; or Control = we rely
+    on strong passwords, which might not help if exploit exists.
+    Write these vulnerabilities next to the steps or in a separate list mapped to the
+    scenario. This will directly feed into deciding mitigations.
+
     \item Assess Impact and Likelihood for Scenarios: As part of analysis, discuss for each scenario,
-    how bad would it be if this happened? and how likely is it to happen? Use qualitative terms (you
-    will formalize in next step, but start conversation):
-        \begin{itemize}   
-            \item Impact: High (e.g. coop might dissolve or face legal action), Medium (painful but
-            survivable), Low (minor inconvenience or embarrassment).
-            \item Likelihood: High (we've seen attempts or it's easy to do), Medium, Low (requires many
-            unlikely failures or very targeted effort).
-            \item Example: Ransomware encrypting files – Impact High (work comes to halt, data loss) but
-            Likelihood maybe Medium if members are generally careful. Sybil attack – Impact High on governance
-            legitimacy, Likelihood Low/Medium depending on how easy it is to create fake accounts in your
-            system.
-            \item Capture these impressions because they will help when you formally prioritize in Step 6.
-        \end{itemize}
+    how bad would it be if this happened? and how likely is it to happen? Use qualitative terms for example:
+    For ransomware encrypting files the Impact is High because of data loss but likelihood maybe Medium
+    if members are generally careful. For sybil attack the impact is High on governance
+    legitimacy but likelihood may be Low to Medium depending on how easy it is to create fake accounts in your
+    system.
+
     \item Leverage Past Incidents: If your coop or similar groups have experienced incidents,
-    incorporate those into scenarios. "This happened before – could it happen again in a worse way?"
+    incorporate those into scenarios. "This happened before, could it happen again in a worse way?"
     Learning from near-misses or history makes scenarios very concrete. For example, "Last year someone
-    guessed our Twitter password – what if they had tweeted offensive stuff? Let's play out that
+    guessed our Twitter password, what if they had tweeted offensive stuff? Let's play out that
     scenario."
 \end{itemize}
 
-\subsubsection{Participation Tips}
-
-For attack trees, it can help to have a tech-savvy member sketch the first draft
-with input, then review with the group to fill gaps. For tabletop simulations,
-try to involve a mix of roles – perhaps an IT person, a governance person, and a
-regular member. Keep the tone educational, not fearful or accusatory. Encourage
-people to "think like an attacker" for a moment – it's often eye-opening for
-non-security folks and can be even a bit fun in a serious way. Time-box the
-simulation (e.g. 20-30 minutes each) to keep it focused. After each scenario,
-have a brief "debrief" discussion: What did we learn? What worked or failed in
-our current setup? This will set you up well for the next step, because you'll
-have identified where the biggest weaknesses are.
-
-\subsection{Step 6: Prioritize Risks Together (Which Problems Matter Most?)}
+\subsection{Step 6: Prioritize Risks Together}
 \label{subsec:Step6}
+
+Which Problems Matter Most?
 
 \subsubsection{Purpose}
 
-Not all threats are equal. In this step, the cooperative evaluates all the
+Not all threats are equal. In this step, the group evaluates all the
 identified threat scenarios and decides which ones to address first. This is
 essentially a risk analysis and ranking. Risk is usually judged by two factors:
 how severe the impact would be and how likely the threat is to occur. By scoring
 or discussing these, the group can focus on the most critical issues.
-Importantly, this is done participatorily – everyone's perspective on what is
+Importantly, this is done participatorily, everyone's perspective on what is
 important is considered, keeping the process democratic. The output will be a
-clear list of top-priority risks that the coop will invest effort in mitigating.
+clear list of top-priority risks that the organization will invest effort in mitigating.
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
 \begin{itemize}   
-    \item Set Risk Criteria (Impact and Likelihood): As a group, establish a simple shared understanding of
-risk levels:
+    \item Set Risk Criteria (Impact and Likelihood): Before prioritizing risks,
+    the group should build a common understanding of what impact
+    and probability mean in their context. High impacts are those that
+    threaten the existence of the organization, violate laws, or seriously undermine
+    the trust of members; medium impacts cause manageable disruptions; and low
+    impacts cause only occasional inconveniences. Similarly, a threat may be
+    considered high probability if there is concrete evidence that it could occur
+    easily, medium if it depends on specific conditions, and low if it is unlikely
+    or requires great sophistication. Using simple scales (such as high, medium, and
+    low) is often sufficient, as long as the meanings are collectively discussed.
 
-    \begin{itemize}   
-        \item Define what High, Medium, Low Impact mean for your coop. For example:
-        \begin{itemize}   
-            \item High Impact: Threatens the existence of the coop, causes major financial loss or
-            legal violation, or fundamentally damages trust (e.g. member personal info exposure, loss of critical systems
-            for long time, major public scandal).
-            \item Medium Impact: Disruptive and costly, but manageable (e.g. service outage for a day,
-            loss of some data that has backups, temporary hit to reputation).
-            \item Low Impact: Annoying but minor consequences (e.g. defacement of a webpage, a single
-            incorrect transaction that can be fixed).
-        \end{itemize}
-        \item Define Likelihood similarly:
-        \begin{itemize}
-            \item High Likelihood: We have evidence or reason to believe this could happen frequently
-            or easily (e.g. known attempts have occurred, or known vulnerabilities exist and are unpatched).
-            \item Medium: It could happen under certain conditions or if an attacker dedicates effort,
-            but not trivial or not seen yet.
-            \item Low: Very rare or would require a perfect storm of failures or an extremely capable
-            adversary.
-        \end{itemize}
-        If you prefer numbers, you can rate both on a 1-5 scale or 1-10. But keeping it simple with
-        words or a 3-point scale is often fine for organizations, as long as everyone talks through the meanings.
-    \end{itemize}
-
-    \item Evaluate Each Threat Scenario: Go through the list of scenarios (from Step 3/5) one by one and discuss:
-    \begin{itemize}   
-        \item "If this happened, how bad would it be? (Impact)" and "How likely is it to happen given what
-        we know? (Likelihood)".
-        \item Encourage input: maybe the IT person knows that a certain attack is actually quite hard, so
-        likelihood is low; but a governance person might point out that even if low, that attack's impact on member
-        trust would be catastrophic. Both points are valid.
-        \item You can do this discussion informally and just mark each scenario High/Med/Low, or use a
-        more structured method like voting or rating:
-        \begin{itemize}   
-            \item For instance, create a grid on a whiteboard with Impact on one axis and Likelihood
-            on the other, and place each threat (on a sticky note) in the grid where the group thinks it belongs. This
-            visual "risk map" often sparks debate ("Should this be higher impact than that?" etc.).
-            \item Alternatively, have each member or a small group give a quick rating for each
-            scenario anonymously (e.g. via a Google Form or pieces of paper), then average the scores. This can help if
-            the group is large to get a baseline, then discuss outliers.
-        \end{itemize}
-        \item Aim for consensus or at least a general agreement on where each major threat sits (exact
-        precision not needed – you mainly want to clearly identify the High-High items).
-    \end{itemize}
+    \item Evaluate Each Threat Scenario: Go through the list of scenarios (from Step 3/5) one by one and discuss
+    "If this happened, how bad would it be? (Impact)" and "How likely is it to happen given what
+    we know? (Likelihood)". Encourage input, maybe the IT person knows that a certain attack is actually quite hard, so
+    likelihood is low; but a governance person might point out that even if low, that attack's impact on member
+    trust would be catastrophic. Both points are valid. You can do this discussion informally and just
+    mark each scenario High/Med/Low, or use a more structured method like voting or rating.
+    Aim for consensus or at least a general agreement on where each major threat sits.
     
     \item Rank the Risks: Based on the evaluations, identify the top tier of risks that demand action. These
     are typically the scenarios with High impact (even if low likelihood) and those with High likelihood (even if
     medium impact), especially anything that's High in both. Often you'll find a handful that stand out as "we
     absolutely must address these."
-    \begin{itemize}   
-        \item Also pay attention to "low-hanging fruit" – a scenario that might be Medium risk but can be
-        fixed easily. Sometimes the group might say, "This isn't our worst problem, but it's so simple to prevent that
-        we should just do it." (Example: "Data loss due to no backup" might be medium likelihood and medium impact,
-        but the fix – implement backups – is straightforward, so you might prioritize it early.)
-        \item You might end up with categories like: Critical (must fix ASAP), Moderate (plan to address),
-        Acceptable or Low (acknowledge but no immediate action).
-    \end{itemize}
+    Also pay attention to "low-hanging fruit", a scenario that might be Medium risk but can be
+    fixed easily. Sometimes the group might say, "This isn't our worst problem, but it's so simple to prevent that
+    we should just do it". Example: "Data loss due to no backup" might be medium likelihood and medium impact,
+    but the fix is straightforward, so you might prioritize it early.
+    You might end up with categories like: Critical (must fix ASAP), Moderate (plan to address),
+    Acceptable or Low (acknowledge but no immediate action).
 
     \item Document Rationale: For transparency, write down a brief note next to each top risk about why it's
     ranked high and what the group's judgment was. E.g., "Sybil attack on voting – High Impact (could undermine
@@ -688,30 +499,10 @@ risk levels:
     
     \item Obtain Group Endorsement: Formally or informally, get the group's nod that "Yes, these are the
     threats we're most concerned about." In a smaller coop, that might be as simple as everyone saying "Sounds
-    right." In a larger one, you might do a quick vote to approve the risk ranking or have the board/steering
-    committee ratify it. This is important for accountability – it shows the decision on what to do next was made
+    right." In a larger one, you might do a quick vote to approve the risk ranking or have the board
+    committee ratify it. This is important for accountability, it shows the decision on what to do next was made
     collectively.
 \end{itemize}
-
-\subsubsection{Participation Tips}
-
-Risk prioritization can sometimes lead to debate or disagreement, because people
-perceive risks differently. That's okay – the discussion is part of the
-participatory process. Ensure that louder voices don't completely drown out
-quieter ones; actively ask for input from different members ("We've heard a lot
-about technical likelihood – how about the user experience perspective, what do
-you think the impact on members would be?"). If consensus is hard, you can fall
-back to a vote or averaging scores, as long as the group accepts that outcome.
-Remember the principle of democratic decision-making followed by unity in
-execution: once the group decides that, say, "Insider data leak" is a top risk
-and "DDoS attack on our website" is lower priority, everyone should respect that
-and focus on the top risks first. This avoids second-guessing later and ensures
-a coherent security effort.
-
-By the end of Step 6, you should have a short list of the most important threats
-to tackle, with group support behind that list. Now it's time to figure out how
-to mitigate those threats.
-
 
 \subsection{Step 7: Mitigations and Governance Decisions (How Do We Fix or Prevent Issues?)}
 \label{subsec:Step7}
@@ -727,7 +518,7 @@ make sure that implementing these fixes doesn't accidentally centralize power or
 violate cooperative principles. We design the mitigations to both reduce risk
 and fit into the coop's governance structure.
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
 \begin{itemize}   
 
@@ -845,29 +636,6 @@ and fit into the coop's governance structure.
         \end{itemize}
     
     \end{itemize}
-    
-\subsubsection{Participation Tips}
-
-Mitigation planning might involve different sub-groups for different items, but
-make sure to bring it back to the full coop for transparency. For instance,
-let's say a tech group comes up with a plan for backups and multi-sig wallets –
-they should present it to others in plain language ("We propose to require two
-people to sign off on any expense over 1000€ – here's how that works... do we
-all agree?"). Use the coop's normal proposal-and-decision process to adopt
-significant changes, so they have legitimacy. Keep records of all these
-decisions (perhaps in a Security section of your meeting notes).
-
-Also, acknowledge limitations: the group should be aware of any risks that you
-decide not to fully mitigate due to resource constraints. For example, "We know
-our website could be DDoS'ed (taken down by an overload attack), but at this
-time we can't afford a mitigation for that; we accept that risk and will focus
-on higher priorities." Being transparent about accepted risks is part of the
-security culture too.
-
-By the end of Step 7, you have an action plan: who will do what to improve
-security, and the coop has agreed on these moves. Now the key is to implement
-and maintain these practices.
-
 
 \subsection{Step 8: Ongoing Improvement and Monitoring (How Do we Keep Alive Security?)}
 \label{subsec:Step8}
@@ -881,7 +649,7 @@ threats, reviewing the effectiveness of your defenses, and adjusting to changes,
 all without losing the cooperative spirit. In short: build a living security
 program that grows and adapts with your organization.
 
-\subsubsection{Activities/Checklist}
+\subsubsection{Activities}
 
 \begin{itemize}   
 
@@ -979,17 +747,34 @@ program that grows and adapts with your organization.
         \end{itemize}
 \end{itemize}
 
-\subsubsection{Participation Tips}
+\subsection{Participation Tips}
+\label{subsec:participation_tips}
 
-Keeping momentum is often the hardest part – enthusiasm is high during initial
-modeling, but can fade. To counter this, make security part of the coop's
-culture. Celebrate successes: "We successfully thwarted a phishing attempt
-because Maria remembered the training – kudos!" or "Our audit showed 100%
-compliance on backups – great job team!" Positive reinforcement shows that these
-efforts matter and work. Also, distribute the load: rotate who leads the
-security check-in, who runs the next training game, etc., so it's not always one
-person driving it (avoid creating a de facto security czar). The more members
-have a role over time, the more ingrained it becomes.
+A key to success is ensuring that the entire group feels comfortable and
+motivated to contribute at each stage, and this requires a culture that values
+collaboration and mutual respect. In small cooperatives, carrying out
+activities in a single meeting with everyone present tends to work well, as it
+facilitates a sense of belonging and avoids the need for multiple sessions. If
+the cooperative is larger, using short questionnaires or smaller discussion
+groups before consolidating the results in a plenary session can reduce
+dispersion and allow each person to express themselves without fear of judgment.
+It is essential that those who are more proficient in technology do not
+monopolize discussions, so it is worth directly questioning members who tend to
+speak less, asking how they perceive the impact of a given threat or
+countermeasure. When seeking consensus on risk prioritization, it is natural for
+differences of opinion to arise; frank conversation is part of the democratic
+process, and in cases where the group cannot reach an agreement, an anonymous
+vote or score can prevent undue pressure. In tabletop simulations or when
+creating adversary personas, a lighthearted and creative atmosphere helps to
+build plausible scenarios without generating tension, always remembering that
+the examples are hypothetical and not direct accusations against colleagues. It
+is equally important to keep a clear record of each decision, so that everyone
+knows why certain choices were made and how they can review them in the future
+if necessary. After implementing defenses, encouraging members to share any
+difficulties or points for improvement promotes both collective learning and
+genuine adherence to new practices. Finally, distributing responsibilities among
+different people or subgroups avoids overload and reinforces the sense of
+collective ownership of security, maintaining a horizontal spirit at every step.
 
 \section{Security and Governance Requirements}
 \label{sec:security_governance_requirements}
