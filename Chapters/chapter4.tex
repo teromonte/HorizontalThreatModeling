@@ -314,7 +314,7 @@ concrete and relatable.
 \subsubsection{Activities}
 
 \begin{itemize}
-    \item Identify Key Threat Actors: Look at the threat scenarios from Step 3 and ask, "Who would
+    \item \textbf{Identify Key Threat Actors}: Look at the threat scenarios from Step 3 and ask, "Who would
     carry out these actions?". You will find a few recurring archetypes. For example:
     a hacker or vandal with no connection to the organization, motivated by profit or
     entertainment; a state or corporate actor who opposes the organization's
@@ -325,7 +325,7 @@ concrete and relatable.
     hacker—and those who act in a non-technical manner, such as an insider who
     manipulates rules or processes to his or her own advantage.
 
-    \item For each type of actor, it is recommended to create a brief profile that
+    \item \textbf{For each type of actor}, it is recommended to create a brief profile that
     includes their name and role, for example: "Mallory, the Malicious Insider" or "Ingrid,
     the Unaware member", as well as describing their motivations such as profit,
     revenge, or simply wanting to harm the organization and their capabilities or
@@ -335,7 +335,7 @@ concrete and relatable.
     and relate each persona to specific scenarios from the threat list, highlighting
     how their actions fit into the group dynamics.
 
-    \item When documenting personas, it is recommended to dedicate a page or slide to each
+    \item \textbf{When documenting personas}, it is recommended to dedicate a page or slide to each
     adversary, including an illustrative image to make it more memorable, avoiding
     photographs of real people, in order to avoid generating bias.
     The text should be clear and accessible, emphasizing that the purpose is
@@ -349,12 +349,12 @@ concrete and relatable.
     communication channels, decision-making platforms). The same pattern can be
     applied for each main type of adversary identified.
     
-    \item Include at Least One Insider Persona: It may be uncomfortable but include a scenario of a malicious or
+    \item \textbf{Include at Least One Insider Persona}: It may be uncomfortable but include a scenario of a malicious or
     careless insider. Cooperatives thrive on trust, yet history shows sometimes insiders can cause harm (intentionally
     or not). By creating, say, "Insider Irene" who is well meaning but prone to bypassing rules.
     Make it clear this is hypothetical to improve security for everyone.
     
-    \item Use Personas in Discussion: Once you have personas, you can use them in future steps. For example, when
+    \item \textbf{Use Personas in Discussion}: Once you have personas, you can use them in future steps. For example, when
     thinking about mitigations, you might ask "Would this stop Mallory?" or "How would we detect Oscar's actions?"
     Personas help ground these discussions.
 \end{itemize}
@@ -378,7 +378,7 @@ action, by visualizing attacks, you prepare to figure out defenses.
 \subsubsection{Activities}
 
 \begin{itemize}   
-    \item Construct Attack Trees: Pick a high-priority threat scenario (you will prioritize
+    \item \textbf{Construct Attack Trees}: Pick a high-priority threat scenario (you will prioritize
     formally in the next step but start with one that seems obviously serious or emblematic).
     For example, "unauthorized access to the member list", an attack tree is
     constructed with that objective at the root. From there, possible paths are identified.
@@ -391,7 +391,7 @@ action, by visualizing attacks, you prepare to figure out defenses.
     level of detail should be sufficient to reveal relevant decisions and
     vulnerabilities, while maintaining the clarity of the analysis.
 
-    \item Conduct Tabletop Simulations: For some scenarios, especially ones involving multiple people or
+    \item \textbf{Conduct Tabletop Simulations}: For some scenarios, especially ones involving multiple people or
     processes, do a role-play tabletop exercise. Assemble a small group and narratively walk through the
     scenario: Assign someone to play the adversary (using one of your personas) and others to play
     defenders or just observers. Example: Simulate "Sybil attack during an online vote." Narrator says:
@@ -407,7 +407,7 @@ action, by visualizing attacks, you prepare to figure out defenses.
     to see where your response or system breaks. It's much cheaper to find gaps this way than during
     a real incident.
     
-    \item Identify Vulnerabilities at Each Step: As you chart out these scenarios, explicitly list the
+    \item \textbf{Identify Vulnerabilities at Each Step}: As you chart out these scenarios, explicitly list the
     vulnerabilities or weak points that make the attack possible. These could be technical (e.g.
     "Outdated plugin allows injection", "No backup exists for database"), or organizational (e.g. "New
     members are not verified, allowing fakes", "Only one person knows how to reset the server"). Also
@@ -422,18 +422,18 @@ action, by visualizing attacks, you prepare to figure out defenses.
     Write these vulnerabilities next to the steps or in a separate list mapped to the
     scenario. This will directly feed into deciding mitigations.
 
-    \item Assess Impact and Likelihood for Scenarios: As part of analysis, discuss for each scenario,
+    \item \textbf{Assess Impact and Likelihood for Scenarios}: As part of analysis, discuss for each scenario,
     how bad would it be if this happened? and how likely is it to happen? Use qualitative terms for example:
     For ransomware encrypting files the Impact is High because of data loss but likelihood maybe Medium
     if members are generally careful. For sybil attack the impact is High on governance
     legitimacy but likelihood may be Low to Medium depending on how easy it is to create fake accounts in your
     system.
 
-    \item Leverage Past Incidents: If your coop or similar groups have experienced incidents,
+    \item \textbf{Leverage Past Incidents}: If your coop or similar groups have experienced incidents,
     incorporate those into scenarios. "This happened before, could it happen again in a worse way?"
     Learning from near-misses or history makes scenarios very concrete. For example, "Last year someone
     guessed our Twitter password, what if they had tweeted offensive stuff? Let's play out that
-    scenario."
+    scenario".
 \end{itemize}
 
 \subsection{Step 6: Prioritize Risks Together}
@@ -454,75 +454,69 @@ clear list of top-priority risks that the organization will invest effort in mit
 
 \subsubsection{Activities}
 
-\begin{itemize}   
-    \item Set Risk Criteria (Impact and Likelihood): Before prioritizing risks,
-    the group should build a common understanding of what impact
-    and probability mean in their context. High impacts are those that
-    threaten the existence of the organization, violate laws, or seriously undermine
-    the trust of members; medium impacts cause manageable disruptions; and low
-    impacts cause only occasional inconveniences. Similarly, a threat may be
-    considered high probability if there is concrete evidence that it could occur
-    easily, medium if it depends on specific conditions, and low if it is unlikely
-    or requires great sophistication. Using simple scales (such as high, medium, and
-    low) is often sufficient, as long as the meanings are collectively discussed.
+\begin{itemize}
 
-    \item Evaluate Each Threat Scenario: Go through the list of scenarios (from Step 3/5) one by one and discuss
-    "If this happened, how bad would it be? (Impact)" and "How likely is it to happen given what
-    we know? (Likelihood)". Encourage input, maybe the IT person knows that a certain attack is actually quite hard, so
-    likelihood is low; but a governance person might point out that even if low, that attack's impact on member
-    trust would be catastrophic. Both points are valid. You can do this discussion informally and just
-    mark each scenario High/Med/Low, or use a more structured method like voting or rating.
-    Aim for consensus or at least a general agreement on where each major threat sits.
+    \item \textbf{Define Risk Criteria (Impact and Likelihood)}: First, agree on clear
+    definitions for impact and likelihood. High impact risks threaten the
+    organization's survival, break laws, or deeply harm member trust; medium impacts
+    create noticeable but manageable problems; low impacts result in minor
+    inconveniences. High likelihood means there's strong evidence a risk can easily
+    happen, medium is conditional, and low likelihood means it's rare or requires
+    sophisticated effort. Use simple terms (high, medium, low), but ensure everyone
+    understands them clearly.
     
-    \item Rank the Risks: Based on the evaluations, identify the top tier of risks that demand action. These
-    are typically the scenarios with High impact (even if low likelihood) and those with High likelihood (even if
-    medium impact), especially anything that's High in both. Often you'll find a handful that stand out as "we
-    absolutely must address these."
-    Also pay attention to "low-hanging fruit", a scenario that might be Medium risk but can be
-    fixed easily. Sometimes the group might say, "This isn't our worst problem, but it's so simple to prevent that
-    we should just do it". Example: "Data loss due to no backup" might be medium likelihood and medium impact,
-    but the fix is straightforward, so you might prioritize it early.
-    You might end up with categories like: Critical (must fix ASAP), Moderate (plan to address),
-    Acceptable or Low (acknowledge but no immediate action).
+    \item \textbf{Evaluate Each Threat Scenario}: Review your scenarios (from Step 3/5) one by one,
+    asking two questions: "If this happens, how bad is it? (Impact)" and "How likely
+    is it? (Likelihood)." Different perspectives matter,for example, tech members
+    might know a threat is difficult to execute (low likelihood), while governance
+    experts could emphasize the severe impact on trust. Aim for informal consensus
+    or use a voting method to agree on each scenario's risk level.
+    
+    \item \textbf{Rank the Risks}: Identify the most critical risks needing immediate
+    action, usually those with high impact, high likelihood, or both. Pay attention
+    also to "easy fixes", issues that might be medium risk but simple to address
+    immediately. Classify risks into categories like Critical (fix urgently),
+    Moderate (plan action), and Low (acknowledge without immediate action).
+    
+    \item \textbf{Document Your Reasoning}: Clearly note why each top risk was
+    prioritized. For example: "Sybil attack on voting, High Impact (could damage
+    governance legitimacy), Low Likelihood (approval required for new members), still
+    prioritized due to potential impact on trust". This transparency helps others
+    understand the choices later.
+    
+    \item \textbf{Check Against Goals}: Revisit Step 1's initial assets and objectives.
+    Ensure the prioritized risks align with your core mission and values. If
+    important assets lack high-ranked threats, double-check if something was
+    overlooked or truly low risk. Likewise, ensure you're not overly prioritizing
+    threats unrelated to your central goals.
+    
+    \item \textbf{Get Group Approval}: Finally, confirm group agreement on your chosen
+    top threats. For smaller groups, informal agreement may suffice; larger groups
+    might prefer a quick formal vote. This step reinforces collective responsibility
+    and accountability for the chosen priorities.
 
-    \item Document Rationale: For transparency, write down a brief note next to each top risk about why it's
-    ranked high and what the group's judgment was. E.g., "Sybil attack on voting – High Impact (could undermine
-    our governance legitimacy), Low Likelihood (member sign-up currently requires approval, and we've seen no
-    attempts) – Still a Top Concern because of impact on trust." This record helps if later someone asks "Why are
-    we focusing on this threat over that one?" Everyone can see the reasoning agreed upon.
-    
-    \item Verify Against Goals: Revisit Step 1's assets and objectives. Ensure that the top risks you've
-    chosen indeed relate to what you care about most. If an important asset has no high risks listed,
-    double-check: did we miss a threat for it, or is it truly low-risk? Conversely, if a scenario came up high
-    risk but involves something not central to your mission, consider if it's truly a priority. This sanity check
-    keeps the process aligned with cooperative values and priorities.
-    
-    \item Obtain Group Endorsement: Formally or informally, get the group's nod that "Yes, these are the
-    threats we're most concerned about." In a smaller coop, that might be as simple as everyone saying "Sounds
-    right." In a larger one, you might do a quick vote to approve the risk ranking or have the board
-    committee ratify it. This is important for accountability, it shows the decision on what to do next was made
-    collectively.
 \end{itemize}
-
-\subsection{Step 7: Mitigations and Governance Decisions (How Do We Fix or Prevent Issues?)}
+    
+\subsection{Step 7: Mitigations and Governance Decisions}
 \label{subsec:Step7}
+
+How Do We Fix or Prevent Issues?
 
 \subsubsection{Purpose}
 
 For each of the top-priority threats, decide on countermeasures and integrate
-those decisions into the coop's action plan. In other words, figure out what
+those decisions into the organization's action plan. In other words, figure out what
 security measures to implement and how to approve and enforce them
 democratically. This step is where you turn analysis into concrete changes:
 technical fixes, new or improved policies, training, etc. It's also where you
 make sure that implementing these fixes doesn't accidentally centralize power or
-violate cooperative principles. We design the mitigations to both reduce risk
-and fit into the coop's governance structure.
+violate cooperative principles.
 
 \subsubsection{Activities}
 
-\begin{itemize}   
+\begin{itemize}
 
-    \item Brainstorm Mitigation Options: For each high-priority threat scenario, list possible ways to mitigate
+    \item \textbf{Brainstorm Mitigation Options}: For each high-priority threat scenario, list possible ways to mitigate
     it. Mitigations can fall into different categories:
         \begin{itemize}   
             \item Technical solutions: e.g. apply a software patch or upgrade, enable two-factor authentication
@@ -635,7 +629,7 @@ and fit into the coop's governance structure.
     accountability and also acknowledge that mitigations may need tweaking.
         \end{itemize}
     
-    \end{itemize}
+\end{itemize}
 
 \subsection{Step 8: Ongoing Improvement and Monitoring (How Do we Keep Alive Security?)}
 \label{subsec:Step8}
