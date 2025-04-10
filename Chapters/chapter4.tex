@@ -61,9 +61,33 @@ Each step includes guidance and checklists for participatory activities,
 and the protocol can be scaled or adapted for organizations of different
 sizes and structures.
 
-(Note: While this protocol is inspired by established frameworks like PASTA,
+Note: While this protocol is inspired by established frameworks like PASTA,
 it does not use the formal seven-stage PASTA terminology. Instead, it
-presents an equivalent logic in a more accessible format.)
+presents an equivalent logic in a more accessible format.
+
+\subsection{Security and Governance Requirements}
+\label{subsec:security_governance_requirements}
+
+The protocol for horizontal organizations must balance robust security with
+participatory governance. It must integrate clear and transparent mechanisms,
+such as immutable records, to ensure reliable audits, while maintaining
+accountability without compromising organizational principles.
+
+Democratic participation is essential. Digital voting systems must ensure the
+privacy and integrity of votes, enabling collective decision-making. The
+protocol must also allow for temporary delegation of authority for specific
+situations, ensuring that such delegations are revocable and auditable.
+
+Flexibility is crucial, especially for the transition between centralized and
+distributed modes. Implement mechanisms such as emergency tokens, clearly
+recording temporary centralizations and subjecting them to retroactive approval
+by members.
+
+Scalability and adaptability are easy, accommodating diverse organizational
+sizes and complexities. It incorporates distributed validation systems and
+iterative threat modeling methods, regularly adapting to new vulnerabilities
+through simulations of real-world scenarios. These strategies ensure that the
+protocol remains durable as organizational dynamics evolve.
 
 \subsection{Target Audience}
 \label{subsec:target_audience}
@@ -74,7 +98,6 @@ our protocol emphasizes simplicity and accessibility. It supports stakeholders
 involved in decision-making, operational activities, conflict resolution, and
 coordination tasks, as well as informal community groups, by providing clear
 guidance and intuitive methods for effectively dealing with security threats.
-
 
 \subsection{Ethics and Protection of Organizations}
 \label{subsec:ethics_protection}
@@ -658,53 +681,6 @@ or improvements needed. Share responsibilities equally among team members to
 avoid overload, foster collective ownership, and maintain a genuinely flat
 organizational structure.
 
-\section{Security and Governance Requirements}
-\label{sec:security_governance_requirements}
-
-The proposed protocol for horizontal organizations must meet security and
-governance requirements that ensure both participatory inclusion and robustness
-against internal and external threats. In decentralized structures, where the
-absence of formal hierarchy can be seen as both an advantage and a challenge, it
-is imperative that the protocol be designed to integrate mechanisms that
-preserve horizontality without compromising organizational resilience.
-Transparency, in this context, emerges as one of the central pillars
-\cite{Colbac}. All events related to the authorization of actions or
-modifications must be recorded in an immutable manner, ensuring that actions can
-be reliably audited by any member of the organization. These immutable records,
-built on technologies such as blockchain or similar cryptographic structures,
-ensure traceability and eliminate the possibility of unauthorized changes,
-maintaining cohesion between organizational principles and technological
-mechanisms.
-
-Democratic participation also plays a fundamental role in the design of the
-protocol \cite{Colbac}. In a horizontal organization, decisions must reflect the
-collective will, and to this end, the protocol must integrate digital voting
-systems that guarantee both the privacy and security of votes \cite{Colbac}. In
-addition, it must be possible to temporarily delegate authority to individuals
-or groups to deal with situations that require specific expertise, always
-ensuring that such delegation can be revoked and that records of actions are
-accessible for collective audit \cite{Colbac}.
-
-Another crucial aspect is the flexibility of the protocol, especially in
-scenarios where the organization needs to switch between centralized and
-distributed governance modes. This transition capacity must be implemented in a
-way that the levels of centralization are temporary and properly tracked,
-ensuring that control can quickly return to the collective. To this end, the
-protocol must provide mechanisms such as emergency tokens, which allow the
-execution of critical actions in exceptional situations, as long as such actions
-are recorded and subject to retroactive validation by the members of the
-organization \cite{Colbac}.
-
-For the protocol to be scalable, it is essential that it supports organizations
-of different sizes and degrees of complexity. This includes implementing
-distributed validation systems that allow collaborative verification of actions
-without burdening individuals or single points of control \cite{Colbac}.
-Furthermore, threat modeling should be iterative and adaptive, incorporating
-techniques such as simulations based on real-world scenarios to identify
-emerging vulnerabilities and adjust countermeasures accordingly. These
-mechanisms ensure that the protocol remains functional and effective even when
-the organizational scale increases or its internal dynamics change.
-
 \section{Evaluation Strategy}
 \label{sec:evaluation_strategy}
 
@@ -745,7 +721,7 @@ empirical evidence on the effectiveness of the protocol relative to \gls{stride}
 in horizontal organizations.
 
 \section*{}
-Chapter 4 presented the preliminary design of a protocol specifically aimed at
+Chapter 4 presented the design of a protocol specifically aimed at
 threat modeling in horizontal organizations, detailing fundamental security and
 governance requirements, such as mechanisms for democratic participation,
 temporary delegation of authority, and auditable records. The importance of
