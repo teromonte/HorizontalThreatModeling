@@ -516,123 +516,63 @@ violate cooperative principles.
 
 \begin{itemize}
 
-    \item \textbf{Brainstorm Mitigation Options}: For each high-priority threat scenario, list possible ways to mitigate
-    it. Mitigations can fall into different categories:
-        \begin{itemize}   
-            \item Technical solutions: e.g. apply a software patch or upgrade, enable two-factor authentication
-    for logins, encrypt data at rest, set up an intrusion detection system, require multi-signature for financial
-    transactions.
-            \item Process or workflow changes: e.g. institute a checklist for onboarding/offboarding members (so
-    fake identities are caught and departing members lose access promptly), establish a routine backup procedure,
-    require a second pair of eyes (peer review) before pushing changes to the website, add a step to verify any
-    important request (like fund transfers) through a secondary channel.
-            \item Education and training: e.g. do a phishing awareness session so members can spot suspicious
-    emails, create a quick guide on how to choose strong passwords or use the password manager the coop adopts,
-    run an orientation on security policies for all members annually.
-            \item Governance/policy measures: e.g. create a policy that "All admin passwords are stored in our
-    shared password manager vault accessible by at least 3 people," or "For emergency decisions, at least 2 out of
-    3 designated responders must agree," or "Every proposal in the decision platform must be made by a verified
-    member identity." Essentially, rules that formalize the security practices.
-        \end{itemize}
+    \item \textbf{Brainstorm Mitigation Options:} For each high-priority threat,
+    list potential mitigations. These might include technical solutions (software
+    updates, two-factor authentication, encryption, multi-signature financial
+    controls), workflow improvements (clear onboarding/offboarding processes,
+    regular backups, peer reviews for critical tasks), training and education
+    (phishing awareness, password management sessions, annual security policy
+    orientations), and governance policies (formal rules for password storage,
+    emergency decision protocols, member identity verification).
     
-    Use the adversary personas as a lens: ask "If we do this, would it stop or deter [Persona] from succeeding?"
-    For instance, to counter Mallory (disgruntled ex-member) misusing credentials, one mitigation might be
-    "immediately deactivate accounts when someone leaves (offboarding policy)." To counter Oscar (outside hacker)
-    exploiting a bug, mitigation is "keep software updated, and maybe run security scans." To counter the Sybil
-    scenario, mitigation could be "implement stricter member verification for online voting (like each account
-    must link to a real person's membership record)."
-
-    List multiple options if they exist, then discuss feasibility: How hard or expensive is it? Does it require
-    outside help or new tools? Does it slow down any workflow (introduce friction)? Does it align with our values
-    (e.g. a mitigation "ban all new members for safety" would harm the coop's openness, so probably unacceptable)?
+    \item \textbf{Evaluate Feasibility:} Consider the practicality of each
+    mitigation. Discuss how difficult or costly they are, if external resources are
+    required, if they introduce significant workflow friction, and if they align
+    with organizational values. Use adversary personas to check effectiveness—ask if
+    specific measures effectively deter identified threats.
     
-    \item Collective Deliberation on Mitigations: For each threat and its potential solutions, discuss with the
-    group (or relevant sub-group) to choose the best course of action. This might happen in a dedicated security
-    meeting or as part of regular meetings. Ensure to involve those who will be responsible for implementing or
-    affected by the change. For example, if the mitigation is "use a new encrypted chat tool," the IT team and
-    regular members should both weigh in (IT on how to implement, members on usability).
-    Some mitigations might be contentious (maybe someone feels requiring 2FA is too burdensome, or rotating admin
-    duties is too chaotic). Strive for consensus by addressing concerns: perhaps provide alternatives or phased
-    approaches. If consensus can't be reached, use your coop's normal decision process (majority vote, etc.) to
-    finalize the decision on that mitigation.
-    Important: Document the decision for each major mitigation: the group agrees "Yes, we will do X to address
-    threat Y." This can be recorded in meeting minutes or an action plan.
+    \item \textbf{Deliberate and Decide Collectively:} Engage members or relevant
+    subgroups to choose appropriate mitigations. Include those responsible for
+    implementation and those affected by changes. Address concerns through
+    discussion, propose alternative solutions, and aim for consensus. Document
+    clearly why each chosen mitigation was prioritized.
     
-    \item Assign Responsibility and Resources: For each chosen mitigation, decide who will carry it out and by
-    when. Since this is a horizontal organization, avoid dumping everything on one person. Instead:
-        \begin{itemize}   
-            \item Spread technical tasks among tech-skilled members or a tech working group, but maybe pair them
-    with a non-tech member for transparency.
-            \item Assign policy drafting to a small team that includes people from governance and operations.
-            \item If training is needed, maybe identify a member who's good at teaching, or an external expert if
-    budget allows.
-            \item Ensure each mitigation has an "owner" or small team responsible for seeing it through. This
-    distributes responsibility and builds shared security knowledge.
-            \item If certain mitigations require budget (e.g. buying a security certificate, or paying for a backup
-    service), note that and ensure it goes through the normal budgeting process of the coop.
-        \end{itemize}
+    \item \textbf{Assign Responsibilities Clearly:} Define clear responsibilities
+    for each mitigation task, distributing them among relevant members or working
+    groups. Technical tasks should include tech-skilled members paired with others
+    for transparency. Assign policy drafting and educational roles to suitable teams
+    or individuals. Clearly state budget needs for specific tasks to ensure
+    alignment with cooperative budgeting processes.
     
-    Essentially, integrate these tasks into your coop's project management – treat them like important initiatives
-    with accountability. This also helps avoid the situation where plans are made but no one follows up.
+    \item \textbf{Implement with Democratic Oversight:} Keep the organization
+    updated throughout the implementation process. Regularly report progress in
+    meetings or group communications. Drafted policies should circulate for
+    collective review and formal adoption. Ensure full cooperation from members,
+    emphasizing that security measures result from collective decisions.
     
-    \item Implement with Democratic Oversight: As mitigations are implemented, keep the group informed. For
-    example:
-        \begin{itemize}   
-            \item If the tech team is deploying a new secure tool, they should report progress at meetings or in
-    the group chat.
-            \item If a policy is drafted (e.g. an "Acceptable Use Policy" for members), circulate it for comments and
-    formally adopt it through the coop's decision mechanism.
-            \item Unity in execution: Once a security measure is agreed on, all members should cooperate in making it
-    work, even if it's a bit inconvenient. This might mean everyone actually enables 2FA on their accounts, or
-    actually uses the new password manager, not just a few. Culturally, frame it as "we all agreed to this because
-    it protects all of us." When needed, gently remind folks that this was a collective decision (the democratic
-    centralism idea: we discussed openly, now we implement uniformly).
-        \end{itemize}
+    \item \textbf{Prepare for Emergencies:} Establish clear protocols for crisis
+    situations requiring rapid response. Formally designate a small emergency
+    response team authorized to take quick decisions within agreed limits. Define
+    the scope and timeframe for their actions, and ensure accountability by
+    mandating transparent post-incident reporting and collective decision-making on
+    permanent actions.
     
-    \item Plan for Emergency Situations (Temporary Delegation): One big governance aspect to settle is: How will
-    we handle a security emergency or critical incident? In a crisis (like an active cyber-attack, or a major
-    breach in progress), organizations might need to act faster than usual consensus allows. The protocol encourages
-    having a pre-agreed emergency response team or procedure:
-        \begin{itemize}   
-            \item Decide if you will appoint a small Security Incident Response Team (SIRT) or similar. This could
-    be, say, 3 trusted members with the technical know-how (or quick learners) who are empowered to make snap
-    decisions when an incident is detected.
-            \item Define the scope and limits of their power: e.g., "They can temporarily shut down a server, or
-    revoke someone's access, or spend up to X euros on emergency help, without full group approval in that
-    moment." Also define the timeframe: their actions are meant to contain the issue, and must be reported ASAP to
-    the membership and reviewed, say, within 24-48 hours.
-            \item This delegation is temporary and accountable: as soon as the immediate threat is handled, they must
-    explain their actions to the whole coop (transparently via an incident report), and if any decision needs to
-    be permanent (like firing an IT provider or changing a policy), it goes to the group for normal
-    decision-making.
-            \item If your coop is small, your "team" might just be the few people who know what to do, but still
-    explicitly acknowledge it ("If something blows up, Alice and Bob will take charge for the moment, and inform
-    everyone as they do").
-        \end{itemize}
+    \item \textbf{Integrate into Governance Documents:} Codify agreed-upon
+    mitigations and emergency protocols into the organization's official
+    documentation. Update handbooks or wikis to institutionalize these practices,
+    ensuring new members receive proper orientation.
     
-    Having this plan prevents paralysis in a crisis and avoids someone unilaterally taking over just because
-    nothing was defined. Everyone knows in advance who will act and trusts that it's been agreed upon.
-    
-    \item Integrate Security into Governance Documents: Once decisions are made (normal mitigations or emergency
-    roles), codify them. Update your coop's handbook, wiki, or policy docs to include the new security measures.
-    For example, add an "Access Control Policy" section that outlines how accounts are managed collectively, or a
-    note in the decision-making section that describes the emergency procedure. This ensures new members will
-    learn these practices during onboarding, and it institutionalizes the security improvements.
-    
-    \item Set Review Milestones: Before closing this step, decide when you will check back on these mitigations.
-    It could be:
-        \begin{itemize}   
-            \item A quick check-in at the next general meeting ("Did we do what we said for threat X? Is it
-    working?").
-            \item A formal review after 3 or 6 months to see progress on longer tasks.
-            \item Incorporating it into an annual coop review or similar. By scheduling a follow-up, you create
-    accountability and also acknowledge that mitigations may need tweaking.
-        \end{itemize}
+    \item \textbf{Set Review Milestones:} Schedule periodic reviews to assess the
+    effectiveness and implementation status of security measures. Quick check-ins at
+    regular meetings, formal reviews after a set period, or integration into annual
+    reviews help maintain accountability and adapt strategies as needed.
     
 \end{itemize}
 
-\subsection{Step 8: Ongoing Improvement and Monitoring (How Do we Keep Alive Security?)}
+\subsection{Step 8: Ongoing Improvement and Monitoring}
 \label{subsec:Step8}
+
+How Do we Keep Alive Security?
 
 \subsubsection{Purpose}
 
@@ -645,130 +585,78 @@ program that grows and adapts with your organization.
 
 \subsubsection{Activities}
 
-\begin{itemize}   
+\begin{itemize}
 
-    \item Include Security in Routine Governance: Treat security as a standing topic in meetings. For
-    example:
-        \begin{itemize}
-            \item In your monthly general meeting or weekly check-in, have a brief agenda item like
-            "Security and Privacy Check." This could be a quick report: "Any incidents or near-misses this
-            month? Any new vulnerabilities found or new tools added that we should consider in our model?"
-            \item Quarterly or semi-annually, do a slightly deeper review. This could coincide with other
-            reviews (financial, operational). Go over the threat list: have any new threats emerged? (Perhaps
-            the coop started using a new platform – that introduces new risks to consider.) Are there threats
-            that can be downgraded because of improvements? Basically, keep the threat model updated.
-            \item If you have a rotating security committee, they can take charge of preparing these updates.
-            But even if not, someone can volunteer each time to gather relevant info.
-        \end{itemize}
-
-    \item Maintain Logs and Audit Trails: Earlier we emphasized logging and traceability. Make sure
-    those logs (system logs, decision logs, access records) are actually being looked at. For example:
-        \begin{itemize}
-            \item If you set up an immutable log of administrative actions (like who changed what settings),
-            maybe once a month a couple of members review it to see if all actions were expected and legit.
-            \item If you require multi-signature on an account, periodically check that the rule is being
-            followed (no one found a shortcut).
-            \item Conduct an internal audit once a year: pick a couple of key policies and verify they are
-            enforced. E.g., "Check 5 random user accounts to ensure they all have 2FA on as required," or
-            "Verify that all ex-members in the past year have indeed been removed from our systems within the
-            agreed 24 hours of departure." Such audits can be done by peers (any member can do it following a
-            script) and results shared openly: "We checked and found 1 of 5 accounts didn't have 2FA; we helped
-            that member set it up."
-        \end{itemize}
-    This might sound formal, but it can be lightweight and it greatly helps catch when practices slip.
-    Because organizations have no boss checking up, the members collectively check up in a transparent way.
-
-    \item Periodic Retraining and Onboarding: Over time, members may forget certain security practices
-    or new people join who weren't part of the initial threat modeling. Address this by:
-        \begin{itemize}
-            \item Creating a short "Security Handbook" or section in your member handbook that summarizes
-            key policies ("We use a shared password manager; here's how to get access," "Never share your login
-            links with others," "Report any lost device immediately," etc., and also the why – referencing
-            threats like "to prevent incidents like [scenario]" which makes it relatable).
-            \item Holding a yearly refresher workshop or sending a summary of "Our coop's top 5 threats and how
-            we mitigate them – reminders for all members."
-            \item Simulating a phishing email test or an impromptu drill (with consent) to keep awareness
-            sharp, then discussing the results in a blameless way ("Hey, 3 of us clicked that fake link – let's
-            go over how to spot those signs!").
-            \item Updating onboarding processes: when new members join, include a quick orientation on security
-            norms (for instance, how accounts are created, who to ask for tech help, basic do's and don'ts). If
-            they know from day one that "security is everyone's responsibility here," it sets a good culture.
-        \end{itemize}
-
-    \item Adapt to Changes in the Coop: If your cooperative grows from 5 members to 50, or starts a new
-    project, revisit the threat model more formally. New scale or activities can mean new threats:
-        \begin{itemize}
-            \item With more members, the risk of insider issues might increase simply by volume, and
-            communication overhead grows – maybe you need more structured processes or automation.
-            \item With new projects (say you start handling money for members, or you open a second location),
-            add those assets and processes to the model and run through the threat steps again in a lighter
-            form.
-            \item Schedule a full threat modeling redo or refresh perhaps annually or bi-annually. It doesn't
-            have to start from scratch each time; you can use the previous notes and just update. But having a
-            cycle ensures that, for example, in two years you're not using the exact same assumptions while the
-            world changed around you.
-        \end{itemize}
-
-    \item Engage with the Wider Community: Horizontal organizations can learn a lot from each other. Consider
-    sharing non-sensitive parts of your security approach with other cooperatives or participating in
-    forums/discussion groups about security in decentralized organizations. You might discover common
-    threats others have seen, or tools specifically helpful for organizations (for example, an open source tool
-    for consensus that has anti-Sybil features, etc.). By contributing your experiences (without giving
-    away your secrets), you also help the movement as a whole become more secure. This external input
-    can be brought back to your coop's next threat modeling session ("We heard another coop had an issue
-    with X, should we consider that scenario for us?").
-
-    \item Monitor and Respond to Evolving Threats: Stay informed about general cybersecurity news that
-    might affect you (e.g., a new vulnerability in a software you use – ensure someone updates it; a
-    wave of phishing targeting small nonprofits – maybe alert members to be extra careful). Since no one
-    person is "the security officer," create channels where such information can be shared. Maybe a
-    security Slack/Matrix channel or an email list for anyone who finds something relevant. Collective
-    eyes can watch more ground.
-
-    \item Governance Feedback Loop: Evaluate how well the balance of democracy and efficiency in your
-    security process is working:
-        \begin{itemize}
-            \item After any incident or even after a year, ask: Did our emergency response plan work? Did
-            anyone feel left out of the loop unnecessarily? If so, adjust the protocol.
-            \item Are members generally comfortable with the security measures or is there grumbling about
-            complexity? If many find it too cumbersome (say the multi-sig process is taking too long for routine
-            tasks), maybe tweak the thresholds or invest in a smoother tool. Always weigh these changes against
-            the risk: maybe it's fine to ease up if the threat is low, or maybe the group agrees the
-            inconvenience is worth the protection.
-            \item Essentially, treat the security policies themselves as living documents subject to the coop's
-            governance. Amend them when needed, just like you would bylaws or other procedures, through the
-            collective decision process.
-        \end{itemize}
+    \item \textbf{Include Security in Routine Governance:} Regularly discuss
+    security as part of routine meetings. Monthly or weekly, briefly review
+    incidents, vulnerabilities, or new tools. Conduct deeper quarterly or
+    semi-annual reviews to update your threat model. Rotate or delegate preparation
+    tasks to maintain collective involvement.
+    
+    \item \textbf{Maintain Logs and Audit Trails:} Regularly inspect logs and
+    records to ensure adherence to agreed practices. Monthly reviews of
+    administrative logs and periodic verification of multi-signature requirements or
+    account security settings help maintain compliance. Conduct an annual peer audit
+    of critical policies, openly sharing results to maintain transparency and
+    accountability.
+    
+    \item \textbf{Periodic Retraining and Onboarding:} Create and regularly update a
+    concise security handbook covering key practices and their rationale. Provide
+    annual refresher workshops and simulate occasional phishing drills, discussing
+    outcomes constructively. Incorporate security orientation into new member
+    onboarding processes to instill a collective security culture from the start.
+    
+    \item \textbf{Adapt to Organizational Changes:} Regularly reassess your threat
+    model to accommodate organizational growth or new projects. Expanded membership
+    or new activities can introduce different risks. Schedule comprehensive threat
+    modeling updates annually or biennially, adjusting assumptions to align with
+    current realities.
+    
+    \item \textbf{Engage with the Wider Community:} Share non-sensitive security
+    strategies with other cooperatives or participate in community forums. This
+    interaction helps identify common threats, discover new tools, and contribute to
+    collective knowledge. Bring insights from external interactions back to enhance
+    your internal threat modeling sessions.
+    
+    \item \textbf{Monitor and Respond to Evolving Threats:} Stay updated on
+    cybersecurity news relevant to your cooperative. Establish clear channels for
+    collective information sharing, such as dedicated group chats or email lists,
+    ensuring timely alerts and responses to emerging threats.
+    
+    \item \textbf{Governance Feedback Loop:} Regularly evaluate your security
+    governance process for effectiveness and inclusivity. After incidents or
+    periodically, review emergency response efficiency and member satisfaction with
+    security protocols. Adjust policies through collective decision-making to
+    balance security needs with practical usability.
+    
 \end{itemize}
 
 \subsection{Participation Tips}
 \label{subsec:participation_tips}
 
-A key to success is ensuring that the entire group feels comfortable and
-motivated to contribute at each stage, and this requires a culture that values
-collaboration and mutual respect. In small cooperatives, carrying out
-activities in a single meeting with everyone present tends to work well, as it
-facilitates a sense of belonging and avoids the need for multiple sessions. If
-the cooperative is larger, using short questionnaires or smaller discussion
-groups before consolidating the results in a plenary session can reduce
-dispersion and allow each person to express themselves without fear of judgment.
-It is essential that those who are more proficient in technology do not
-monopolize discussions, so it is worth directly questioning members who tend to
-speak less, asking how they perceive the impact of a given threat or
-countermeasure. When seeking consensus on risk prioritization, it is natural for
-differences of opinion to arise; frank conversation is part of the democratic
-process, and in cases where the group cannot reach an agreement, an anonymous
-vote or score can prevent undue pressure. In tabletop simulations or when
-creating adversary personas, a lighthearted and creative atmosphere helps to
-build plausible scenarios without generating tension, always remembering that
-the examples are hypothetical and not direct accusations against colleagues. It
-is equally important to keep a clear record of each decision, so that everyone
-knows why certain choices were made and how they can review them in the future
-if necessary. After implementing defenses, encouraging members to share any
-difficulties or points for improvement promotes both collective learning and
-genuine adherence to new practices. Finally, distributing responsibilities among
-different people or subgroups avoids overload and reinforces the sense of
-collective ownership of security, maintaining a horizontal spirit at every step.
+Successful threat modeling requires that everyone in the organization feels comfortable
+and motivated to contribute. Creating a culture of collaboration and respect is
+crucial. In small groups, completing activities in a single meeting is
+effective, fostering unity and avoiding repeat sessions. For larger groups, use
+brief questionnaires or small group discussions, consolidating ideas later in
+plenary to ensure that everyone can contribute without feeling judged.
+
+It is important that members with technical expertise do not dominate the
+conversation. Encourage more reserved participants by asking them directly for
+their opinions on specific threats or solutions. When prioritizing risks, open
+discussions are valuable, but if consensus is difficult, consider anonymous
+voting or point scoring to ease the pressure.
+
+Keep a relaxed and creative environment when role-playing scenarios or
+developing adversarial personas. Make it clear that these scenarios are
+hypothetical and not accusations against anyone. Document decisions
+transparently, explaining the reasons clearly, allowing for future review and
+improvements.
+
+Once security measures are in place, encourage open feedback on any challenges
+or improvements needed. Share responsibilities equally among team members to
+avoid overload, foster collective ownership, and maintain a genuinely flat
+organizational structure.
 
 \section{Security and Governance Requirements}
 \label{sec:security_governance_requirements}
