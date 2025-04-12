@@ -9,6 +9,8 @@
 \chapter{Solution}
 \label{cha:solution}
 
+\prependtographicspath{{Chapters/Figures/Covers/}}
+
 \glsresetall
  
 \section{Threat Modeling Protocol for Horizontal Organizations}
@@ -192,11 +194,11 @@ noting social trust assumptions like who or what we trust and in what ways.
 
 \subsubsection{Activities}
 
-List components and assets like hardware, Software, Data Stores,
+\textbf{List components and assets} like hardware, Software, Data Stores,
 People, Roles and Processes. Write these out, possibly in categories.
 Essentially, you are enumerating what pieces make up your organization's "system".
 
-After that, diagram the Workflow: On a large paper or using a simple online diagram,
+After that, \textbf{diagram the Workflow}: On a large paper or using a simple online diagram,
 sketch how these components connect. Draw who interacts with what:
 for example members (people) log into the chat platform (software) to discuss,
 or the website communicates with a payment processor. Draw arrows for data flow
@@ -204,7 +206,7 @@ or interaction: emails sent, files shared, money transferred, etc. Keep it
 understandable. Mark any external services clearly since those are partly
 outside your control.
 
-Identify Trust Boundaries, the points in the system where the
+\textbf{Identify Trust Boundaries}, the points in the system where the
 level of trust changes. For instance: between an external user and your
 internal system like a public website and your internal database; between
 a regular member and personal data; social trust boundaries for example
@@ -214,7 +216,7 @@ On your diagram, draw a dotted line where these boundaries are.
 Essentially ask: At what points do we assume things are safe on one side
 and potentially risky on the other?
 
-Document Who Has Access to What: Alongside the map, list which roles or people have
+\textbf{Document Who Has Access to What}: Alongside the map, list which roles or people have
 access to which assets. E.g., "Only tech team members can access the server", or "All
 members can post in the forum", or "Treasurer has the bank account login". This
 helps spotlight any concentrations of access and areas where trust is placed in
@@ -389,74 +391,61 @@ How Could Attacks Happen?
 
 \subsubsection{Purpose}
 
-Now take your threat list and personas, and dive deeper into how those threats
-could play out step-by-step. This scenario analysis helps you understand the
-sequence of events in an attack and where your weak points are. In practice,
-this means building attack narratives or attack trees and possibly simulating
-some scenarios in an exercise. This step turns abstract threats into
-concrete stories, revealing exactly what vulnerabilities enable an attack and
-how severe the consequences would be. It's a bridge from brainstorming to
-action, by visualizing attacks, you prepare to figure out defenses.
+Now, use your list of threats and personas to explore in detail how attacks
+might happen step by step. This deeper analysis helps you understand exactly
+where your vulnerabilities lie. By turning abstract threats into clear scenarios
+or stories, you can clearly see what needs to be defended against and how severe
+the consequences will be.
 
 \subsubsection{Activities}
 
-\begin{itemize}   
-    \item \textbf{Construct Attack Trees}: Pick a high-priority threat scenario (you will prioritize
-    formally in the next step but start with one that seems obviously serious or emblematic).
-    For example, "unauthorized access to the member list", an attack tree is
-    constructed with that objective at the root. From there, possible paths are identified.
-    For example, an external attacker exploits a vulnerability in the system, gains administrator privileges, and
-    extracts the data; or a malicious insider uses their legitimate access to copy
-    and disclose the information; or an attacker convinces someone to give up their
-    password, logs in with the victim's account, and navigates to the data. The
-    figure below illustrates these branches. At each stage, it highlights where
-    defenses already exist, where they fail, and which points require attention. The
-    level of detail should be sufficient to reveal relevant decisions and
-    vulnerabilities, while maintaining the clarity of the analysis.
+\begin{itemize}
+\item \textbf{Build Attack Trees}: Choose a primary threat scenario, such as
+"unauthorized access to the member list." Place it at the root of your tree and
+explore the possible paths: an attacker could exploit software vulnerabilities
+to gain administrator access, or an attacker could misuse legitimate access, or
+someone could trick a member into sharing credentials. At each step, clearly
+identify what defenses already exist, whether they are effective, and what
+improvements are needed. Keep the tree clear and easy to understand.
 
-    \item \textbf{Conduct Tabletop Simulations}: For some scenarios, especially ones involving multiple people or
-    processes, do a role-play tabletop exercise. Assemble a small group and narratively walk through the
-    scenario: Assign someone to play the adversary (using one of your personas) and others to play
-    defenders or just observers. Example: Simulate "Sybil attack during an online vote." Narrator says:
-    "It's the day of a big proposal vote. Unknown to the group, Mallory has created three fake member identities over
-    the last month." Then step by step: "Vote opens. Mallory votes as herself and as Alice, Bob, and
-    Charlie (her fake profiles). The system tallies four votes from what appears to be four people."
-    Discuss: Would anything at that moment flag an issue? How would the organization notice? Perhaps another
-    member finds it odd that there were three new members who never spoke but voted. Or maybe nobody
-    notices until later. Continue: "The vote passes with those extra votes. Later, someone questions the
-    outcome…" This kind of storytelling helps highlight if your current processes have detection or not.
-    Participants can chime in with "At that point, I would check the member list…" or ask "Do we verify
-    new online voters somehow?" Write down these insights. The idea is to practice an attack in theory
-    to see where your response or system breaks. It's much cheaper to find gaps this way than during
-    a real incident.
-    
-    \item \textbf{Identify Vulnerabilities at Each Step}: As you chart out these scenarios, explicitly list the
-    vulnerabilities or weak points that make the attack possible. These could be technical (e.g.
-    "Outdated plugin allows injection", "No backup exists for database"), or organizational (e.g. "New
-    members are not verified, allowing fakes", "Only one person knows how to reset the server"). Also
-    note any existing controls and whether they work: For each step in the scenario, ask "What should
-    stop this? Do we have something to stop it? Does it actually stop it or can it be bypassed?"
-    E.g., in the Sybil scenario: Vulnerability = lack of strict member verification in the
-    voting system. Existing control = new accounts require admin approval (does that happen? maybe
-    someone auto-approved without checks).
-    In the hacker scenario: Vulnerability = software not patched; Control = we have a
-    firewall, but if the attack comes through a web port, firewall doesn't stop it; or Control = we rely
-    on strong passwords, which might not help if exploit exists.
-    Write these vulnerabilities next to the steps or in a separate list mapped to the
-    scenario. This will directly feed into deciding mitigations.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{tree}
+    \caption{Attack Tree Example}
+    \label{fig:attack_tree_example}
+  \end{figure}
 
-    \item \textbf{Assess Impact and Likelihood for Scenarios}: As part of analysis, discuss for each scenario,
-    how bad would it be if this happened? and how likely is it to happen? Use qualitative terms for example:
-    For ransomware encrypting files the Impact is High because of data loss but likelihood maybe Medium
-    if members are generally careful. For sybil attack the impact is High on governance
-    legitimacy but likelihood may be Low to Medium depending on how easy it is to create fake accounts in your
-    system.
+\item \textbf{Conduct Simulations}: Organize simulation exercises for
+more complex scenarios. Assign someone to represent the adversary, while others
+act as defenders or observers. For example, simulate a Sybil attack scenario:
+"Mallory secretly created false identities before a vote and uses them to
+influence the results." Go through the steps, discussing whether current
+procedures would detect the attack. This exercise helps reveal weaknesses in a
+safe, low-pressure environment rather than during an actual incident.
+This kind of storytelling helps highlight if your current processes have detection or not.
+\item \textbf{Identify Vulnerabilities at Each Step}: For each scenario,
+explicitly identify the weaknesses that make the attack possible. Include both
+technical issues ("outdated software", "no data backups") and organizational
+issues ("no membership verification", "one person controls critical knowledge").
+Identify your current controls and assess whether they actually prevent the
+attack or whether they can be circumvented. Clearly document these
+vulnerabilities for each scenario, which helps directly inform your mitigation
+efforts.
 
-    \item \textbf{Leverage Past Incidents}: If your coop or similar groups have experienced incidents,
-    incorporate those into scenarios. "This happened before, could it happen again in a worse way?"
-    Learning from near-misses or history makes scenarios very concrete. For example, "Last year someone
-    guessed our Twitter password, what if they had tweeted offensive stuff? Let's play out that
-    scenario".
+\item \textbf{Assess the Impact and Likelihood of Scenarios}: Clearly discuss
+the severity of each scenario and the likelihood of its occurrence. Use simple
+terms: “High,” “Medium,” or “Low.” For example, ransomware that encrypts
+important files may have “High Impact” due to potential data loss, but only
+“Medium Likelihood” if members follow best practices. Similarly, a Sybil attack
+may have “High Impact” due to loss of trust, but “Low to Medium Likelihood,”
+depending on how carefully you select new members.
+
+\item \textbf{Leverage Past Incidents}: Incorporate experiences from previous
+incidents or near misses to make scenarios more concrete. Ask, “Could this
+happen again, perhaps in a more damaging way?” For example, “We temporarily lost
+control of our Twitter account before—what if the attackers post harmful content
+next time?” Using real-world examples helps everyone understand the severity of
+the threats and the importance of preventive measures.
 \end{itemize}
 
 \subsection{Step 6: Prioritize Risks Together}
