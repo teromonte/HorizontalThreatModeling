@@ -304,7 +304,7 @@ requiring alignment between security objectives and business priorities
 Another example is \gls{coretm}, designed to facilitate threat modeling in
 distributed or remote teams. Using collaborative tools, such as shared
 annotation platforms, \gls{coretm} makes the process more accessible and
-inclusive, being ideal for horizontal and global organizations \cite{CoReTM}.
+inclusive \cite{CoReTM}.
 
 Finally, \gls{ptm} promotes the inclusion of a wide range of stakeholders in the
 threat modeling process \cite{ParticipatoryThreatModelling}. This approach
@@ -340,8 +340,8 @@ traceability \cite{Colbac}.
 In the context of \gls{colbac}, interactions with the Collective Sphere follow a
 process structured in three phases: in the Draft Phase, the user creates a token
 that specifies the permissions and objectives of the action; in the Petition
-Phase, the token is submitted to a vote by the members of the organization; and,
-finally, in the Authorization Phase, the results of the vote determine the
+Phase, the token is submitted to a vote by the members of the organization;
+in the Authorization Phase, the results of the vote determine the
 approval or rejection of the action, with all records being stored in the
 Immutable Sphere \cite{Colbac}. This structure offers flexibility by allowing
 the adaptation of the level of horizontality according to the needs of the
@@ -371,7 +371,7 @@ EverydayRevolutions}.
 \label{subsec:abccrypto}
 
 \gls{abc} is a threat modeling framework specifically developed to address the
-peculiarities of cryptocurrencies and blockchain-based systems. In contrast to
+peculiarities of cryptocurrencies and blockchain based systems. In contrast to
 generalist frameworks such as \gls{stride}, \gls{abc} is designed to address the
 unique security challenges presented by distributed and permissionless systems,
 where actors distrust each other and economic incentives play a central role
@@ -458,8 +458,8 @@ compromises. However, this approach also presents challenges, such as the
 difficulty of managing large key rings and the subjectivity in assigning trust
 levels \cite{Pgp}.
 
-The relevance of \gls{pgp} and \gls{wot} to horizontal organizations is evident
-\cite{Colbac}. Non-hierarchical structures can take advantage of the
+The relevance of \gls{pgp} and \gls{wot} to horizontal organizations is evident.
+Non-hierarchical structures can take advantage of the
 decentralized nature of \gls{wot} to create security systems aligned with the
 principles of collective autonomy and distributed governance . By allowing each
 participant to build their own web of trust, \gls{pgp} strengthens security
@@ -476,7 +476,7 @@ The evaluation of threat modeling frameworks requires objective criteria to
 compare their effectiveness, applicability, and suitability to different
 organizational contexts \cite{EvaluationofCompetingThreatModeling}. Key criteria
 include the ability to identify specific threats, adaptability to changes in the
-operational environment, implementation costs, and the integration of social,
+operational environment, implementation costs and the integration of social,
 economic, and technical dimensions into the modeling process
 \cite{ThreatModelingASystematicLiteratureReview}. In addition, scalability and
 the ability to handle complex organizational structures are critical factors
@@ -484,26 +484,11 @@ the ability to handle complex organizational structures are critical factors
 
 \gls{stride}, for example, is widely used for its simplicity and applicability
 in traditional software systems \cite{ThreatModelingdesigningForSecurity}.
-However, it faces limitations in decentralized environments, such as
-cryptocurrencies or horizontal organizations, due to its reliance on predefined
-threat categories \cite{STRIDEthreatmodelingforcyberphysical}. In contrast,
+However, it faces limitations in decentralized environments due to its reliance on
+predefined threat categories \cite{STRIDEthreatmodelingforcyberphysical}. In contrast,
 frameworks such as \gls{abc} offer a specialized approach, using collusion
-matrices to explore threats in distributed and permissionless systems, while
-\gls{pasta} focuses on iterative risk assessment for dynamic systems
+matrices, while \gls{pasta} focuses on iterative risk assessment for dynamic systems
 \cite{AbcCrypto, RiskCentricThreatModeling}.
-
-Frameworks such as \gls{colbac}, on the other hand, stand out for integrating
-democratic processes into threat modeling, allowing horizontal organizations to
-align security and participatory governance. Despite its innovation,
-\gls{colbac} faces usability challenges due to the need for familiarization with
-democratic processes and the risk of voting fatigue in large groups.
-
-Finally, scalability is essential for organizations dealing with multiple
-participants and complex interactions \cite{AbcCrypto}. Techniques such as
-scenario fusion in \gls{abc} demonstrate that specialized frameworks can
-mitigate operational costs while maintaining analytical robustness
-\cite{AbcCrypto}. This makes them suitable for modern systems that require both
-technical precision and organizational flexibility \cite{Colbac}.
 
 \subsection{Applicability in Non-Hierarchical Organizations}
 \label{subsec:applicability_nonhierarchical_orgs}
@@ -524,14 +509,6 @@ incorporates economic analysis and financial incentives to mitigate risks in
 blockchain ecosystems, offering tools such as collusion matrices to map complex
 threat scenarios.
 
-Traditional frameworks such as \gls{stride} and attack trees provide a solid
-foundation for threat identification, but their applicability is limited in
-horizontal organizations due to their reliance on formal hierarchies and
-centralized control points \cite{ThreatModelingdesigningForSecurity,
-AttackTrees}. In contrast, emerging approaches such as \gls{ptm} promote greater
-alignment with the needs of these organizations by integrating stakeholders at
-every stage of the process.
-
 The choice of a framework for horizontal organizations must balance technical
 effectiveness with transparency and collective engagement. Solutions such as
 \gls{abc} and \gls{colbac} excel at integrating social and economic dimensions,
@@ -539,17 +516,6 @@ demonstrating that security can be strengthened through collaborative practices
 and inclusive governance \cite{AbcCrypto, Colbac}. These approaches are
 particularly relevant for organizations seeking to align security with
 organizational autonomy and resilience \cite{Colbac}.
-
-\section*{} 
-Chapter 3 analyzed traditional threat modeling approaches, highlighting
-established methodologies such as \gls{stride}, as well as their applications and
-limitations in decentralized and collaborative environments. The fundamental
-categories used in vulnerability identification were described and the necessary
-adaptations for non-hierarchical contexts were discussed. Based on these
-analyses, Chapter 4 presents the preliminary design of a protocol specifically
-adapted for horizontal organizations, describing the fundamental security and
-governance requirements necessary to maintain organizational resilience and
-ensure democratic participation in threat analysis and mitigation processes.
 
 \begin{table}[]
     \caption{Comparison of Threat Modeling Methods}
@@ -569,7 +535,7 @@ ensure democratic participation in threat analysis and mitigation processes.
                     Service, Elevation of Privilege
                 &Software and application security (design-phase threat analysis)
                 &Six-category mnemonic covers major attack types (acts as a
-                    checklist). Applied to system models (DFDs) to systematically identify threats
+                    checklist). Applied to \gls{dfds} to systematically identify threats
                     per component. Simple and widely adopted; easy for teams new to threat modeling.
                 &Focused on technical threats – may miss threats outside its six
                     categories (e.g., collusion or social attacks). No built-in risk ranking, so a
@@ -650,5 +616,13 @@ ensure democratic participation in threat analysis and mitigation processes.
     }
 \end{table}
 
-
-        
+\section*{} 
+Chapter 3 analyzed traditional threat modeling approaches, highlighting
+established methodologies such as \gls{stride}, as well as their applications and
+limitations in decentralized and collaborative environments. The fundamental
+categories used in vulnerability identification were described and the necessary
+adaptations for non-hierarchical contexts were discussed. Based on these
+analyses, Chapter 4 presents the preliminary design of a protocol specifically
+adapted for horizontal organizations, describing the fundamental security and
+governance requirements necessary to maintain organizational resilience and
+ensure democratic participation in threat analysis and mitigation processes.
