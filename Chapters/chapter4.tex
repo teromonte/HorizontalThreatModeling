@@ -19,9 +19,9 @@
 Horizontal cooperatives face unique security challenges. Without a central
 authority, they are vulnerable to attacks that exploit their open, democratic
 nature. For example, an attacker might create fake member identities to sway
-decisions (a Sybil attack) or abuse the consensus process to cause chaos. At the
+decisions or abuse the consensus process to cause chaos. At the
 same time, horizontality can be a security strength: distributing decisions
-means there's no single point of failure. This protocol treats horizontality
+means there is no single point of failure. This protocol treats horizontality
 as an asset, making security a collective endeavor rather than a top-down
 mandate.
 
@@ -29,28 +29,27 @@ mandate.
 \label{subsec:key_principles}
 
 \begin{itemize}
-    \item \textbf{Transparency}: Security activities (like decisions,
-configurations, and incidents) should be visible to members. Open logs and
-auditable records ensure nothing happens "behind closed doors, building trust
+    \item \textbf{Transparency}: Security activities like decisions,
+configurations and incidents should be visible to members. Open logs and
+auditable records ensure nothing happens behind closed doors, building trust
 and accountability among the group.
     \item \textbf{Decentralization}: No single person should have unchecked
 power over systems or data. Access and control are distributed. This prevents a
-"single admin from being a weak link and avoids creating a digital vanguard
-(where a tech-savvy few hold all the keys).
+single admin from being a weak link and avoids creating a digital vanguard
+where a tech-savvy few hold all the keys.
     \item \textbf{Democratic Participation}: All members can participate in
 identifying and addressing threats. Security decisions are made through
-inclusive discussions or votes, so measures have collective buy-in. This keeps
+inclusive discussions or votes, so measures are collective. This keeps
 the process aligned with the coop's democratic governance.
-    \item \textbf{Traceability}: Every important action (granting access, making
-a change, etc.) leaves an immutable trail. For example, changes can be logged on
+    \item \textbf{Traceability}: Every important action like granting access or making
+a change leaves an immutable trail. For example, changes can be logged on
 tamper-proof ledgers and digitally signed by those who approved them. This way,
 if something goes wrong, the coop can trace what happened and who was involved,
 without relying on memory or hearsay.
     \item \textbf{Resilience}: The protocol aims to strengthen the coop's
 ability to withstand and recover from threats. By eliminating single failure
-points and planning for crises (with backup plans and rapid response
-mechanisms), the organization stays resilient even under attack. If one
-safeguard fails, others are in place to limit damage and bounce back quickly.
+points and planning for crises with backup plans and rapid response
+mechanisms, the organization stays resilient even under attack.
 \end{itemize}
 
 These principles ensure that improving security will not undermine the
@@ -65,31 +64,8 @@ sizes and structures.
 
 Note: While this protocol is inspired by established frameworks like PASTA,
 it does not use the formal seven-stage PASTA terminology. Instead, it
-presents an equivalent logic in a more accessible format.
-
-\subsection{Security and Governance Requirements}
-\label{subsec:security_governance_requirements}
-
-The protocol for horizontal organizations must balance robust security with
-participatory governance. It must integrate clear and transparent mechanisms,
-such as immutable records, to ensure reliable audits, while maintaining
-accountability without compromising organizational principles.
-
-Democratic participation is essential. Digital voting systems must ensure the
-privacy and integrity of votes, enabling collective decision-making. The
-protocol must also allow for temporary delegation of authority for specific
-situations, ensuring that such delegations are revocable and auditable.
-
-Flexibility is crucial, especially for the transition between centralized and
-distributed modes. Implement mechanisms such as emergency tokens, clearly
-recording temporary centralizations and subjecting them to retroactive approval
-by members.
-
-Scalability and adaptability are easy, accommodating diverse organizational
-sizes and complexities. It incorporates distributed validation systems and
-iterative threat modeling methods, regularly adapting to new vulnerabilities
-through simulations of real-world scenarios. These strategies ensure that the
-protocol remains durable as organizational dynamics evolve.
+presents an equivalent logic in a more accessible format focusing on
+horizontal scenarios.
 
 \subsection{Target Audience}
 \label{subsec:target_audience}
@@ -118,7 +94,7 @@ significant damage, not only operational, but also personal and social.
 Therefore, the protocol must incorporate strict guidelines on the ethical
 treatment of identified vulnerabilities, ensuring that such information is
 managed in a restricted manner and shared only with authorized individuals or
-groups, always respecting the principle of least privilege.
+groups.
 
 Additionally, it is vital to establish clear internal communication mechanisms
 to ensure that any identified vulnerabilities are immediately reported,
@@ -145,15 +121,15 @@ What Are We Protecting?
 
 Set the stage by agreeing on what assets and operations you need to protect, and
 what your security objectives are. This ensures everyone is on the same page
-about why you are doing threat modeling and what "success looks like". 
+about why you are doing threat modeling and what success looks like. 
 
 \subsubsection{Activities}
 
 \begin{itemize}
     \item \textbf{Identify Critical Assets}: In a group, list out what is most
-valuable to your organization. This can include digital assets (member data,
-documents, the website, chat platforms), physical assets (office space, devices,
-servers), and intangible assets (the organization's reputation, member trust).
+valuable to your organization. This can include digital assets as member data,
+documents, the website, chat platforms or physical assets as office space, devices,
+servers or intangible assets as the organization's reputation, member trust.
 Ask yourselves what would hurt the most if it were stolen, destroyed, or made
 public.
     \item \textbf{Outline Key Operations/Workflows}: Describe in simple terms
@@ -163,16 +139,15 @@ community space with an entry badge system". Understanding these workflows helps
 identify where disruptions would be most damaging.
     \item \textbf{State Security Objectives and Requirements}: Discuss what
 security means for your organization. Do you need to keep member data private? Ensure
-your service is always available? Meet any legal regulations like
-GDPR? Also consider organization statutes or policies about confidentiality and data
-handling. For instance, if your statutes say all financial info must be accessible
+your service is always available? Meet any legal regulations like GDPR? Also consider
+organization statutes or policies about confidentiality and data handling.
+For instance, if your statutes say all financial info must be accessible
 to members, that influences how you balance transparency with confidentiality.
     \item \textbf{Define the Scope and Boundaries}: Decide what will and won't
 be covered in this threat modeling exercise. Maybe you want to focus on a
-particular system and not on unrelated areas.
-Or include only digital systems but not physical office
-security or vice versa. Clearly defining scope prevents the discussion from
-going off-track. It's okay to start with a narrow scope and expand later if needed.
+particular system and not on unrelated areas. Or include only digital systems but not
+physical office security or vice versa. Clearly defining scope prevents the discussion from
+going off-track. It is okay to start with a narrow scope and expand later if needed.
     \item \textbf{Agree on Terminology}: Ensure everyone understands basic terms
 you will use. For example, define what you mean by asset, threat, vulnerability,
 etc., in plain language. A quick glossary on a whiteboard can help.
@@ -194,11 +169,11 @@ noting social trust assumptions like who or what we trust and in what ways.
 
 \subsubsection{Activities}
 
-\textbf{List components and assets} like hardware, Software, Data Stores,
-People, Roles and Processes. Write these out, possibly in categories.
+\textbf{List components and assets} like hardware, software, data stores,
+people, roles and processes. Write these out, possibly in categories.
 Essentially, you are enumerating what pieces make up your organization's "system".
 
-After that, \textbf{diagram the Workflow}: On a large paper or using a simple online diagram,
+After that, \textbf{diagram the workflow}: On a large paper or using a simple online diagram,
 sketch how these components connect. Draw who interacts with what:
 for example members (people) log into the chat platform (software) to discuss,
 or the website communicates with a payment processor. Draw arrows for data flow
@@ -206,7 +181,7 @@ or interaction: emails sent, files shared, money transferred, etc. Keep it
 understandable. Mark any external services clearly since those are partly
 outside your control.
 
-\textbf{Identify Trust Boundaries}, the points in the system where the
+\textbf{Identify trust boundaries}, the points in the system where the
 level of trust changes. For instance: between an external user and your
 internal system like a public website and your internal database; between
 a regular member and personal data; social trust boundaries for example
@@ -235,7 +210,7 @@ Brainstorm all the potential threats and bad things that could happen to the
 assets and processes you identified. The goal is a comprehensive list of threat
 scenarios, covering both technical attacks and governance risks. At this
 stage, quantity is more important than quality. We want to surface as many
-ideas as possible, without judging them yet. This step harnesses the diverse
+ideas as possible, without judging them yet. This step groups the different
 perspectives in your organization: digitally skilled members might think
 of hacking scenarios, whereas others might point out process failures or insider
 issues that a pure tech focus could miss.
@@ -255,8 +230,8 @@ issues that a pure tech focus could miss.
 
     \item \textbf{Use Prompts and Creative Tools}:
     Use prompts and creative techniques to explore potential threats by walking
-    through the system map from Step 2 and pausing at each component or boundary to
-    ask what could go wrong. For example, when examining the database, consider
+    through the system map from \hyperref[subsec:Step2]{Step 2} and pausing at each component or
+    boundary to ask what could go wrong. For example, when examining the database, consider
     whether someone could steal or delete important information, and think about who
     might do this and how. At a boundary like the internet connection, reflect on
     the possibility of an attacker intercepting data in transit or flooding the
@@ -279,12 +254,11 @@ issues that a pure tech focus could miss.
     external events that could pose significant risks.
 
     \item \textbf{Distinguish Different Threat Sources}:
-    As ideas emerge, note whether each threat
-    scenario is external like a hacker, a virus, a competitor
-    or internal coming from within the organization like a member error,
-    an insider attack, conflict and miscoordination. There could be a hybrid threat
-    where an external actor exploits an internal weakness, like a hacker using
-    social engineering to trick a member into giving up access.
+    As ideas emerge, note whether each threat scenario is external like a
+    hacker, a virus, a competitor or internal coming from within the organization
+    like a member error, an insider attack, conflict and miscoordination. There could
+    be a hybrid threat where an external actor exploits an internal weakness, like
+    a hacker using social engineering to trick a member into giving up access.
 
     \item \textbf{Write Down Concrete Scenarios}:
     For each idea, capture it as a short scenario description.
@@ -293,15 +267,15 @@ issues that a pure tech focus could miss.
     \begin{itemize}
         \item \textbf{Sybil Attack on decision-making:} An attacker creates multiple fake member
         accounts to gain extra votes in an online poll, influencing the group decision illicitly.
-        \item \textbf{Insider data leak:} A discontented member with access to sensitive data decides to leak member
-        emails and addresses to the public.
-        \item \textbf{Ransomware on shared drive:} Malware infects a member's computer and encrypts the shared cloud
-        drive files, making them inaccessible until a ransom is paid.
-        \item \textbf{Lost credentials:} A member who manages the Twitter account leaves suddenly, and no one else has
-        the password The group loses control of its own social media.
-        \item \textbf{Miscoordination outage:} In a crisis, no one is designated to respond, because everyone thinks
-        someone else will, and a small issue like a certificate expiry escalates, taking the website offline
-        for days.
+        \item \textbf{Insider data leak:} A discontented member with access to sensitive data decides
+        to leak member emails and addresses to the public.
+        \item \textbf{Ransomware on shared drive:} Malware infects a member's computer and encrypts the
+        shared cloud drive files, making them inaccessible until a ransom is paid.
+        \item \textbf{Lost credentials:} A member who manages the Twitter account leaves suddenly, and
+        no one else has the password so the group loses control of its own social media.
+        \item \textbf{Miscoordination outage:} In a crisis, no one is designated to respond, because everyone
+        thinks someone else will, and a small issue like a certificate expiry escalates, taking the website
+        offline for days.
         \item \textbf{Service provider failure:} The third-party platform goes
         down or is compromised, affecting the organization's operations.
     \end{itemize}
@@ -312,10 +286,9 @@ issues that a pure tech focus could miss.
     is concerned about it.
 
     \item \textbf{Ensure Social/Process Threats are Included}:
-    Cooperatives might face threats like quorum manipulation (exploiting the rules
-    of consensus/voting), abuse of emergency powers (someone invoking a crisis to
-    grab authority), or "digital vanguard" accumulation (one person quietly gaining
-    control of many digital assets because no one else steps up). Include these in
+    Cooperatives might face threats like quorum manipulation, abuse of emergency powers
+    (someone invoking a crisis to grab authority), or "digital vanguard" accumulation (one person
+    quietly gaining control of many digital assets). Include these in
     your brainstorming. For example, "Member X holds all the keys and if they quit
     or go rogue, we're locked out" is a valid threat scenario to record (it's an
     internal risk).
@@ -339,33 +312,31 @@ concrete and relatable.
 \subsubsection{Activities}
 
 \begin{itemize}
-    \item \textbf{Identify Key Threat Actors}: Look at the threat scenarios from Step 3 and ask, "Who would
-    carry out these actions?". You will find a few recurring archetypes. For example:
+    \item \textbf{Identify Key Threat Actors}: Look at the threat scenarios from \hyperref[subsec:Step3]{Step 3}
+    and ask, "Who would carry out these actions?". You will find a few recurring archetypes. For example:
     a hacker or vandal with no connection to the organization, motivated by profit or
     entertainment; a state or corporate actor who opposes the organization's
     mission; a disgruntled or former member with inside knowledge and intent to
     cause harm; or a careless insider who, even without bad intentions, may
     introduce risks through mistakes or negligence. It is also important to
-    distinguish between adversaries with technical skills—such as a mid-level
-    hacker—and those who act in a non-technical manner, such as an insider who
+    distinguish between adversaries with technical skills, such as a mid-level
+    hacker and those who act in a non technical manner, such as an insider who
     manipulates rules or processes to his or her own advantage.
 
     \item \textbf{For each type of actor}, it is recommended to create a brief profile that
-    includes their name and role, for example: "Mallory, the Malicious Insider" or "Ingrid,
+    includes their name and role, for example: "Maria, the Malicious Insider" or "Marcos,
     the Unaware member", as well as describing their motivations such as profit,
     revenge, or simply wanting to harm the organization and their capabilities or
     resources, from intrusion techniques to privileged insider knowledge. In
     addition, it is important to indicate what methods this actor might use for example:
     phishing, vulnerability exploitation, manipulation of legitimate credentials.
-    and relate each persona to specific scenarios from the threat list, highlighting
+    And relate each persona to specific scenarios from the threat list, highlighting
     how their actions fit into the group dynamics.
 
     \item \textbf{When documenting personas}, it is recommended to dedicate a page or slide to each
-    adversary, including an illustrative image to make it more memorable, avoiding
-    photographs of real people, in order to avoid generating bias.
-    The text should be clear and accessible, emphasizing that the purpose is
-    purely internal, without the need for excessive formality. For example, when
-    describing Mallory, the resentful ex-member, it would be useful to indicate her
+    adversary, including an illustrative image to make it more memorable. The text should be clear
+    and accessible, emphasizing that the purpose is purely internal. For example, when
+    describing Maria, the resentful ex-member, it would be useful to indicate her
     background (she left after a conflict, but still retains some credentials), her
     motivations (revenge, demonstrating security flaws), her skills (she knows the
     system well, although she is not an expert in hacking), the most likely actions
@@ -374,14 +345,15 @@ concrete and relatable.
     communication channels, decision-making platforms). The same pattern can be
     applied for each main type of adversary identified.
     
-    \item \textbf{Include at Least One Insider Persona}: It may be uncomfortable but include a scenario of a malicious or
-    careless insider. Cooperatives thrive on trust, yet history shows sometimes insiders can cause harm (intentionally
-    or not). By creating, say, "Insider Irene" who is well meaning but prone to bypassing rules.
-    Make it clear this is hypothetical to improve security for everyone.
+    \item \textbf{Include at Least One Insider Persona}: It may be uncomfortable but include a scenario of
+    a malicious or careless insider. Cooperatives thrive on trust, yet history shows sometimes insiders
+    can cause harm (intentionally or not). By creating, say, "Insider Irene" who is well meaning but
+    prone to bypassing rules. Make it clear this is hypothetical to improve security for everyone.
     
-    \item \textbf{Use Personas in Discussion}: Once you have personas, you can use them in future steps. For example, when
-    thinking about mitigations, you might ask "Would this stop Mallory?" or "How would we detect Oscar's actions?"
-    Personas help ground these discussions.
+    \item \textbf{Use Personas in Discussion}: Once you have personas, you can use them in future steps.
+    For example, when thinking about mitigations, you might ask "Would this stop Maria?" or
+    "How would we detect Oscar's actions?". Personas help ground these discussions.
+
 \end{itemize}
 
 \subsection{Step 5: Analyze Attack Scenarios}
@@ -393,59 +365,62 @@ How Could Attacks Happen?
 
 Now, use your list of threats and personas to explore in detail how attacks
 might happen step by step. This deeper analysis helps you understand exactly
-where your vulnerabilities lie. By turning abstract threats into clear scenarios
+where your vulnerabilities are. By turning abstract threats into clear scenarios
 or stories, you can clearly see what needs to be defended against and how severe
 the consequences will be.
 
 \subsubsection{Activities}
 
 \begin{itemize}
-\item \textbf{Build Attack Trees}: Choose a primary threat scenario, such as
-"unauthorized access to the member list." Place it at the root of your tree and
-explore the possible paths: an attacker could exploit software vulnerabilities
-to gain administrator access, or an attacker could misuse legitimate access, or
-someone could trick a member into sharing credentials. At each step, clearly
-identify what defenses already exist, whether they are effective, and what
-improvements are needed. Keep the tree clear and easy to understand.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\linewidth]{tree}
-    \caption{Attack Tree Example}
-    \label{fig:attack_tree_example}
-  \end{figure}
+    \item \textbf{Build Attack Trees}: Choose a primary threat scenario, such as
+    "unauthorized access to the member list." Place it at the root of your tree and
+    explore the possible paths: an attacker could exploit software vulnerabilities
+    to gain administrator access, or an attacker could misuse legitimate access, or
+    someone could trick a member into sharing credentials. At each step, clearly
+    identify what defenses already exist, whether they are effective, and what
+    improvements are needed. Keep the tree clear and easy to understand.
 
-\item \textbf{Conduct Simulations}: Organize simulation exercises for
-more complex scenarios. Assign someone to represent the adversary, while others
-act as defenders or observers. For example, simulate a Sybil attack scenario:
-"Mallory secretly created false identities before a vote and uses them to
-influence the results." Go through the steps, discussing whether current
-procedures would detect the attack. This exercise helps reveal weaknesses in a
-safe, low-pressure environment rather than during an actual incident.
-This kind of storytelling helps highlight if your current processes have detection or not.
-\item \textbf{Identify Vulnerabilities at Each Step}: For each scenario,
-explicitly identify the weaknesses that make the attack possible. Include both
-technical issues ("outdated software", "no data backups") and organizational
-issues ("no membership verification", "one person controls critical knowledge").
-Identify your current controls and assess whether they actually prevent the
-attack or whether they can be circumvented. Clearly document these
-vulnerabilities for each scenario, which helps directly inform your mitigation
-efforts.
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.6\linewidth]{tree}
+        \caption{Attack Tree Example}
+        \label{fig:attack_tree_example}
+    \end{figure}
 
-\item \textbf{Assess the Impact and Likelihood of Scenarios}: Clearly discuss
-the severity of each scenario and the likelihood of its occurrence. Use simple
-terms: “High,” “Medium,” or “Low.” For example, ransomware that encrypts
-important files may have “High Impact” due to potential data loss, but only
-“Medium Likelihood” if members follow best practices. Similarly, a Sybil attack
-may have “High Impact” due to loss of trust, but “Low to Medium Likelihood,”
-depending on how carefully you select new members.
+    \item \textbf{Conduct Simulations}: Organize simulation exercises for
+    more complex scenarios. Assign someone to represent the adversary, while others
+    act as defenders or observers. For example, simulate a Sybil attack scenario:
+    "Maria secretly created false identities before a vote and uses them to
+    influence the results." Go through the steps, discussing whether current
+    procedures would detect the attack. This exercise helps reveal weaknesses in a
+    safe, low-pressure environment rather than during an actual incident.
+    This kind of storytelling helps highlight if your current processes have detection or not.
 
-\item \textbf{Leverage Past Incidents}: Incorporate experiences from previous
-incidents or near misses to make scenarios more concrete. Ask, “Could this
-happen again, perhaps in a more damaging way?” For example, “We temporarily lost
-control of our Twitter account before—what if the attackers post harmful content
-next time?” Using real-world examples helps everyone understand the severity of
-the threats and the importance of preventive measures.
+    \item \textbf{Identify Vulnerabilities at Each Step}: For each scenario,
+    explicitly identify the weaknesses that make the attack possible. Include both
+    technical issues ("outdated software", "no data backups") and organizational
+    issues ("no membership verification", "one person controls critical knowledge").
+    Identify your current controls and assess whether they actually prevent the
+    attack or whether they can be circumvented. Clearly document these
+    vulnerabilities for each scenario, which helps directly inform your mitigation
+    efforts.
+
+    \item \textbf{Assess the Impact and Likelihood of Scenarios}: Clearly discuss
+    the severity of each scenario and the likelihood of its occurrence. Use simple
+    terms: High, Medium, or Low. For example, ransomware that encrypts
+    important files may have High Impact due to potential data loss, but only
+    Medium Likelihood if members follow best practices. Similarly, a Sybil attack
+    may have High Impact due to loss of trust, but Low to Medium Likelihood,
+    depending on how carefully you select new members.
+
+    \item \textbf{Leverage Past Incidents}: Incorporate experiences from previous
+    incidents or near misses to make scenarios more concrete. Ask, "Could this
+    happen again, perhaps in a more damaging way?" For example, "We temporarily lost
+    control of our Twitter account before, what if the attackers post harmful content
+    next time?" Using real-world examples helps everyone understand the severity of
+    the threats and the importance of preventive measures.
+
 \end{itemize}
 
 \subsection{Step 6: Prioritize Risks Together}
@@ -462,13 +437,13 @@ how severe the impact would be and how likely the threat is to occur. By scoring
 or discussing these, the group can focus on the most critical issues.
 Importantly, this is done participatorily, everyone's perspective on what is
 important is considered, keeping the process democratic. The output will be a
-clear list of top-priority risks that the organization will invest effort in mitigating.
+clear list of top risks that the organization will invest effort in mitigating.
 
 \subsubsection{Activities}
 
 \begin{itemize}
 
-    \item \textbf{Define Risk Criteria (Impact and Likelihood)}: First, agree on clear
+    \item \textbf{Define Impact and Likelihood}: First, agree on clear
     definitions for impact and likelihood. High impact risks threaten the
     organization's survival, break laws, or deeply harm member trust; medium impacts
     create noticeable but manageable problems; low impacts result in minor
@@ -477,7 +452,7 @@ clear list of top-priority risks that the organization will invest effort in mit
     sophisticated effort. Use simple terms (high, medium, low), but ensure everyone
     understands them clearly.
     
-    \item \textbf{Evaluate Each Threat Scenario}: Review your scenarios (from Step 3/5) one by one,
+    \item \textbf{Evaluate Each Threat Scenario}: Review your scenarios from Step 3 to 5 one by one,
     asking two questions: "If this happens, how bad is it? (Impact)" and "How likely
     is it? (Likelihood)." Different perspectives matter,for example, tech members
     might know a threat is difficult to execute (low likelihood), while governance
@@ -496,7 +471,7 @@ clear list of top-priority risks that the organization will invest effort in mit
     prioritized due to potential impact on trust". This transparency helps others
     understand the choices later.
     
-    \item \textbf{Check Against Goals}: Revisit Step 1's initial assets and objectives.
+    \item \textbf{Check Against Goals}: Revisit \hyperref[subsec:Step1]{Step 1's} initial assets and objectives.
     Ensure the prioritized risks align with your core mission and values. If
     important assets lack high-ranked threats, double-check if something was
     overlooked or truly low risk. Likewise, ensure you're not overly prioritizing
@@ -516,7 +491,7 @@ How Do We Fix or Prevent Issues?
 
 \subsubsection{Purpose}
 
-For each of the top-priority threats, decide on countermeasures and integrate
+For each of the top priority threats, decide on countermeasures and integrate
 those decisions into the organization's action plan. In other words, figure out what
 security measures to implement and how to approve and enforce them
 democratically. This step is where you turn analysis into concrete changes:
@@ -528,19 +503,19 @@ violate cooperative principles.
 
 \begin{itemize}
 
-    \item \textbf{Brainstorm Mitigation Options:} For each high-priority threat,
+    \item \textbf{Brainstorm Mitigation Options:} For each high priority threat,
     list potential mitigations. These might include technical solutions (software
-    updates, two-factor authentication, encryption, multi-signature financial
-    controls), workflow improvements (clear onboarding/offboarding processes,
-    regular backups, peer reviews for critical tasks), training and education
-    (phishing awareness, password management sessions, annual security policy
-    orientations), and governance policies (formal rules for password storage,
-    emergency decision protocols, member identity verification).
+    updates, two-factor authentication, encryption), workflow improvements
+    (clear onboarding/offboarding processes, regular backups, peer reviews
+    for critical tasks), training and education (phishing awareness, password
+    management sessions, annual security policy orientations), and governance
+    policies (formal rules for password storage, emergency decision protocols,
+    member identity verification).
     
     \item \textbf{Evaluate Feasibility:} Consider the practicality of each
     mitigation. Discuss how difficult or costly they are, if external resources are
     required, if they introduce significant workflow friction, and if they align
-    with organizational values. Use adversary personas to check effectiveness—ask if
+    with organizational values. Use adversary personas to check effectiveness, ask if
     specific measures effectively deter identified threats.
     
     \item \textbf{Deliberate and Decide Collectively:} Engage members or relevant
@@ -566,7 +541,7 @@ violate cooperative principles.
     situations requiring rapid response. Formally designate a small emergency
     response team authorized to take quick decisions within agreed limits. Define
     the scope and timeframe for their actions, and ensure accountability by
-    mandating transparent post-incident reporting and collective decision-making on
+    mandating transparent post-incident reporting and collective decision making on
     permanent actions.
     
     \item \textbf{Integrate into Governance Documents:} Codify agreed-upon
@@ -578,68 +553,6 @@ violate cooperative principles.
     effectiveness and implementation status of security measures. Quick check-ins at
     regular meetings, formal reviews after a set period, or integration into annual
     reviews help maintain accountability and adapt strategies as needed.
-    
-\end{itemize}
-
-\subsection{Step 8: Ongoing Improvement and Monitoring}
-\label{subsec:Step8}
-
-How Do we Keep Alive Security?
-
-\subsubsection{Purpose}
-
-Threat modeling isn't a one-time project – especially in a cooperative that
-evolves. Step 8 is about making security a continuous, integrated part of your
-coop's governance and operations. This means regularly monitoring for new
-threats, reviewing the effectiveness of your defenses, and adjusting to changes,
-all without losing the cooperative spirit. In short: build a living security
-program that grows and adapts with your organization.
-
-\subsubsection{Activities}
-
-\begin{itemize}
-
-    \item \textbf{Include Security in Routine Governance:} Regularly discuss
-    security as part of routine meetings. Monthly or weekly, briefly review
-    incidents, vulnerabilities, or new tools. Conduct deeper quarterly or
-    semi-annual reviews to update your threat model. Rotate or delegate preparation
-    tasks to maintain collective involvement.
-    
-    \item \textbf{Maintain Logs and Audit Trails:} Regularly inspect logs and
-    records to ensure adherence to agreed practices. Monthly reviews of
-    administrative logs and periodic verification of multi-signature requirements or
-    account security settings help maintain compliance. Conduct an annual peer audit
-    of critical policies, openly sharing results to maintain transparency and
-    accountability.
-    
-    \item \textbf{Periodic Retraining and Onboarding:} Create and regularly update a
-    concise security handbook covering key practices and their rationale. Provide
-    annual refresher workshops and simulate occasional phishing drills, discussing
-    outcomes constructively. Incorporate security orientation into new member
-    onboarding processes to instill a collective security culture from the start.
-    
-    \item \textbf{Adapt to Organizational Changes:} Regularly reassess your threat
-    model to accommodate organizational growth or new projects. Expanded membership
-    or new activities can introduce different risks. Schedule comprehensive threat
-    modeling updates annually or biennially, adjusting assumptions to align with
-    current realities.
-    
-    \item \textbf{Engage with the Wider Community:} Share non-sensitive security
-    strategies with other cooperatives or participate in community forums. This
-    interaction helps identify common threats, discover new tools, and contribute to
-    collective knowledge. Bring insights from external interactions back to enhance
-    your internal threat modeling sessions.
-    
-    \item \textbf{Monitor and Respond to Evolving Threats:} Stay updated on
-    cybersecurity news relevant to your cooperative. Establish clear channels for
-    collective information sharing, such as dedicated group chats or email lists,
-    ensuring timely alerts and responses to emerging threats.
-    
-    \item \textbf{Governance Feedback Loop:} Regularly evaluate your security
-    governance process for effectiveness and inclusivity. After incidents or
-    periodically, review emergency response efficiency and member satisfaction with
-    security protocols. Adjust policies through collective decision-making to
-    balance security needs with practical usability.
     
 \end{itemize}
 
@@ -669,45 +582,6 @@ Once security measures are in place, encourage open feedback on any challenges
 or improvements needed. Share responsibilities equally among team members to
 avoid overload, foster collective ownership, and maintain a genuinely flat
 organizational structure.
-
-\section{Evaluation Strategy}
-\label{sec:evaluation_strategy}
-
-The evaluation of the proposed protocol will be conducted through an
-experimental and comparative approach, involving real case studies in
-organizations with different degrees of horizontality. The main objective is to
-validate the effectiveness of the protocol in identifying, mitigating and
-preventing threats in horizontal organizational contexts, directly comparing its
-performance with established frameworks, such as \gls{stride}.
-
-Candidate organizations will be selected to represent a variety of horizontal
-structures, ensuring diversity in power distribution, size and operational
-complexity. Participants from each organization will receive structured training
-sessions covering both the proposed protocol and \gls{stride}, ensuring
-familiarity and a level playing field for comparison.
-
-\textbf{Parallel Threat Modeling Sessions:}
-Each organization will conduct simultaneous threat modeling sessions using both
-the proposed protocol and \gls{stride} in identical scenarios. These sessions
-will be observed to systematically document the process and collect data,
-analyzed according to the following clearly defined metrics:
-
-\begin{itemize}
-\item \textbf{Precision}: The ratio of valid threats correctly identified to the
-total number of threats identified by the protocol.
-\item \textbf{Coverage (Recall)}: The proportion of existing threats identified
-by the protocol relative to a reference set established by experts.
-\item \textbf{Operational Efficiency}: Total time (latency) required to complete
-each phase of the threat modeling process, including identification, analysis,
-and mitigation planning.
-\item \textbf{Usability}: Participants' opinions on the ease of use, clarity,
-and overall effort required to learn and effectively apply the protocol.
-\end{itemize}
-
-By systematically applying these clearly defined metrics and evaluation steps,
-this strategy ensures a comprehensive comparative analysis, providing robust
-empirical evidence on the effectiveness of the protocol relative to \gls{stride}
-in horizontal organizations.
 
 \section*{}
 Chapter 4 presented the design of a protocol specifically aimed at
