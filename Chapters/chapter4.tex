@@ -228,30 +228,31 @@ issues that a pure tech focus could miss.
     Assure everyone this is about hypothetical situations,
     not personal distrust.
 
-    \item \textbf{Use Prompts and Creative Tools}:
-    Use prompts and creative techniques to explore potential threats by walking
-    through the system map from \hyperref[subsec:Step2]{Step 2} and pausing at each component or
-    boundary to ask what could go wrong. For example, when examining the database, consider
-    whether someone could steal or delete important information, and think about who
-    might do this and how. At a boundary like the internet connection, reflect on
-    the possibility of an attacker intercepting data in transit or flooding the
-    system with excessive traffic. It can also be helpful to introduce the classic
-    \gls{stride} as a simple checklist that prompts questions such as
-    whether there is a risk of someone impersonating users,
-    manipulating records, denying actions they actually performed, exposing private
-    data, disrupting service, or somehow gaining privileged access.
+    \item \textbf{Leverage security cards with context-specific prompts}: Use
+    prompts and creative techniques to explore potential threats by walking through
+    the system map from \hyperref[subsec:Step2]{Step 2} and stopping at each
+    component or boundary to ask what could go wrong. For example, when examining a
+    decentralized voting platform, consider whether an attacker could create fake
+    member identities to influence decisions or exploit loopholes in consensus
+    protocols to disrupt governance. At trust boundaries such as member-managed data
+    repositories, consider risks such as the misuse of shared credentials by
+    insiders or the accidental exposure of confidential discussions due to overly
+    permissive access controls.
 
-    Another useful approach is to incorporate Security Cards, which
-    encourage you to think broadly about different attackers
-    motivations, methods, and the impacts they could have.
-    Motivations might include financial gain, political objectives, disgruntled
-    ex-members, or simple mischief. Methods and resources could range from phishing
-    emails and malware to physical break-ins, social engineering, or legal threats.
-    The potential impacts include service downtime, loss of member trust, financial
-    losses, or legal ramifications. By posing these questions and exploring various
-    scenarios, the group can avoid focusing solely on obvious IT threats and instead
-    uncover possibilities that include internal misuse, human error, or even
-    external events that could pose significant risks.
+    Present the classic \gls{stride} structure as a checklist for generating
+    questions adapted to horizontal dynamics: Could someone pose as a trusted
+    contributor in a leaderless forum? Can disputes arise over actions recorded in
+    collaborative tools, allowing for rejection? Are there vulnerabilities that
+    allow unauthorized escalation of privileges in shared administrative workflows?
+
+    Extend this analysis with Security Cards to further explore adversarial
+    motivations, methods, and impacts. For example, consider motivations such as
+    undermining collective trust through disinformation campaigns or hijacking
+    decision-making processes through Sybil attacks. Methods may include exploiting
+    decentralized authentication weaknesses to impersonate members or manipulating
+    quorum thresholds to prevent critical votes. Impacts can range from operational
+    paralysis due to sabotaged communication tools to reputational damage due to
+    leaked internal deliberations.
 
     \item \textbf{Distinguish Different Threat Sources}:
     As ideas emerge, note whether each threat scenario is external like a
