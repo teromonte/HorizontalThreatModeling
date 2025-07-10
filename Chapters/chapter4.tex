@@ -199,105 +199,12 @@ individuals. Write down services or partners you rely on and mark them on the
 diagram for example, your website host, email service, or any software
 provider. These are outside your organization but critical; threats can come through them.
 
-\subsection{Step 3: Identify Threats Collaboratively}
+
+
+\subsection{Step 3: Profile Adversaries}
 \label{subsec:Step3}
 
-What Could Go Wrong?
-
-\subsubsection{Purpose}
-
-Brainstorm all the potential threats and bad things that could happen to the
-assets and processes you identified. The goal is a comprehensive list of threat
-scenarios, covering both technical attacks and governance risks. At this
-stage, quantity is more important than quality. We want to surface as many
-ideas as possible, without judging them yet. This step groups the different
-perspectives in your organization: digitally skilled members might think
-of hacking scenarios, whereas others might point out process failures or insider
-issues that a pure tech focus could miss.
-
-\subsubsection{Activities}
-
-\begin{itemize}
-
-    \item \textbf{Brainstorm in a Safe Environment}:
-    
-    Gather a group of members, ideally representing different roles or viewpoints,
-    for a threat brainstorming session. Set some ground rules: no idea is
-    too small and everyone's input is valued. It's important
-    people feel comfortable mentioning even unpleasant hypotheticals.
-    Assure everyone this is about hypothetical situations,
-    not personal distrust.
-
-    \item \textbf{Leverage security cards with specific prompts}: Use
-    prompts and creative techniques to explore potential threats by walking through
-    the system map from \hyperref[subsec:Step2]{Step 2} and stopping at each
-    component or boundary to ask what could go wrong. For example, when examining a
-    decentralized voting platform, consider whether an attacker could create fake
-    member identities to influence decisions or exploit loopholes in consensus
-    protocols to disrupt governance. At trust boundaries such as member-managed data
-    repositories, consider risks such as the misuse of shared credentials by
-    insiders or the accidental exposure of confidential discussions due to overly
-    permissive access controls.
-
-    Present the classic \gls{stride} (see section~\ref{subsec:stride}) structure as a checklist for generating
-    questions adapted to horizontal dynamics: Could someone pose as a trusted
-    contributor in a leaderless forum? Can disputes arise over actions recorded in
-    collaborative tools, allowing for rejection? Are there vulnerabilities that
-    allow unauthorized escalation of privileges in shared administrative workflows?
-
-    Extend this analysis with Security Cards (see section~\ref{subsec:security_cards}) to further explore
-    adversarial motivations, methods, and impacts. For example, consider motivations such as
-    undermining collective trust through disinformation campaigns or hijacking
-    decision-making processes through Sybil attacks. Methods may include exploiting
-    decentralized authentication weaknesses to impersonate members or manipulating
-    quorum thresholds to prevent critical votes. Impacts can range from operational
-    paralysis due to sabotaged communication tools to reputational damage due to
-    leaked internal deliberations.
-
-    \item \textbf{Distinguish Different Threat Sources}:
-    As ideas emerge, note whether each threat scenario is external like a
-    hacker, a virus, a competitor or internal coming from within the organization
-    like a member error, an insider attack, conflict and miscoordination. There could
-    be a hybrid threat where an external actor exploits an internal weakness, like
-    a hacker using social engineering to trick a member into giving up access.
-
-    \item \textbf{Write Down Concrete Scenarios}:
-    For each idea, capture it as a short scenario description.
-    For example:
-
-    \begin{itemize}
-        \item \textbf{Sybil Attack on decision-making:} An attacker creates multiple fake member
-        accounts to gain extra votes in an online poll, influencing the group decision illicitly.
-        \item \textbf{Insider data leak:} A discontented member with access to sensitive data decides
-        to leak member emails and addresses to the public.
-        \item \textbf{Ransomware on shared drive:} Malware infects a member's computer and encrypts the
-        shared cloud drive files, making them inaccessible until a ransom is paid.
-        \item \textbf{Lost credentials:} A member who manages the Twitter account leaves suddenly, and
-        no one else has the password so the group loses control of its own social media.
-        \item \textbf{Miscoordination outage:} In a crisis, no one is designated to respond, because everyone
-        thinks someone else will, and a small issue like a certificate expiry escalates, taking the website
-        offline for days.
-        \item \textbf{Service provider failure:} The third-party platform goes
-        down or is compromised, affecting the organization's operations.
-    \end{itemize}
-
-    Aim for a broad list, covering cyber-attacks, human mistakes, physical events
-    like the office gets robbed or a server gets wet, and governance failures. Don't
-    worry at this stage if some scenarios seem very unlikely. List them as if someone
-    is concerned about it.
-
-    \item \textbf{Ensure Social/Process Threats are Included}:
-    Cooperatives might face threats like quorum manipulation, abuse of emergency powers
-    (someone invoking a crisis to grab authority), or "digital vanguard" accumulation (one person
-    quietly gaining control of many digital assets). Include these in
-    your brainstorming. For example, "Member X holds all the keys and if they quit
-    or go rogue, we're locked out" is a valid threat scenario to record (it's an
-    internal risk).
-
-\end{itemize}
-
-\subsection{Step 4: Profile Adversaries}
-\label{subsec:Step4}
+TODO-* Define Adversaries
 
 Who Might Attack Us?
 
@@ -354,6 +261,105 @@ concrete and relatable.
     \item \textbf{Use Personas in Discussion}: Once you have personas, you can use them in future steps.
     For example, when thinking about mitigations, you might ask "Would this stop Maria?" or
     "How would we detect Oscar's actions?". Personas help ground these discussions.
+
+\end{itemize}
+
+\subsection{Step 4: Identify Threats Collaboratively}
+\label{subsec:Step4}
+
+What Could Go Wrong?
+
+\subsubsection{Purpose}
+
+Brainstorm all the potential threats and bad things that could happen to the
+assets and processes you identified. The goal is a comprehensive list of threat
+scenarios, covering both technical attacks and governance risks. At this
+stage, quantity is more important than quality. We want to surface as many
+ideas as possible, without judging them yet. This step groups the different
+perspectives in your organization: digitally skilled members might think
+of hacking scenarios, whereas others might point out process failures or insider
+issues that a pure tech focus could miss.
+
+\subsubsection{Activities}
+
+\begin{itemize}
+
+    \item \textbf{Brainstorm in a Safe Environment}:
+    
+    Gather a group of members, ideally representing different roles or viewpoints,
+    for a threat brainstorming session. Set some ground rules: no idea is
+    too small and everyone's input is valued. It's important
+    people feel comfortable mentioning even unpleasant hypotheticals.
+    Assure everyone this is about hypothetical situations,
+    not personal distrust.
+
+    \item \textbf{Leverage security cards with specific prompts}: Use
+    prompts and creative techniques to explore potential threats by walking through
+    the system map from \hyperref[subsec:Step2]{Step 2} and stopping at each
+    component or boundary to ask what could go wrong. For example, when examining a
+    decentralized voting platform, consider whether an attacker could create fake
+    member identities to influence decisions or exploit loopholes in consensus
+    protocols to disrupt governance. At trust boundaries such as member-managed data
+    repositories, consider risks such as the misuse of shared credentials by
+    insiders or the accidental exposure of confidential discussions due to overly
+    permissive access controls.
+
+    Present the classic \gls{stride} (see section~\ref{subsec:stride}) structure as a checklist for generating
+    questions adapted to horizontal dynamics: Could someone pose as a trusted
+    contributor in a leaderless forum? Can disputes arise over actions recorded in
+    collaborative tools, allowing for rejection? Are there vulnerabilities that
+    allow unauthorized escalation of privileges in shared administrative workflows?
+
+    Extend this analysis with Security Cards (see section~\ref{subsec:security_cards}) to further explore
+    adversarial motivations, methods, and impacts. For example, consider motivations such as
+    undermining collective trust through disinformation campaigns or hijacking
+    decision-making processes through Sybil attacks. Methods may include exploiting
+    decentralized authentication weaknesses to impersonate members or manipulating
+    quorum thresholds to prevent critical votes. Impacts can range from operational
+    paralysis due to sabotaged communication tools to reputational damage due to
+    leaked internal deliberations. 
+
+    TODO- security cards
+
+    \item \textbf{Distinguish Different Threat Sources}:
+    As ideas emerge, note whether each threat scenario is external like a
+    hacker, a virus, a competitor or internal coming from within the organization
+    like a member error, an insider attack, conflict and miscoordination. There could
+    be a hybrid threat where an external actor exploits an internal weakness, like
+    a hacker using social engineering to trick a member into giving up access.
+
+    \item \textbf{Write Down Concrete Scenarios}:
+    For each idea, capture it as a short scenario description.
+    For example:
+
+    \begin{itemize}
+        \item \textbf{Sybil Attack on decision-making:} An attacker creates multiple fake member
+        accounts to gain extra votes in an online poll, influencing the group decision illicitly.
+        \item \textbf{Insider data leak:} A discontented member with access to sensitive data decides
+        to leak member emails and addresses to the public.
+        \item \textbf{Ransomware on shared drive:} Malware infects a member's computer and encrypts the
+        shared cloud drive files, making them inaccessible until a ransom is paid.
+        \item \textbf{Lost credentials:} A member who manages the Twitter account leaves suddenly, and
+        no one else has the password so the group loses control of its own social media.
+        \item \textbf{Miscoordination outage:} In a crisis, no one is designated to respond, because everyone
+        thinks someone else will, and a small issue like a certificate expiry escalates, taking the website
+        offline for days.
+        \item \textbf{Service provider failure:} The third-party platform goes
+        down or is compromised, affecting the organization's operations.
+    \end{itemize}
+
+    Aim for a broad list, covering cyber-attacks, human mistakes, physical events
+    like the office gets robbed or a server gets wet, and governance failures. Don't
+    worry at this stage if some scenarios seem very unlikely. List them as if someone
+    is concerned about it.
+
+    \item \textbf{Ensure Social/Process Threats are Included}:
+    Cooperatives might face threats like quorum manipulation, abuse of emergency powers
+    (someone invoking a crisis to grab authority), or "digital vanguard" accumulation (one person
+    quietly gaining control of many digital assets). Include these in
+    your brainstorming. For example, "Member X holds all the keys and if they quit
+    or go rogue, we're locked out" is a valid threat scenario to record (it's an
+    internal risk).
 
 \end{itemize}
 
