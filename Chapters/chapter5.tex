@@ -17,35 +17,26 @@ structured evaluation is required. The primary objective of this evaluation is
 to empirically assess whether the protocol achieves its design goals,
 particularly in its capacity to identify a broader range of threats relevant to
 non-hierarchical organizations compared to traditional methods. Furthermore, the
-evaluation seeks to measure the quality and actionability of the outcomes and
-gauge the collaborative experience of the participants.
+evaluation seeks to measure the quality of the outcomes and of the collaborative
+experience of the participants.
 
 This chapter outlines the methodology for a comparative experiment designed to
 measure the protocol's performance against an established industry standard,
-STRIDE. The evaluation is structured around a real-world workshop and uses a
+STRIDE. The evaluation is structured around a real world workshop and uses a
 combination of quantitative output metrics and qualitative participant feedback
 to provide a holistic assessment.
 
 \section{Experimental Design}
 \label{sec:experimental_design}
 
-The evaluation will be conducted as a two-day, in-person workshop with members
+The evaluation will be conducted as a two session workshop with members
 of multiple horizontal organizations. To ensure a robust and fair comparison, the
-experiment will employ a counterbalanced, within-subjects design. Participants
-will be randomly divided into two groups.
+experiment will alternate the order of methodologies between sessions. Participants
+will be randomly divided into two groups, one for each session.
 
-\begin{itemize}
-\item \textbf{Day 1:} Group A will use the proposed protocol, while Group B will
-use the traditional STRIDE methodology.
-\item \textbf{Day 2:} The groups will switch methodologies. Group A will use
-STRIDE, and Group B will use the proposed protocol.
-\end{itemize}
-
-This counterbalanced design is crucial for mitigating learning effects, where
-participants might become more proficient at threat modeling on the second day
-simply due to the previous day's experience. If there is not enough people to
-fill two groups, the same group will use both methodologies on different days.
-In this case, the order of methodologies will be randomized within different
+If there are not enough people to fill two groups, the same group
+will use both methodologies in different sessions. In this case, the
+order of methodologies will be randomized within different
 organizations to avoid bias.
 
 \section{Evaluation Metrics}
@@ -70,13 +61,13 @@ consistency:
 \begin{itemize}
 \item \textbf{Technical:} Threats related to software flaws, network
 vulnerabilities, data breaches, or malware.
-\item \textbf{Governance/Process:} Threats related to decision-making failures,
+\item \textbf{Governance/Process:} Threats related to decision making failures,
 loss of critical credentials due to poor process, single points of human
 failure, or flawed onboarding/offboarding.
 \item \textbf{Social/Human:} Threats originating from human actors, such as
 malicious insiders, social engineering, member conflict impacting operations, or
 unintentional errors.
-\item \textbf{Third-Party:} Threats originating from the failure or compromise
+\item \textbf{Third Party:} Threats originating from the failure or compromise
 of an external service provider.
 \end{itemize}
 \item \textbf{Analysis:} The total number of threats in each category will be
@@ -98,9 +89,9 @@ severity.
 method, a risk score will be calculated based on the group's assessment of
 Impact and Likelihood (as performed in Step 6 of the protocol). Using a simple
 scale (e.g., Low=1, Medium=2, High=3), the score will be calculated as:
-\textit{Risk = Impact × Likelihood}. The total risk score for the top threats
+\textit{Risk = Impact x Likelihood}. The total risk score for the top threats
 from each method will be compared to determine which methodology was more
-effective at surfacing high-priority issues.
+effective at surfacing high priority issues.
 \item \textbf{Relevance to Critical Assets:} Using the list of critical assets
 defined in Step 1 of the protocol, we will count the number of these assets that
 have at least one valid threat identified against them by each method. This
@@ -117,7 +108,7 @@ mitigations proposed.
 \item \textbf{Number of Actionable Mitigations:} We will count the number of
 proposed mitigations from each session that are specific, measurable, and
 assignable. An actionable mitigation is one that can be converted directly into
-a task (e.g., "Enable two-factor authentication for all member accounts") rather
+a task (e.g., "Enable two factor authentication for all member accounts") rather
 than a vague goal (e.g., "Improve login security"). This metric provides a
 direct measure of the protocol's ability to translate analysis into action.
 \end{itemize}
@@ -128,14 +119,14 @@ direct measure of the protocol's ability to translate analysis into action.
 Given that the proposed protocol is designed 
 for democratic and inclusive
 participation, the subjective experience of the users is a primary criterion for
-success. This will be measured using post-session surveys.
+success. This will be measured using post session surveys.
 
 \subsection{Quantitative Feedback via Surveys}
 \label{subsec:quantitative_feedback}
 
 After each threat modeling session, participants will be asked to anonymously
 complete a short survey. They will rate their agreement with a series of
-statements on a 5-point Likert scale (1 = Strongly Disagree, 5 = Strongly
+statements on a 5 point Likert scale (1 = Strongly Disagree, 5 = Strongly
 Agree).
 
 The survey will include the following core questions:
@@ -155,9 +146,17 @@ and perceived effectiveness.
 \subsection{Qualitative Feedback}
 \label{subsec:qualitative_feedback}
 
-In addition to scaled questions, the survey will include open-ended questions to
+In addition to scaled questions, the survey will include open ended questions to
 gather richer, qualitative insights. These questions will ask participants what
 they found most and least useful about each process and invite any other
 suggestions for improvement. This feedback will be crucial for identifying
 specific strengths and areas for refinement in the protocol's design and
 facilitation guidance.
+
+\section{Results}
+\label{sec:results}
+
+the protocol was tested in a workshop with two horizontal organizations: 
+A Associação Comunidária é uma organização sem fins lucrativos e 
+o coletivo Frente Anti-Racista.
+

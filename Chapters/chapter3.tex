@@ -114,7 +114,7 @@ centralization increases the need for collaborative threat mapping
 
 Attack trees, introduced by Bruce Schneier \cite{AttackTrees}, provide a
 hierarchical framework for threat modeling, where the attack objective is
-represented by the root node, and the sub-objectives and steps required to
+represented by the root node, and the sub objectives and steps required to
 achieve it are arranged in child nodes. Each node can be detailed with logical
 operators such as AND and OR, representing conditions that must be met either
 together or alternatively \cite{FoundationsofAttackTrees}.
@@ -139,7 +139,7 @@ shared elements across different scenarios to be modeled once and incorporated
 into future analyses, saving time and resources.
 
 Although broadly applicable, attack trees present challenges related to the
-effort required for their initial construction and the complexity in large-scale
+effort required for their initial construction and the complexity in large scale
 systems \cite{AttackTrees, Energytheftdetectionissues}. Collaboration between
 stakeholders, including technical and operational experts, is essential to
 ensure that threat representation is accurate and comprehensive
@@ -161,15 +161,15 @@ nodes and continuous evaluation to avoid oversights or gaps
 \subsection{PASTA}
 \label{subsec:pasta}
 
-\gls{pasta} is a risk-centric threat modeling methodology designed to integrate
+\gls{pasta} is a risk centric threat modeling methodology designed to integrate
 security throughout the software development lifecycle. Proposed by Tony
 UcedaVelez and Marco M. Morana \cite{RiskCentricThreatModeling}, the framework
-consists of seven sequential stages that allow for in-depth and iterative
+consists of seven sequential stages that allow for in depth and iterative
 analysis of threats and vulnerabilities.
 
 The main goal of \gls{pasta} is to align security concerns with business
 objectives, ensuring that mitigation measures address both technical risks and
-organizational impacts. The methodology promotes a risk-oriented approach by
+organizational impacts. The methodology promotes a risk oriented approach by
 integrating attack simulations to evaluate the effectiveness of proposed
 countermeasures \cite{RiskCentricThreatModeling}.
 
@@ -179,7 +179,7 @@ stage, the security requirements, risk profile, and potential
 business impacts are defined.
     \item \textbf{Definition of the Technical Scope (DTS):} This stage
 details the technical aspects, such as users, software components,
-third-party infrastructure, and external dependencies.
+third party infrastructure, and external dependencies.
     \item \textbf{Application Decomposition and Analysis (ADA):} The
 application is broken down into basic functional elements to identify
 data flows, user types, and existing security controls.
@@ -213,9 +213,8 @@ One of the most relevant aspects of \gls{pasta} is its compatibility with
 horizontal organizations. The collaborative approach of the methodology, which
 involves multiple stakeholders at all stages of the process, is aligned with the
 principles of distributed governance \cite{Colbac}. In non-hierarchical
-structures, where responsibility for security is shared, \gls{pasta} offers a
-structured framework to identify and mitigate risks in a participatory and
-efficient way.
+structures, \gls{pasta} offers a structured framework to identify and mitigate
+risks in a participatory and efficient way.
 
 \subsection{Security Cards}
 \label{subsec:security_cards}
@@ -233,7 +232,7 @@ Each card provides examples and scenarios related to its dimension, helping
 teams explore vulnerabilities that might otherwise be missed by traditional
 methods \cite{SecurityCardsToolkit}. For example, in the “Human Impact”
 dimension, cards can highlight how security breaches can affect privacy,
-emotional or financial well-being, providing a more user-centric perspective
+emotional or financial well being, providing a more user centric perspective
 \cite{KeepingAheadofOurAdversaries}.
 
 Security Cards have been used in a variety of applications, such as protecting
@@ -262,7 +261,7 @@ personas, \gls{pngs} help anticipate how adversaries might exploit
 vulnerabilities in a system, providing a detailed adversarial perspective
 \cite{PnGRequirementsPhaseThreatModeling}.
 
-\gls{pngs} are created through techniques such as crowd-sourcing, allowing
+\gls{pngs} are created through techniques such as crowd sourcing, allowing
 different stakeholders to contribute insights to threat identification
 \cite{PnGRequirementsPhaseThreatModeling}. This collaborative approach increases
 the breadth and diversity of attacker profiles considered, allowing for more
@@ -407,11 +406,11 @@ real systems such as Bitcoin, Filecoin, and CacheCash. In the case of Filecoin,
 the framework revealed significant gaps in the public design, particularly in
 collusion scenarios that had not previously been considered. In CacheCash,
 \gls{abc} was used from the early design stages to identify 525 cases of
-collusion and implement incentive-based countermeasures \cite{AbcCrypto}.
+collusion and implement incentive based countermeasures \cite{AbcCrypto}.
 
 While \gls{abc} has clear benefits, it is not without its challenges
 \cite{AbcCrypto}. Creating collusion matrices and analyzing threat categories in
-detail can be resource-intensive, especially in systems with multiple
+detail can be resource intensive, especially in systems with multiple
 participants and complex assets. However, these efforts are rewarded by the
 identification of critical threats and the robustness of the proposed solutions
 \cite{AbcCrypto}.
@@ -425,7 +424,7 @@ the security and resilience of distributed systems \cite{AbcCrypto}.
 
 \gls{pgp}, developed by Philip Zimmermann, is a cryptographic system that
 combines privacy, authentication, and convenience to protect messages and files
-\cite{Pgp}. \gls{pgp} uses public-key cryptography to enable secure
+\cite{Pgp}. \gls{pgp} uses public key cryptography to enable secure
 communication between individuals, even without prior trust or key exchange over
 secure channels \cite{Pgp}.
 
@@ -500,28 +499,25 @@ organizations operate on the basis of distributed governance, equitable
 participation, and the absence of formal centralization, requiring approaches
 that respect and reinforce these principles \cite{EverydayRevolutions}.
 
-Frameworks such as \gls{colbac} and \gls{abc} demonstrate strong compatibility
+Frameworks such as \gls{colbac} and \gls{pasta} demonstrate strong compatibility
 with horizontal organizations due to their emphasis on collaborative processes
 and adaptability to decentralized contexts. \gls{colbac} uses collective
-authorization tokens to align security and democratic governance, allowing
-flexibility between temporary centralization and horizontal control. \gls{abc}
-incorporates economic analysis and financial incentives to mitigate risks in
-blockchain ecosystems, offering tools such as collusion matrices to map complex
-threat scenarios.
+authorization tokens to align security and democratic governance. \gls{pasta},
+with its iterative and participatory approach, facilitates the involvement of
+stakeholders at all levels, ensuring that diverse perspectives are considered
+in the threat modeling process.
 
 The choice of a framework for horizontal organizations must balance technical
 effectiveness with transparency and collective engagement. Solutions such as
 \gls{abc} and \gls{colbac} excel at integrating social and economic dimensions,
 demonstrating that security can be strengthened through collaborative practices
-and inclusive governance \cite{AbcCrypto, Colbac}. These approaches are
-particularly relevant for organizations seeking to align security with
-organizational autonomy and resilience \cite{Colbac}.
+and inclusive governance \cite{AbcCrypto, Colbac}.
 
 \begin{table}[]
     \caption{Comparison of Threat Modeling Methods}
     \label{tab:threat-modeling-comparison}
     \scriptsize
-    \resizebox{\textwidth}{!}{%
+    \resizebox{\textwidth}{!}{
         \begin{tabular}{|p{0.06\textwidth}|p{0.2\textwidth}|p{0.21\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
             \toprule
             Method
@@ -533,81 +529,81 @@ organizational autonomy and resilience \cite{Colbac}.
             STRIDE
                 &Spoofing, Tampering, Repudiation, Information Disclosure, Denial of
                     Service, Elevation of Privilege
-                &Software and application security (design-phase threat analysis)
-                &Six-category mnemonic covers major attack types (acts as a
+                &Software and application security (design phase threat analysis)
+                &Six category mnemonic covers major attack types (acts as a
                     checklist). Applied to \gls{dfds} to systematically identify threats
                     per component. Simple and widely adopted; easy for teams new to threat modeling.
-                &Focused on technical threats – may miss threats outside its six
-                    categories (e.g., collusion or social attacks). No built-in risk ranking, so a
+                &Focused on technical threats, may miss threats outside its six
+                    categories (e.g., collusion or social attacks). No built in risk ranking, so a
                     long list of threats may need additional prioritization. Considered less
-                    detailed for complex, business-specific threats.\\
+                    detailed for complex, business specific threats.\\
             Attack Trees
-                &No fixed set – any threat goal can be modeled (e.g., malware
-                    attack, insider abuse, social engineering) as the root, with sub-goals as attack
+                &No fixed set, any threat goal can be modeled (e.g., malware
+                    attack, insider abuse, social engineering) as the root, with sub goals as attack
                     steps.
                 &Broadly applicable (software, cyber-physical systems, critical
                     infrastructure) for visualizing attack paths.
                 &Graphical tree diagrams map out attacker goals and all possible
-                    paths (leaf nodes are specific attack methods). Can capture complex multi-step
+                    paths (leaf nodes are specific attack methods). Can capture complex multi step
                     attacks (including technical exploits or human tactics) by branching logic.
                     Often used in combination with other methods (e.g., STRIDE or risk scoring) for
                     comprehensive analysis.
-                &Time-consuming to create for large or complex systems (trees can
-                    become very large). No inherent risk scoring – requires supplemental analysis
+                &Time consuming to create for large or complex systems (trees can
+                    become very large). No inherent risk scoring, requires supplemental analysis
                     (like CVSS) to prioritize threats. Maintenance can be difficult as systems
                     evolve (manual updates needed for tree changes).\\
             PASTA
-                &Not predefined by categories – addresses all threat types
+                &Not predefined by categories, addresses all threat types
                     identified through its stages, from technical vulnerabilities to misuse and
                     fraud (prioritized by business impact).
                 &Enterprise and critical systems where business impact and risk
                     alignment are key (e.g., fintech, large applications). Integrates with SDLC and
                     organizational risk management.
-                &Seven-stage, risk-centric methodology (from defining scope to
-                    attack simulation) providing in-depth analysis. Aligns threats with business
-                    objectives – focuses on likely attacks that matter most to the organization's
+                &Seven stage, risk centric methodology (from defining scope to
+                    attack simulation) providing in depth analysis. Aligns threats with business
+                    objectives, focuses on likely attacks that matter most to the organization's
                     mission. Emphasizes risk prioritization: analyzes likelihood/impact of each
                     threat to guide resource allocation.
-                &Complex and resource-intensive – the 7-step process is lengthy and
-                    requires cross-functional expertise. Not widely used compared to simpler models;
+                &Complex and resource intensive, the 7 step process is lengthy and
+                    requires cross functional expertise. Not widely used compared to simpler models;
                     has a steep learning curve and longer implementation time. Geared toward
-                    comprehensive analysis, which may be overkill for small projects or early-phase
+                    comprehensive analysis, which may be overkill for small projects or early phase
                     designs.\\
             Trike
-                &Doesn't use classic threat categories – focuses on unauthorized
+                &Doesn't use classic threat categories, focuses on unauthorized
                     actions on assets. Threats are modeled as any action (Create, Read, Update,
                     Delete) by any actor that violates assigned permissions (e.g., an insider
                     modifying data they shouldn't, or an outsider gaining illicit access).
                 &Primarily for security audit and risk management in software
                     systems. Suitable for organizations wanting to set and verify acceptable risk
                     levels for each asset/user role.
-                &Risk-based audit approach – assigns a risk score to each asset's
+                &Risk based audit approach, assigns a risk score to each asset's
                     threat scenarios, ensuring risk is acceptable to stakeholders. Uses a unique
-                    actor–asset matrix (CRUD matrix) to identify where an actor's permitted actions
+                    actor-asset matrix (CRUD matrix) to identify where an actor's permitted actions
                     differ from potential malicious actions. Provides a structured way to involve
                     stakeholders in deciding which risks to mitigate vs. accept (tying into
                     governance).          
-                &Can be too granular/complex in large IT environments – requires
+                &Can be too granular/complex in large IT environments, requires
                     detailed mapping of all assets, roles, and permissions. Less mainstream and fewer
                     tooling options and community support compared to STRIDE/PASTA. Focuses on
                     internal policy violations; may require augmentation to cover threats like
-                    external social engineering or collusion not captured by role-permission
+                    external social engineering or collusion not captured by role permission
                     analysis.\\
             ABC
-                &Collusion-based threats (multiple actors cooperating maliciously)
+                &Collusion based threats (multiple actors cooperating maliciously)
                     and financial attacks specific to crypto systems. Derives custom threat
-                    categories for new blockchain assets (e.g., double-spend fraud, consensus
+                    categories for new blockchain assets (e.g., double spend fraud, consensus
                     manipulation) beyond traditional threat lists.
                 &Blockchain and decentralized systems (cryptocurrencies,
                     decentralized organizations). Tailored for systems with economic incentives and
-                    distributed trust, but also applied to other large-scale distributed systems
-                    (e.g., cloud-native architectures).
-                &Introduces collusion matrices – a novel tool to systematically
+                    distributed trust, but also applied to other large scale distributed systems
+                    (e.g., cloud native architectures).
+                &Introduces collusion matrices, a novel tool to systematically
                     enumerate complex collusion scenarios among actors (forcing analysis of
-                    combinations of insider/outsider attacks). Asset-centric: identifies unique
-                    assets (crypto tokens, consensus, smart contracts) and derives system-specific
+                    combinations of insider/outsider attacks). Asset centric: identifies unique
+                    assets (crypto tokens, consensus, smart contracts) and derives system specific
                     threat categories incorporating financial impact.      
-                &Specialized scope – designed for cryptocurrency and blockchain context, so it
+                &Specialized scope, designed for cryptocurrency and blockchain context, so it
                     may require adaptation to use in other domains. Complexity: Collusion analysis
                     can become intricate (though the matrix approach manages complexity, it still
                     demands detailed domain knowledge).\\
