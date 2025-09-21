@@ -156,7 +156,112 @@ facilitation guidance.
 \section{Results}
 \label{sec:results}
 
-the protocol was tested in a workshop with two horizontal organizations: 
-A Associação Comunidária é uma organização sem fins lucrativos e 
-o coletivo Frente Anti-Racista.
+The proposed protocol was evaluated in practical workshops with two non-hierarchical
+organizations: ComuniDária, a non-profit community association, and Frente Anti-Racista,
+a political activist collective. Each organization participated in two separate sessions,
+one using the proposed protocol and another using the traditional STRIDE methodology.
+The following sections present the results of these workshops, analyzed according to the
+evaluation metrics defined in section ~\ref{sec:evaluation_metrics}.
 
+\subsection{Threat Volume and Diversity}
+\label{subsec:threat_volumediversity}
+
+\begin{table}[]
+    \caption{Quantitative Comparison of Threat Modeling Methodologies}
+    \label{tab:evaluation-results}
+    \scriptsize
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{|p{0.45\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
+            \toprule
+            Evaluation Metric
+                &STRIDE
+                &Proposed Protocol\\
+            \midrule
+            \textbf{Threat Volume}
+                & 
+                & \\
+            Total Threats Identified
+                &19
+                &16\\
+            \midrule
+            \textbf{Threat Diversity (\% of Total Threats)}
+                & 
+                & \\
+            \hspace{1em} Technical
+                &26\% (5 threats)
+                &19\% (3 threats)\\
+            \hspace{1em} Governance/Process
+                &16\% (3 threats)
+                &19\% (3 threats)\\
+            \hspace{1em} Social/Human
+                &26\% (5 threats)
+                &50\% (8 threats)\\
+            \hspace{1em} Third Party
+                &32\% (6 threats)
+                &12\% (2 threats)\\
+            \midrule
+            \textbf{Actionability of Outcomes}
+                & 
+                & \\
+            Total Actionable Mitigations Proposed
+                &4
+                &13\\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+As hypothesized in the evaluation design, the results demonstrate a
+significant divergence in the types of threats identified by each methodology.
+The STRIDE sessions predominantly produced threats categorized as 'Technical'
+and 'Third Party'. For instance, with Frente Anti-Racista, STRIDE identified
+risks such as a lack of two-factor authentication and dependency on Meta's
+platform security. While valid, these threats are external or purely
+technical in nature.
+
+In contrast, the proposed protocol yielded a more balanced distribution, with
+a clear emphasis on 'Social/Human' and 'Governance/Process' threats. The Frente
+Anti-Racista workshop using our protocol identified critical risks such as "a new
+member joining with the intent to infiltrate" (Social/Human) and "failure to comply
+with bureaucracy leading to loss of state funding" (Governance/Process). These
+findings suggest that the proposed protocol is more effective at surfacing the
+socio-technical risks that are particularly relevant to non-hierarchical and
+politically-oriented organizations.
+
+\subsection{Threat Quality and Relevance}
+\label{subsec:threat_quality_relevance}
+
+Beyond volume, the quality and relevance of the identified threats were analyzed.
+For both ComuniDária and Frente Anti-Racista, the highest-priority threats identified
+using the proposed protocol were directly linked to their core mission and organizational
+vulnerabilities. For example, Frente Anti-Racista prioritized "an extremist physically
+attacking a member using leaked data" (Impact: 5, Likelihood: Medium) and "an infiltrator
+leaking internal communications" (Impact: 4, Likelihood: High).
+
+The STRIDE methodology, while identifying important technical weaknesses, did not surface
+these kinds of existential, mission-critical threats. Its focus remained on the security
+of data flows, leading to priorities like "potential for data interception on WhatsApp,"
+which, while important, does not capture the same level of organizational risk.
+
+The proposed protocol's process begins by identifying Critical Assets, including
+intangible ones like 'reputation' and 'member trust'. Consequently, the threats
+identified were inherently relevant to these assets. In contrast, STRIDE's asset model is
+the system's data flow diagram. This led to a disconnect, where threats were identified
+against processes (e.g., 'Gerenciar Divulgação Pública') but not explicitly against the
+assets the organization itself deemed most valuable.
+
+\subsection{Actionability of Outcomes}
+\label{subsec:actionability_outcomes}
+
+An effective threat modeling process must result in actionable mitigations. The workshops
+demonstrated a clear difference in the nature of the proposed solutions. The proposed
+protocol guided organizations toward developing internal, process-based mitigations. For
+example, in response to the "infiltrator" threat, Frente Anti-Racista proposed creating
+"a screening process for new members." For the risk of data leaks, ComuniDária proposed
+"registering which member has access to each page or file."
+
+The mitigations derived from the STRIDE sessions were often technical fixes (e.g., "enable
+two-factor authentication") or pointed to dependencies on external providers ("depender da
+segurança da Google"). This suggests the proposed protocol is more effective at empowering
+organizations to improve their security posture through changes in their own collective
+governance and processes, which is a core goal for non-hierarchical structures.
