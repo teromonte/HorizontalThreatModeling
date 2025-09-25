@@ -13,24 +13,18 @@
 
 To validate the effectiveness, usability, and unique contributions of the threat
 modeling protocol developed in this research (see Chapter \ref{cha:solution}), a
-structured evaluation is required. The primary objective of this evaluation is
-to empirically assess whether the protocol achieves its design goals,
-particularly in its capacity to identify a broader range of threats relevant to
-non-hierarchical organizations compared to traditional methods. Furthermore, the
-evaluation seeks to measure the quality of the outcomes and of the collaborative
-experience of the participants.
+structured evaluation with the objective to empirically assess whether the protocol
+achieves better results in identifying a broader range of threats relevant to
+non-hierarchical organizations compared to \gls{stride}.
 
-This chapter outlines the methodology for a comparative experiment designed to
-measure the protocol's performance against an established industry standard,
-STRIDE. The evaluation is structured around a real world workshop and uses a
-combination of quantitative output metrics and qualitative participant feedback
-to provide a holistic assessment.
+The evaluation is structured around a real world workshop and uses a
+combination of quantitative output metrics to provide a holistic assessment.
 
 \section{Experimental Design}
 \label{sec:experimental_design}
 
 The evaluation will be conducted as a two session workshop with members
-of multiple horizontal organizations. To ensure a robust and fair comparison, the
+of multiple horizontal organizations. To ensure a fair comparison, the
 experiment will alternate the order of methodologies between sessions. Participants
 will be randomly divided into two groups, one for each session.
 
@@ -42,10 +36,8 @@ organizations to avoid bias.
 \section{Evaluation Metrics}
 \label{sec:evaluation_metrics}
 
-The outputs from the sessions using the proposed protocol and STRIDE will be
-compared using a set of objective metrics. These metrics are designed to move
-beyond a simple count of threats to assess the scope, severity, and practicality
-of the results.
+The outputs from the sessions using the proposed protocol and \gls{stride} will be
+compared using a set of objective metrics.
 
 \subsection{Threat Volume and Diversity}
 \label{subsec:threat_volume_and_diversity}
@@ -55,118 +47,109 @@ methodology. The goal is to determine if the proposed protocol successfully
 guides participants to consider risks beyond the purely technical domain.
 
 \begin{itemize}
-\item \textbf{Measurement:} After each session, the complete list of unique
-threats will be categorized. A predefined set of categories will be used for
-consistency:
-\begin{itemize}
-\item \textbf{Technical:} Threats related to software flaws, network
-vulnerabilities, data breaches, or malware.
-\item \textbf{Governance/Process:} Threats related to decision making failures,
-loss of critical credentials due to poor process, single points of human
-failure, or flawed onboarding/offboarding.
-\item \textbf{Social/Human:} Threats originating from human actors, such as
-malicious insiders, social engineering, member conflict impacting operations, or
-unintentional errors.
-\item \textbf{Third Party:} Threats originating from the failure or compromise
-of an external service provider.
-\end{itemize}
-\item \textbf{Analysis:} The total number of threats in each category will be
-counted and compared for both methodologies. It is hypothesized that STRIDE will
-produce a high volume of threats in the "Technical" category, whereas the
-proposed protocol will yield a more balanced distribution across all categories,
-particularly highlighting "Governance/Process" and "Social/Human" threats.
+    \item \textbf{Measurement:} After each session, the complete list of unique
+    threats will be categorized. A predefined set of categories will be used for
+    consistency:
+
+    \begin{itemize}
+        \item \textbf{Technical:} Threats related to software flaws, network
+        vulnerabilities, data breaches, or malware.
+
+        \item \textbf{Governance/Process:} Threats related to decision making failures,
+        loss of critical credentials due to poor process, single points of human
+        failure, or flawed onboarding/offboarding.
+
+        \item \textbf{Social/Human:} Threats originating from human actors, such as
+        malicious insiders, social engineering, member conflict impacting operations, or
+        unintentional errors.
+
+        \item \textbf{Third Party:} Threats originating from the failure or compromise
+        of an external service provider.
+    \end{itemize}
+
+    \item \textbf{Analysis:} The total number of threats in each category will be
+    counted and compared for both methodologies. It is hypothesized that \gls{stride} will
+    produce a high volume of threats in the "Technical" category, whereas the
+    proposed protocol will show a more balanced distribution across all categories,
+    particularly highlighting "Governance/Process" and "Social/Human" threats.
 \end{itemize}
 
-\subsection{Threat Quality and Relevance}
-\label{subsec:threat_quality_and_relevance}
+\subsection{Relevance to Critical Assets}
+\label{subsec:relevance_to_critical_assets}
 
 This dimension evaluates whether the identified threats are significant and
-pertinent to the organization's core concerns, moving the focus from quantity to
-severity.
-
-\begin{itemize}
-\item \textbf{Prioritized Risk Score:} For the top 10 threats identified by each
-method, a risk score will be calculated based on the group's assessment of
-Impact and Likelihood (as performed in Step 6 of the protocol). Using a simple
-scale (e.g., Low=1, Medium=2, High=3), the score will be calculated as:
-\textit{Risk = Impact x Likelihood}. The total risk score for the top threats
-from each method will be compared to determine which methodology was more
-effective at surfacing high priority issues.
-\item \textbf{Relevance to Critical Assets:} Using the list of critical assets
-defined in Step 1 of the protocol, we will count the number of these assets that
-have at least one valid threat identified against them by each method. This
-metric measures how well each methodology focused the discussion on what the
-organization explicitly defined as most valuable.
-\end{itemize}
+pertinent to the organization, moving the focus from quantity to
+severity. Using the list of critical assets defined in Step 1 of the protocol,
+we will count the number of these assets that have at least one valid
+threat identified against them by each method. This metric measures how well
+each methodology focused the discussion on what the organization explicitly
+defined as most valuable.
 
 \subsection{Actionability of Outcomes}
 \label{subsec:actionability_of_outcomes}
+
 An effective threat modeling process must lead to concrete, implementable
 security improvements. This metric quantifies the practical value of the
 mitigations proposed.
-\begin{itemize}
-\item \textbf{Number of Actionable Mitigations:} We will count the number of
-proposed mitigations from each session that are specific, measurable, and
-assignable. An actionable mitigation is one that can be converted directly into
-a task (e.g., "Enable two factor authentication for all member accounts") rather
+
+We will count the number of proposed mitigations from each session that are specific,
+measurable, and assignable. An actionable mitigation is one that can be converted directly
+into a task (e.g., "Enable two factor authentication for all member accounts") rather
 than a vague goal (e.g., "Improve login security"). This metric provides a
 direct measure of the protocol's ability to translate analysis into action.
-\end{itemize}
 
 \section{Participant Experience and Usability}
 \label{sec:participant_experience}
 
-Given that the proposed protocol is designed 
-for democratic and inclusive
-participation, the subjective experience of the users is a primary criterion for
-success. This will be measured using post session surveys.
+Given that the proposed protocol is designed for democratic and inclusive participation,
+the subjective experience of the users is a primary criteria for
+success.
 
-\subsection{Quantitative Feedback via Surveys}
-\label{subsec:quantitative_feedback}
+We will evaluate the experience through careful observation during the workshops. We
+will watch for specific things like who is speaking? Is it only the members with technical
+skills, or is everyone contributing ideas? Do people seem interested and focused? Are they
+building on each other's ideas? 
 
-After each threat modeling session, participants will be asked to anonymously
-complete a short survey. They will rate their agreement with a series of
-statements on a 5 point Likert scale (1 = Strongly Disagree, 5 = Strongly
-Agree).
+At the end of each session, we will have a short, informal
+conversation. We will ask what felt useful, what was difficult, and how the
+process could be better. This direct feedback is more valuable than numbers
+on a scale. It helps us see if the protocol truly serves the collective.
 
-The survey will include the following core questions:
+\subsection{Ethics and Protection of Organizations}
+\label{subsec:ethics_protection}
 
-\begin{enumerate}
-\item \textbf{Clarity:} "I understood the goals and steps of the process we just used."
-\item \textbf{Coverage:} "This method helped us consider a wide range of relevant threats."
-\item \textbf{Focus:} "This method helped us focus on the most critical risks to our organization."
-\item \textbf{Empowerment:} "I felt comfortable contributing my ideas, regardless of my technical knowledge."
-\item \textbf{Effectiveness:} "Overall, I believe this session was an effective use of our time to improve our security."
-\end{enumerate}
+A principle of this study is the protection and confidentiality
+of the organizations that agree to participate. The workshops
+involves the disclosure of sensitive information, including existing vulnerabilities,
+internal processes, and strategic challenges, creating a significant responsibility to
+safeguard this data from any potential harm.
 
-The mean scores for each question will be calculated and compared between the
-two methodologies to provide quantitative insight into usability, inclusivity,
-and perceived effectiveness.
+To honor this responsibility, a strict ethical framework was followed. All
+information gathered during the evaluation is treated with
+confidentiality. Any specific findings, examples, or details about the
+participating organizations are included in this thesis only after receiving
+their explicit and informed authorization. This ensures that the collaboration
+and the data shared are used responsibly and do not expose the organizations to
+risk.
 
-\subsection{Qualitative Feedback}
-\label{subsec:qualitative_feedback}
-
-In addition to scaled questions, the survey will include open ended questions to
-gather richer, qualitative insights. These questions will ask participants what
-they found most and least useful about each process and invite any other
-suggestions for improvement. This feedback will be crucial for identifying
-specific strengths and areas for refinement in the protocol's design and
-facilitation guidance.
+%TODO
 
 \section{Results}
 \label{sec:results}
 
 The proposed protocol was evaluated in practical workshops with two non-hierarchical
-organizations: ComuniDária, a non-profit community association, and Frente Anti-Racista,
+organizations: ComuniDária, a non-profit immigrant association, and Frente Anti-Racista,
 a political activist collective. Each organization participated in two separate sessions,
-one using the proposed protocol and another using the traditional STRIDE methodology.
+one using the proposed protocol and another using the traditional \gls{stride} methodology.
 The following sections present the results of these workshops, analyzed according to the
 evaluation metrics defined in section ~\ref{sec:evaluation_metrics}.
 
 \subsection{Threat Volume and Diversity}
 \label{subsec:threat_volumediversity}
 
-\begin{table}[]
+
+
+\begin{table}[!htbp]
     \caption{Quantitative Comparison of Threat Modeling Methodologies}
     \label{tab:evaluation-results}
     \scriptsize
@@ -174,7 +157,7 @@ evaluation metrics defined in section ~\ref{sec:evaluation_metrics}.
         \begin{tabular}{|p{0.45\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
             \toprule
             Evaluation Metric
-                &STRIDE
+                &\gls{stride}
                 &Proposed Protocol\\
             \midrule
             \textbf{Threat Volume}
@@ -211,59 +194,125 @@ evaluation metrics defined in section ~\ref{sec:evaluation_metrics}.
     }
 \end{table}
 
-As hypothesized in the evaluation design, the results demonstrate a
-significant divergence in the types of threats identified by each methodology.
-The STRIDE sessions predominantly produced threats categorized as 'Technical'
-and 'Third Party'. For instance, with Frente Anti-Racista, STRIDE identified
-risks such as a lack of two-factor authentication and dependency on Meta's
-platform security. While valid, these threats are external or purely
-technical in nature.
+As we hypothesized in the evaluation design, the results show a big difference
+in the types of threats identified by each methodology. The numbers themselves
+tell a story. In total, the proposed protocol found more threats across the two
+workshops—16 in total, compared to the 11 found by \gls{stride}.
 
-In contrast, the proposed protocol yielded a more balanced distribution, with
-a clear emphasis on 'Social/Human' and 'Governance/Process' threats. The Frente
-Anti-Racista workshop using our protocol identified critical risks such as "a new
-member joining with the intent to infiltrate" (Social/Human) and "failure to comply
-with bureaucracy leading to loss of state funding" (Governance/Process). These
-findings suggest that the proposed protocol is more effective at surfacing the
-socio-technical risks that are particularly relevant to non-hierarchical and
-politically-oriented organizations.
+The \gls{stride} sessions, for both ComuniDária and Frente Anti-Racista, gave us a
+list of threats that were very technical or about external things. We saw things
+like “Phishing”, “lack of backup”, and “mobile device security failure”.
+Important, yes. But these are problems any organization could have. And most
+critically, across both workshops, \gls{stride} identified exactly zero threats in the
+Governance/Process category. It is a blind spot.
 
-\subsection{Threat Quality and Relevance}
+Then we look at our protocol. The picture is completely different. The
+distribution of threats is much more balanced. For Frente Anti-Racista, it
+uncovered critical governance threats like “a person pretending to be a member
+to vote in an assembly” and the risk of “not complying with bureaucracy and
+losing state funding.” For ComuniDária, it found the risk of “misconduct for
+personal gain.” These are the deep, internal, structural risks that can really
+damage a non-hierarchical group. These are threats \gls{stride} cannot see.
+
+Also, our protocol found more Social/Human threats (6 versus 4), and they were
+more specific to the context of these organizations. Not just a generic “user
+error,” but the very real danger of “a new member joining just to infiltrate and
+leak information.” This shows that the protocol guides the conversation to the
+risks that are most real and dangerous for these specific groups, moving beyond
+the purely technical view into the socio-technical reality of their work.
+
+\subsection{Relevance to Critical Assets}
 \label{subsec:threat_quality_relevance}
 
-Beyond volume, the quality and relevance of the identified threats were analyzed.
-For both ComuniDária and Frente Anti-Racista, the highest-priority threats identified
-using the proposed protocol were directly linked to their core mission and organizational
-vulnerabilities. For example, Frente Anti-Racista prioritized "an extremist physically
-attacking a member using leaked data" (Impact: 5, Likelihood: Medium) and "an infiltrator
-leaking internal communications" (Impact: 4, Likelihood: High).
+Beyond just the number of threats, it is the quality and relevance that showed
+the biggest difference. A threat modeling process must protect what is most
+important.
 
-The STRIDE methodology, while identifying important technical weaknesses, did not surface
-these kinds of existential, mission-critical threats. Its focus remained on the security
-of data flows, leading to priorities like "potential for data interception on WhatsApp,"
-which, while important, does not capture the same level of organizational risk.
+Our protocol's process starts by asking a simple question: What are your
+critical assets? And the groups did not just list technical things. ComuniDária
+identified intangibles like credibility (reputation) and member trust.
+Frente Anti-Racista listed their operationality of the nucleo and the very
+safety of their members.
 
-The proposed protocol's process begins by identifying Critical Assets, including
-intangible ones like 'reputation' and 'member trust'. Consequently, the threats
-identified were inherently relevant to these assets. In contrast, STRIDE's asset model is
-the system's data flow diagram. This led to a disconnect, where threats were identified
-against processes (e.g., 'Gerenciar Divulgação Pública') but not explicitly against the
-assets the organization itself deemed most valuable.
+Because of this, the threats we found were naturally tied to these assets. It is
+simple logic. When Frente Anti-Racista prioritized an extremist physically
+attacking a member using leaked data or an infiltrator leaking internal
+communications, these are direct attacks on their most valued assets. They are
+existential threats.
+
+The \gls{stride} methodology is different. Its asset model is the system’s data
+flow diagram. So it finds threats against a process, like the flow of
+information in a messaging app, but not explicitly against the assets the
+organization itself said were most valuable. While it identified important
+technical weaknesses, the priorities were different, like potential for data
+interception on WhatsApp. This is important, yes, but it does not capture the
+same level of organizational risk. It is a technical vulnerability, not a threat
+to the soul of the organization.
+
+This created a disconnect. \gls{stride} was looking at the machine, but our protocol
+was looking at the mission. And for these groups, that is where the real risk
+lives.
 
 \subsection{Actionability of Outcomes}
 \label{subsec:actionability_outcomes}
 
-An effective threat modeling process must result in actionable mitigations. The workshops
-demonstrated a clear difference in the nature of the proposed solutions. The proposed
-protocol guided organizations toward developing internal, process-based mitigations. For
-example, in response to the "infiltrator" threat, Frente Anti-Racista proposed creating
-"a screening process for new members." For the risk of data leaks, ComuniDária proposed
-"registering which member has access to each page or file."
+A threat modeling process must lead to action. Real change. Without this, it is
+only talk. The workshops showed a very clear difference here.
 
-The mitigations derived from the STRIDE sessions were often technical fixes (e.g., "enable
-two-factor authentication") or pointed to dependencies on external providers ("depender da
-segurança da Google"). This suggests the proposed protocol is more effective at empowering
-organizations to improve their security posture through changes in their own collective
-governance and processes, which is a core goal for non-hierarchical structures.
+The proposed protocol guided the organizations to create their own internal,
+process-based mitigations. These are solutions they can build themselves. For
+example, in response to the "infiltrator" threat, Frente Anti-Racista did not
+propose a new software; they proposed to create "a screening process for new
+members." This is not a technical fix. It is a change in their collective
+governance. ComuniDária proposed to "register which member has access to each
+page or file." These are actions they can take, together, to make themselves
+stronger from the inside. They are empowered.
+
+The mitigations from the \gls{stride} sessions were different. Across both
+organizations, the number of actionable mitigations proposed was zero. Nothing.
+But even if there were mitigations, the threats \gls{stride} found point to a
+different kind of solution. The threats were technical, so the fixes would be
+technical—"enable two-factor authentication"—or they would point to a dependency
+on others. On a big company. "Depender da segurança da Google" (to depend on
+Google's security). This suggests the proposed protocol is much more effective
+at helping organizations improve their security through changes in their own
+collective processes, which is a core goal for non-hierarchical structures. It
+gives them the power.
+
+\subsection{Participant Experience and Usability}
+\label{subsec:participant_outcomes}
+
+The evaluation of the participant experience was not done with surveys, but
+through direct observation of the workshops.
+
+A clear challenge emerged, and it was common to both methodologies: the initial
+step of creating a visual map of the system. Whether it was the formal \gls{dfd}
+for \gls{stride} or the system and trust map in our protocol, this was
+the most difficult part for the participants. It is an abstract exercise, and it
+requires a kind of thinking that can be a barrier before the real discussion
+begins.
+
+But it is what happened after this step that the difference became profound.
+During the \gls{stride} sessions, the conversation became the property of the few
+members with more technical knowledge. The vocabulary of \gls{stride}—spoofing,
+tampering, repudiation—created a wall. Many participants became quiet observers.
+
+With the proposed protocol, this wall did not exist. The change was immediate.
+The room came alive with discussion. Both ComuniDária and Frente Anti-Racista
+interacted much, much more. The reason is simple. Our protocol speaks a human
+language. When the discussion is about creating a persona for "the malicious
+insider" or protecting an asset like "reputation," everyone is an expert. It is
+not a technical debate anymore; it is a collective conversation about their own
+organization.
 
 \section*{}
+This chapter detailed the structured evaluation conducted to validate the
+proposed threat modeling protocol. Through comparative workshops with two
+non-hierarchical organizations, the protocol was tested against the
+standard \gls{stride} methodology. Across all metrics the proposed protocol
+demonstrated a clear superiority for this context. It did not
+just find more threats, it surfaced the right
+threats. The governance and social vulnerabilities that \gls{stride} is
+blind to. Furthermore, the evaluation confirmed a significantly more inclusive
+and empowering experience for the participants, transforming a technical
+exercise into a collective, strategic conversation.
