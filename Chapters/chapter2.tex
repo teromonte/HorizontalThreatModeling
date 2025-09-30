@@ -16,7 +16,8 @@
 
 Threat modeling is a central component of cybersecurity as it allows the
 identification of valuable assets, analysis of potential attack vectors and
-establishment of controls capable of mitigating risks. This practice goes beyond
+establishment of controls capable of mitigating risks
+\cite{ThreatModelingASummaryOfAvailableMethods}. This practice goes beyond
 technical factors incorporating organizational and human elements that shape
 security in diverse contexts, especially in horizontal structures, where
 internal processes and trust relationships become even more critical due to the
@@ -27,14 +28,10 @@ contexts \cite{ThreatModelingdesigningForSecurity}.
 
 Studies such as \cite{ThreatModelingAsABasisForSecurityRequirements},
 \cite{AdvancedThreatModeling}, and \cite{DemystifyingTheThreatModelingProcess}
-demonstrate the need for structured, yet adaptable, methods to keep up with
-changing environments. Adopting the adversary perspective
-\cite{AHybridThreatModelingMethod} is crucial to anticipate complex scenarios
-and strengthen resilience in decentralized environments, where the multiplicity
-of actors and the distribution of power require a holistic analysis of threats.
-In this type of context, threat modeling needs to reflect the distribution of
-power and the multiplicity of actors, including potential internal, external and
-hybrid threats \cite{ThreatModelingASummaryOfAvailableMethods}.
+demonstrate the need for structured and adaptable methods to keep up with
+changing environments. Adopting the adversary perspective is crucial to
+anticipate complex scenarios and strengthen resilience in decentralized
+environments \cite{AHybridThreatModelingMethod}.
 
 In addition, Microsoft's experience, documented in
 \cite{ExperiencesThreatModelingAtMicrosoft}, emphasizes the importance of
@@ -42,7 +39,7 @@ involving diverse stakeholders and applying collaborative tools. These elements
 become crucial when decision making is democratic or decentralized, since
 identifying and mitigating risks requires collective engagement and strategic
 flexibility, connecting the threat modeling exercise to organizational dynamics
-\cite{ParticipatoryThreatModelling}.
+\cite{ParticipatoryThreatModelling, ThreatModelingASummaryOfAvailableMethods}.
 
 \subsection{Conceptual Definitions}
 \label{subsec:conceptual_definitions}
@@ -53,10 +50,7 @@ By adopting a holistic view, as suggested by
 \cite{ThreatModelingAsABasisForSecurityRequirements} and
 \cite{AdvancedThreatModeling}, security analysis is not restricted to
 infrastructure, but incorporates internal practices, information flows, and the
-organization's culture. In non-hierarchical contexts, the absence of clear lines
-of authority and the participatory nature make an analysis that considers the
-distribution of responsibilities and the reliance on collective mitigation
-mechanisms essential \cite{Colbac}.
+organization's culture.
 
 In turn, \cite{DemystifyingTheThreatModelingProcess} emphasizes that there is no
 single solution for threat modeling. In this sense, threat modeling becomes an
@@ -67,25 +61,27 @@ such as participatory decision making tools and collaborative security practices
 \subsection{Main Methodologies}
 \label{subsec:main_methodologies}
 
-Widely discussed methodologies such as \gls{stride}, attack trees, and
-scenario based frameworks \cite{EvaluationofCompetingThreatModeling} provide a
-tested starting point, but they often fail to capture the complexity of
+Widely discussed methodologies such as \gls{stride} and
+scenario based frameworks like attack trees \cite{EvaluationofCompetingThreatModeling}
+provide a tested starting point, but they often fail to capture the complexity of
 horizontal structures.
 
 The documentation \cite{ThreatModelingASummaryOfAvailableMethods} provides an
 overview of existing methods, cautioning that the effectiveness of each approach
 depends on the context. For example, \gls{stride} and attack trees are useful
-for identifying straightforward attack vectors, but the lack of formal
-hierarchies intensifies the need to explore complex scenarios such as insider
+for identifying straightforward attack vectors, but there is no support
+to explore complex scenarios such as insider
 threats coupled with external attacks, as well as flaws in distributed
 authentication, consensus, and governance mechanisms, as suggested in
-\cite{Colbac, AttackTrees, STRIDEthreatmodelingforcyberphysical}.
+\cite{STRIDEthreatmodelingforcyberphysical}.
 
-Integrating diverse approaches, such as collaborative cryptography practices
-\cite{AbcCrypto} and hybrid approaches \cite{CoReTM}, enables horizontal
-organizations to identify less obvious risk patterns and strengthen their
-collective resilience. This integration becomes crucial in distributed
-structures for reaching maximum cohesiveness.
+In contrast to these approaches, \gls{pasta} methodology offers a 
+risk-centric perspective \cite{RiskCentricThreatModeling}. Its seven-stage process is
+structured to align security activities with business objectives,
+thus shifting the focus from a simple enumeration of generic threats to a
+detailed analysis of attacks that would realistically target valuable assets.
+Its application is particularly justified for systems where governance and distributed trust are
+not only technical features but are fundamental to the business proposition \cite{RiskCentricThreatModeling}.
 
 \section{Taxonomy of Organizational Structures}
 \label{sec:taxonomy_organizational_structures}
@@ -158,24 +154,18 @@ each type of hierarchy.
 
 Horizontal organizations are distinguished by their rejection of traditional
 hierarchies, prioritizing distributed decision making processes and equitable
-participation of all members. This model contrasts directly with hierarchical
+participation of all members  \cite{Non-HierarchicalForms}.
+This model contrasts directly with hierarchical
 structures, which centralize power at higher levels, perpetuating inequalities
 in access to information and organizational control \cite{Non-HierarchicalForms}.
 
 Horizontality is both a tool and an objective in itself \cite{Colbac}. In
 Argentine social movements, as analyzed by Marina Sitrin, horizontality has
 emerged as an essential mechanism for establishing relationships based on trust
-and consensus, overcoming traditional forms of organization. Neighborhood
-assemblies and collectives of unemployed workers exemplify how horizontality can
+and consensus, overcoming traditional forms of organization \cite{EverydayRevolutions}.
+Neighborhood assemblies and collectives of unemployed workers exemplify how horizontality can
 be applied to self management and collective planning
 \cite{EverydayRevolutions}.
-
-In the field of cybernetics, the \gls{colbac} protocol demonstrates the relevance of
-horizontality in digital security systems, promoting collaborative access
-control that reduces the centralization of power. This model avoids the
-vulnerabilities created by the dependence on single owners of passwords or
-permissions, reinforcing the coherence between organizational practices and
-technological tools \cite{Colbac}.
 
 In addition, historical examples, such as Athenian democracy, illustrate that
 horizontal structures can be complemented by temporary centralization mechanisms
@@ -238,9 +228,8 @@ mutual accountability that truly sustain the desired horizontality
 \section{Democratic Centralism}
 \label{sec:democratic_centralism}
 
-In the midst of increasingly challenging scenarios in terms of organizational
-coordination, whether in the management of large corporations or in the
-maintenance of decentralized networks such as blockchain, the need arises to
+In the middle of increasingly challenging scenarios in terms of organizational
+coordination, whether in the management of large or smaller corporations, the need arises to
 reconcile efficiency in decision making with the active participation of all
 those involved \cite{DoArtifactsHavePolitics}. Democratic centralism, formulated
 to meet the demands of revolutionary movements, maintains its relevance by
@@ -284,7 +273,7 @@ democratic centralism \cite{CGTPStatutes}.
 The influence of democratic centralism transcends the limits of political
 parties and can be extended to diverse scenarios that require both broad
 participation and efficient execution \cite{ACenturyofDemocraticCentralism,
-TheCostsofConnection}. Horizontal or distributed organizations can use this
+TheCostsofConnection}. Horizontal organizations can use this
 model to reconcile the voice of their members with the need to make centralized
 decisions at critical moments
 \cite{StillaCenturyoftheChineseModel,ACenturyofDemocraticCentralism}.
